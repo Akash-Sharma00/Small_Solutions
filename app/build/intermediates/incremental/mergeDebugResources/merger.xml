@@ -7696,7 +7696,7 @@
         
         <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimaryVariant</item>
         
-    </style></file><file path="D:\Nitin\Android\SmallSolutions\app\src\main\res\values-night\themes.xml" qualifiers="night-v8"><style name="Theme.SmallSolutions" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    </style></file><file path="D:\Nitin\Android\SmallSolutions\app\src\main\res\values-night\themes.xml" qualifiers="night-v8"><style name="Theme.SmallSolutions" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
