@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private static int SPLASH_SCREEN;
-}
+
     //Variables
     Animation topAnim, bottomAnim;
     ImageView image;
@@ -44,5 +44,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        })
-}
+        });
+}}
