@@ -4,16 +4,44 @@
         "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\font_bad_script.xml.flat",
+        "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\font\\bad_script.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\font_bungee.xml.flat",
+        "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\font\\bungee.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\font_baloo_bhai.xml.flat",
+        "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\font\\baloo_bhai.xml"
+    },
+    {
         "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\anim_top_animation.xml.flat",
+        "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\anim\\top_animation.xml"
     },
     {
         "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
+        "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
         "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_plumber.jpg.flat",
+        "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\drawable\\plumber.jpg"
+    },
+    {
+        "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\font_bangers.xml.flat",
+        "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\font\\bangers.xml"
     },
     {
         "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
@@ -42,6 +70,10 @@
     {
         "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\anim_bottom_animation.xml.flat",
+        "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\anim\\bottom_animation.xml"
     },
     {
         "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
