@@ -8,6 +8,14 @@
         "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\font\\bad_script.xml"
     },
     {
+        "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\font_bungee.xml.flat",
+        "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\font\\bungee.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\font_baloo_bhai.xml.flat",
+        "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\font\\baloo_bhai.xml"
+    },
+    {
         "merged": "D:\\Nitin\\Android\\SmallSolutions\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "D:\\Nitin\\Android\\SmallSolutions\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
