@@ -10,6 +10,15 @@
     android:background="@color/white"
     android:padding="20sp">
 
+    <TextView
+        android:id="@+id/skip_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="310dp"
+        android:onClick="skip"
+        android:text="Skip >>>"
+        android:textColor="@color/blue" />
+
     <ImageView
         android:id="@+id/LogoImage"
         android:layout_width="150dp"
@@ -18,8 +27,8 @@
 
     <TextView
         android:id="@+id/WelcomeText"
-        android:layout_width="295dp"
-        android:layout_height="96dp"
+        android:layout_width="282dp"
+        android:layout_height="88dp"
         android:fontFamily="@font/baloo_bhai"
         android:text="@string/WelcomeTextLoginScreen"
         android:textColor="@color/blue"
@@ -29,41 +38,42 @@
         android:id="@+id/SignInText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="@string/WelcomeSignInText"
         android:textSize="16sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/UserName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/UserName"
-            android:hint="@string/UserNameText"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:hint="@string/UserNameText">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Password"
             android:hint="@string/PasswordText"
-            app:passwordToggleEnabled="true"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,8 +83,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="230dp"
             android:layout_marginTop="5dp"
+            android:onClick="forgetPassword"
             android:text="@string/ForgetPasswordButton"
-            android:textColor="@color/purple_200"
+            android:textColor="@color/blue"
             android:textSize="16sp" />
 
         <Button
@@ -84,18 +95,20 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:backgroundTint="@color/blue"
+            android:onClick="SignIn"
             android:text="@string/signInText" />
 
         <Button
             android:id="@+id/NewUserButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#00000000"
-            android:text="@string/NewUserButtonText"
-            android:textColor="@color/grey"
             android:layout_gravity="right"
+            android:layout_margin="5dp"
+            android:backgroundTint="#00000000"
             android:elevation="0dp"
-            android:layout_margin="5dp"/>
+            android:onClick="newUser"
+            android:text="@string/NewUserButtonText"
+            android:textColor="@color/grey" />
 
     </LinearLayout>
 
