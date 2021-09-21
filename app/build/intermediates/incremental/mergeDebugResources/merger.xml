@@ -7688,8 +7688,8 @@
         <item>@font/bungee</item>
     </array></file><file path="D:\Nitin\Black Book Project\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Small Solutions</string><string name="textview">Small Solutions</string><string name="WelcomeTextLoginScreen">Hello there, Welcome Back</string><string name="WelcomeSignInText">Sign in to Proceed</string><string name="UserNameText">UserName</string><string name="PasswordText">Password</string><string name="ForgetPasswordButton">Forget Password?</string><string name="signInText">Sign in</string><string name="NewUserButtonText">New User? Sign UP</string></file><file path="D:\Nitin\Black Book Project\app\src\main\res\values\themes.xml" qualifiers=""><style name="Theme.SmallSolutions" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
         <item name="colorOnPrimary">@color/white</item>
         
         <item name="colorSecondary">@color/teal_200</item>
@@ -7700,8 +7700,8 @@
         
     </style></file><file path="D:\Nitin\Black Book Project\app\src\main\res\values-night\themes.xml" qualifiers="night-v8"><style name="Theme.SmallSolutions" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
         <item name="colorOnPrimary">@color/black</item>
         
         <item name="colorSecondary">@color/teal_200</item>
