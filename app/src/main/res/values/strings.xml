@@ -8,4 +8,6 @@
     <string name="ForgetPasswordButton">Forget Password?</string>
     <string name="signInText">Sign in</string>
     <string name="NewUserButtonText">New User? Sign UP</string>
+    <string name="SearchText">Search here</string>
+
 </resources>
