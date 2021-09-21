@@ -36,6 +36,10 @@
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\font_bad_script.xml.flat",
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\font\\bad_script.xml"
     },
