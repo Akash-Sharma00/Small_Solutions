@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Small Solutions</string>
     <string name="textview">Small Solutions</string>
+    <string name="WelcomeTextLoginScreen">Hello there, Welcome Back</string>
+    <string name="WelcomeSignInText">Sign in to Proceed</string>
+    <string name="UserNameText">UserName</string>
+    <string name="PasswordText">Password</string>
+    <string name="ForgetPasswordButton">Forget Password?</string>
+    <string name="signInText">Sign in</string>
+    <string name="NewUserButtonText">New User? Sign UP</string>
 </resources>
