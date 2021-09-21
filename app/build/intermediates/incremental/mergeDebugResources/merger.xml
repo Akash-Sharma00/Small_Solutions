@@ -7701,7 +7701,7 @@
     </style></file><file path="C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\res\values-night\themes.xml" qualifiers="night-v8"><style name="Theme.SmallSolutions" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/blue</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
         <item name="colorOnPrimary">@color/black</item>
         
         <item name="colorSecondary">@color/teal_200</item>
