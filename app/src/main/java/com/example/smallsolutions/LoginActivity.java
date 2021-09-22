@@ -2,6 +2,7 @@ package com.example.smallsolutions;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -9,7 +10,9 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
     //Skip button
     public void skip(View view){
-        Toast.makeText(getBaseContext(), "Under construction", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getBaseContext(), "Under construction", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
     }
 
     //Forget password button

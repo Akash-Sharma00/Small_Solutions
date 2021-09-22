@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-#Tue Sep 21 13:47:06 IST 2021
+#Wed Sep 22 11:15:29 IST 2021
 base.2=D\:\\Nitin\\Black Book Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
-=======
-#Tue Sep 21 18:03:12 IST 2021
-base.2=C\:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
->>>>>>> upstream/master
 path.2=4/classes.dex
 base.1=D\:\\Nitin\\Black Book Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 path.1=0/classes.dex

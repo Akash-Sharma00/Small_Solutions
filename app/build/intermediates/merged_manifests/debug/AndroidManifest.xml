@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmallSolutions" >
         <activity
+            android:name="com.example.smallsolutions.HomeActivity"
+            android:exported="true" />
+        <activity
             android:name="com.example.smallsolutions.LoginActivity"
             android:exported="true" />
         <activity
