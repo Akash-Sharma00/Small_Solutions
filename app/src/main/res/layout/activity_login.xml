@@ -100,10 +100,11 @@
             android:text="@string/signInText" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/new_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/ic_launcher_background"
+            android:onClick="newUser"
             android:text="@string/NewUserButtonText"
             android:textColor="@color/blue" />
 
