@@ -108,8 +108,8 @@
             android:backgroundTint="@color/blue"
             android:onClick="SignIn"
             android:layout_gravity="center"
-            android:text="@string/signInText"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:text="@string/signInText"/>
 
         <Button
             android:id="@+id/new_user"
