@@ -100,17 +100,12 @@
             android:text="@string/signInText" />
 
         <Button
-            android:id="@+id/NewUserButton"
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_margin="5dp"
-            android:background="@color/blue"
-            android:backgroundTint="#00000000"
-            android:elevation="0dp"
-            android:onClick="newUser"
+            android:backgroundTint="@color/ic_launcher_background"
             android:text="@string/NewUserButtonText"
-            android:textColor="@android:color/holo_red_dark" />
+            android:textColor="@color/blue" />
 
     </LinearLayout>
 
