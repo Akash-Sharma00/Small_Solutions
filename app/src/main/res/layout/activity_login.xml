@@ -20,6 +20,7 @@
         android:onClick="skip"
         android:text="Skip >>>"
         android:textSize="15dp"
+        android:fontFamily="@font/baloo_bhai"
         android:textColor="@color/blue" />
 
     <ImageView
@@ -35,15 +36,17 @@
         android:fontFamily="@font/baloo_bhai"
         android:text="@string/WelcomeTextLoginScreen"
         android:textColor="@color/blue"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:lineSpacingExtra="-20dp"/>
 
     <TextView
         android:id="@+id/SignInText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="-10dp"
         android:layout_marginLeft="5dp"
         android:layout_gravity="left"
+        android:fontFamily="@font/baloo_bhai"
         android:text="@string/WelcomeSignInText"
         android:textColor="@color/blue"
         android:textSize="16sp" />
@@ -97,6 +100,7 @@
             android:layout_gravity="right"
             android:text="@string/ForgetPasswordButton"
             android:textColor="@color/blue"
+            android:fontFamily="@font/baloo_bhai"
             android:textSize="16sp" />
 
         <Button
@@ -109,7 +113,8 @@
             android:onClick="SignIn"
             android:layout_gravity="center"
             android:textColor="@color/white"
-            android:text="@string/signInText"/>
+            android:text="@string/signInText"
+            android:fontFamily="@font/baloo_bhai"/>
 
         <Button
             android:id="@+id/new_user"
@@ -119,6 +124,7 @@
             android:onClick="newUser"
             android:text="@string/NewUserButtonText"
             android:layout_gravity="center"
+            android:fontFamily="@font/baloo_bhai"
             android:textColor="@color/blue" />
 
     </LinearLayout>
