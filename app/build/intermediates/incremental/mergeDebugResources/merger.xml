@@ -7685,6 +7685,7 @@
         <item>@font/</item>
         <item>@font/baloo_bhai</item>
         <item>@font/bangers</item>
+        <item>@font/bree_serif</item>
         <item>@font/bungee</item>
     </array></file><file path="D:\Nitin\Black Book Project\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Small Solutions</string><string name="textview">Small Solutions</string><string name="WelcomeTextLoginScreen">Hello there, Welcome Back</string><string name="WelcomeSignInText">Sign in to Proceed</string><string name="UserNameText">UserName</string><string name="PasswordText">Password</string><string name="ForgetPasswordButton">Forget Password?</string><string name="signInText">Sign in</string><string name="NewUserButtonText">New User? Sign UP</string><string name="SearchText">Search here</string></file><file path="D:\Nitin\Black Book Project\app\src\main\res\values\themes.xml" qualifiers=""><style name="Theme.SmallSolutions" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
@@ -7710,7 +7711,7 @@
         
         <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimaryVariant</item>
         
-    </style></file><file name="activity_sign_up" path="D:\Nitin\Black Book Project\app\src\main\res\layout\activity_sign_up.xml" qualifiers="" type="layout"/></source><source path="D:\Nitin\Black Book Project\app\build\generated\res\rs\debug"/><source path="D:\Nitin\Black Book Project\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Nitin\Black Book Project\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Nitin\Black Book Project\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
+    </style></file><file name="activity_sign_up" path="D:\Nitin\Black Book Project\app\src\main\res\layout\activity_sign_up.xml" qualifiers="" type="layout"/><file name="bree_serif" path="D:\Nitin\Black Book Project\app\src\main\res\font\bree_serif.xml" qualifiers="" type="font"/></source><source path="D:\Nitin\Black Book Project\app\build\generated\res\rs\debug"/><source path="D:\Nitin\Black Book Project\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Nitin\Black Book Project\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Nitin\Black Book Project\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
         <attr name="android:layout"/>
         <attr format="reference" name="buttonPanelSideLayout"/>
         <attr format="reference" name="listLayout"/>
