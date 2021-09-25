@@ -4,12 +4,12 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\anim_bottom_animation.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\anim\\bottom_animation.xml"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_bangers.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\bangers.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\anim_bottom_animation.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\anim\\bottom_animation.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_bottom_img.jpg.flat",
