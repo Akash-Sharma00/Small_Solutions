@@ -19,13 +19,13 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DetailsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class SignUpActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     private RadioGroup radioGroup;
     Button cancel, done;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
+        setContentView(R.layout.activity_sign_up);
 
         //getting buttons and views
         cancel = (Button) findViewById(R.id.cancel);
