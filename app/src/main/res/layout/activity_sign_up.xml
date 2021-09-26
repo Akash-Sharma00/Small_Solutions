@@ -191,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:fontFamily="@font/bree_serif"
-                    android:onClick="@string/CANCEL"
+                    android:onClick="CANCEL"
                     android:text="@string/CANCEL" />
 
             </LinearLayout>
