@@ -72,9 +72,9 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                 if (radioButton == employee || radioButton == employer) {
                     scrollView.setVisibility(View.VISIBLE);
                     if (radioButton == employer) {
-                        spinner.setVisibility(View.INVISIBLE);
-                        t2.setVisibility(View.INVISIBLE);
-                        t3.setVisibility(View.INVISIBLE);
+                        spinner.setVisibility(View.GONE);
+                        t2.setVisibility(View.GONE);
+                        t3.setVisibility(View.GONE);
                     } else {
                         spinner.setVisibility(View.VISIBLE);
                         t2.setVisibility(View.VISIBLE);
