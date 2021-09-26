@@ -46,14 +46,15 @@
 
     <ScrollView
         android:id="@+id/form"
-        android:layout_width="443dp"
-        android:layout_height="527dp"
-        android:layout_marginTop="180dp"
+        android:layout_width="390dp"
+        android:layout_height="440dp"
         android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/selections"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/selections"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.667">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -155,7 +156,7 @@
 
             <EditText
                 android:id="@+id/exp"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_marginBottom="5dp"
@@ -165,42 +166,35 @@
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
 
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="34dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/bree_serif"
+                    android:text="@string/done" />
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/bree_serif"
+                    android:onClick="@string/CANCEL"
+                    android:text="@string/CANCEL" />
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="227dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="34dp"
-        android:gravity="right"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/form">
-
-        <Button
-            android:id="@+id/done"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/bree_serif"
-            android:text="@string/done" />
-
-        <Button
-            android:id="@+id/cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/bree_serif"
-            android:onClick="@string/CANCEL"
-            android:text="@string/CANCEL" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
