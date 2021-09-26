@@ -89,10 +89,18 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String item = parent.getItemAtPosition(position).toString();
+        Toast.makeText(this, "You selected "+item, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         //Default function
+    }
+
+    //When cancel clicked
+    public void CANCEL (View view)
+    {
+        Intent intent = new Intent(this,LoginActivity.class);
+        startActivity(intent);
     }
 }
