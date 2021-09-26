@@ -12,18 +12,22 @@
 
     <TextView
         android:id="@+id/skip_login"
-        android:layout_width="84dp"
-        android:layout_height="38dp"
-        android:layout_marginLeft="290dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/bree_serif"
         android:onClick="skip"
         android:text="Skip >>>"
-        android:textColor="@color/blue" />
+        android:textColor="@color/blue"
+        android:textSize="15dp" />
 
     <ImageView
         android:id="@+id/LogoImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginTop="-30dp"
         android:src="@drawable/plumber" />
 
     <TextView
@@ -32,15 +36,21 @@
         android:layout_height="88dp"
         android:fontFamily="@font/baloo_bhai"
         android:text="@string/WelcomeTextLoginScreen"
+        android:layout_marginTop="-15dp"
         android:textColor="@color/blue"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:lineSpacingExtra="-20dp"/>
 
     <TextView
         android:id="@+id/SignInText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="left"
+        android:fontFamily="@font/baloo_bhai"
         android:text="@string/WelcomeSignInText"
+        android:textColor="@color/blue"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -55,11 +65,14 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:hint="@string/UserNameText">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,6 +81,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:hint="@string/PasswordText"
             app:passwordToggleEnabled="true">
 
@@ -80,13 +94,15 @@
 
         <TextView
             android:id="@+id/ForgetPassword"
-            android:layout_width="145dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="230dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="8dp"
             android:onClick="forgetPassword"
+            android:layout_gravity="right"
             android:text="@string/ForgetPasswordButton"
             android:textColor="@color/blue"
+            android:fontFamily="@font/bree_serif"
             android:textSize="16sp" />
 
         <Button
@@ -97,7 +113,10 @@
             android:layout_marginBottom="5dp"
             android:backgroundTint="@color/blue"
             android:onClick="SignIn"
-            android:text="@string/signInText" />
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/signInText"
+            android:fontFamily="@font/bree_serif"/>
 
         <Button
             android:id="@+id/new_user"
@@ -106,6 +125,8 @@
             android:backgroundTint="@color/ic_launcher_background"
             android:onClick="newUser"
             android:text="@string/NewUserButtonText"
+            android:layout_gravity="center"
+            android:fontFamily="@font/bree_serif"
             android:textColor="@color/blue" />
 
     </LinearLayout>

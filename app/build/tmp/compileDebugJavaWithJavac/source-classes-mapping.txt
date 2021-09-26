@@ -5,5 +5,8 @@ com/example/smallsolutions/HomeActivity.java
 com/example/smallsolutions/MainActivity.java
  com.example.smallsolutions.MainActivity
  com.example.smallsolutions.MainActivity$1
+com/example/smallsolutions/SignUpActivity.java
+ com.example.smallsolutions.SignUpActivity
+ com.example.smallsolutions.SignUpActivity$1
 com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity

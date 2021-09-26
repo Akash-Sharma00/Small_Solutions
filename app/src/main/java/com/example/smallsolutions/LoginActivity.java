@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
+
     //Skip button
     public void skip(View view){
-//        Toast.makeText(getBaseContext(), "Under construction", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
@@ -27,7 +27,8 @@ public class LoginActivity extends AppCompatActivity {
 
     //new user button
     public void newUser(View view){
-        Toast.makeText(getBaseContext(), "Under construction", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, SignUpActivity.class);
+        startActivity(intent);
     }
 
     @Override
