@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
     TextView c = (TextView) findViewById(R.id.carpenter);
@@ -16,56 +17,27 @@ public class HomeActivity extends AppCompatActivity {
 
     public void carpenter(View view){
         c.setBackgroundResource(R.drawable.blue);
-        e.setBackgroundResource(R.drawable.white_rounded);
-        m.setBackgroundResource(R.drawable.white_rounded);
-        p.setBackgroundResource(R.drawable.white_rounded);
-        s.setBackgroundResource(R.drawable.white_rounded);
-        more.setBackgroundResource(R.drawable.white_rounded);
+        Toast.makeText(this, "Rest all button are under developing stage", Toast.LENGTH_SHORT).show();
     }
 
     public void electrician(View view){
-        e.setBackgroundResource(R.drawable.blue);
-        c.setBackgroundResource(R.drawable.white_rounded);
-        m.setBackgroundResource(R.drawable.white_rounded);
-        p.setBackgroundResource(R.drawable.white_rounded);
-        s.setBackgroundResource(R.drawable.white_rounded);
-        more.setBackgroundResource(R.drawable.white_rounded);
+
     }
 
     public void mechanic(View view){
-        m.setBackgroundResource(R.drawable.blue);
-        e.setBackgroundResource(R.drawable.white_rounded);
-        c.setBackgroundResource(R.drawable.white_rounded);
-        p.setBackgroundResource(R.drawable.white_rounded);
-        s.setBackgroundResource(R.drawable.white_rounded);
-        more.setBackgroundResource(R.drawable.white_rounded);
+
     }
 
     public void plumber(View view){
-        p.setBackgroundResource(R.drawable.blue);
-        e.setBackgroundResource(R.drawable.white_rounded);
-        m.setBackgroundResource(R.drawable.white_rounded);
-        c.setBackgroundResource(R.drawable.white_rounded);
-        s.setBackgroundResource(R.drawable.white_rounded);
-        more.setBackgroundResource(R.drawable.white_rounded);
+
     }
 
     public void soft(View view){
-        s.setBackgroundResource(R.drawable.blue);
-        e.setBackgroundResource(R.drawable.white_rounded);
-        m.setBackgroundResource(R.drawable.white_rounded);
-        p.setBackgroundResource(R.drawable.white_rounded);
-        c.setBackgroundResource(R.drawable.white_rounded);
-        more.setBackgroundResource(R.drawable.white_rounded);
+
     }
 
     public void more(View view){
-        more.setBackgroundResource(R.drawable.blue);
-        e.setBackgroundResource(R.drawable.white_rounded);
-        m.setBackgroundResource(R.drawable.white_rounded);
-        p.setBackgroundResource(R.drawable.white_rounded);
-        s.setBackgroundResource(R.drawable.white_rounded);
-        c.setBackgroundResource(R.drawable.white_rounded);
+
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
