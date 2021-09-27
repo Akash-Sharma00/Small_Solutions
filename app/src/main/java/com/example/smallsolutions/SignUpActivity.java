@@ -26,6 +26,7 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        getSupportActionBar().hide();
 
         //getting buttons and views
         cancel = (Button) findViewById(R.id.cancel);
