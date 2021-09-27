@@ -21,7 +21,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void electrician(View view){
-
+        c.setBackgroundResource(R.drawable.white_rounded);
     }
 
     public void mechanic(View view){
