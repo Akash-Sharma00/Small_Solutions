@@ -22,4 +22,10 @@
     <string name="CANCEL">CANCEL</string>
     <string name="FillTheDetails">Fill the details</string>
     <string name="Address">Address</string>
+    <string name="carpenter">Carpenter</string>
+    <string name="plumber">Plumber</string>
+    <string name="electrician">Electrician</string>
+    <string name="mechanic">Mechanic</string>
+    <string name="softDev">Software Developer</string>
+    <string name="more">More</string>
 </resources>
