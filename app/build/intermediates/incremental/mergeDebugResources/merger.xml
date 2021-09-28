@@ -7699,6 +7699,7 @@
         
         <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimaryVariant</item>
         
+
     </style></file><file path="C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\res\values-night\themes.xml" qualifiers="night-v8"><style name="Theme.SmallSolutions" parent="Theme.MaterialComponents.DayNight">
         
         <item name="colorPrimary">@color/blue</item>

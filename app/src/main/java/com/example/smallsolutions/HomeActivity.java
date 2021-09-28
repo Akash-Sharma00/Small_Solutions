@@ -2,6 +2,7 @@ package com.example.smallsolutions;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;

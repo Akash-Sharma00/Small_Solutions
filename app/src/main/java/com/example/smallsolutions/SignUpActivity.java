@@ -38,7 +38,7 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
         TextView t2 = (TextView) findViewById(R.id.exp);
         TextView t3 = (TextView) findViewById(R.id.age);
 
-        //Set up the drop down list
+        //Set up the drop down list of profession
         Spinner spinner = (Spinner) findViewById(R.id.professions);
         spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
 
@@ -64,6 +64,28 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
         //Adding List in Drop
         spinner.setAdapter(dataAdapter);
 
+        //Set up the drop down list of profession
+        Spinner spinner1 = (Spinner) findViewById(R.id.expSpinner);
+        spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+
+        //Creating List
+        List<String> categories1 = new ArrayList<String>();
+        categories1.add("Choose Your Experience");
+        categories1.add("Fresher");
+        categories1.add("6 Month and less");
+        categories1.add("1 Year");
+        categories1.add("2 Years");
+        categories1.add("3 Years");
+        categories1.add("4 Years");
+        categories1.add("5 Years and more...");
+
+        //Setting Adapter
+        ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories1);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        //Adding List in Drop
+        spinner1.setAdapter(dataAdapter1);
+
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -74,10 +96,12 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                     scrollView.setVisibility(View.VISIBLE);
                     if (radioButton == employer) {
                         spinner.setVisibility(View.GONE);
+                        spinner1.setVisibility(View.GONE);
                         t2.setVisibility(View.GONE);
                         t3.setVisibility(View.GONE);
                     } else {
                         spinner.setVisibility(View.VISIBLE);
+                        spinner1.setVisibility(View.VISIBLE);
                         t2.setVisibility(View.VISIBLE);
                         t3.setVisibility(View.VISIBLE);
                     }
@@ -89,8 +113,7 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
     //Function run when the drop down list clicked
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String item = parent.getItemAtPosition(position).toString();
-        Toast.makeText(this, "You selected "+item, Toast.LENGTH_SHORT).show();
+//        String item = parent.getItemAtPosition(position).toString();
     }
 
     @Override

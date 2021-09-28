@@ -55,7 +55,6 @@
         android:layout_marginTop="176dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="87dp"
-        android:background="#EFEEEE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/selections"
         app:layout_constraintHorizontal_bias="0.047"
@@ -172,6 +171,11 @@
                 android:hint="@string/Exp"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
+
+            <Spinner
+                android:id="@+id/expSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
