@@ -3,7 +3,7 @@
     <string name="textview">Small Solutions</string>
     <string name="WelcomeTextLoginScreen">Hello there, Welcome Back</string>
     <string name="WelcomeSignInText">Sign in to Proceed</string>
-    <string name="UserNameText">UserName</string>
+    <string name="UserNameText">Email id</string>
     <string name="PasswordText">Password</string>
     <string name="ForgetPasswordButton">Forget Password?</string>
     <string name="signInText">Sign in</string>
@@ -18,11 +18,10 @@
     <string name="Profession">Choose Profession</string>
     <string name="Exp">Experience</string>
     <string name="Age">Age</string>
-    <string name="AboutText">Write a description about you Self</string>
+    <string name="AboutText">Write a description about you Self (OPTIONAL)</string>
     <string name="done">DONE</string>
     <string name="CANCEL">CANCEL</string>
     <string name="FillTheDetails">Fill the details</string>
-    <string name="Address">Address</string>
     <string name="carpenter">Carpenter</string>
     <string name="plumber">Plumber</string>
     <string name="electrician">Electrician</string>

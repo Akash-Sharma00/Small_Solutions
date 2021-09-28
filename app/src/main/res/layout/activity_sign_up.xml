@@ -110,7 +110,8 @@
                 android:ems="10"
                 android:fontFamily="@font/bree_serif"
                 android:hint="@string/PasswordText"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
 
             <EditText
                 android:id="@+id/editTextPhone"
@@ -122,18 +123,6 @@
                 android:fontFamily="@font/bree_serif"
                 android:hint="@string/Contact"
                 android:inputType="phone"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:ems="10"
-                android:fontFamily="@font/bree_serif"
-                android:gravity="start|top"
-                android:hint="@string/Address"
-                android:inputType="textMultiLine"
                 android:minHeight="48dp" />
 
             <EditText
