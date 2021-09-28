@@ -29,17 +29,16 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
         getSupportActionBar().hide();
 
         //getting buttons and views
-        cancel = (Button) findViewById(R.id.cancel);
-        done = (Button) findViewById(R.id.done);
-        radioGroup = (RadioGroup) findViewById(R.id.selections);
+        cancel = findViewById(R.id.cancel);
+        done = findViewById(R.id.done);
+        radioGroup = findViewById(R.id.selections);
         radioGroup.clearCheck();
-        ScrollView scrollView = (ScrollView) findViewById(R.id.form);
+        ScrollView scrollView = findViewById(R.id.form);
         scrollView.setVisibility(View.INVISIBLE);
-        TextView t2 = (TextView) findViewById(R.id.exp);
-        TextView t3 = (TextView) findViewById(R.id.age);
+        TextView t3 = findViewById(R.id.age);
 
         //Set up the drop down list of profession
-        Spinner spinner = (Spinner) findViewById(R.id.professions);
+        Spinner spinner = findViewById(R.id.professions);
         spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
 
         //Creating List
@@ -65,8 +64,8 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
         spinner.setAdapter(dataAdapter);
 
         //Set up the drop down list of profession
-        Spinner spinner1 = (Spinner) findViewById(R.id.expSpinner);
-        spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+        Spinner spinner1 = findViewById(R.id.expSpinner);
+        spinner1.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
 
         //Creating List
         List<String> categories1 = new ArrayList<String>();
@@ -97,12 +96,10 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                     if (radioButton == employer) {
                         spinner.setVisibility(View.GONE);
                         spinner1.setVisibility(View.GONE);
-                        t2.setVisibility(View.GONE);
                         t3.setVisibility(View.GONE);
                     } else {
                         spinner.setVisibility(View.VISIBLE);
                         spinner1.setVisibility(View.VISIBLE);
-                        t2.setVisibility(View.VISIBLE);
                         t3.setVisibility(View.VISIBLE);
                     }
                 }
