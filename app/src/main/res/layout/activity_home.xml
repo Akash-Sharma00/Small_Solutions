@@ -139,8 +139,8 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
-        android:layout_height="605dp"
-        android:layout_marginBottom="22dp"
+        android:layout_height="610dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -711,10 +711,12 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#B5C6E3"
+        android:background="#AA8CD5"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
 
         <ImageButton
             android:id="@+id/imageButton5"
