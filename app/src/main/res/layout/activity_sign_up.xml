@@ -55,7 +55,6 @@
         android:layout_marginTop="176dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="87dp"
-        android:background="#EFEEEE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/selections"
         app:layout_constraintHorizontal_bias="0.047"
@@ -111,7 +110,8 @@
                 android:ems="10"
                 android:fontFamily="@font/bree_serif"
                 android:hint="@string/PasswordText"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
 
             <EditText
                 android:id="@+id/editTextPhone"
@@ -123,18 +123,6 @@
                 android:fontFamily="@font/bree_serif"
                 android:hint="@string/Contact"
                 android:inputType="phone"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:ems="10"
-                android:fontFamily="@font/bree_serif"
-                android:gravity="start|top"
-                android:hint="@string/Address"
-                android:inputType="textMultiLine"
                 android:minHeight="48dp" />
 
             <EditText
@@ -161,17 +149,25 @@
                 android:fontFamily="@font/bree_serif"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
+            <Spinner
+                android:id="@+id/expSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp" />
+
             <EditText
-                android:id="@+id/exp"
-                android:layout_width="wrap_content"
+                android:id="@+id/discription"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_marginBottom="5dp"
                 android:ems="10"
                 android:fontFamily="@font/bree_serif"
-                android:hint="@string/Exp"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
+                android:gravity="start|top"
+                android:hint="@string/AboutText"
+                android:inputType="textMultiLine" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
