@@ -10,3 +10,5 @@ com/example/smallsolutions/SignUpActivity.java
  com.example.smallsolutions.SignUpActivity$1
 com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity
+com/example/smallsolutions/profileActivity.java
+ com.example.smallsolutions.profileActivity
