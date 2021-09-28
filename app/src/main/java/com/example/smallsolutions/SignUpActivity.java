@@ -91,16 +91,19 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                 RadioButton radioButton = (RadioButton) findViewById(checkedId);
                 RadioButton employee = (RadioButton) findViewById(R.id.employee);
                 RadioButton employer = (RadioButton) findViewById(R.id.employer);
+                TextView description = findViewById(R.id.discription);
                 if (radioButton == employee || radioButton == employer) {
                     scrollView.setVisibility(View.VISIBLE);
                     if (radioButton == employer) {
                         spinner.setVisibility(View.GONE);
                         spinner1.setVisibility(View.GONE);
                         t3.setVisibility(View.GONE);
+                        description.setVisibility(View.GONE);
                     } else {
                         spinner.setVisibility(View.VISIBLE);
                         spinner1.setVisibility(View.VISIBLE);
                         t3.setVisibility(View.VISIBLE);
+                        description.setVisibility(View.VISIBLE);
                     }
                 }
             }

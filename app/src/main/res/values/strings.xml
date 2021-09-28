@@ -18,6 +18,7 @@
     <string name="Profession">Choose Profession</string>
     <string name="Exp">Experience</string>
     <string name="Age">Age</string>
+    <string name="AboutText">Write a description about you Self</string>
     <string name="done">DONE</string>
     <string name="CANCEL">CANCEL</string>
     <string name="FillTheDetails">Fill the details</string>
