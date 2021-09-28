@@ -34,6 +34,7 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
         radioGroup = findViewById(R.id.selections);
         radioGroup.clearCheck();
         ScrollView scrollView = findViewById(R.id.form);
+
         scrollView.setVisibility(View.INVISIBLE);
         TextView t3 = findViewById(R.id.age);
 
