@@ -184,6 +184,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:backgroundTint="@color/blue"
                     android:fontFamily="@font/bree_serif"
                     android:text="@string/done" />
 
@@ -192,6 +193,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:backgroundTint="@color/blue"
                     android:fontFamily="@font/bree_serif"
                     android:onClick="CANCEL"
                     android:text="@string/CANCEL" />
