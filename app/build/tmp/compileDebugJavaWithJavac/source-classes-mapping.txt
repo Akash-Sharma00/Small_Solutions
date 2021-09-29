@@ -10,5 +10,6 @@ com/example/smallsolutions/SignUpActivity.java
  com.example.smallsolutions.SignUpActivity$1
 com/example/smallsolutions/HomeActivity.java
  com.example.smallsolutions.HomeActivity
+ com.example.smallsolutions.HomeActivity$1
 com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity

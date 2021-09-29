@@ -28,6 +28,12 @@ public class HomeActivity extends AppCompatActivity {
 
         TextView carpenter = findViewById(R.id.carpenter);
         carpenter.setBackgroundResource(R.drawable.blue);
+        carpenter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(HomeActivity.this, "Finally i am on", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
