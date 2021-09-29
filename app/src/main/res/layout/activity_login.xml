@@ -74,7 +74,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="3dp"
-                android:fontFamily="@font/bree_serif" />
+                android:fontFamily="@font/bree_serif"
+                android:hint="@string/Email"
+                android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

@@ -3,7 +3,7 @@
     <string name="textview">Small Solutions</string>
     <string name="WelcomeTextLoginScreen">Hello there, Welcome Back</string>
     <string name="WelcomeSignInText">Sign in to Proceed</string>
-    <string name="UserNameText">Email id</string>
+    <string name="UserNameText">Name</string>
     <string name="PasswordText">Password</string>
     <string name="ForgetPasswordButton">Forget Password?</string>
     <string name="signInText">Sign in</string>
