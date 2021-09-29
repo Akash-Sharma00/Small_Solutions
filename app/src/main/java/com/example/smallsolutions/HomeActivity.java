@@ -27,11 +27,84 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         TextView carpenter = findViewById(R.id.carpenter);
+        TextView electrician = findViewById(R.id.electrician);
+        TextView mechanic = findViewById(R.id.mechanic);
+        TextView softDev = findViewById(R.id.softDev);
+        TextView plumber = findViewById(R.id.plumber);
+        TextView more = findViewById(R.id.more);
         carpenter.setBackgroundResource(R.drawable.blue);
+
+        electrician.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                electrician.setBackgroundResource(R.drawable.blue);
+                mechanic.setBackgroundResource(R.drawable.white);
+                softDev.setBackgroundResource(R.drawable.white);
+                carpenter.setBackgroundResource(R.drawable.white);
+                plumber.setBackgroundResource(R.drawable.white);
+                more.setBackgroundResource(R.drawable.white);
+            }
+        });
+
+        mechanic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mechanic.setBackgroundResource(R.drawable.blue);
+                electrician.setBackgroundResource(R.drawable.white);
+                softDev.setBackgroundResource(R.drawable.white);
+                carpenter.setBackgroundResource(R.drawable.white);
+                plumber.setBackgroundResource(R.drawable.white);
+                more.setBackgroundResource(R.drawable.white);
+            }
+        });
+
+        softDev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                softDev.setBackgroundResource(R.drawable.blue);
+                mechanic.setBackgroundResource(R.drawable.white);
+                electrician.setBackgroundResource(R.drawable.white);
+                carpenter.setBackgroundResource(R.drawable.white);
+                plumber.setBackgroundResource(R.drawable.white);
+                more.setBackgroundResource(R.drawable.white);
+            }
+        });
+
         carpenter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(HomeActivity.this, "Finally i am on", Toast.LENGTH_SHORT).show();
+                carpenter.setBackgroundResource(R.drawable.blue);
+                mechanic.setBackgroundResource(R.drawable.white);
+                softDev.setBackgroundResource(R.drawable.white);
+                electrician.setBackgroundResource(R.drawable.white);
+                plumber.setBackgroundResource(R.drawable.white);
+                more.setBackgroundResource(R.drawable.white);
+            }
+        });
+
+        plumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                plumber.setBackgroundResource(R.drawable.blue);
+                mechanic.setBackgroundResource(R.drawable.white);
+                softDev.setBackgroundResource(R.drawable.white);
+                carpenter.setBackgroundResource(R.drawable.white);
+                electrician.setBackgroundResource(R.drawable.white);
+                more.setBackgroundResource(R.drawable.white);
+            }
+        });
+
+        more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                more.setBackgroundResource(R.drawable.blue);
+                mechanic.setBackgroundResource(R.drawable.white);
+                softDev.setBackgroundResource(R.drawable.white);
+                carpenter.setBackgroundResource(R.drawable.white);
+                plumber.setBackgroundResource(R.drawable.white);
+                electrician.setBackgroundResource(R.drawable.white);
+
+                Toast.makeText(HomeActivity.this, "Will Jump to more", Toast.LENGTH_SHORT).show();
             }
         });
     }
