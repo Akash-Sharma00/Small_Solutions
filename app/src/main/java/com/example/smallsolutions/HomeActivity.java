@@ -104,7 +104,8 @@ public class HomeActivity extends AppCompatActivity {
                 plumber.setBackgroundResource(R.drawable.white);
                 electrician.setBackgroundResource(R.drawable.white);
 
-                Toast.makeText(HomeActivity.this, "Will Jump to more", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(HomeActivity.this, More.class);
+                startActivity(intent);
             }
         });
     }
