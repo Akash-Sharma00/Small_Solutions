@@ -80,6 +80,10 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\plumber.jpeg"
     },
     {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_mrplumber.jpg.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\mrplumber.jpg"
+    },
+    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_blue.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\blue.xml"
     },
