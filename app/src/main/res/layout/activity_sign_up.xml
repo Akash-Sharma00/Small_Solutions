@@ -186,7 +186,8 @@
                     android:layout_margin="10dp"
                     android:backgroundTint="@color/blue"
                     android:fontFamily="@font/bree_serif"
-                    android:text="@string/done" />
+                    android:text="@string/done"
+                    android:textColor="#FFFFFF" />
 
                 <Button
                     android:id="@+id/cancel"
@@ -196,7 +197,8 @@
                     android:backgroundTint="@color/blue"
                     android:fontFamily="@font/bree_serif"
                     android:onClick="CANCEL"
-                    android:text="@string/CANCEL" />
+                    android:text="@string/CANCEL"
+                    android:textColor="#FFFFFF" />
 
             </LinearLayout>
 

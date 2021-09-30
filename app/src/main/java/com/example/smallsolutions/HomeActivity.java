@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -38,6 +39,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 electrician.setBackgroundResource(R.drawable.blue);
+                electrician.setTextColor(Color.WHITE);
                 mechanic.setBackgroundResource(R.drawable.white);
                 softDev.setBackgroundResource(R.drawable.white);
                 carpenter.setBackgroundResource(R.drawable.white);
@@ -50,6 +52,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mechanic.setBackgroundResource(R.drawable.blue);
+                mechanic.setTextColor(Color.WHITE);
                 electrician.setBackgroundResource(R.drawable.white);
                 softDev.setBackgroundResource(R.drawable.white);
                 carpenter.setBackgroundResource(R.drawable.white);
@@ -62,6 +65,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 softDev.setBackgroundResource(R.drawable.blue);
+                softDev.setTextColor(Color.WHITE);
                 mechanic.setBackgroundResource(R.drawable.white);
                 electrician.setBackgroundResource(R.drawable.white);
                 carpenter.setBackgroundResource(R.drawable.white);
@@ -74,6 +78,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 carpenter.setBackgroundResource(R.drawable.blue);
+                carpenter.setTextColor(Color.WHITE);
                 mechanic.setBackgroundResource(R.drawable.white);
                 softDev.setBackgroundResource(R.drawable.white);
                 electrician.setBackgroundResource(R.drawable.white);
@@ -86,6 +91,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 plumber.setBackgroundResource(R.drawable.blue);
+                plumber.setTextColor(Color.WHITE);
                 mechanic.setBackgroundResource(R.drawable.white);
                 softDev.setBackgroundResource(R.drawable.white);
                 carpenter.setBackgroundResource(R.drawable.white);
@@ -97,13 +103,6 @@ public class HomeActivity extends AppCompatActivity {
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                more.setBackgroundResource(R.drawable.blue);
-                mechanic.setBackgroundResource(R.drawable.white);
-                softDev.setBackgroundResource(R.drawable.white);
-                carpenter.setBackgroundResource(R.drawable.white);
-                plumber.setBackgroundResource(R.drawable.white);
-                electrician.setBackgroundResource(R.drawable.white);
-
                 Intent intent = new Intent(HomeActivity.this, More.class);
                 startActivity(intent);
             }
@@ -121,16 +120,18 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int choice = item.getItemId();
         if (choice == R.id.search){
-            Toast.makeText(this, "Search", Toast.LENGTH_SHORT).show();
-        }
+            Intent intent = new Intent(HomeActivity.this, More.class);
+            startActivity(intent);        }
         if (choice == R.id.category){
-            Toast.makeText(this, "Under Construction", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(HomeActivity.this, More.class);
+            startActivity(intent);
         }
         if (choice == R.id.settings){
             Toast.makeText(this, "Under Construction", Toast.LENGTH_SHORT).show();
         }
         if (choice == R.id.login){
-            Toast.makeText(this, "Under Construction", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }

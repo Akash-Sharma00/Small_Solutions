@@ -13,8 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="10dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -95,7 +94,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginEnd="10dp"
                             android:layout_marginBottom="10dp"
-                            app:srcCompat="@drawable/digitalmarketer" />
+                            app:srcCompat="@drawable/cook" />
 
                         <TextView
                             android:id="@+id/textView10"
@@ -104,7 +103,7 @@
                             android:layout_below="@id/imageView10"
                             android:layout_centerHorizontal="true"
                             android:fontFamily="@font/bree_serif"
-                            android:text="@string/DigitalMarketer"
+                            android:text="@string/cook"
                             android:textSize="20sp" />
 
                     </RelativeLayout>
