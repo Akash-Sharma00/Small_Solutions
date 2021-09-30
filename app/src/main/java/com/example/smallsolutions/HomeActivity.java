@@ -39,7 +39,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 electrician.setBackgroundResource(R.drawable.blue);
-                electrician.setTextColor(Color.WHITE);
                 mechanic.setBackgroundResource(R.drawable.white);
                 softDev.setBackgroundResource(R.drawable.white);
                 carpenter.setBackgroundResource(R.drawable.white);
@@ -52,7 +51,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mechanic.setBackgroundResource(R.drawable.blue);
-                mechanic.setTextColor(Color.WHITE);
                 electrician.setBackgroundResource(R.drawable.white);
                 softDev.setBackgroundResource(R.drawable.white);
                 carpenter.setBackgroundResource(R.drawable.white);
@@ -65,7 +63,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 softDev.setBackgroundResource(R.drawable.blue);
-                softDev.setTextColor(Color.WHITE);
                 mechanic.setBackgroundResource(R.drawable.white);
                 electrician.setBackgroundResource(R.drawable.white);
                 carpenter.setBackgroundResource(R.drawable.white);
@@ -78,7 +75,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 carpenter.setBackgroundResource(R.drawable.blue);
-                carpenter.setTextColor(Color.WHITE);
                 mechanic.setBackgroundResource(R.drawable.white);
                 softDev.setBackgroundResource(R.drawable.white);
                 electrician.setBackgroundResource(R.drawable.white);
@@ -91,7 +87,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 plumber.setBackgroundResource(R.drawable.blue);
-                plumber.setTextColor(Color.WHITE);
                 mechanic.setBackgroundResource(R.drawable.white);
                 softDev.setBackgroundResource(R.drawable.white);
                 carpenter.setBackgroundResource(R.drawable.white);
