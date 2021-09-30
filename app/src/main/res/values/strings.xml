@@ -26,6 +26,6 @@
     <string name="plumber">Plumber</string>
     <string name="electrician">Electrician</string>
     <string name="mechanic">Mechanic</string>
-    <string name="softDev">Software Developer</string>
+    <string name="webDev">Web Developer</string>
     <string name="more">More</string>
 </resources>
