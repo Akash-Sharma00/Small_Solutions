@@ -1,5 +1,7 @@
 com/example/smallsolutions/BuildConfig.java
  com.example.smallsolutions.BuildConfig
+com/example/smallsolutions/More.java
+ com.example.smallsolutions.More
 com/example/smallsolutions/HomeActivity.java
  com.example.smallsolutions.HomeActivity
  com.example.smallsolutions.HomeActivity$1
