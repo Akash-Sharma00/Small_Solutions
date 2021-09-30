@@ -27,5 +27,9 @@
     <string name="electrician">Electrician</string>
     <string name="mechanic">Mechanic</string>
     <string name="webDev">Web Developer</string>
+    <string name="androidapp">App Developer</string>
+    <string name="photoeditor">Photo Editor</string>
+    <string name="videoeditor">Video Editor</string>
+    <string name="DigitalMarketer">Digital Marketer</string>
     <string name="more">More</string>
 </resources>
