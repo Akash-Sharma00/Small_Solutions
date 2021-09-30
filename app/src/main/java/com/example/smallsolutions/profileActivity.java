@@ -10,6 +10,5 @@ public class profileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        getActionBar().setTitle("Profile");
     }
 }
