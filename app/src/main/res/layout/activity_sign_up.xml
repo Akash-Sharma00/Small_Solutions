@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/bree_serif"
             android:text="@string/Choose_the_type_of_registration"
             android:textColor="@color/blue"
@@ -32,7 +32,7 @@
             android:id="@+id/selections"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2">
 
@@ -75,8 +75,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
                 android:fontFamily="@font/bree_serif"
                 android:text="@string/FillTheDetails"
                 android:textColor="@color/blue"
@@ -144,11 +143,8 @@
             <Spinner
                 android:id="@+id/professions"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="5dp"
                 android:dropDownWidth="wrap_content"
                 android:fontFamily="@font/bree_serif"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
@@ -156,11 +152,9 @@
             <Spinner
                 android:id="@+id/expSpinner"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="5dp" />
+                tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
                 android:id="@+id/discription"
@@ -171,15 +165,14 @@
                 android:fontFamily="@font/bree_serif"
                 android:gravity="start|top"
                 android:hint="@string/AboutText"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:minHeight="48dp" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="10dp"
+                android:padding="10dp"
                 android:gravity="right"
                 android:orientation="horizontal">
 
@@ -191,7 +184,7 @@
                     android:backgroundTint="@color/blue"
                     android:fontFamily="@font/bree_serif"
                     android:text="@string/done"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/cancel"
@@ -202,7 +195,7 @@
                     android:fontFamily="@font/bree_serif"
                     android:onClick="CANCEL"
                     android:text="@string/CANCEL"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
