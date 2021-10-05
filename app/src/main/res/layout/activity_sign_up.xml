@@ -7,60 +7,63 @@
     android:layout_marginBottom="5dp"
     tools:context=".SignUpActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/selectionConstraints"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/bree_serif"
-        android:text="@string/Choose_the_type_of_registration"
-        android:textColor="@color/blue"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/selections"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <RadioGroup
-        android:id="@+id/selections"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="11dp"
-        app:layout_constraintBottom_toTopOf="@+id/form"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
-
-        <RadioButton
-            android:id="@+id/employee"
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="7dp"
+            android:layout_margin="10dp"
             android:fontFamily="@font/bree_serif"
-            android:text="@string/Employee" />
+            android:text="@string/Choose_the_type_of_registration"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/employer"
+        <RadioGroup
+            android:id="@+id/selections"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bree_serif"
-            android:text="@string/Employer" />
-    </RadioGroup>
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <RadioButton
+                android:id="@+id/employee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:fontFamily="@font/bree_serif"
+                android:minHeight="48dp"
+                android:text="@string/Employee" />
+
+            <RadioButton
+                android:id="@+id/employer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-15dp"
+                android:fontFamily="@font/bree_serif"
+                android:minHeight="48dp"
+                android:text="@string/Employer" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
         android:id="@+id/form"
-        android:layout_width="389dp"
-        android:layout_height="463dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="87dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/selections"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="@+id/selections"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectionConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,8 +74,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
                 android:fontFamily="@font/bree_serif"
                 android:text="@string/FillTheDetails"
                 android:textColor="@color/blue"
@@ -140,11 +142,8 @@
             <Spinner
                 android:id="@+id/professions"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="5dp"
                 android:dropDownWidth="wrap_content"
                 android:fontFamily="@font/bree_serif"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
@@ -152,11 +151,9 @@
             <Spinner
                 android:id="@+id/expSpinner"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="5dp" />
+                tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
                 android:id="@+id/discription"
@@ -167,15 +164,14 @@
                 android:fontFamily="@font/bree_serif"
                 android:gravity="start|top"
                 android:hint="@string/AboutText"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:minHeight="48dp" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="10dp"
+                android:padding="10dp"
                 android:gravity="right"
                 android:orientation="horizontal">
 
@@ -187,7 +183,7 @@
                     android:backgroundTint="@color/blue"
                     android:fontFamily="@font/bree_serif"
                     android:text="@string/done"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/cancel"
@@ -198,7 +194,7 @@
                     android:fontFamily="@font/bree_serif"
                     android:onClick="CANCEL"
                     android:text="@string/CANCEL"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 

@@ -10,26 +10,37 @@
     android:padding="20sp"
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/skip_login"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:fontFamily="@font/bree_serif"
-        android:minHeight="48dp"
-        android:onClick="skip"
-        android:text="Skip >>>"
-        android:textColor="@color/blue"
-        android:textSize="15dp" />
+        android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/LogoImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="-30dp"
-        android:src="@drawable/mrplumber" />
+        <ImageView
+            android:id="@+id/LogoImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/mrplumber" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/skip_login"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:fontFamily="@font/bree_serif"
+                android:minHeight="48dp"
+                android:onClick="skip"
+                android:text="Skip >>>"
+                android:textColor="@color/blue"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/WelcomeText"
