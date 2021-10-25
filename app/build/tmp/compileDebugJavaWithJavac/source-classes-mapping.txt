@@ -10,13 +10,13 @@ com/example/smallsolutions/HomeActivity.java
  com.example.smallsolutions.HomeActivity$4
  com.example.smallsolutions.HomeActivity$5
  com.example.smallsolutions.HomeActivity$6
-com/example/smallsolutions/MainActivity.java
- com.example.smallsolutions.MainActivity
- com.example.smallsolutions.MainActivity$1
+com/example/smallsolutions/profileActivity.java
+ com.example.smallsolutions.profileActivity
 com/example/smallsolutions/SignUpActivity.java
  com.example.smallsolutions.SignUpActivity
  com.example.smallsolutions.SignUpActivity$1
 com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity
-com/example/smallsolutions/profileActivity.java
- com.example.smallsolutions.profileActivity
+com/example/smallsolutions/MainActivity.java
+ com.example.smallsolutions.MainActivity
+ com.example.smallsolutions.MainActivity$1
