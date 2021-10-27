@@ -84,6 +84,7 @@
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:backgroundTint="#FFFFFF"
+                android:clickable="false"
                 app:srcCompat="@drawable/home_icon" />
 
             <TextView
@@ -106,6 +107,7 @@
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:backgroundTint="#FFFFFF"
+                android:clickable="false"
                 app:srcCompat="@drawable/search_icon" />
 
             <TextView
@@ -126,6 +128,7 @@
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:backgroundTint="#FFFFFF"
+                android:clickable="false"
                 app:srcCompat="@drawable/hired" />
 
             <TextView
@@ -146,12 +149,13 @@
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:backgroundTint="#FFFFFF"
+                android:clickable="false"
                 app:srcCompat="@drawable/ic_baseline_person_outline_24" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="7dp"
+                android:paddingStart="15dp"
                 android:text="@string/profile"
                 android:textSize="16sp" />
         </LinearLayout>
