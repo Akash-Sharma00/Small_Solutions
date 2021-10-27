@@ -12,8 +12,14 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class HomeActivity extends AppCompatActivity {
+
     public void catSearch(View view){
         Intent intent = new Intent(this,Category.class);
+        startActivity(intent);
+    }
+
+    public void profile (View view){
+        Intent intent = new Intent(this,profileActivity.class);
         startActivity(intent);
     }
 
@@ -21,10 +27,5 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        ImageView img = findViewById(R.id.imghome);
-        img.setColorFilter(Color.BLUE);
-        TextView hometxt = findViewById(R.id.hometxt);
-        hometxt.setTextColor(Color.BLUE);
     }
 }

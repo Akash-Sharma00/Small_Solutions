@@ -1,16 +1,16 @@
 com/example/smallsolutions/BuildConfig.java
  com.example.smallsolutions.BuildConfig
+com/example/smallsolutions/Category.java
+ com.example.smallsolutions.Category
+com/example/smallsolutions/profileActivity.java
+ com.example.smallsolutions.profileActivity
+com/example/smallsolutions/SignUpActivity.java
+ com.example.smallsolutions.SignUpActivity
+ com.example.smallsolutions.SignUpActivity$1
 com/example/smallsolutions/HomeActivity.java
  com.example.smallsolutions.HomeActivity
 com/example/smallsolutions/MainActivity.java
  com.example.smallsolutions.MainActivity
  com.example.smallsolutions.MainActivity$1
-com/example/smallsolutions/SignUpActivity.java
- com.example.smallsolutions.SignUpActivity
- com.example.smallsolutions.SignUpActivity$1
 com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity
-com/example/smallsolutions/profileActivity.java
- com.example.smallsolutions.profileActivity
-com/example/smallsolutions/Category.java
- com.example.smallsolutions.Category

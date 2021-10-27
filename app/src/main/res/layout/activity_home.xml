@@ -24,7 +24,6 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:fontFamily="@font/bree_serif"
         android:text="@string/hire_a_person"
         app:layout_constraintStart_toStartOf="@+id/textView15"
@@ -91,9 +90,9 @@
                 android:id="@+id/hometxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="17dp"
+                android:paddingStart="20dp"
                 android:text="@string/Home"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -115,8 +114,9 @@
                 android:id="@+id/cattxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingStart="5dp"
                 android:text="@string/category"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -137,9 +137,9 @@
                 android:id="@+id/hiredtxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="17dp"
+                android:paddingStart="20dp"
                 android:text="@string/hired"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -147,6 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:onClick="profile"
             android:orientation="vertical">
 
             <ImageView
@@ -159,9 +160,9 @@
                 android:id="@+id/profiletxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="15dp"
+                android:paddingStart="17dp"
                 android:text="@string/profile"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 
