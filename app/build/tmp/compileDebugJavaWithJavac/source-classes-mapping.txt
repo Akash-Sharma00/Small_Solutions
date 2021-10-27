@@ -1,15 +1,7 @@
 com/example/smallsolutions/BuildConfig.java
  com.example.smallsolutions.BuildConfig
-com/example/smallsolutions/More.java
- com.example.smallsolutions.More
 com/example/smallsolutions/HomeActivity.java
  com.example.smallsolutions.HomeActivity
- com.example.smallsolutions.HomeActivity$1
- com.example.smallsolutions.HomeActivity$2
- com.example.smallsolutions.HomeActivity$3
- com.example.smallsolutions.HomeActivity$4
- com.example.smallsolutions.HomeActivity$5
- com.example.smallsolutions.HomeActivity$6
 com/example/smallsolutions/MainActivity.java
  com.example.smallsolutions.MainActivity
  com.example.smallsolutions.MainActivity$1
@@ -20,3 +12,5 @@ com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity
 com/example/smallsolutions/profileActivity.java
  com.example.smallsolutions.profileActivity
+com/example/smallsolutions/Category.java
+ com.example.smallsolutions.Category

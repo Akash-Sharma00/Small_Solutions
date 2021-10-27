@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmallSolutions">
         <activity
-            android:name=".More"
+            android:name=".Category"
             android:exported="true" />
         <activity
             android:name=".profileActivity"

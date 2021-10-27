@@ -33,4 +33,9 @@
     <string name="DigitalMarketer">Digital Marketer</string>
     <string name="cook">Cook</string>
     <string name="more">More</string>
+
+
+    <string name="Home">Home Page</string>
+    <string name="hire_a_person">Choose One To Hire</string>
+    <string name="search_a_employee">Search For a Perfect Person</string>
 </resources>
