@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="sans-serif"
         android:text="@string/app_name"
         android:textColor="#000000"
@@ -82,7 +82,7 @@
             <ImageButton
                 android:id="@+id/imageButton2"
                 android:layout_width="80dp"
-                android:layout_height="60dp"
+                android:layout_height="30dp"
                 android:backgroundTint="#FFFFFF"
                 app:srcCompat="@drawable/home_icon" />
 
@@ -104,7 +104,7 @@
 
             <ImageButton
                 android:layout_width="80dp"
-                android:layout_height="60dp"
+                android:layout_height="30dp"
                 android:backgroundTint="#FFFFFF"
                 app:srcCompat="@drawable/search_icon" />
 
@@ -124,15 +124,15 @@
 
             <ImageButton
                 android:layout_width="80dp"
-                android:layout_height="60dp"
+                android:layout_height="30dp"
                 android:backgroundTint="#FFFFFF"
-                app:srcCompat="@drawable/home_icon" />
+                app:srcCompat="@drawable/hired" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="17dp"
-                android:text="@string/Home"
+                android:text="@string/hired"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -144,14 +144,14 @@
 
             <ImageButton
                 android:layout_width="80dp"
-                android:layout_height="60dp"
+                android:layout_height="30dp"
                 android:backgroundTint="#FFFFFF"
                 app:srcCompat="@drawable/ic_baseline_person_outline_24" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="10dp"
+                android:paddingStart="7dp"
                 android:text="@string/profile"
                 android:textSize="16sp" />
         </LinearLayout>
