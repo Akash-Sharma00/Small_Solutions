@@ -13,8 +13,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class HomeActivity extends AppCompatActivity {
 
     ImageView homeimg, searchimg, hiredimg, profileimg;
@@ -84,10 +82,12 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    private void replaceFragment(Fragment fragment){
+
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.homeFrame, fragment);
         fragmentTransaction.commit();
     }
+
 }
