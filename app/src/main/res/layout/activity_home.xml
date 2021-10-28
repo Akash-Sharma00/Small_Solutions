@@ -84,6 +84,7 @@
             android:background="@drawable/blue"
             android:text="Button"
             android:textColor="#FFFFFF" />
+
     </FrameLayout>
 
     <LinearLayout
@@ -103,7 +104,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:clickable="true"
             android:onClick="homepage"
             android:orientation="vertical">
 

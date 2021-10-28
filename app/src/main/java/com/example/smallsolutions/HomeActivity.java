@@ -1,6 +1,9 @@
 package com.example.smallsolutions;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -56,6 +59,8 @@ public class HomeActivity extends AppCompatActivity {
         clearColor();
         searchimg.setColorFilter(Color.BLUE);
         searchtxt.setTextColor(Color.BLUE);
+
+        replaceFragment(new categoryfrag());
     }
 
     public void hiredpage(View view){
@@ -77,5 +82,12 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+    }
+
+    private void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.homeFrame, fragment);
+        fragmentTransaction.commit();
     }
 }
