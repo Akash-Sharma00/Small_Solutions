@@ -42,10 +42,12 @@
 
         <LinearLayout
             android:id="@+id/linearLayout6"
-            android:layout_width="359dp"
+            android:layout_width="match_parent"
             android:layout_height="47dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="95dp"
+            android:layout_marginEnd="15dp"
             android:background="@drawable/search_bar_bg"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +74,16 @@
                 android:textColorHint="@color/grey"
                 android:textSize="14sp" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="180dp"
+            android:background="@drawable/blue"
+            android:text="Button"
+            android:textColor="#FFFFFF" />
     </FrameLayout>
 
     <LinearLayout
@@ -80,6 +92,8 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -88,8 +102,8 @@
             android:id="@+id/nav_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:clickable="true"
             android:onClick="homepage"
             android:orientation="vertical">
 
@@ -105,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="20dp"
                 android:text="@string/Home"
+                android:textColor="#8F9192"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -129,6 +144,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="5dp"
                 android:text="@string/category"
+                android:textColor="#8F9192"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -153,6 +169,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="20dp"
                 android:text="@string/hired"
+                android:textColor="#8F9192"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -176,6 +193,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="17dp"
                 android:text="@string/profile"
+                android:textColor="#8F9192"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
