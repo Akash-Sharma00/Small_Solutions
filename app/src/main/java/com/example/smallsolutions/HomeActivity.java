@@ -32,16 +32,16 @@ public class HomeActivity extends AppCompatActivity {
     public  void clearColor(){
         getElement();
         homeimg.clearColorFilter();
-        hometxt.setTextColor(R.drawable.search_bar_bg);
+        hometxt.setTextColor(Color.rgb(143,145,146));
 
         hiredimg.clearColorFilter();
-        hiredtxt.setTextColor(R.drawable.search_bar_bg);
+        hiredtxt.setTextColor(Color.rgb(143,145,146));
 
         profileimg.clearColorFilter();
-        profiletxt.setTextColor(R.drawable.search_bar_bg);
+        profiletxt.setTextColor(Color.rgb(143,145,146));
 
         searchimg.clearColorFilter();
-        searchtxt.setTextColor(R.drawable.search_bar_bg);
+        searchtxt.setTextColor(Color.rgb(143,145,146));
     }
 
     public void homepage(View view){
