@@ -6,66 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="15dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/app_name"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/bree_serif"
-        android:text="@string/hire_a_person"
-        app:layout_constraintStart_toStartOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="359dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/search_bar_bg"
-        android:orientation="horizontal"
+    <FrameLayout
+        android:id="@+id/homeFrame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/imageButton"
+        <TextView
+            android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:backgroundTint="#E4E3E3"
-            app:srcCompat="@drawable/search_icon" />
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/app_name"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName"
+        <TextView
+            android:id="@+id/textView16"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/bree_serif"
+            android:text="@string/hire_a_person"
+            app:layout_constraintStart_toStartOf="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="359dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="95dp"
             android:background="@drawable/search_bar_bg"
-            android:ems="10"
-            android:hint="@string/search_a_employee"
-            android:inputType="textPersonName"
-            android:textColorHint="@color/grey"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="#E4E3E3"
+                app:srcCompat="@drawable/search_icon" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/search_bar_bg"
+                android:ems="10"
+                android:hint="@string/search_a_employee"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/grey"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </FrameLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout7"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
         android:background="#FFFFFF"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
