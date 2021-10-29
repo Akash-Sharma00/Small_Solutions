@@ -55,11 +55,6 @@ public class HomeActivity extends AppCompatActivity {
         clearColor();
         searchimg.setColorFilter(Color.BLUE);
         searchtxt.setTextColor(Color.BLUE);
-
-        categoryfrag frag1 = new categoryfrag();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.homeFrame, frag1);
-        fragmentTransaction.commit();
     }
 
     public void hiredpage(View view){
