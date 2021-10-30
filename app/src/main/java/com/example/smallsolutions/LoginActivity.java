@@ -12,6 +12,7 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.tabs.TabLayout;
 
 public class LoginActivity extends AppCompatActivity {
@@ -89,27 +90,30 @@ public class LoginActivity extends AppCompatActivity {
 //        Collapse listener for appbar
         AppBarLayout appBarLayout;
 
+//        function to listen collapsing of appbar AppBarLayout appBarLayout;
+
         appBarLayout = findViewById(R.id.appbar_layout);
+        CollapsingToolbarLayout collapsingToolbarLayout;
+        collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
 
-//        function to listen collapsing of appbar
-        appBarLayout.addOnOffsetChangedListener((AppBarLayout.BaseOnOffsetChangedListener) (appBarLayout1, verticalOffset) -> {
-            if(Math.abs(verticalOffset) - appBarLayout1.getTotalScrollRange() == 0){
-                Toolbar toolbar;
-                toolbar = findViewById(R.id.collapsing_toolbar);
-                toolbar.setTitleTextColor(Color.rgb(0,0,0));
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                if(verticalOffset == 0){
+                    toolbar.setTitleTextColor(Color.rgb(255,255,255));
 
-                NestedScrollView scrollView;
-                scrollView = findViewById(R.id.form);
-                scrollView.setBackgroundColor(Color.rgb(255,255,255));
-            }
-            else{
-                Toolbar toolbar;
-                toolbar = findViewById(R.id.collapsing_toolbar);
-                toolbar.setTitleTextColor(Color.rgb(255,255,255));
+                    NestedScrollView scrollView;
+                    scrollView = findViewById(R.id.form);
+                    scrollView.setBackgroundResource(R.drawable.form_background);
+                }
+                else{
+                    toolbar.setTitleTextColor(Color.rgb(0,0,0));
 
-                NestedScrollView scrollView;
-                scrollView = findViewById(R.id.form);
-                scrollView.setBackgroundResource(R.drawable.form_background);
+                    NestedScrollView scrollView;
+                    scrollView = findViewById(R.id.form);
+                    scrollView.setBackgroundColor(Color.rgb(255,255,255));
+                }
             }
         });
     }
