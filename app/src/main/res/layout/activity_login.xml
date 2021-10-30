@@ -9,6 +9,7 @@
     tools:context=".LoginActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
@@ -46,6 +47,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/form"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/form_background"
@@ -61,7 +63,6 @@
                 android:id="@+id/signin_tabbar_layout"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/form_background"
                 app:layout_constraintBottom_toTopOf="@id/form_viewpager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -72,6 +73,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:tabGravity="fill"
+                    android:background="@color/white"
                     app:tabMode="fixed"
                     app:tabTextColor="@color/grey"
                     tools:ignore="SpeakableTextPresentCheck">
