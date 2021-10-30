@@ -14,18 +14,18 @@ public class FragmentAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-//        switch (position)
-//        {
-//            case 1:
+        switch (position)
+        {
+            case 1:
+                return new frag2();
+//            case 2:
 //                return new frag1();
-////            case 2:
-////                return new frag1();
-//        }
+        }
         return new frag1();
     }
 
     @Override
     public int getItemCount() {
-        return 1;
+        return 2;
     }
 }
