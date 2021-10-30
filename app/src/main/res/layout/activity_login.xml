@@ -1,150 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:backgroundTint="@color/ic_launcher_background"
-    android:orientation="vertical"
-    android:padding="20sp"
+    android:background="@drawable/toolbar_background"
     tools:context=".LoginActivity">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
-        <ImageView
-            android:id="@+id/LogoImage"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/mrplumber" />
-
-        <RelativeLayout
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp"
-            android:gravity="right">
+            android:layout_height="150dp"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/toolbar_background"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="@string/app_name">
 
             <TextView
-                android:id="@+id/skip_login"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:fontFamily="@font/bree_serif"
-                android:minHeight="48dp"
-                android:onClick="skip"
-                android:text="Skip >>>"
-                android:textColor="@color/blue"
-                android:textSize="15dp" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="@string/WelcomeText"
+                android:textColor="@color/white"
+                android:layout_marginLeft="30dp"
+                android:textSize="24sp"
+                app:layout_collapseMode="parallax" />
 
-        </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
 
-    </LinearLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-    <TextView
-        android:id="@+id/WelcomeText"
-        android:layout_width="282dp"
-        android:layout_height="88dp"
-        android:fontFamily="@font/baloo_bhai"
-        android:text="@string/WelcomeTextLoginScreen"
-        android:layout_marginTop="-15dp"
-        android:textColor="@color/blue"
-        android:textSize="30sp"
-        android:lineSpacingExtra="-20dp"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <TextView
-        android:id="@+id/SignInText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_gravity="left"
-        android:fontFamily="@font/baloo_bhai"
-        android:text="@string/WelcomeSignInText"
-        android:textColor="@color/blue"
-        android:textSize="16sp" />
-
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:background="@drawable/form_background"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/UserName"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="fill"
+            android:padding="10dp">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/signin_tabbar_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="3dp"
-                android:fontFamily="@font/bree_serif"
-                android:hint="@string/Email"
-                android:inputType="textEmailAddress" />
+                android:layout_height="40dp"
+                android:background="@drawable/form_background"
+                app:layout_constraintBottom_toTopOf="@id/form_viewpager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/form_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:tabGravity="fill"
+                    app:tabMode="fixed"
+                    app:tabTextColor="@color/grey"
+                    tools:ignore="SpeakableTextPresentCheck">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Password"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="@string/PasswordText"
-            app:passwordToggleEnabled="true">
+                </com.google.android.material.tabs.TabLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/form_viewpager"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bree_serif"
-                android:inputType="textPassword" />
+                android:layout_height="600dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signin_tabbar_layout" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/ForgetPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="8dp"
-            android:fontFamily="@font/bree_serif"
-            android:minHeight="48dp"
-            android:onClick="forgetPassword"
-            android:text="@string/ForgetPasswordButton"
-            android:textColor="@color/blue"
-            android:textSize="16sp" />
+    </androidx.core.widget.NestedScrollView>
 
-        <Button
-            android:id="@+id/SignUpButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:backgroundTint="@color/blue"
-            android:onClick="SignIn"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:text="@string/signInText"
-            android:fontFamily="@font/bree_serif"/>
-
-        <Button
-            android:id="@+id/new_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/ic_launcher_background"
-            android:onClick="newUser"
-            android:text="@string/NewUserButtonText"
-            android:layout_gravity="center"
-            android:fontFamily="@font/bree_serif"
-            android:textColor="@color/blue" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
