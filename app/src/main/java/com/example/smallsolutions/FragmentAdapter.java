@@ -17,11 +17,11 @@ public class FragmentAdapter extends FragmentStateAdapter {
         switch (position)
         {
             case 1:
-                return new frag2();
+                return new CategoryFragment();
 //            case 2:
 //                return new frag1();
         }
-        return new frag1();
+        return new HomeFragment();
     }
 
     @Override
