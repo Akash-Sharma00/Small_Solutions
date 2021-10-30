@@ -31,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         fragmentAdapter = new FragmentAdapter(fm, getLifecycle());
         viewPager2.setAdapter(fragmentAdapter);
+        tabLayout.getTabAt(0).getIcon().setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_IN);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
