@@ -13,5 +13,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <!--        toolbar title-->
+        <item name="android:textColorPrimary">@android:color/white</item>
     </style>
 </resources>
