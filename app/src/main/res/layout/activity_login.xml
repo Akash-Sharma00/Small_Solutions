@@ -20,7 +20,7 @@
             android:layout_height="150dp"
             android:fitsSystemWindows="true"
             android:background="@drawable/toolbar_background"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="?attr/colorOnPrimary"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             app:title="@string/app_name">
 

@@ -1,13 +1,14 @@
 <resources>
+    <!--    Headings-->
     <string name="app_name">Small Solutions</string>
-    <string name="textview">Small Solutions</string>
-    <string name="WelcomeTextLoginScreen">Hello there, Welcome Back</string>
-    <string name="WelcomeSignInText">Sign in to Proceed</string>
+    <string name="WelcomeText">Welcome to</string>
+
+    <!--    Form Textbox-->
     <string name="UserNameText">Name</string>
     <string name="PasswordText">Password</string>
     <string name="ForgetPasswordButton">Forget Password?</string>
     <string name="signInText">Sign in</string>
-    <string name="NewUserButtonText">New User? Sign UP</string>
+    <string name="SignUpText">Sign UP</string>
     <string name="SearchText">Search here</string>
     <string name="Employer">Employer</string>
     <string name="Employee">Employee</string>
@@ -22,6 +23,8 @@
     <string name="done">DONE</string>
     <string name="CANCEL">CANCEL</string>
     <string name="FillTheDetails">Fill the details</string>
+
+    <!--    Catagory activity text-->
     <string name="carpenter">Carpenter</string>
     <string name="plumber">Plumber</string>
     <string name="electrician">Electrician</string>
