@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,71 +12,48 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class HomeActivity extends AppCompatActivity {
 
-    ImageView homeimg, searchimg, hiredimg, profileimg;
-    TextView hometxt, searchtxt, hiredtxt, profiletxt;
-
-    public void getElement(){
-        homeimg = findViewById(R.id.imghome);
-        searchimg = findViewById(R.id.imgsearch);
-        hiredimg = findViewById(R.id.imghired);
-        profileimg = findViewById(R.id.imgprofile);
-
-        hometxt = findViewById(R.id.hometxt);
-        searchtxt = findViewById(R.id.cattxt);
-        hiredtxt = findViewById(R.id.hiredtxt);
-        profiletxt = findViewById(R.id.profiletxt);
-    }
-
-    public  void clearColor(){
-        getElement();
-        homeimg.clearColorFilter();
-        hometxt.setTextColor(Color.rgb(143,145,146));
-
-        hiredimg.clearColorFilter();
-        hiredtxt.setTextColor(Color.rgb(143,145,146));
-
-        profileimg.clearColorFilter();
-        profiletxt.setTextColor(Color.rgb(143,145,146));
-
-        searchimg.clearColorFilter();
-        searchtxt.setTextColor(Color.rgb(143,145,146));
-    }
-
-    public void homepage(View view){
-        getElement();
-        clearColor();
-        homeimg.setColorFilter(Color.BLUE);
-        hometxt.setTextColor(Color.BLUE);
-    }
-
-    public void catepage(View view){
-        getElement();
-        clearColor();
-        searchimg.setColorFilter(Color.BLUE);
-        searchtxt.setTextColor(Color.BLUE);
-    }
-
-    public void hiredpage(View view){
-        getElement();
-        clearColor();
-        hiredtxt.setTextColor(Color.BLUE);
-        hiredimg.setColorFilter(Color.BLUE);
-    }
-
-    public void profilepage(View view){
-        getElement();
-        clearColor();
-        profileimg.setColorFilter(Color.BLUE);
-        profiletxt.setTextColor(Color.BLUE);
-    }
-
+    TabLayout tabLayout;
+    ViewPager2 viewPager2;
+    FragmentAdapter fragmentAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager2 = findViewById(R.id.viewpager2);
+
+        FragmentManager fm = getSupportFragmentManager();
+        fragmentAdapter = new FragmentAdapter(fm, getLifecycle());
+        viewPager2.setAdapter(fragmentAdapter);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager2.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                tabLayout.selectTab(tabLayout.getTabAt(position));
+            }
+        });
     }
 
 }
