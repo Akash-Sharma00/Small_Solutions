@@ -234,7 +234,8 @@
         android:layout_marginTop="373dp"
         android:text="@string/Recommended"
         android:textColor="#020202"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/textView26"
@@ -277,7 +278,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="130dp"
-                    tools:src="@drawable/mrplumber" />
+                    android:src="@drawable/mrplumber" />
 
                 <TextView
                     android:id="@+id/textView18"
@@ -292,7 +293,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <RatingBar
@@ -313,7 +314,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="130dp"
-                    tools:src="@drawable/mrplumber" />
+                    android:src="@drawable/mrplumber" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -326,7 +327,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <RatingBar
@@ -346,7 +347,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="130dp"
-                    tools:src="@drawable/mrplumber" />
+                    android:src="@drawable/mrplumber" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -359,7 +360,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <RatingBar
@@ -379,7 +380,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="130dp"
-                    tools:src="@drawable/mrplumber" />
+                    android:src="@drawable/mrplumber" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -392,7 +393,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <RatingBar
@@ -412,7 +413,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="130dp"
-                    tools:src="@drawable/mrplumber" />
+                    android:src="@drawable/mrplumber" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -425,7 +426,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <RatingBar
@@ -445,7 +446,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="130dp"
-                    tools:src="@drawable/mrplumber" />
+                    android:src="@drawable/mrplumber" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -458,7 +459,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <RatingBar
@@ -478,7 +479,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="130dp"
-                    tools:src="@drawable/mrplumber" />
+                    android:src="@drawable/mrplumber" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -491,7 +492,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <RatingBar
@@ -524,7 +525,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <RatingBar
@@ -544,7 +545,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="130dp"
-                    tools:src="@drawable/mrplumber" />
+                    android:src="@drawable/mrplumber" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -557,7 +558,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <RatingBar
@@ -577,7 +578,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="130dp"
-                    tools:src="@drawable/mrplumber" />
+                    android:src="@drawable/mrplumber" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -590,7 +591,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <RatingBar
@@ -610,7 +611,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="130dp"
-                    tools:src="@drawable/mrplumber" />
+                    android:src="@drawable/mrplumber" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -623,7 +624,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <RatingBar
