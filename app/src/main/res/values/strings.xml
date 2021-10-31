@@ -32,7 +32,7 @@
     <string name="videoeditor">Video Editor</string>
     <string name="DigitalMarketer">Digital Marketer</string>
     <string name="cook">Cook</string>
-    <string name="more">More</string>
+    <string name="more">more</string>
 
 
     <string name="Home">Home</string>
@@ -41,6 +41,9 @@
     <string name="category">Categories</string>
     <string name="hire_a_person">Choose Professionals To Hire</string>
     <string name="search_a_employee">Search For Skilled Person</string>
+    <string name="Recommended">Recommended Employees</string>
+    <string name="you_may_also_like_this">You May Also Like This</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
