@@ -28,3 +28,4 @@ com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity
  com.example.smallsolutions.LoginActivity$1
  com.example.smallsolutions.LoginActivity$2
+ com.example.smallsolutions.LoginActivity$3

@@ -89,30 +89,25 @@ public class LoginActivity extends AppCompatActivity {
 
 //        Collapse listener for appbar
         AppBarLayout appBarLayout;
+        appBarLayout = findViewById(R.id.appbar_layout);
 
 //        function to listen collapsing of appbar AppBarLayout appBarLayout;
 
-        appBarLayout = findViewById(R.id.appbar_layout);
-        CollapsingToolbarLayout collapsingToolbarLayout;
-        collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                if(verticalOffset == 0){
-                    toolbar.setTitleTextColor(Color.rgb(255,255,255));
-
-                    NestedScrollView scrollView;
-                    scrollView = findViewById(R.id.form);
-                    scrollView.setBackgroundResource(R.drawable.form_background);
-                }
-                else{
-                    toolbar.setTitleTextColor(Color.rgb(0,0,0));
-
+                if(Math.abs(verticalOffset) - appBarLayout.getTotalScrollRange() == 0){
                     NestedScrollView scrollView;
                     scrollView = findViewById(R.id.form);
                     scrollView.setBackgroundColor(Color.rgb(255,255,255));
+
+                    CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
+                    collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.grey));
+                }
+                else{
+                    NestedScrollView scrollView;
+                    scrollView = findViewById(R.id.form);
+                    scrollView.setBackgroundResource(R.drawable.form_background);
                 }
             }
         });
