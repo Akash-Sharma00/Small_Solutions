@@ -70,12 +70,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="15dp"
@@ -86,105 +88,73 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/plumber" />
-                </LinearLayout>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plumber" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/plumber" />
-                </LinearLayout>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plumber" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/plumber" />
-                </LinearLayout>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plumber" />
             </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
@@ -194,100 +164,78 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/plumber" />
-                </LinearLayout>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plumber" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/plumber" />
-                </LinearLayout>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plumber" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/plumber" />
-                </LinearLayout>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plumber" />
             </LinearLayout>
-
         </LinearLayout>
+
     </LinearLayout>
 
-    </FrameLayout>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="373dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </HorizontalScrollView>
+
+</FrameLayout>
