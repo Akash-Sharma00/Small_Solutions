@@ -102,7 +102,8 @@ public class LoginActivity extends AppCompatActivity {
                     scrollView.setBackgroundColor(Color.rgb(255,255,255));
 
                     CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
-                    collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.grey));
+                    collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.white));
+                    collapsingToolbarLayout.setContentScrimResource(R.drawable.toolbar_background);
                 }
                 else{
                     NestedScrollView scrollView;
