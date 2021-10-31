@@ -275,7 +275,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:src="@tools:sample/avatars" />
@@ -312,20 +311,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Name"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
@@ -334,7 +330,6 @@
                     android:textStyle="bold" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar"
                     style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -349,20 +344,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Name"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
@@ -371,7 +363,6 @@
                     android:textStyle="bold" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar"
                     style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -386,20 +377,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Name"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
@@ -408,7 +396,6 @@
                     android:textStyle="bold" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar"
                     style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -423,20 +410,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Name"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
@@ -445,7 +429,6 @@
                     android:textStyle="bold" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar"
                     style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -460,20 +443,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Name"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
@@ -482,7 +462,6 @@
                     android:textStyle="bold" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar"
                     style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -497,20 +476,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Name"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
@@ -519,7 +495,6 @@
                     android:textStyle="bold" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar"
                     style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -534,20 +509,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Name"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
@@ -556,7 +528,6 @@
                     android:textStyle="bold" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar"
                     style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -571,20 +542,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Name"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
@@ -593,7 +561,6 @@
                     android:textStyle="bold" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar"
                     style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -614,14 +581,12 @@
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Name"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/electrician"
@@ -630,7 +595,6 @@
                     android:textStyle="bold" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar"
                     style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
