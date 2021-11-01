@@ -15,13 +15,15 @@
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/bree_serif"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintVertical_bias="0.08"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
@@ -30,10 +32,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="@string/PasswordText"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/bree_serif"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +57,8 @@
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/bree_serif"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,10 +73,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="@string/Contact"
+        android:inputType="number"
         android:minHeight="48dp"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/bree_serif"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,10 +94,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="@string/Age"
+        android:inputType="number"
         android:minHeight="48dp"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/bree_serif"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,6 +109,27 @@
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Employee_drop_down"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:hint="Select Catagoty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age_edittext"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".8">
 
+        <AutoCompleteTextView
+            android:id="@+id/autoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

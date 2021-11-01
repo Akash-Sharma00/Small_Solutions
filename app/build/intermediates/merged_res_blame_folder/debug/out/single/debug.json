@@ -16,12 +16,12 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_login.xml.flat",
@@ -78,6 +78,10 @@
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_dropdown_textview.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\dropdown_textview.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
@@ -144,12 +148,12 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\cook.png"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\menu_toolbar.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\menu\\toolbar.xml"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\menu_toolbar.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\menu\\toolbar.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_androidapp.jpeg.flat",

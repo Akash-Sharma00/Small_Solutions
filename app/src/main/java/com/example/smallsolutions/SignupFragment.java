@@ -7,6 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -53,12 +58,23 @@ public class SignupFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_signup, container, false);
+        View root = inflater.inflate(R.layout.fragment_signup, container, false);
+
+        AutoCompleteTextView autoCompleteTextView = root.findViewById(R.id.autoComplete);
+
+        String[] category = {"Employer", "Employee"};
+        String[] professions = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
+
+        ArrayAdapter<String> adapter_employee;
+        adapter_employee = new ArrayAdapter<String>(root.getContext(), R.layout.dropdown_textview, R.id.items_design, category);
+        autoCompleteTextView.setAdapter(adapter_employee);
+        return root;
     }
 }
