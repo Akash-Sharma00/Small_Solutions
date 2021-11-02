@@ -67,13 +67,15 @@ public class SignupFragment extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_signup, container, false);
 
-        AutoCompleteTextView autoCompleteTextView = root.findViewById(R.id.autoComplete);
+        AutoCompleteTextView autoCompleteTextView = root.findViewById(R.id.autoComplete_catagory);
+        autoCompleteTextView.setInputType(0);
 
         String[] category = {"Employer", "Employee"};
         String[] professions = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
 
         ArrayAdapter<String> adapter_employee;
         adapter_employee = new ArrayAdapter<String>(root.getContext(), R.layout.dropdown_textview, R.id.items_design, category);
+        autoCompleteTextView.setSelected(true);
         autoCompleteTextView.setAdapter(adapter_employee);
         return root;
     }

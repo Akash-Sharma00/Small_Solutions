@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -44,6 +46,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
+
+//        For welcome text animation
+        NestedScrollView scrollView = findViewById(R.id.form);
+
+        TextView welcome_text = findViewById(R.id.welcome_text_toolbar);
+        welcome_text.animate().translationY(scrollView.getScrollY()).setDuration(0);
 
 //        Creating variable for viewpager, tablayout and adapter class
         ViewPager2 pager2;

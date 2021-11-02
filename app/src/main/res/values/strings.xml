@@ -37,4 +37,8 @@
     <string name="cook">Cook</string>
     <string name="more">More</string>
 
+<!--    DropDown hint text-->
+    <string name="catagory">Select Catogory</string>
+    <style name="professions">Select Profession</style>
+
 </resources>

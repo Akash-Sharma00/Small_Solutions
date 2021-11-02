@@ -26,6 +26,7 @@
             app:title="@string/app_name">
 
             <TextView
+                android:id="@+id/welcome_text_toolbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|start"
@@ -34,7 +35,7 @@
                 android:textColor="@color/white"
                 android:layout_marginStart="30dp"
                 android:textSize="24sp"
-                app:layout_collapseMode="parallax" />
+                app:layout_collapseMode="none" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -75,6 +76,8 @@
                     android:layout_height="match_parent"
                     app:tabGravity="fill"
                     android:background="@color/white"
+                    app:tabSelectedTextColor="@color/blue"
+                    sele
                     app:tabMode="fixed"
                     app:tabTextColor="@color/grey"
                     tools:ignore="SpeakableTextPresentCheck">
