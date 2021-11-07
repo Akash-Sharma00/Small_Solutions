@@ -269,8 +269,8 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="420dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:background="#E3EAF8">
 
         <LinearLayout
