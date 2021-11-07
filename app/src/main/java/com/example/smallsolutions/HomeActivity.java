@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -58,6 +60,14 @@ public class HomeActivity extends AppCompatActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
+
+        ImageView burger = findViewById(R.id.burger);
+         burger.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Toast.makeText(getApplicationContext(), "Hello my friend", Toast.LENGTH_SHORT).show();
+             }
+         });
     }
 
 }

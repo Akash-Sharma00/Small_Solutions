@@ -18,9 +18,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmallSolutions" >
         <activity
-            android:name="com.example.smallsolutions.Category"
-            android:exported="true" />
-        <activity
             android:name="com.example.smallsolutions.profileActivity"
             android:exported="true" />
         <activity

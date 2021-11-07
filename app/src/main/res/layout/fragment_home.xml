@@ -8,7 +8,7 @@
     tools:context=".HomeFragment">
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/burger"
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_gravity="right"
@@ -241,7 +241,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="393dp"
+        android:layout_marginTop="383dp"
         android:text="@string/Recommended"
         android:textColor="#020202"
         android:textSize="18sp"
@@ -252,7 +252,7 @@
         android:layout_width="50dp"
         android:layout_height="25dp"
         android:layout_gravity="right"
-        android:layout_marginTop="393dp"
+        android:layout_marginTop="383dp"
         android:layout_marginEnd="10dp"
         android:text="@string/more"
         android:textColor="@color/BLUE"
@@ -263,7 +263,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="415dp"
+        android:layout_marginTop="405dp"
         android:layout_marginBottom="5dp"
         android:text="@string/you_may_also_like_this"
         android:textSize="12sp" />
