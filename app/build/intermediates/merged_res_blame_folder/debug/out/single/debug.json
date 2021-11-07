@@ -24,6 +24,10 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_profession_design.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\profession_design.xml"
+    },
+    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_login.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_login.xml"
     },

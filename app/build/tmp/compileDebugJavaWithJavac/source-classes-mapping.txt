@@ -1,19 +1,24 @@
 com/example/smallsolutions/BuildConfig.java
  com.example.smallsolutions.BuildConfig
-com/example/smallsolutions/LoginFragment.java
- com.example.smallsolutions.LoginFragment
 com/example/smallsolutions/profileActivity.java
  com.example.smallsolutions.profileActivity
 com/example/smallsolutions/More.java
  com.example.smallsolutions.More
+com/example/smallsolutions/SignUpActivity.java
+ com.example.smallsolutions.SignUpActivity
+ com.example.smallsolutions.SignUpActivity$1
+com/example/smallsolutions/LoginFragment.java
+ com.example.smallsolutions.LoginFragment
+com/example/smallsolutions/ProfessionRecyclerI.java
+ com.example.smallsolutions.ProfessionRecyclerI
 com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity
  com.example.smallsolutions.LoginActivity$1
  com.example.smallsolutions.LoginActivity$2
  com.example.smallsolutions.LoginActivity$3
-com/example/smallsolutions/SignUpActivity.java
- com.example.smallsolutions.SignUpActivity
- com.example.smallsolutions.SignUpActivity$1
+com/example/smallsolutions/MainActivity.java
+ com.example.smallsolutions.MainActivity
+ com.example.smallsolutions.MainActivity$1
 com/example/smallsolutions/HomeActivity.java
  com.example.smallsolutions.HomeActivity
  com.example.smallsolutions.HomeActivity$1
@@ -22,10 +27,12 @@ com/example/smallsolutions/HomeActivity.java
  com.example.smallsolutions.HomeActivity$4
  com.example.smallsolutions.HomeActivity$5
  com.example.smallsolutions.HomeActivity$6
-com/example/smallsolutions/MainActivity.java
- com.example.smallsolutions.MainActivity
- com.example.smallsolutions.MainActivity$1
+com/example/smallsolutions/ProfessionAdapter.java
+ com.example.smallsolutions.ProfessionAdapter
+ com.example.smallsolutions.ProfessionAdapter$ViewHolder
 com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment
+ com.example.smallsolutions.SignupFragment$1
+ com.example.smallsolutions.SignupFragment$2
 com/example/smallsolutions/LoginFragmentAdapter.java
  com.example.smallsolutions.LoginFragmentAdapter

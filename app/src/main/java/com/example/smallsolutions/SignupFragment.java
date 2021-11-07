@@ -3,15 +3,22 @@ package com.example.smallsolutions;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,22 +68,73 @@ public class SignupFragment extends Fragment {
 
     }
 
+    AutoCompleteTextView autoCompleteTextView;
+    String[] category = {"Employer", "Employee"};
+    String[] professions = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
+    TextView addText, removeText;
+    ArrayList<ProfessionRecyclerI> professionArray;
+    ArrayAdapter adapterList;
+    RecyclerView recycler;
+    ProfessionAdapter recyclerAdapter;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_signup, container, false);
 
-        AutoCompleteTextView autoCompleteTextView = root.findViewById(R.id.autoComplete_catagory);
-        autoCompleteTextView.setInputType(0);
+        catatoryAdapter(root);
+        professionAdapter(root);
 
-        String[] category = {"Employer", "Employee"};
-        String[] professions = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
+        addText = root.findViewById(R.id.add_profession);
+        removeText = root.findViewById(R.id.remove_profession);
 
-        ArrayAdapter<String> adapter_employee;
-        adapter_employee = new ArrayAdapter<String>(root.getContext(), R.layout.dropdown_textview, R.id.items_design, category);
-        autoCompleteTextView.setSelected(true);
-        autoCompleteTextView.setAdapter(adapter_employee);
+        addText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addProfession(root);
+            }
+        });
+
+        removeText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                removeProfession();
+            }
+        });
+
         return root;
     }
+
+    public void catatoryAdapter(View root){
+        autoCompleteTextView = root.findViewById(R.id.autoComplete_catagory);
+        autoCompleteTextView.setInputType(0);
+
+        ArrayAdapter<String> adapter_employee;
+        adapter_employee = new ArrayAdapter<>(root.getContext(), R.layout.dropdown_textview, R.id.items_design, category);
+        autoCompleteTextView.setSelected(true);
+        autoCompleteTextView.setAdapter(adapter_employee);
+    }
+
+    public void professionAdapter(View root){
+        recycler = root.findViewById(R.id.recycler);
+        adapterList = new ArrayAdapter(root.getContext(),R.layout.dropdown_textview,R.id.items_design,professions);
+        professionArray = new ArrayList<>();
+        professionArray.add(new ProfessionRecyclerI(adapterList));
+        recyclerAdapter = new ProfessionAdapter(professionArray);
+        recycler.setLayoutManager(new LinearLayoutManager(root.getContext()));
+        recycler.setAdapter(recyclerAdapter);
+    }
+
+      public void addProfession(View root){
+          professionArray.add(0, new ProfessionRecyclerI(adapterList));
+          recyclerAdapter.notifyItemInserted(0);
+      }
+
+      public void removeProfession(){
+          if (professionArray.size() > 1){
+              professionArray.remove(0);
+              recyclerAdapter.notifyItemRemoved(0);
+          }
+      }
 }

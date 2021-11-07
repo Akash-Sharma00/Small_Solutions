@@ -70,6 +70,8 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Login"));
         tabLayout.addTab(tabLayout.newTab().setText("Sign up"));
 
+        tabLayout.setSelectedTabIndicatorColor(Color.rgb(48,99,184));
+
 //        Hooking tablayout with viewpager
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

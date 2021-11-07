@@ -77,7 +77,6 @@
                     app:tabGravity="fill"
                     android:background="@color/white"
                     app:tabSelectedTextColor="@color/blue"
-                    sele
                     app:tabMode="fixed"
                     app:tabTextColor="@color/grey"
                     tools:ignore="SpeakableTextPresentCheck">
