@@ -13,22 +13,22 @@ import android.widget.Toast;
 
 public class HomeFragment extends Fragment {
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        ImageView drawer = view.findViewById(R.id.burger);
+        ImageView hamburger = (ImageView) getView().findViewById(R.id.burger);
 
-        drawer.setOnClickListener(new View.OnClickListener() {
+        hamburger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(view.getContext(), "sf", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "hello", Toast.LENGTH_SHORT).show();
             }
         });
 
-        return view;
+        return inflater.inflate(R.layout.fragment_home, container, false);
 
     }
 }

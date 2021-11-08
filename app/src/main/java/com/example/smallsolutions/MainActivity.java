@@ -51,11 +51,4 @@ public class MainActivity extends AppCompatActivity {
             }
         },SPLASH_SCREEN);
 
-        ImageView burger = findViewById(R.id.burger);
-        burger.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Hello my friend", Toast.LENGTH_SHORT).show();
-            }
-        });
 }}
