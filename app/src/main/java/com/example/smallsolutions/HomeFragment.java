@@ -6,29 +6,30 @@ import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 
-public class HomeFragment extends Fragment {
-
+public class HomeFragment extends Fragment implements OnClickListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        View myView = inflater.inflate(R.layout.fragment_home, container, false);
+        // Inflate the layout for this
+        ImageView hamburger = myView.findViewById(R.id.burger);
+        hamburger.setOnClickListener(this);
+        return myView;
 
-        ImageView hamburger = (ImageView) getView().findViewById(R.id.burger);
+    }
 
-        hamburger.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "hello", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        return inflater.inflate(R.layout.fragment_home, container, false);
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.burger){
+            Toast.makeText(getActivity(), "hello", Toast.LENGTH_SHORT).show();
+        }
 
     }
 }
