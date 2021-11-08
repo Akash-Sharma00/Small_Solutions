@@ -7,7 +7,7 @@
     <string name="UserNameText">Name</string>
     <string name="PasswordText">Password</string>
     <string name="ForgetPasswordButton">Forget Password?</string>
-    <string name="signInText">Sign in</string>
+    <string name="signInText">Login</string>
     <string name="SignUpText">Sign UP</string>
     <string name="SearchText">Search here</string>
     <string name="Employer">Employer</string>
@@ -16,12 +16,10 @@
     <string name="Name">Name</string>
     <string name="Email">Email ID</string>
     <string name="Contact">Contact</string>
-    <string name="Profession">Choose Profession</string>
     <string name="Exp">Experience</string>
     <string name="Age">Age</string>
     <string name="AboutText">Write a description about your Self (OPTIONAL)</string>
     <string name="done">DONE</string>
-    <string name="CANCEL">CANCEL</string>
     <string name="FillTheDetails">Fill the details</string>
 
     <!--    Catagory activity text-->
@@ -39,6 +37,7 @@
 
 <!--    DropDown hint text-->
     <string name="catagory">Select Catogory</string>
-    <style name="professions">Select Profession</style>
+    <string name="Profession">Choose Profession</string>
+    <string name="experience">Experience</string>
 
 </resources>

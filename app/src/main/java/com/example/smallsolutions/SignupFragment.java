@@ -68,9 +68,12 @@ public class SignupFragment extends Fragment {
 
     }
 
-    AutoCompleteTextView autoCompleteTextView;
-    String[] category = {"Employer", "Employee"};
-    String[] professions = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
+    AutoCompleteTextView autoCompleteTextView;    //for catagory
+
+//    String arrays for drop down box
+    String[] category = {"Employee","Employer"};
+    String[] professions = {"Carpenter","Electrician","Mechanic","Plumber","Web Developer","App Developer","Photo Editor","Video Editor","Digital Marketer","Cook","Other"};
+    String[] experience = {"yrs", "months"};
     TextView addText, removeText;
     ArrayList<ProfessionRecyclerI> professionArray;
     ArrayAdapter adapterList;
@@ -102,6 +105,8 @@ public class SignupFragment extends Fragment {
                 removeProfession();
             }
         });
+
+        experienceAdapter(root);
 
         return root;
     }
@@ -136,5 +141,13 @@ public class SignupFragment extends Fragment {
               professionArray.remove(0);
               recyclerAdapter.notifyItemRemoved(0);
           }
+      }
+
+      public void experienceAdapter(View root){
+        AutoCompleteTextView autoCompleteTextView_experience;
+        autoCompleteTextView_experience = root.findViewById(R.id.autoComplete_experience);
+        autoCompleteTextView_experience.setInputType(0);
+        ArrayAdapter exprienceList = new ArrayAdapter(root.getContext(),R.layout.dropdown_textview,R.id.items_design,experience);
+        autoCompleteTextView_experience.setAdapter(exprienceList);
       }
 }
