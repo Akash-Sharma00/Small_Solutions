@@ -33,6 +33,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/bree_serif"
                 android:hint="@string/Profession"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 app:hintTextAppearance="@font/bree_serif"
                 tools:layout_editor_absoluteX="219dp"

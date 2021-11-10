@@ -19,27 +19,10 @@ import com.google.android.material.tabs.TabLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
-    //Skip button
-    public void skip(View view){
-        Intent intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
-    }
-
-    //Forget password button
-    public void forgetPassword(View view){
-        Toast.makeText(getBaseContext(), "Under construction", Toast.LENGTH_SHORT).show();
-    }
-
-    //SignIn button
-    public void SignIn(View view){
-        Toast.makeText(getBaseContext(), "Under construction", Toast.LENGTH_SHORT).show();
-    }
-
-    //new user button
-    public void newUser(View view){
-        Intent intent = new Intent(this, SignUpActivity.class);
-        startActivity(intent);
-    }
+//     Creating variable for viewpager, tablayout and adapter class
+    ViewPager2 pager2;
+    TabLayout tabLayout;
+    LoginFragmentAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,11 +35,6 @@ public class LoginActivity extends AppCompatActivity {
 
         TextView welcome_text = findViewById(R.id.welcome_text_toolbar);
         welcome_text.animate().translationY(scrollView.getScrollY()).setDuration(0);
-
-//        Creating variable for viewpager, tablayout and adapter class
-        ViewPager2 pager2;
-        TabLayout tabLayout;
-        LoginFragmentAdapter adapter;
 
 //        Hooks
         pager2 = findViewById(R.id.form_viewpager);
@@ -122,5 +100,14 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+//        Funtion to create animation
+        animation();
+    }
+
+    public void animation(){
+        tabLayout.setAlpha(0);
+        tabLayout.setTranslationX(300);
+        tabLayout.animate().translationX(0).alpha(1).setDuration(800);
     }
 }

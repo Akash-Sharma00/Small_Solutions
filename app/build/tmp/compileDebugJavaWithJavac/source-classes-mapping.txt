@@ -4,6 +4,7 @@ com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment
  com.example.smallsolutions.SignupFragment$1
  com.example.smallsolutions.SignupFragment$2
+ com.example.smallsolutions.SignupFragment$3
 com/example/smallsolutions/More.java
  com.example.smallsolutions.More
 com/example/smallsolutions/ProfessionAdapter.java

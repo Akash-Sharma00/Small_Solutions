@@ -59,12 +59,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
+            android:background="@color/white"
             android:padding="10dp">
 
             <com.google.android.material.appbar.AppBarLayout
                 android:id="@+id/signin_tabbar_layout"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:background="@color/white"
                 app:layout_constraintBottom_toTopOf="@id/form_viewpager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

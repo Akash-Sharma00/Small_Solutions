@@ -10,15 +10,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -70,15 +73,25 @@ public class SignupFragment extends Fragment {
 
     AutoCompleteTextView autoCompleteTextView;    //for catagory
 
-//    String arrays for drop down box
-    String[] category = {"Employee","Employer"};
-    String[] professions = {"Carpenter","Electrician","Mechanic","Plumber","Web Developer","App Developer","Photo Editor","Video Editor","Digital Marketer","Cook","Other"};
+    //    String arrays for drop down box
+    String[] catagory = {"Employee", "Employer"};
+    String[] professions = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
     String[] experience = {"yrs", "months"};
     TextView addText, removeText;
+
+    //    Array and adapter for profession drop down
     ArrayList<ProfessionRecyclerI> professionArray;
     ArrayAdapter adapterList;
+
+    //    Recycler and recycler adapter
     RecyclerView recycler;
     ProfessionAdapter recyclerAdapter;
+
+    //    Drop Down view for catagory
+    AutoCompleteTextView autoCompleteTextView_catagory;
+
+    //    Selected catagory String variable
+    String catagory_string;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -108,22 +121,33 @@ public class SignupFragment extends Fragment {
 
         experienceAdapter(root);
 
+        autoCompleteTextView_catagory = root.findViewById(R.id.autoComplete_catagory);
+        gone(root);
+
         return root;
     }
 
-    public void catatoryAdapter(View root){
+    public void catatoryAdapter(View root) {
         autoCompleteTextView = root.findViewById(R.id.autoComplete_catagory);
         autoCompleteTextView.setInputType(0);
 
         ArrayAdapter<String> adapter_employee;
-        adapter_employee = new ArrayAdapter<>(root.getContext(), R.layout.dropdown_textview, R.id.items_design, category);
+        adapter_employee = new ArrayAdapter<>(root.getContext(), R.layout.dropdown_textview, R.id.items_design, catagory);
         autoCompleteTextView.setSelected(true);
         autoCompleteTextView.setAdapter(adapter_employee);
+
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                catagory_string = adapter_employee.getItem(i);
+                invisible(root);
+            }
+        });
     }
 
-    public void professionAdapter(View root){
+    public void professionAdapter(View root) {
         recycler = root.findViewById(R.id.recycler);
-        adapterList = new ArrayAdapter(root.getContext(),R.layout.dropdown_textview,R.id.items_design,professions);
+        adapterList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, professions);
         professionArray = new ArrayList<>();
         professionArray.add(new ProfessionRecyclerI(adapterList));
         recyclerAdapter = new ProfessionAdapter(professionArray);
@@ -131,23 +155,58 @@ public class SignupFragment extends Fragment {
         recycler.setAdapter(recyclerAdapter);
     }
 
-      public void addProfession(View root){
-          professionArray.add(0, new ProfessionRecyclerI(adapterList));
-          recyclerAdapter.notifyItemInserted(0);
-      }
+    public void addProfession(View root) {
+        professionArray.add(0, new ProfessionRecyclerI(adapterList));
+        recyclerAdapter.notifyItemInserted(0);
+    }
 
-      public void removeProfession(){
-          if (professionArray.size() > 1){
-              professionArray.remove(0);
-              recyclerAdapter.notifyItemRemoved(0);
-          }
-      }
+    public void removeProfession() {
+        if (professionArray.size() > 1) {
+            professionArray.remove(0);
+            recyclerAdapter.notifyItemRemoved(0);
+        }
+    }
 
-      public void experienceAdapter(View root){
+    public void experienceAdapter(View root) {
         AutoCompleteTextView autoCompleteTextView_experience;
         autoCompleteTextView_experience = root.findViewById(R.id.autoComplete_experience);
         autoCompleteTextView_experience.setInputType(0);
-        ArrayAdapter exprienceList = new ArrayAdapter(root.getContext(),R.layout.dropdown_textview,R.id.items_design,experience);
+        ArrayAdapter exprienceList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, experience);
         autoCompleteTextView_experience.setAdapter(exprienceList);
-      }
+    }
+
+    public void invisible(View root) {
+        EditText age = root.findViewById(R.id.age);
+        EditText experience_edittext = root.findViewById(R.id.experience_edittext);
+        TextInputLayout experience_textInputLayout = root.findViewById(R.id.experience_dropdown);
+
+        if (catagory_string == "Employee") {
+            recycler.setVisibility(View.VISIBLE);
+            age.setVisibility(View.VISIBLE);
+            experience_edittext.setVisibility(View.VISIBLE);
+            experience_textInputLayout.setVisibility(View.VISIBLE);
+            addText.setVisibility(View.VISIBLE);
+            removeText.setVisibility(View.VISIBLE);
+        } else {
+            recycler.setVisibility(View.GONE);
+            age.setVisibility(View.GONE);
+            experience_edittext.setVisibility(View.GONE);
+            experience_textInputLayout.setVisibility(View.GONE);
+            addText.setVisibility(View.GONE);
+            removeText.setVisibility(View.GONE);
+        }
+    }
+
+    public void gone(View root){
+        EditText age = root.findViewById(R.id.age);
+        EditText experience_edittext = root.findViewById(R.id.experience_edittext);
+        TextInputLayout experience_textInputLayout = root.findViewById(R.id.experience_dropdown);
+
+        recycler.setVisibility(View.GONE);
+        age.setVisibility(View.GONE);
+        experience_edittext.setVisibility(View.GONE);
+        experience_textInputLayout.setVisibility(View.GONE);
+        addText.setVisibility(View.GONE);
+        removeText.setVisibility(View.GONE);
+    }
 }

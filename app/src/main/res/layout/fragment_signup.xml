@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/username_edittext"
+            android:id="@+id/username_signup"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/UserNameText"
@@ -34,7 +34,7 @@
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
-            android:id="@+id/password_edittext"
+            android:id="@+id/password_signup"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -51,12 +51,12 @@
             android:background="@drawable/textbox_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailid_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/emailid_signup"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
-            android:id="@+id/emailid_edittext"
+            android:id="@+id/emailid_signup"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -72,7 +72,7 @@
             app:hintTextAppearance="@font/bree_serif"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/username_signup"
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
@@ -93,7 +93,7 @@
             android:background="@drawable/textbox_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/password_signup"
             app:layout_constraintWidth_percent=".8"
             tools:ignore="DuplicateClickableBoundsCheck,DuplicateClickableBoundsCheck,DuplicateClickableBoundsCheck" />
 
@@ -117,6 +117,7 @@
                 android:id="@+id/autoComplete_catagory"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="18sp"
                 android:fontFamily="@font/bree_serif"
                 android:hint="@string/catagory"
                 android:textColor="@color/black"
@@ -165,7 +166,7 @@
             app:hintTextAppearance="@font/bree_serif"
             android:inputType="number"
             android:minHeight="48dp"
-            android:paddingLeft="10dp"
+            android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:textSize="18sp"
@@ -192,6 +193,7 @@
             android:paddingBottom="10dp"
             android:textColor="@color/black"
             android:textSize="18sp"
+            android:textAlignment="center"
             app:hintTextAppearance="@font/bree_serif"
             android:background="@drawable/textbox_layout"
             app:layout_constraintBottom_toBottomOf="@+id/experience_dropdown"

@@ -7,18 +7,19 @@
     tools:context=".LoginFragment">
 
     <EditText
-        android:id="@+id/UserName_edittext"
+        android:id="@+id/UserName_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/UserNameText"
-        app:hintTextAppearance="@font/bree_serif"
-        android:textSize="18sp"
-        android:fontFamily="@font/bree_serif"
-        android:textColor="@color/black"
-        android:paddingTop="10dp"
-        android:paddingLeft="20dp"
-        android:paddingBottom="10dp"
         android:background="@drawable/textbox_layout"
+        android:fontFamily="@font/bree_serif"
+        android:hint="@string/UserNameText"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:hintTextAppearance="@font/bree_serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
@@ -28,26 +29,28 @@
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/password_edittext"
+        android:id="@+id/password_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="@string/PasswordText"
-        app:hintTextAppearance="@font/bree_serif"
-        android:textSize="18sp"
+        android:background="@drawable/textbox_layout"
         android:fontFamily="@font/bree_serif"
-        android:textColor="@color/black"
+        android:hint="@string/PasswordText"
+        android:minHeight="48dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:background="@drawable/textbox_layout"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:hintTextAppearance="@font/bree_serif"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/UserName_edittext"
-        app:layout_constraintTop_toBottomOf="@id/UserName_edittext"
+        app:layout_constraintStart_toStartOf="@+id/UserName_login"
+        app:layout_constraintTop_toBottomOf="@id/UserName_login"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
     <TextView
+        android:id="@+id/forget_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintVertical_bias=".05"
@@ -57,9 +60,9 @@
         android:textColor="@color/blue"
         android:fontFamily="@font/bree_serif"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/password_edittext"
+        app:layout_constraintEnd_toEndOf="@+id/password_login"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_edittext" />
+        app:layout_constraintTop_toBottomOf="@+id/password_login" />
 
     <Button
         android:id="@+id/login_button"
@@ -75,7 +78,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password_edittext" />
+        app:layout_constraintTop_toBottomOf="@id/password_login" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
