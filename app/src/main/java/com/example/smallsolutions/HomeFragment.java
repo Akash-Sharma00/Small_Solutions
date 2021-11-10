@@ -32,7 +32,7 @@ public class HomeFragment extends Fragment implements OnClickListener{
     public void onClick(View v) {
         if(v.getId() == R.id.burger){
 //            Toast.makeText(getActivity(), "hello", Toast.LENGTH_SHORT).show();
-            drawer.openDrawer(GravityCompat.START);
+            drawer.openDrawer(GravityCompat.END);
         }
     }
 
