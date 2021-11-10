@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment implements OnClickListener{
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.burger){
-            mDrawer.openDrawer(GravityCompat.START);
+            mDrawer.openDrawer(GravityCompat.END);
         }
     }
 
