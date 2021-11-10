@@ -17,7 +17,6 @@ import android.widget.Toolbar;
 
 
 public class HomeFragment extends Fragment implements OnClickListener{
-    private DrawerLayout drawer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,7 +24,6 @@ public class HomeFragment extends Fragment implements OnClickListener{
         View myView = inflater.inflate(R.layout.fragment_home, container, false);
         ImageView hamburger = myView.findViewById(R.id.burger);
         hamburger.setOnClickListener(this);
-        DrawerLayout drawer = myView.findViewById(R.id.drawer_layout);
 
         return myView;
     }
@@ -33,7 +31,8 @@ public class HomeFragment extends Fragment implements OnClickListener{
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.burger){
-//            Toast.makeText(getActivity(), "hello", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getActivity(),"hello", Toast.LENGTH_SHORT).show();
+            DrawerLayout drawer = v.findViewById(R.id.drawer_layout);
              drawer.openDrawer(Gravity.RIGHT);
         }
     }
