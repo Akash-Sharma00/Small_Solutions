@@ -1,659 +1,655 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:context=".HomeFragment">
+
+    <TextView
+        style="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="420dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="@string/hire_a_person" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/search_bar_bg"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#E4E3E3"
+            app:srcCompat="@drawable/search_icon" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/search_bar_bg"
+            android:ems="10"
+            android:hint="@string/search_a_employee"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/grey"
+            android:textSize="14sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="150dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <TextView
-            style="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="35dp"
-            android:text="@string/app_name"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/bree_serif"
-            android:text="@string/hire_a_person"/>
-
         <LinearLayout
-            android:id="@+id/linearLayout6"
             android:layout_width="match_parent"
-            android:layout_height="47dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/search_bar_bg"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/textView16">
+            android:padding="5dp">
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:backgroundTint="#E4E3E3"
-                app:srcCompat="@drawable/search_icon" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/search_bar_bg"
-                android:ems="10"
-                android:hint="@string/search_a_employee"
-                android:inputType="textPersonName"
-                android:textColorHint="@color/grey"
-                android:textSize="14sp" />
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/carpenter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/carpenter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/carpenter" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:padding="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="15dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/carpenter" />
-                </LinearLayout>
-
-                <LinearLayout
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/carpenter" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/carpenter" />
-                </LinearLayout>
+                    android:text="@string/carpenter" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/carpenter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/blue"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/carpenter_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/carpenter" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="400dp"
+        android:text="@string/Recommended"
+        android:textColor="#020202"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/you_may_also_like_this"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="411dp"
+        android:layout_marginEnd="25dp"
+        android:text="@string/more"
+        android:textColor="@color/BLUE"
+        android:textSize="14sp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:background="#E3EAF8">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="15dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:orientation="vertical">
 
-                <LinearLayout
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/mrplumber" />
+
+                <TextView
+                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/carpenter" />
-                </LinearLayout>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:text="@string/electrician"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/BLUE"
+                    android:rating="3.3" />
+            </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/carpenter" />
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/mrplumber" />
+
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/blue"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/carpenter_icon" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electrician"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/carpenter" />
-                </LinearLayout>
+                <RatingBar
+                    style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/BLUE"
+                    android:rating="3.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/mrplumber" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electrician"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/BLUE"
+                    android:rating="3.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/mrplumber" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electrician"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/BLUE"
+                    android:rating="3.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/mrplumber" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electrician"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/BLUE"
+                    android:rating="3.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/mrplumber" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electrician"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/BLUE"
+                    android:rating="3.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/mrplumber" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electrician"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/BLUE"
+                    android:rating="3.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/mrplumber" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electrician"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/BLUE"
+                    android:rating="3.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/mrplumber" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electrician"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/BLUE"
+                    android:rating="3.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/mrplumber" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electrician"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/BLUE"
+                    android:rating="3.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/mrplumber" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electrician"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/BLUE"
+                    android:rating="3.3" />
             </LinearLayout>
 
         </LinearLayout>
+    </HorizontalScrollView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/Recommended"
-            android:textColor="#020202"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-
-
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="@string/you_may_also_like_this"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="50dp"
-            android:layout_height="25dp"
-            android:layout_gravity="right"
-            android:layout_marginEnd="10dp"
-            android:text="@string/more"
-            android:textColor="@color/BLUE"
-            android:textSize="14sp" />
-
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="#E3EAF8">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginBottom="5dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/mrplumber" />
-
-                    <TextView
-                        android:id="@+id/textView18"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electrician"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <RatingBar
-                        android:id="@+id/ratingBar"
-                        style="@android:style/Widget.DeviceDefault.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:progressTint="@color/BLUE"
-                        android:rating="3.3" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/mrplumber" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electrician"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <RatingBar
-                        style="@android:style/Widget.DeviceDefault.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:progressTint="@color/BLUE"
-                        android:rating="3.3" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/mrplumber" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electrician"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <RatingBar
-                        style="@style/Widget.AppCompat.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:progressTint="@color/BLUE"
-                        android:rating="3.3" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/mrplumber" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electrician"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <RatingBar
-                        style="@style/Widget.AppCompat.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:progressTint="@color/BLUE"
-                        android:rating="3.3" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/mrplumber" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electrician"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <RatingBar
-                        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:progressTint="@color/BLUE"
-                        android:rating="3.3" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/mrplumber" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electrician"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <RatingBar
-                        style="@android:style/Widget.DeviceDefault.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:progressTint="@color/BLUE"
-                        android:rating="3.3" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/mrplumber" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electrician"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <RatingBar
-                        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:progressTint="@color/BLUE"
-                        android:rating="3.3" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/mrplumber" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electrician"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <RatingBar
-                        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:progressTint="@color/BLUE"
-                        android:rating="3.3" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/mrplumber" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electrician"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <RatingBar
-                        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:progressTint="@color/BLUE"
-                        android:rating="3.3" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/mrplumber" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electrician"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <RatingBar
-                        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:progressTint="@color/BLUE"
-                        android:rating="3.3" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/mrplumber" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electrician"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <RatingBar
-                        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:progressTint="@color/BLUE"
-                        android:rating="3.3" />
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="end"
-        android:id="@+id/nav_view"
-        android:background="@color/white"
-        />
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>
