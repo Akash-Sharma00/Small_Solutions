@@ -21,8 +21,8 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="410dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/bree_serif"
         android:text="@string/hire_a_person" />
 
@@ -237,8 +237,8 @@
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="410dp"
         android:text="@string/you_may_also_like_this"
         android:textSize="12sp" />
 
