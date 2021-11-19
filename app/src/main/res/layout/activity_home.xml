@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
     android:fitsSystemWindows="true"
-    tools:openDrawer="st art">
+    tools:openDrawer="start">
 
         <com.google.android.material.navigation.NavigationView
             android:layout_width="wrap_content"
@@ -29,9 +29,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:title="@string/app_name"
             app:titleMarginStart="10dp"
-            app:titleTextColor="@color/black"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
-
+            app:titleTextColor="@color/black" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewpager2"
