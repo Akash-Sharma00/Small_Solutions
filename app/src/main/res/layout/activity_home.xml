@@ -30,8 +30,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:logo="@drawable/ic_hamburger"
             app:title="@string/app_name"
-            app:titleMarginStart="30dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:titleMarginStart="10dp"
             app:titleTextColor="@color/black"
             tools:ignor="MissingConstraints" />
 
