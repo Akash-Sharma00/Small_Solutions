@@ -39,7 +39,6 @@ public class HomeActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewpager2);
 
