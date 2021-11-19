@@ -28,8 +28,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:logo="@drawable/ic_hamburger"
             app:title="@string/app_name"
+            android:background="@color/white"
             app:titleMarginStart="10dp"
             app:titleTextColor="@color/black"
             tools:ignor="MissingConstraints" />
