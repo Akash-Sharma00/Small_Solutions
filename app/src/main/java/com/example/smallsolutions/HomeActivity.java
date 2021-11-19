@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         drawerLayout = findViewById(R.id.drawerLayout);
-        navigationView = findViewById(R.id.navigation);
+        navigationView = findViewById(R.id.navigationView);
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
@@ -58,6 +58,7 @@ public class HomeActivity extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
+
                 tab.getIcon().clearColorFilter();
             }
 
