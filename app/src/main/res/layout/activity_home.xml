@@ -29,9 +29,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:title="@string/app_name"
             app:titleMarginStart="10dp"
-            app:titleTextColor="@color/black"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
-
+            app:titleTextColor="@color/black"/>
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewpager2"
             android:layout_width="match_parent"
