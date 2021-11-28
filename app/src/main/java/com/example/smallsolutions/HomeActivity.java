@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener{
 
     TabLayout tabLayout;
     ViewPager2 viewPager2;
@@ -45,6 +45,9 @@ public class HomeActivity extends AppCompatActivity {
 
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        navigationView.setNavigationItemSelectedListener(this);
+
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewpager2);
 
@@ -83,14 +86,38 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId())
-        {
-            case R.id.first:
-                Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
-                return true;
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.navProfile:
+                Toast.makeText(this, "profile", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.navNew:
+                Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.navLogout:
+                Toast.makeText(this, "LogOut", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.navShare:
+                Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
+                break;
         }
-        return super.onOptionsItemSelected(item);
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START))
+        {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else {
+            super.onBackPressed();
+        }
     }
 }

@@ -2,8 +2,37 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <group android:checkableBehavior="single">
     <item
-        android:id="@+id/first"
-        android:title="@string/category"
-        android:icon="@drawable/search_icon"/>
+        android:id="@+id/navProfile"
+        android:title="@string/profile"
+        android:icon="@drawable/icon_profile"/>
 </group>
+    <item
+        android:title="@string/authentication">
+        <menu>
+            <item
+                android:id="@+id/navNew"
+                android:title="@string/logIn"
+                android:icon="@drawable/icon_login"/>
+            <item
+                android:id="@+id/navLogout"
+                android:title="@string/logOut"
+                android:icon="@drawable/icon_logout"/>
+        </menu>
+    </item>
+    <item android:title="@string/yourMarked">
+        <menu>
+            <item
+                android:id="@+id/navFavorites"
+                android:title="@string/favorites"
+                android:icon="@drawable/icon_favorite"/>
+        </menu>
+    </item>
+    <item android:title="@string/recommend">
+        <menu>
+            <item
+                android:id="@+id/navShare"
+                android:title="@string/share"
+                android:icon="@drawable/icon_share"/>
+        </menu>
+    </item>
 </menu>
