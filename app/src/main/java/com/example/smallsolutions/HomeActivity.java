@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
-public class HomeActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener{
+public class HomeActivity extends AppCompatActivity{
 
     TabLayout tabLayout;
     ViewPager2 viewPager2;
@@ -35,7 +35,6 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
 
 
         drawerLayout = findViewById(R.id.drawerLayout);
-        navigationView = findViewById(R.id.navigationView);
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
@@ -46,8 +45,6 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView.setNavigationItemSelectedListener(this);
-
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewpager2);
 
@@ -55,6 +52,20 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
         fragmentAdapter = new FragmentAdapter(fm, getLifecycle());
         viewPager2.setAdapter(fragmentAdapter);
         tabLayout.getTabAt(0).getIcon().setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_IN);
+
+        navigationView = findViewById(R.id.navigationView);
+        navigationView.setNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.navProfile:
+                    Toast.makeText(getApplicationContext(), "Home", Toast.LENGTH_SHORT).show();
+                    return true;
+
+                case R.id.navFavorites:
+                    Toast.makeText(getApplicationContext(), "Favorite", Toast.LENGTH_SHORT).show();
+                    return true;
+            }
+            return true;
+        });
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -84,30 +95,6 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
             }
         });
 
-    }
-
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.navProfile:
-                Toast.makeText(this, "profile", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.navNew:
-                Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.navLogout:
-                Toast.makeText(this, "LogOut", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.navShare:
-                Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
-                break;
-        }
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
     }
 
     @Override
