@@ -36,6 +36,7 @@ public class HomeActivity extends AppCompatActivity{
 
         drawerLayout = findViewById(R.id.drawerLayout);
         toolbar = findViewById(R.id.toolbar);
+        navigationView = findViewById(R.id.navigationView);
 
         setSupportActionBar(toolbar);
 
@@ -53,19 +54,7 @@ public class HomeActivity extends AppCompatActivity{
         viewPager2.setAdapter(fragmentAdapter);
         tabLayout.getTabAt(0).getIcon().setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_IN);
 
-        navigationView = findViewById(R.id.navigationView);
-        navigationView.setNavigationItemSelectedListener(item -> {
-            switch (item.getItemId()){
-                case R.id.navProfile:
-                    Toast.makeText(getApplicationContext(), "Home", Toast.LENGTH_SHORT).show();
-                    return true;
 
-                case R.id.navFavorites:
-                    Toast.makeText(getApplicationContext(), "Favorite", Toast.LENGTH_SHORT).show();
-                    return true;
-            }
-            return true;
-        });
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -106,5 +95,14 @@ public class HomeActivity extends AppCompatActivity{
         else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.navProfile)
+        {
+            Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
