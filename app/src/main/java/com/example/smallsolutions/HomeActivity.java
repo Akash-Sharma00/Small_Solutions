@@ -109,7 +109,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.navProfile) {
-            Toast.makeText(this, "Hello profile", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Hello profile", Toast.LENGTH_SHORT).show();
             return true;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
