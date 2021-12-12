@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
-public class HomeActivity extends AppCompatActivity{
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     TabLayout tabLayout;
     ViewPager2 viewPager2;
@@ -104,5 +104,15 @@ public class HomeActivity extends AppCompatActivity{
             Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.navProfile) {
+            Toast.makeText(this, "Hello profile", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
     }
 }
