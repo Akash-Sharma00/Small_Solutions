@@ -193,7 +193,6 @@
                     android:backgroundTint="@color/blue"
                     android:fontFamily="@font/bree_serif"
                     android:onClick="CANCEL"
-                    android:text="@string/CANCEL"
                     android:textColor="@color/white" />
 
             </LinearLayout>
