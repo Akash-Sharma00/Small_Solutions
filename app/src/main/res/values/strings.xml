@@ -44,14 +44,4 @@
     <string name="Recommended">Recommended Employees</string>
     <string name="you_may_also_like_this">You May Also Like This</string>
 
-<!--    For Side navigation drawer -->
-    <string name="navigation_open">Open Navigation</string>
-    <string name="navigation_close">Close Navigation</string>
-    <string name="authentication">Authentication</string>
-    <string name="logIn">LOG IN</string>
-    <string name="logOut">LOG OUT</string>
-    <string name="yourMarked">Your Corner</string>
-    <string name="favorites">Favorites</string>
-    <string name="recommend">Recommend</string>
-    <string name="share">Share</string>
 </resources>
