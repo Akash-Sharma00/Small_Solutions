@@ -18,9 +18,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmallSolutions" >
         <activity
-            android:name="com.example.smallsolutions.More"
-            android:exported="true" />
-        <activity
             android:name="com.example.smallsolutions.profileActivity"
             android:exported="true" />
         <activity
@@ -28,7 +25,8 @@
             android:exported="true" />
         <activity
             android:name="com.example.smallsolutions.HomeActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name="com.example.smallsolutions.LoginActivity"
             android:exported="true" />

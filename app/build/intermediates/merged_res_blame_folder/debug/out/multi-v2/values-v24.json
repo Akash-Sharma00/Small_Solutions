@@ -14,7 +14,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\sachi\\.gradle\\caches\\transforms-3\\d7d68196ec2a152fae1fbc3cdeb8417c\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+=======
+                    "source": "C:\\Users\\abc\\.gradle\\caches\\transforms-3\\d7d68196ec2a152fae1fbc3cdeb8417c\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+>>>>>>> upstream/arrange
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
