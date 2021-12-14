@@ -1,133 +1,67 @@
 package com.example.smallsolutions;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager2.widget.ViewPager2;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
-public class HomeActivity extends AppCompatActivity {
-    private Toolbar toolbar;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 
-    public void profile(View view){
-        Intent intent = new Intent(this,profileActivity.class);
-        startActivity(intent);
-    }
+public class HomeActivity extends AppCompatActivity{
+
+    TabLayout tabLayout;
+    ViewPager2 viewPager2;
+    FragmentAdapter fragmentAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        TextView carpenter = findViewById(R.id.carpenter);
-        TextView electrician = findViewById(R.id.electrician);
-        TextView mechanic = findViewById(R.id.mechanic);
-        TextView softDev = findViewById(R.id.softDev);
-        TextView plumber = findViewById(R.id.plumber);
-        TextView more = findViewById(R.id.more);
-        carpenter.setBackgroundResource(R.drawable.blue);
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager2 = findViewById(R.id.viewpager2);
 
-        electrician.setOnClickListener(new View.OnClickListener() {
+        FragmentManager fm = getSupportFragmentManager();
+        fragmentAdapter = new FragmentAdapter(fm, getLifecycle());
+        viewPager2.setAdapter(fragmentAdapter);
+        tabLayout.getTabAt(0).getIcon().setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_IN);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View v) {
-                electrician.setBackgroundResource(R.drawable.blue);
-                mechanic.setBackgroundResource(R.drawable.white);
-                softDev.setBackgroundResource(R.drawable.white);
-                carpenter.setBackgroundResource(R.drawable.white);
-                plumber.setBackgroundResource(R.drawable.white);
-                more.setBackgroundResource(R.drawable.white);
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager2.setCurrentItem(tab.getPosition());
+                tab.getIcon().setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_IN);
+
             }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                tab.getIcon().clearColorFilter();
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+
         });
 
-        mechanic.setOnClickListener(new View.OnClickListener() {
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
-            public void onClick(View v) {
-                mechanic.setBackgroundResource(R.drawable.blue);
-                electrician.setBackgroundResource(R.drawable.white);
-                softDev.setBackgroundResource(R.drawable.white);
-                carpenter.setBackgroundResource(R.drawable.white);
-                plumber.setBackgroundResource(R.drawable.white);
-                more.setBackgroundResource(R.drawable.white);
-            }
-        });
-
-        softDev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                softDev.setBackgroundResource(R.drawable.blue);
-                mechanic.setBackgroundResource(R.drawable.white);
-                electrician.setBackgroundResource(R.drawable.white);
-                carpenter.setBackgroundResource(R.drawable.white);
-                plumber.setBackgroundResource(R.drawable.white);
-                more.setBackgroundResource(R.drawable.white);
-            }
-        });
-
-        carpenter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                carpenter.setBackgroundResource(R.drawable.blue);
-                mechanic.setBackgroundResource(R.drawable.white);
-                softDev.setBackgroundResource(R.drawable.white);
-                electrician.setBackgroundResource(R.drawable.white);
-                plumber.setBackgroundResource(R.drawable.white);
-                more.setBackgroundResource(R.drawable.white);
-            }
-        });
-
-        plumber.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                plumber.setBackgroundResource(R.drawable.blue);
-                mechanic.setBackgroundResource(R.drawable.white);
-                softDev.setBackgroundResource(R.drawable.white);
-                carpenter.setBackgroundResource(R.drawable.white);
-                electrician.setBackgroundResource(R.drawable.white);
-                more.setBackgroundResource(R.drawable.white);
-            }
-        });
-
-        more.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, More.class);
-                startActivity(intent);
+            public void onPageSelected(int position) {
+                tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.toolbar,menu);
-        return  true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int choice = item.getItemId();
-        if (choice == R.id.search){
-            Intent intent = new Intent(HomeActivity.this, More.class);
-            startActivity(intent);        }
-        if (choice == R.id.category){
-            Intent intent = new Intent(HomeActivity.this, More.class);
-            startActivity(intent);
-        }
-        if (choice == R.id.settings){
-            Toast.makeText(this, "Under Construction", Toast.LENGTH_SHORT).show();
-        }
-        if (choice == R.id.login){
-            Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-            startActivity(intent);
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }

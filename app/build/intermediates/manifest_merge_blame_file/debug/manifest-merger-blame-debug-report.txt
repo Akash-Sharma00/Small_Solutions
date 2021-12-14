@@ -11,7 +11,7 @@
 9-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:5:5-40:19
+11-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:5:5-38:19
 12        android:allowBackup="true"
 12-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,58 +29,54 @@
 19-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:11:9-52
 20        <activity
 20-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:12:9-14:39
-21            android:name="com.example.smallsolutions.More"
-21-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:13:13-33
+21            android:name="com.example.smallsolutions.profileActivity"
+21-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:13:13-44
 22            android:exported="true" />
 22-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:14:13-36
 23        <activity
 23-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:15:9-17:39
-24            android:name="com.example.smallsolutions.profileActivity"
-24-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:16:13-44
+24            android:name="com.example.smallsolutions.SignUpActivity"
+24-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:16:13-43
 25            android:exported="true" />
 25-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:17:13-36
 26        <activity
-26-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:18:9-20:39
-27            android:name="com.example.smallsolutions.SignUpActivity"
-27-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:19:13-43
-28            android:exported="true" />
+26-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:18:9-21:58
+27            android:name="com.example.smallsolutions.HomeActivity"
+27-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:19:13-41
+28            android:exported="true"
 28-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:20:13-36
-29        <activity
-29-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:21:9-23:39
-30            android:name="com.example.smallsolutions.HomeActivity"
-30-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:22:13-41
-31            android:exported="true" />
-31-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:23:13-36
-32        <activity
-32-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:24:9-26:39
-33            android:name="com.example.smallsolutions.LoginActivity"
-33-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:25:13-42
-34            android:exported="true" />
-34-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:26:13-36
-35        <activity
-35-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:27:9-35:20
-36            android:name="com.example.smallsolutions.MainActivity"
-36-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:28:13-41
-37            android:exported="true" >
-37-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:29:13-36
-38            <intent-filter>
-38-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:30:13-34:29
-39                <action android:name="android.intent.action.MAIN" />
-39-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:31:17-69
-39-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:31:25-66
-40
-41                <category android:name="android.intent.category.LAUNCHER" />
-41-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:33:17-77
-41-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:33:27-74
-42            </intent-filter>
-43        </activity>
-44
-45        <meta-data
-45-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:37:9-39:57
-46            android:name="preloaded_fonts"
-46-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:38:13-43
-47            android:resource="@array/preloaded_fonts" />
-47-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:39:13-54
-48    </application>
-49
-50</manifest>
+29            android:windowSoftInputMode="adjustNothing" />
+29-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:21:13-56
+30        <activity
+30-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:22:9-24:39
+31            android:name="com.example.smallsolutions.LoginActivity"
+31-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:23:13-42
+32            android:exported="true" />
+32-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:24:13-36
+33        <activity
+33-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:25:9-33:20
+34            android:name="com.example.smallsolutions.MainActivity"
+34-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:26:13-41
+35            android:exported="true" >
+35-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:27:13-36
+36            <intent-filter>
+36-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:28:13-32:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:29:17-69
+37-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:29:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:31:17-77
+39-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:31:27-74
+40            </intent-filter>
+41        </activity>
+42
+43        <meta-data
+43-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:35:9-37:57
+44            android:name="preloaded_fonts"
+44-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:36:13-43
+45            android:resource="@array/preloaded_fonts" />
+45-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:37:13-54
+46    </application>
+47
+48</manifest>

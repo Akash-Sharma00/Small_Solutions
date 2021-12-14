@@ -33,11 +33,22 @@
     <string name="videoeditor">Video Editor</string>
     <string name="DigitalMarketer">Digital Marketer</string>
     <string name="cook">Cook</string>
-    <string name="more">More</string>
 
 <!--    DropDown hint text-->
     <string name="catagory">Select Catagory</string>
     <string name="Profession">Choose Profession</string>
     <string name="experience">Experience</string>
+
+    <string name="more">more</string>
+
+<!--   Strings of home fragments -->
+    <string name="Home">Home</string>
+    <string name="hired">Hired</string>
+    <string name="profile">Profile</string>
+    <string name="category">Categories</string>
+    <string name="hire_a_person">Choose Professionals To Hire</string>
+    <string name="search_a_employee">Search For Skilled Person</string>
+    <string name="Recommended">Recommended Employees</string>
+    <string name="you_may_also_like_this">You May Also Like This</string>
 
 </resources>
