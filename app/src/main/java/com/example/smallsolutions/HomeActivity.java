@@ -28,7 +28,6 @@ public class HomeActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewpager2);
 
@@ -47,7 +46,6 @@ public class HomeActivity extends AppCompatActivity{
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
                 tab.getIcon().clearColorFilter();
             }
 
@@ -64,7 +62,6 @@ public class HomeActivity extends AppCompatActivity{
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
-
     }
 
 }
