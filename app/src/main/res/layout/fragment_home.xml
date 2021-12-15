@@ -298,7 +298,7 @@
         android:layout_alignParentBottom="true"
         android:background="#E3EAF8"
         android:padding="5dp"
-        app:layout_constraintVertical_bias=".2"
+        app:layout_constraintVertical_bias=".7"
         app:layout_constraintTop_toBottomOf="@+id/category"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
