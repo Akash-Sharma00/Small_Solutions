@@ -40,7 +40,8 @@
             android:hint="@string/search_a_employee"
             android:inputType="textPersonName"
             android:textColorHint="@color/grey"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
     </LinearLayout>
 
     <LinearLayout
@@ -67,7 +68,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="7dp"
+                android:layout_margin="11dp"
                 android:padding="6dp">
 
                 <RelativeLayout
@@ -98,7 +99,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="7dp">
+                android:layout_margin="11dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -128,7 +129,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="7dp">
+                android:layout_margin="11dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -165,7 +166,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="7dp"
+                android:layout_margin="11dp"
                 android:padding="6dp">
 
                 <RelativeLayout
@@ -196,7 +197,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="7dp">
+                android:layout_margin="11dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -226,7 +227,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="7dp">
+                android:layout_margin="11dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -297,9 +298,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#E3EAF8"
+        android:layout_marginTop="7dp"
         android:padding="5dp"
-        app:layout_constraintVertical_bias=".9"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/options_textview"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
