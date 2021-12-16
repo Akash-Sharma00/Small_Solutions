@@ -47,7 +47,7 @@ public class HomeActivity extends AppCompatActivity{
                 return true;
 
             case R.id.sign_in:
-                Intent intent = new Intent(this, LoginActivity.class);
+                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(intent);
                 return true;
 
