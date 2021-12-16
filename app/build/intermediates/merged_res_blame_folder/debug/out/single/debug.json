@@ -52,6 +52,10 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\buttons_layout.xml"
     },
     {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_toolbar.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\toolbar.xml"
+    },
+    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },

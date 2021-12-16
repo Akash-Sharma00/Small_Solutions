@@ -21,10 +21,15 @@ import com.google.android.material.tabs.TabLayout;
 
 public class HomeActivity extends AppCompatActivity{
 
+//    Variables for viewpager and tablayout
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     FragmentAdapter fragmentAdapter;
 
+//    Variable for toolbar
+    Toolbar toolbar;
+
+//    function to display menu bar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -37,14 +42,17 @@ public class HomeActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+//        Hooks for tablayout and viewpager
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewpager2);
 
+//        Creating adapter
         FragmentManager fm = getSupportFragmentManager();
         fragmentAdapter = new FragmentAdapter(fm, getLifecycle());
         viewPager2.setAdapter(fragmentAdapter);
         tabLayout.getTabAt(0).getIcon().setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_IN);
 
+//        Hooking tablayout with viewpager
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -72,7 +80,9 @@ public class HomeActivity extends AppCompatActivity{
             }
         });
 
-
+//        Hook for toolbar
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
     }
 
