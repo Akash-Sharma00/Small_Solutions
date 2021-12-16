@@ -6,11 +6,11 @@
         android:title="@string/more"
         app:showAsAction="never"/>
 
-    <item android:id="@+id/more2"
-        android:title="@string/more"
+    <item android:id="@+id/sign_in"
+        android:title="@string/signInText"
         app:showAsAction="never"/>
 
-    <item android:id="@+id/more3"
+    <item android:id="@+id/more2"
         android:title="@string/more"
         app:showAsAction="never">
 
