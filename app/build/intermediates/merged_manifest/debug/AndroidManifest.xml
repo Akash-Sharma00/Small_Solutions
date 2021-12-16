@@ -26,6 +26,7 @@
         <activity
             android:name="com.example.smallsolutions.HomeActivity"
             android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
             android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name="com.example.smallsolutions.LoginActivity"

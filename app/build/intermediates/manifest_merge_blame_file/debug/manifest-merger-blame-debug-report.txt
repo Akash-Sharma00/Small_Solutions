@@ -11,7 +11,7 @@
 9-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:5:5-38:19
+11-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:5:5-39:19
 12        android:allowBackup="true"
 12-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -40,43 +40,45 @@
 25            android:exported="true" />
 25-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:17:13-36
 26        <activity
-26-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:18:9-21:58
+26-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:18:9-22:58
 27            android:name="com.example.smallsolutions.HomeActivity"
 27-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:19:13-41
 28            android:exported="true"
-28-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:20:13-36
-29            android:windowSoftInputMode="adjustNothing" />
-29-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:21:13-56
-30        <activity
-30-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:22:9-24:39
-31            android:name="com.example.smallsolutions.LoginActivity"
-31-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:23:13-42
-32            android:exported="true" />
-32-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:24:13-36
-33        <activity
-33-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:25:9-33:20
-34            android:name="com.example.smallsolutions.MainActivity"
-34-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:26:13-41
-35            android:exported="true" >
-35-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:27:13-36
-36            <intent-filter>
-36-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:28:13-32:29
-37                <action android:name="android.intent.action.MAIN" />
-37-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:29:17-69
-37-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:29:25-66
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-39-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:31:17-77
-39-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:31:27-74
-40            </intent-filter>
-41        </activity>
-42
-43        <meta-data
-43-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:35:9-37:57
-44            android:name="preloaded_fonts"
-44-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:36:13-43
-45            android:resource="@array/preloaded_fonts" />
-45-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:37:13-54
-46    </application>
-47
-48</manifest>
+28-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:21:13-36
+29            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+29-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:20:13-80
+30            android:windowSoftInputMode="adjustNothing" />
+30-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:22:13-56
+31        <activity
+31-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:23:9-25:39
+32            android:name="com.example.smallsolutions.LoginActivity"
+32-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:24:13-42
+33            android:exported="true" />
+33-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:25:13-36
+34        <activity
+34-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:26:9-34:20
+35            android:name="com.example.smallsolutions.MainActivity"
+35-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:27:13-41
+36            android:exported="true" >
+36-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:28:13-36
+37            <intent-filter>
+37-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:29:13-33:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:30:17-69
+38-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:30:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:32:17-77
+40-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:32:27-74
+41            </intent-filter>
+42        </activity>
+43
+44        <meta-data
+44-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:36:9-38:57
+45            android:name="preloaded_fonts"
+45-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:37:13-43
+46            android:resource="@array/preloaded_fonts" />
+46-->D:\Nitin\Black Book Project\app\src\main\AndroidManifest.xml:38:13-54
+47    </application>
+48
+49</manifest>
