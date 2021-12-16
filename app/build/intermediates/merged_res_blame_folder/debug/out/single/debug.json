@@ -24,16 +24,16 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_profession_design.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\profession_design.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_profession_design.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\profession_design.xml"
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_hired.png.flat",
@@ -62,6 +62,10 @@
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\menu_home_menu_bar.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\menu\\home_menu_bar.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",

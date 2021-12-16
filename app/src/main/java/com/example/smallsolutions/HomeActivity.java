@@ -11,6 +11,8 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -22,6 +24,13 @@ public class HomeActivity extends AppCompatActivity{
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     FragmentAdapter fragmentAdapter;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.home_menu_bar, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +71,9 @@ public class HomeActivity extends AppCompatActivity{
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
+
+
+
     }
 
 }
