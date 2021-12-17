@@ -2,30 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/more"
-        android:title="@string/more"
-        app:showAsAction="never"/>
-
     <item android:id="@+id/sign_in"
         android:title="@string/signInText"
-        app:showAsAction="never"/>
-
-    <item android:id="@+id/more2"
-        android:title="@string/more"
-        app:showAsAction="never">
-
-        <menu>
-
-            <item android:id="@+id/subitem1"
-                android:title="subitem1"/>
-
-            <item android:id="@+id/subitem2"
-                android:title="subitem2"/>
-
-        </menu>
-
-    </item>
-
-
+        app:showAsAction="ifRoom"/>
 
 </menu>

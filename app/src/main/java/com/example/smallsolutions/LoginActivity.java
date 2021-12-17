@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-//        Collapse listener for appbar
+//        Collapse listener for collapsing toolbar
         AppBarLayout appBarLayout;
         appBarLayout = findViewById(R.id.appbar_layout);
 

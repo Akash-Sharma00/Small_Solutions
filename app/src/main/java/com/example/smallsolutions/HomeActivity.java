@@ -43,9 +43,6 @@ public class HomeActivity extends AppCompatActivity{
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.more:
-                return true;
-
             case R.id.sign_in:
                 Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(intent);
