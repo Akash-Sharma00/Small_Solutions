@@ -31,27 +31,8 @@ public class HomeActivity extends AppCompatActivity{
 //    Variable for toolbar
     Toolbar toolbar;
 
-//    function to display menu bar
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.home_menu_bar, menu);
-        return true;
-    }
-
-//    Function to add clickListener for menu items
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.sign_in:
-                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-                startActivity(intent);
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
+//    Drawer Variable
+    private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,8 +79,24 @@ public class HomeActivity extends AppCompatActivity{
 
 //        Hook for toolbar
         toolbar = findViewById(R.id.toolbar);
+
+//        Setting toolbar as actionbar
         setSupportActionBar(toolbar);
 
+//        Hook for drawer variable
+        drawer = findViewById(R.id.drawerLayout);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)){
+            drawer.closeDrawer(GravityCompat.START);
+        }
+        else{
+            super.onBackPressed();
+        }
+    }
 }
