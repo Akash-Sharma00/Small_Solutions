@@ -7,6 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@id/drawerLayout"
         android:layout_width="0dp"
@@ -24,10 +28,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <include
-                android:id="@+id/toolbar"
-                layout="@layout/toolbar" />
-
             <FrameLayout
                 android:id="@+id/fragment_container"
                 android:layout_width="match_parent"
@@ -38,7 +38,7 @@
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/nav_view"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             app:headerLayout="@layout/navbar_header"
             app:menu="@menu/home_menu_bar"/>
 
@@ -51,8 +51,10 @@
         android:paddingTop="17dp"
         app:layout_constraintBottom_toTopOf="@+id/tabLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
