@@ -99,12 +99,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Intent intent;
         switch (item.getItemId()){
             case R.id.login:
-                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
                 break;
         }
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
