@@ -21,7 +21,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
-public class HomeActivity extends AppCompatActivity{
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 //    Variables for viewpager and tablayout
     TabLayout tabLayout;
@@ -90,6 +90,22 @@ public class HomeActivity extends AppCompatActivity{
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         drawer.bringToFront();
+
+//        Variable for navigatioin view
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.login:
+                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return true;
     }
 
     @Override
