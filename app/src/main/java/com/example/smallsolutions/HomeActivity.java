@@ -99,7 +99,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
         switch (item.getItemId()){
             case R.id.login:
                 Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
