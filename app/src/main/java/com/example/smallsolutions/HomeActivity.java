@@ -89,24 +89,24 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        drawer.bringToFront();
 
 //        Variable for navigatioin view
         NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
 
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Intent intent;
+        Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
         switch (item.getItemId()){
             case R.id.login:
-                intent = new Intent(this, LoginActivity.class);
+                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(intent);
                 break;
         }
-        drawer.closeDrawer(GravityCompat.START);
+
         return true;
     }
 
