@@ -239,7 +239,7 @@
         android:textSize="12sp" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/more"
         android:layout_width="50dp"
         android:layout_height="25dp"
         android:layout_alignParentTop="true"
