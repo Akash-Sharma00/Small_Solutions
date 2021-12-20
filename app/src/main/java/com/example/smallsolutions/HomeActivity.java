@@ -102,7 +102,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Intent intent;
         switch (item.getItemId()){
             case R.id.login:
-                intent = new Intent(getApplicationContext(), LoginActivity.class);
+                intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 break;
         }
