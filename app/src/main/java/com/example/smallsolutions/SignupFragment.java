@@ -180,7 +180,7 @@ public class SignupFragment extends Fragment {
         EditText experience_edittext = root.findViewById(R.id.experience_edittext);
         TextInputLayout experience_textInputLayout = root.findViewById(R.id.experience_dropdown);
 
-        if (catagory_string == "Employee") {
+        if (catagory_string == "Job Seeker") {
             recycler.setVisibility(View.VISIBLE);
             age.setVisibility(View.VISIBLE);
             experience_edittext.setVisibility(View.VISIBLE);
