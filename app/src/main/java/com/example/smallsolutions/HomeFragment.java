@@ -1,5 +1,6 @@
 package com.example.smallsolutions;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -27,7 +28,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.more:
-                Toast.makeText(getActivity(), "More called", Toast.LENGTH_SHORT).show();
+//                calling all random activity
+//                Toast.makeText(getActivity(), "More called", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(),AllRandom.class);
+                v.getContext().startActivity(intent);
+                getActivity().finish();
                 break;
         }
     }

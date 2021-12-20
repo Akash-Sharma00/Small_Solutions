@@ -24,6 +24,8 @@ com/example/smallsolutions/profileActivity.java
  com.example.smallsolutions.profileActivity
 com/example/smallsolutions/FragmentAdapter.java
  com.example.smallsolutions.FragmentAdapter
+com/example/smallsolutions/AllRandom.java
+ com.example.smallsolutions.AllRandom
 com/example/smallsolutions/CategoryFragment.java
  com.example.smallsolutions.CategoryFragment
 com/example/smallsolutions/LoginFragmentAdapter.java

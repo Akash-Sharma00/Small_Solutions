@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmallSolutions" >
         <activity
+            android:name="com.example.smallsolutions.AllRandom"
+            android:exported="true" />
+        <activity
             android:name="com.example.smallsolutions.profileActivity"
             android:exported="true" />
         <activity
