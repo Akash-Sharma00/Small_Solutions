@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
         AppBarLayout appBarLayout;
         appBarLayout = findViewById(R.id.appbar_layout);
 
-//        function to listen collapsing of appbar AppBarLayout appBarLayout;
+//        function to listen collapsing of collapsing toolbar
 
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override

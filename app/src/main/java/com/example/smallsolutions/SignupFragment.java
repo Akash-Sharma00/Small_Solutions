@@ -74,7 +74,7 @@ public class SignupFragment extends Fragment {
     AutoCompleteTextView autoCompleteTextView;    //for catagory
 
     //    String arrays for drop down box
-    String[] catagory = {"Employee", "Employer"};
+    String[] catagory = {"Job Seeker", "Recruiter"};
     String[] professions = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
     String[] experience = {"yrs", "months"};
     TextView addText, removeText;
