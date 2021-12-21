@@ -14,8 +14,6 @@
         <!-- Customize your theme here. -->
 
         <!-- Status bar colour-->
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@color/blue</item>
 
         <!--        toolbar title-->
