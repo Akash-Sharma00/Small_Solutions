@@ -13,7 +13,7 @@
 
         <!-- Customize your theme here. -->
 
-        <!-- Status bar color. -->
+        <!-- Status bar color-->
         <item name="android:statusBarColor" tools:targetApi="l">#003063B8</item>
 
         <!--        toolbar title-->
