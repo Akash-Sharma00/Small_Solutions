@@ -10,9 +10,13 @@
         <item name="colorSecondaryVariant">@color/blue</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="titleTextColor">@color/white</item>
+
+        <!-- Customize your theme here. -->
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/blue</item>
-        <!-- Customize your theme here. -->
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+<!--        <item name="android:windowTranslucentNavigation">true</item>-->
 
         <!--        toolbar title-->
         <item name="android:textColorPrimary">@android:color/white</item>
