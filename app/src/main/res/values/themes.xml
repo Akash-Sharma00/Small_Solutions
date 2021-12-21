@@ -15,8 +15,6 @@
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/blue</item>
-<!--        <item name="android:windowTranslucentStatus">true</item>-->
-<!--        <item name="android:windowTranslucentNavigation">true</item>-->
 
         <!--        toolbar title-->
         <item name="android:textColorPrimary">@android:color/white</item>
