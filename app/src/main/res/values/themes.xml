@@ -14,7 +14,9 @@
         <!-- Customize your theme here. -->
 
         <!-- Status bar colour-->
-        <item name="android:statusBarColor">#003063B8</item>
+        <item name="android:statusBarColor">@color/blue</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
 
         <!--        toolbar title-->
         <item name="android:textColorPrimary">@color/white</item>
