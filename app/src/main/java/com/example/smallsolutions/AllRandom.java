@@ -20,10 +20,12 @@ public class AllRandom extends AppCompatActivity {
         setContentView(R.layout.activity_all_random);
 
         cardList = new ArrayList<>();
-        cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber,4.4, "Akash", "Plumber"));
-        cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber,4.4, "Akash", "Plumber"));
-        cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber,4.4, "Akash", "Plumber"));
 
+        for (int i =0; i <= 20; i++) {
+            cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 4.4, "Akash", "Plumber"));
+            cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 4.4, "Akash", "Plumber"));
+            cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 4.4, "Akash", "Plumber"));
+        }
 
         recyclerView = findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
