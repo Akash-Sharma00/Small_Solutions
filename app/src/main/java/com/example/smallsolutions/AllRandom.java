@@ -21,10 +21,10 @@ public class AllRandom extends AppCompatActivity {
 
         cardList = new ArrayList<>();
 
-        for (int i =0; i <= 20; i++) {
+        for (int i =0; i <= 10; i++) {
             cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 4.4, "Akash", "Plumber"));
-            cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 4.4, "Akash", "Plumber"));
-            cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 4.4, "Akash", "Plumber"));
+            cardList.add(new RecyclerGetterNSetter(R.drawable.cook, 1.4, "Nitin", "Cleaner"));
+            cardList.add(new RecyclerGetterNSetter(R.drawable.carpenter, 4.9, "XYZ", "Developer"));
         }
 
         recyclerView = findViewById(R.id.recycler);
