@@ -34,7 +34,7 @@
                 android:text="@string/WelcomeText"
                 android:textColor="@color/white"
                 android:layout_marginStart="30dp"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_collapseMode="none" />
 
             <androidx.appcompat.widget.Toolbar
