@@ -24,12 +24,12 @@
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\hired.png"
     },
     {
-        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_webdev.jpeg.flat",
-        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable-v24\\webdev.jpeg"
-    },
-    {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_buttons_layout.xml.flat",
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable\\buttons_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_webdev.jpeg.flat",
+        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable-v24\\webdev.jpeg"
     },
     {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_hired.png.flat",
