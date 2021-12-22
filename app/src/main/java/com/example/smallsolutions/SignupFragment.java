@@ -74,7 +74,7 @@ public class SignupFragment extends Fragment {
     AutoCompleteTextView autoCompleteTextView;    //for catagory
 
     //    String arrays for drop down box
-    String[] catagory = {"Employee", "Employer"};
+    String[] catagory = {"Job Seeker", "Recruiter"};
     String[] professions = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
     String[] experience = {"yrs", "months"};
     TextView addText, removeText;
@@ -180,7 +180,7 @@ public class SignupFragment extends Fragment {
         EditText experience_edittext = root.findViewById(R.id.experience_edittext);
         TextInputLayout experience_textInputLayout = root.findViewById(R.id.experience_dropdown);
 
-        if (catagory_string == "Employee") {
+        if (catagory_string == "Job Seeker") {
             recycler.setVisibility(View.VISIBLE);
             age.setVisibility(View.VISIBLE);
             experience_edittext.setVisibility(View.VISIBLE);

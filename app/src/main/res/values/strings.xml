@@ -51,4 +51,8 @@
     <string name="Recommended">Recommended Employees</string>
     <string name="you_may_also_like_this">You May Also Like This</string>
 
+<!--    Navigation Drawer Strings-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 </resources>
