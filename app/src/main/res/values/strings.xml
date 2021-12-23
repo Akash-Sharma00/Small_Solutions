@@ -34,14 +34,14 @@
     <string name="DigitalMarketer">Digital Marketer</string>
     <string name="cook">Cook</string>
 
-<!--    DropDown hint text-->
+    <!--    DropDown hint text-->
     <string name="catagory">Select Catagory</string>
     <string name="Profession">Choose Profession</string>
     <string name="experience">Experience</string>
 
     <string name="more">more</string>
 
-<!--   Strings of home fragments -->
+    <!--   Strings of home fragments -->
     <string name="Home">Home</string>
     <string name="hired">Hired</string>
     <string name="profile">Profile</string>

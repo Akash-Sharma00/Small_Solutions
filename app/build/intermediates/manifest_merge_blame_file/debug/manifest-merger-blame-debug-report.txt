@@ -11,7 +11,11 @@
 9-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
 10
 11    <application
+<<<<<<< HEAD
 11-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:5:5-37:19
+=======
+11-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:5:5-41:19
+>>>>>>> more
 12        android:allowBackup="true"
 12-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,12 +33,18 @@
 19-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:11:9-52
 20        <activity
 20-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:12:9-14:39
+<<<<<<< HEAD
 21            android:name="com.example.smallsolutions.profileActivity"
 21-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:13:13-44
+=======
+21            android:name="com.example.smallsolutions.AllRandom"
+21-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:13:13-38
+>>>>>>> more
 22            android:exported="true" />
 22-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:14:13-36
 23        <activity
 23-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:15:9-17:39
+<<<<<<< HEAD
 24            android:name="com.example.smallsolutions.SignUpActivity"
 24-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:16:13-43
 25            android:exported="true" />
@@ -78,3 +88,56 @@
 45    </application>
 46
 47</manifest>
+=======
+24            android:name="com.example.smallsolutions.profileActivity"
+24-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:16:13-44
+25            android:exported="true" />
+25-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:17:13-36
+26        <activity
+26-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:18:9-20:39
+27            android:name="com.example.smallsolutions.SignUpActivity"
+27-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:19:13-43
+28            android:exported="true" />
+28-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:20:13-36
+29        <activity
+29-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:21:9-24:59
+30            android:name="com.example.smallsolutions.HomeActivity"
+30-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:22:13-41
+31            android:exported="true"
+31-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:23:13-36
+32            android:windowSoftInputMode="adjustNothing" />
+32-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:24:13-56
+33        <activity
+33-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:25:9-27:39
+34            android:name="com.example.smallsolutions.LoginActivity"
+34-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:26:13-42
+35            android:exported="true" />
+35-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:27:13-36
+36        <activity
+36-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:28:9-36:20
+37            android:name="com.example.smallsolutions.MainActivity"
+37-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:29:13-41
+38            android:exported="true" >
+38-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:30:13-36
+39            <intent-filter>
+39-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:31:13-35:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:32:17-69
+40-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:32:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:34:17-77
+42-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:34:27-74
+43            </intent-filter>
+44        </activity>
+45
+46        <meta-data
+46-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:38:9-40:57
+47            android:name="preloaded_fonts"
+47-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:39:13-43
+48            android:resource="@array/preloaded_fonts" />
+48-->C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:40:13-54
+49    </application>
+50
+51</manifest>
+>>>>>>> more

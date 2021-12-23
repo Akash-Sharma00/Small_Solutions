@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmallSolutions">
         <activity
+            android:name=".AllRandom"
+            android:exported="true" />
+        <activity
             android:name=".profileActivity"
             android:exported="true" />
         <activity
@@ -17,7 +20,12 @@
             android:exported="true" />
         <activity
             android:name=".HomeActivity"
+<<<<<<< HEAD
             android:exported="true"/>
+=======
+            android:exported="true"
+            android:windowSoftInputMode="adjustNothing" />
+>>>>>>> more
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
