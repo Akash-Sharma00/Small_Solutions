@@ -256,12 +256,12 @@
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_login.xml.flat",
-        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\layout\\fragment_login.xml"
-    },
-    {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_digitalmarketer.jpeg.flat",
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable-v24\\digitalmarketer.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\layout\\fragment_login.xml"
     },
     {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",

@@ -10,9 +10,8 @@ com/example/smallsolutions/ProfessionAdapter.java
  com.example.smallsolutions.ProfessionAdapter$ViewHolder
 com/example/smallsolutions/ProfessionRecyclerI.java
  com.example.smallsolutions.ProfessionRecyclerI
-com/example/smallsolutions/RecyclerAdapter.java
- com.example.smallsolutions.RecyclerAdapter
- com.example.smallsolutions.RecyclerAdapter$viewHolder
+com/example/smallsolutions/HomeFragment.java
+ com.example.smallsolutions.HomeFragment
 com/example/smallsolutions/RecyclerGetterNSetter.java
  com.example.smallsolutions.RecyclerGetterNSetter
 com/example/smallsolutions/MainActivity.java
@@ -27,8 +26,8 @@ com/example/smallsolutions/profileActivity.java
  com.example.smallsolutions.profileActivity
 com/example/smallsolutions/FragmentAdapter.java
  com.example.smallsolutions.FragmentAdapter
-com/example/smallsolutions/LoginFragment.java
- com.example.smallsolutions.LoginFragment
+com/example/smallsolutions/AllRandom.java
+ com.example.smallsolutions.AllRandom
 com/example/smallsolutions/CategoryFragment.java
  com.example.smallsolutions.CategoryFragment
 com/example/smallsolutions/LoginFragmentAdapter.java
@@ -40,7 +39,8 @@ com/example/smallsolutions/HomeActivity.java
 com/example/smallsolutions/SignUpActivity.java
  com.example.smallsolutions.SignUpActivity
  com.example.smallsolutions.SignUpActivity$1
-com/example/smallsolutions/AllRandom.java
- com.example.smallsolutions.AllRandom
-com/example/smallsolutions/HomeFragment.java
- com.example.smallsolutions.HomeFragment
+com/example/smallsolutions/RecyclerAdapter.java
+ com.example.smallsolutions.RecyclerAdapter
+ com.example.smallsolutions.RecyclerAdapter$viewHolder
+com/example/smallsolutions/LoginFragment.java
+ com.example.smallsolutions.LoginFragment
