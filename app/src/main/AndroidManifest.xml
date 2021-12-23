@@ -20,12 +20,8 @@
             android:exported="true" />
         <activity
             android:name=".HomeActivity"
-<<<<<<< HEAD
-            android:exported="true"/>
-=======
             android:exported="true"
             android:windowSoftInputMode="adjustNothing" />
->>>>>>> more
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
