@@ -106,6 +106,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
         }
 
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
