@@ -24,6 +24,7 @@ public class AllRandom extends AppCompatActivity {
         cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 4.4, "Akash", "Plumber"));
         cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 1.4, "Nitin", "Cleaner"));
         cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 4.9, "XYZ", "Developer"));
+        cardList.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 0.9, "Aadersh", "Nalla"));
 
         recyclerView = findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
