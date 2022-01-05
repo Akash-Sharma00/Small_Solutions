@@ -90,7 +90,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-//        Variable for navigatioin view
+//        Variable for navigation view
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
@@ -105,7 +105,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 break;
         }
-
+        drawer.closeDrawer((GravityCompat.START));
         return true;
     }
 
