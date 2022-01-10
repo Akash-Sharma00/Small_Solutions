@@ -22,24 +22,16 @@ import java.util.ArrayList;
 
 public class SignupFragment extends Fragment {
 
-    AutoCompleteTextView autoCompleteTextView;    //for category
-
     //    String arrays for drop down box
     String[] catagory = {"Job Seeker", "Recruiter"};
     String[] professions = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
     String[] experience = {"yrs", "months"};
-    TextView addText, removeText;
 
-    //    Array and adapter for profession drop down
-    ArrayList<ProfessionRecyclerI> professionArray;
-    ArrayAdapter adapterList;
-
-    //    Recycler and recycler adapter
-    RecyclerView recycler;
-    ProfessionAdapter recyclerAdapter;
+//    Text Input Layout of profession autocomplete text view
+    TextInputLayout textInputLayout_profession;
 
     //    Drop Down view for catagory
-    AutoCompleteTextView autoCompleteTextView_category;
+    AutoCompleteTextView autoCompleteTextView_category, autoCompleteTextView_profession;
 
     //    Selected catagory String variable
     String catagory_string;
@@ -47,7 +39,7 @@ public class SignupFragment extends Fragment {
 //    Sign up button
     Button signup;
 
-//All data in edittext
+//  All data in edittext
     EditText name, mail, password, contact, age, exp;
 
     @Override
@@ -66,24 +58,6 @@ public class SignupFragment extends Fragment {
         password = root.findViewById(R.id.password_signup);
         contact = root.findViewById(R.id.contact_edittext);
         age = root.findViewById(R.id.age);
-        autoCompleteTextView_category = root.findViewById(R.id.autoComplete_catagory);
-
-        addText = root.findViewById(R.id.add_profession);
-        removeText = root.findViewById(R.id.remove_profession);
-
-        addText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addProfession(root);
-            }
-        });
-
-        removeText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                removeProfession();
-            }
-        });
 
         signup = root.findViewById(R.id.signup);
         signup.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +69,7 @@ public class SignupFragment extends Fragment {
 
         experienceAdapter(root);
 
-        autoCompleteTextView_category = root.findViewById(R.id.autoComplete_catagory);
+        textInputLayout_profession = root.findViewById(R.id.professions_drop_down);
         gone(root);
 
         return root;
@@ -105,15 +79,15 @@ public class SignupFragment extends Fragment {
     }
 
     public void catatoryAdapter(View root) {
-        autoCompleteTextView = root.findViewById(R.id.autoComplete_catagory);
-        autoCompleteTextView.setInputType(0);
+        autoCompleteTextView_category = root.findViewById(R.id.autoComplete_catagory);
+        autoCompleteTextView_category.setInputType(0);
 
         ArrayAdapter<String> adapter_employee;
         adapter_employee = new ArrayAdapter<>(root.getContext(), R.layout.dropdown_textview, R.id.items_design, catagory);
-        autoCompleteTextView.setSelected(true);
-        autoCompleteTextView.setAdapter(adapter_employee);
+        autoCompleteTextView_category.setSelected(true);
+        autoCompleteTextView_category.setAdapter(adapter_employee);
 
-        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        autoCompleteTextView_category.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 catagory_string = adapter_employee.getItem(i);
@@ -123,25 +97,12 @@ public class SignupFragment extends Fragment {
     }
 
     public void professionAdapter(View root) {
-        recycler = root.findViewById(R.id.recycler);
+        autoCompleteTextView_profession = root.findViewById(R.id.autoComplete_profession);
+
+        ArrayAdapter adapterList;
         adapterList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, professions);
-        professionArray = new ArrayList<>();
-        professionArray.add(new ProfessionRecyclerI(adapterList));
-        recyclerAdapter = new ProfessionAdapter(professionArray);
-        recycler.setLayoutManager(new LinearLayoutManager(root.getContext()));
-        recycler.setAdapter(recyclerAdapter);
-    }
 
-    public void addProfession(View root) {
-        professionArray.add(0, new ProfessionRecyclerI(adapterList));
-        recyclerAdapter.notifyItemInserted(0);
-    }
-
-    public void removeProfession() {
-        if (professionArray.size() > 1) {
-            professionArray.remove(0);
-            recyclerAdapter.notifyItemRemoved(0);
-        }
+        autoCompleteTextView_profession.setAdapter(adapterList);
     }
 
     public void experienceAdapter(View root) {
@@ -158,19 +119,15 @@ public class SignupFragment extends Fragment {
         TextInputLayout experience_textInputLayout = root.findViewById(R.id.experience_dropdown);
 
         if (catagory_string == "Job Seeker") {
-            recycler.setVisibility(View.VISIBLE);
+            textInputLayout_profession.setVisibility(View.VISIBLE);
             age.setVisibility(View.VISIBLE);
             experience_edittext.setVisibility(View.VISIBLE);
             experience_textInputLayout.setVisibility(View.VISIBLE);
-            addText.setVisibility(View.VISIBLE);
-            removeText.setVisibility(View.VISIBLE);
         } else {
-            recycler.setVisibility(View.GONE);
+            textInputLayout_profession.setVisibility(View.GONE);
             age.setVisibility(View.GONE);
             experience_edittext.setVisibility(View.GONE);
             experience_textInputLayout.setVisibility(View.GONE);
-            addText.setVisibility(View.GONE);
-            removeText.setVisibility(View.GONE);
         }
     }
 
@@ -179,11 +136,9 @@ public class SignupFragment extends Fragment {
         EditText experience_edittext = root.findViewById(R.id.experience_edittext);
         TextInputLayout experience_textInputLayout = root.findViewById(R.id.experience_dropdown);
 
-        recycler.setVisibility(View.GONE);
+        textInputLayout_profession.setVisibility(View.GONE);
         age.setVisibility(View.GONE);
         experience_edittext.setVisibility(View.GONE);
         experience_textInputLayout.setVisibility(View.GONE);
-        addText.setVisibility(View.GONE);
-        removeText.setVisibility(View.GONE);
     }
 }
