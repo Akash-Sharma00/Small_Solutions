@@ -17,6 +17,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -69,7 +71,22 @@ public class SignupFragment extends Fragment {
 
         experienceAdapter(root);
 
+<<<<<<< HEAD
         textInputLayout_profession = root.findViewById(R.id.professions_drop_down);
+=======
+        //getting sign button
+        signup = root.findViewById(R.id.signup);
+//      handling click on sign up button
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference reference = database.getReference("user");
+            }
+        });
+
+        autoCompleteTextView_category = root.findViewById(R.id.autoComplete_catagory);
+>>>>>>> origin/fire
         gone(root);
 
         return root;
