@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-#Sun Jan 09 16:03:51 IST 2022
+#Tue Jan 11 21:12:42 IST 2022
 base.2=D\:\\Nitin\\Black Book Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
-=======
-#Sat Jan 08 21:01:58 IST 2022
-base.2=C\:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
->>>>>>> origin/fire
 path.2=4/classes.dex
 base.1=D\:\\Nitin\\Black Book Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 path.1=0/classes.dex

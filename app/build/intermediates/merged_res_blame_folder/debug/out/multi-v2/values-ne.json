@@ -4,23 +4,6 @@
             "outputFile": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ne\\values-ne.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\sachi\\.gradle\\caches\\transforms-3\\736795ced1125049463359fb87a935ed\\transformed\\jetified-play-services-basement-17.0.0\\res\\values-ne\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "222",
-                        "endOffsets": "469"
-                    },
-                    "to": {
-                        "startLines": "45",
-                        "startColumns": "4",
-                        "startOffsets": "4614",
-                        "endColumns": "222",
-                        "endOffsets": "4832"
-                    }
-                },
-                {
                     "source": "C:\\Users\\sachi\\.gradle\\caches\\transforms-3\\1c82df0e58fbd0ba966b0ae0d34659c1\\transformed\\core-1.5.0\\res\\values-ne\\values-ne.xml",
                     "from": {
                         "startLines": "2",
@@ -54,6 +37,23 @@
                         "endLines": "5,33,34,35,36,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104",
                         "endColumns": "12,81,101,109,86,65,95,65,60,104,71,57,73,61,53,112,59,60,58,77,123,80,84,105,80,82,82,66,65,76,78,87,68,75,80,67,90,77,92,96,73,78,97,59,65,87,87,61,67,62,104,117,94,119,83",
                         "endOffsets": "262,3106,3208,3318,3405,6299,6395,6461,6522,6627,6699,6757,6831,6893,6947,7060,7120,7181,7240,7318,7442,7523,7608,7714,7795,7878,7961,8028,8094,8171,8250,8338,8407,8483,8564,8632,8723,8801,8894,8991,9065,9144,9242,9302,9368,9456,9544,9606,9674,9737,9842,9960,10055,10175,10259"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\sachi\\.gradle\\caches\\transforms-3\\6adff63397c1ac50e331d47bdf613af2\\transformed\\jetified-play-services-basement-17.1.0\\res\\values-ne\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "222",
+                        "endOffsets": "469"
+                    },
+                    "to": {
+                        "startLines": "45",
+                        "startColumns": "4",
+                        "startOffsets": "4614",
+                        "endColumns": "222",
+                        "endOffsets": "4832"
                     }
                 },
                 {
