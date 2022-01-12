@@ -1,6 +1,5 @@
 package com.example.smallsolutions;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -24,8 +23,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.concurrent.Executor;
 
 public class SignupFragment extends Fragment {
 
@@ -91,28 +88,37 @@ public class SignupFragment extends Fragment {
         if (validateInputs()){
             FirebaseDatabase databaseInstance = FirebaseDatabase.getInstance();
             FirebaseAuth auth = FirebaseAuth.getInstance();
-            DatabaseReference userReference , professionReference, recruiterReference;
+            DatabaseReference userReference , professionReference, recruiterReference, allUsersReference;
             userReference = databaseInstance.getReference("users");
-            professionReference = databaseInstance.getReference("profession");
-            recruiterReference = databaseInstance.getReference("recruiter");
+            allUsersReference = databaseInstance.getReference("users/allUsers");
+            professionReference = databaseInstance.getReference("users/profession");
+            recruiterReference = databaseInstance.getReference("users/recruiter");
 
             auth.createUserWithEmailAndPassword(userEmailString, userPasswordString)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
+                                String userId = auth.getUid();
                                 if (catagoryString.equals("Recruiter")){
+                                    UserDetails recruiterDetails = new UserDetails(userNameString, userEmailString,
+                                            userPasswordString, userPhoneNoString);
 
+                                    recruiterReference.child(userId).setValue(recruiterDetails);
+
+                                    String path = "users/" + catagoryString + "/" + userId;
+                                    allUsersReference.child(userId).setValue(path);
+                                    Toast.makeText(getContext(), "Signed in succssfully", Toast.LENGTH_SHORT).show();
                                 }
                                 else {
-                                    JobSeekerDetails seekerDetails = new JobSeekerDetails(userNameString,
+                                    UserDetails seekerDetails = new UserDetails(userNameString,
                                             userEmailString, userPasswordString, userPhoneNoString, ageString,
-                                            experienceString + experienceTimeString, professionString);
+                                            experienceString + " " + experienceTimeString, professionString);
 
-                                    professionReference.child(callingProfessionString(professionString)).child(auth.getUid()).setValue(seekerDetails);
+                                    professionReference.child(professionString).child(userId).setValue(seekerDetails);
 
-                                    String path = "profession/" + auth.getUid();
-                                    userReference.child(auth.getUid()).setValue(path);
+                                    String path = "users/profession/" + professionString + "/" + userId;
+                                    allUsersReference.child(userId).setValue(path);
                                     Toast.makeText(getContext(), "Signed in succssfully", Toast.LENGTH_SHORT).show();
 
                                 }
@@ -120,10 +126,6 @@ public class SignupFragment extends Fragment {
                         }
                     });
         }
-    }
-
-    private String callingProfessionString(String professionString) {
-        return professionString;
     }
 
     private void getEditTextData() {
@@ -161,6 +163,11 @@ public class SignupFragment extends Fragment {
             contactEditText.requestFocus();
             return false;
         }
+        if (userPhoneNoString.length() != 10){
+            contactEditText.setError("Enter valid number");
+            contactEditText.requestFocus();
+            return false;
+        }
         if (catagoryString.equals("Job Seeker")){
             if (ageString.isEmpty()){
                 ageEditText.setError("Age Required");
@@ -170,6 +177,11 @@ public class SignupFragment extends Fragment {
             if (experienceString.isEmpty()){
                 expEditText.setError("Experience Required");
                 expEditText.requestFocus();
+                return false;
+            }
+            if (Integer.parseInt(ageString) < 18){
+                ageEditText.setError("Age should be atleast 18");
+                ageEditText.requestFocus();
                 return false;
             }
 //            2. Checking if inner drop down is selected
@@ -207,7 +219,7 @@ public class SignupFragment extends Fragment {
             passwordEditText.requestFocus();
             return false;
         }
-        if (userPasswordString.length() > 10){
+        if (userPasswordString.length() > 15){
             passwordEditText.setError("Password is too large");
             passwordEditText.requestFocus();
             return false;
@@ -215,11 +227,6 @@ public class SignupFragment extends Fragment {
         if (!Patterns.EMAIL_ADDRESS.matcher(userEmailString).matches()){
             emailEditText.setError("Provide valid email");
             emailEditText.requestFocus();
-            return false;
-        }
-        if (Integer.parseInt(ageString) < 18){
-            ageEditText.setError("Age should be atleast 18");
-            ageEditText.requestFocus();
             return false;
         }
 

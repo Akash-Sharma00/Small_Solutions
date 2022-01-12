@@ -2,15 +2,22 @@ package com.example.smallsolutions;
 
 import java.io.Serializable;
 
-class JobSeekerDetails implements Serializable {
+class UserDetails implements Serializable {
 
     private String userName, userEmail, userPassword, userPhoneNo, age, experience, profession;
 
-    public JobSeekerDetails() {
+    public UserDetails() {
 
     }
 
-    public JobSeekerDetails(String userName, String userEmail, String userPassword, String userPhoneNo, String age, String experience, String profession) {
+    public UserDetails(String userName, String userEmail, String userPassword, String userPhoneNo) {
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userPhoneNo = userPhoneNo;
+    }
+
+    public UserDetails(String userName, String userEmail, String userPassword, String userPhoneNo, String age, String experience, String profession) {
         this.userName = userName;
         this.userEmail = userEmail;
         this.userPassword = userPassword;

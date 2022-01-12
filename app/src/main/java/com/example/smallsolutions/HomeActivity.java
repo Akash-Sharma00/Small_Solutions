@@ -103,6 +103,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.login:
                 Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(intent);
+                finish();
                 break;
         }
         drawer.closeDrawer((GravityCompat.START));
