@@ -55,4 +55,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+<!--    Profile Activity Strings-->
+    <string name="only_Profession">Profession</string>
+
 </resources>

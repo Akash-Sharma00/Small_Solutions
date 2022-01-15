@@ -27,7 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SignupFragment extends Fragment {
 
 //    String arrays for drop down box
-    String[] catagoryArray = {"Job Seeker", "Recruiter"};
+    String[] categoryArray = {"Job Seeker", "Recruiter"};
     String[] professionsArray = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
     String[] experienceArray = {"yrs", "months"};
 
@@ -52,7 +52,7 @@ public class SignupFragment extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_signup, container, false);
 
-        catatoryAdapter(root);
+        categoryAdapter(root);
         professionAdapter(root);
 
 //        getting all edit text
@@ -92,7 +92,7 @@ public class SignupFragment extends Fragment {
             userReference = databaseInstance.getReference("users");
             allUsersReference = databaseInstance.getReference("users/allUsers");
             professionReference = databaseInstance.getReference("users/profession");
-            recruiterReference = databaseInstance.getReference("users/recruiter");
+            recruiterReference = databaseInstance.getReference("users/Recruiter");
 
             auth.createUserWithEmailAndPassword(userEmailString, userPasswordString)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -108,7 +108,7 @@ public class SignupFragment extends Fragment {
 
                                     String path = "users/" + catagoryString + "/" + userId;
                                     allUsersReference.child(userId).setValue(path);
-                                    Toast.makeText(getContext(), "Signed in succssfully", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getContext(), "Signed in successfully", Toast.LENGTH_SHORT).show();
                                 }
                                 else {
                                     UserDetails seekerDetails = new UserDetails(userNameString,
@@ -119,7 +119,7 @@ public class SignupFragment extends Fragment {
 
                                     String path = "users/profession/" + professionString + "/" + userId;
                                     allUsersReference.child(userId).setValue(path);
-                                    Toast.makeText(getContext(), "Signed in succssfully", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getContext(), "Signed in successfully", Toast.LENGTH_SHORT).show();
 
                                 }
                             }
@@ -142,7 +142,7 @@ public class SignupFragment extends Fragment {
 
     public boolean validateInputs(){
 //        Checking if inputs are empty
-//         1. Checking if textboxes are empty
+//         1. Checking if textBoxes are empty
         if(userNameString.isEmpty()){
             nameEditText.setError("Username Required");
             nameEditText.requestFocus();
@@ -198,7 +198,7 @@ public class SignupFragment extends Fragment {
         }
 //        3. Checking if outer dropdown list is selected
         if (catagoryString.equals("")){
-            autoCompleteTextView_category.setError("Catagory Required");
+            autoCompleteTextView_category.setError("Category Required");
             autoCompleteTextView_category.requestFocus();
             return false;
         }
@@ -233,12 +233,12 @@ public class SignupFragment extends Fragment {
         return true;
     }
 
-    public void catatoryAdapter(View root) {
+    public void categoryAdapter(View root) {
         autoCompleteTextView_category = root.findViewById(R.id.autoComplete_catagory);
         autoCompleteTextView_category.setInputType(0);
 
         ArrayAdapter<String> adapter_employee;
-        adapter_employee = new ArrayAdapter<>(root.getContext(), R.layout.dropdown_textview, R.id.items_design, catagoryArray);
+        adapter_employee = new ArrayAdapter<>(root.getContext(), R.layout.dropdown_textview, R.id.items_design, categoryArray);
         autoCompleteTextView_category.setSelected(true);
         autoCompleteTextView_category.setAdapter(adapter_employee);
 
