@@ -74,12 +74,12 @@ public class LoginFragment extends Fragment {
 
 //    Function to create animation for login page
     public void animation(View root){
+
 //        Creating Hooks
         username = root.findViewById(R.id.UserName_login);
         password = root.findViewById(R.id.password_login);
         forgetPassword = root.findViewById(R.id.forget_password);
         login = root.findViewById(R.id.login_button);
-
 
 //        Setting initial opacity for all elements
         username.setAlpha(0);

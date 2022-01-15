@@ -4,14 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.view.animation.Animation;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -28,7 +23,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
 
 //        For welcome text animation
         NestedScrollView scrollView = findViewById(R.id.form);
@@ -75,11 +69,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-//        Collapse listener for appbar
+//        Collapse listener for collapsing toolbar
         AppBarLayout appBarLayout;
         appBarLayout = findViewById(R.id.appbar_layout);
 
-//        function to listen collapsing of appbar AppBarLayout appBarLayout;
+//        function to listen collapsing of collapsing toolbar
 
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override

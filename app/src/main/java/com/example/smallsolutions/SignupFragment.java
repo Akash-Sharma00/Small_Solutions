@@ -2,96 +2,49 @@ package com.example.smallsolutions;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.ArrayList;
-import java.util.Locale;
-
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SignupFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class SignupFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+//    String arrays for drop down box
+    String[] catagoryArray = {"Job Seeker", "Recruiter"};
+    String[] professionsArray = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
+    String[] experienceArray = {"yrs", "months"};
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+//    Variables to take user data from edittext
+    String userNameString, userEmailString, userPasswordString, userPhoneNoString, catagoryString = "", ageString, experienceString, experienceTimeString = "", professionString ="";
 
-    public SignupFragment() {
-        // Required empty public constructor
-    }
+//    Text Input Layout of profession autocomplete text view
+    TextInputLayout textInputLayout_profession;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SignupFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static SignupFragment newInstance(String param1, String param2) {
-        SignupFragment fragment = new SignupFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    //   Autocomplete TextViews for Drop Down
+    AutoCompleteTextView autoCompleteTextView_category, autoCompleteTextView_profession, autoCompleteTextView_experience;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+//    Sign up button
+    Button signup;
 
-    }
-
-    AutoCompleteTextView autoCompleteTextView;    //for catagory
-
-    //    String arrays for drop down box
-    String[] catagory = {"Employee", "Employer"};
-    String[] professions = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
-    String[] experience = {"yrs", "months"};
-    TextView addText, removeText;
-
-    //    Array and adapter for profession drop down
-    ArrayList<ProfessionRecyclerI> professionArray;
-    ArrayAdapter adapterList;
-
-    //    Recycler and recycler adapter
-    RecyclerView recycler;
-    ProfessionAdapter recyclerAdapter;
-
-    //    Drop Down view for catagory
-    AutoCompleteTextView autoCompleteTextView_catagory;
-
-    //    Selected catagory String variable
-    String catagory_string;
+//  All data in edittext
+    EditText nameEditText, emailEditText, passwordEditText, contactEditText, ageEditText, expEditText;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -102,77 +55,230 @@ public class SignupFragment extends Fragment {
         catatoryAdapter(root);
         professionAdapter(root);
 
-        addText = root.findViewById(R.id.add_profession);
-        removeText = root.findViewById(R.id.remove_profession);
+//        getting all edit text
 
-        addText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addProfession(root);
-            }
-        });
+        nameEditText = root.findViewById(R.id.username_signup);
+        emailEditText = root.findViewById(R.id.emailid_signup);
+        passwordEditText = root.findViewById(R.id.password_signup);
+        contactEditText = root.findViewById(R.id.contact_edittext);
+        ageEditText = root.findViewById(R.id.age);
+        expEditText = root.findViewById(R.id.experience_edittext);
 
-        removeText.setOnClickListener(new View.OnClickListener() {
+        signup = root.findViewById(R.id.signup);
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                removeProfession();
+            public void onClick(View v) {
+                authenticateUser();
             }
         });
 
         experienceAdapter(root);
 
-        autoCompleteTextView_catagory = root.findViewById(R.id.autoComplete_catagory);
+        textInputLayout_profession = root.findViewById(R.id.professions_drop_down);
+
+        autoCompleteTextView_category = root.findViewById(R.id.autoComplete_catagory);
+
         gone(root);
 
         return root;
     }
 
+    private void authenticateUser() {
+        getEditTextData();
+        if (validateInputs()){
+            FirebaseDatabase databaseInstance = FirebaseDatabase.getInstance();
+            FirebaseAuth auth = FirebaseAuth.getInstance();
+            DatabaseReference userReference , professionReference, recruiterReference, allUsersReference;
+            userReference = databaseInstance.getReference("users");
+            allUsersReference = databaseInstance.getReference("users/allUsers");
+            professionReference = databaseInstance.getReference("users/profession");
+            recruiterReference = databaseInstance.getReference("users/recruiter");
+
+            auth.createUserWithEmailAndPassword(userEmailString, userPasswordString)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()){
+                                String userId = auth.getUid();
+                                if (catagoryString.equals("Recruiter")){
+                                    UserDetails recruiterDetails = new UserDetails(userNameString, userEmailString,
+                                            userPasswordString, userPhoneNoString);
+
+                                    recruiterReference.child(userId).setValue(recruiterDetails);
+
+                                    String path = "users/" + catagoryString + "/" + userId;
+                                    allUsersReference.child(userId).setValue(path);
+                                    Toast.makeText(getContext(), "Signed in succssfully", Toast.LENGTH_SHORT).show();
+                                }
+                                else {
+                                    UserDetails seekerDetails = new UserDetails(userNameString,
+                                            userEmailString, userPasswordString, userPhoneNoString, ageString,
+                                            experienceString + " " + experienceTimeString, professionString);
+
+                                    professionReference.child(professionString).child(userId).setValue(seekerDetails);
+
+                                    String path = "users/profession/" + professionString + "/" + userId;
+                                    allUsersReference.child(userId).setValue(path);
+                                    Toast.makeText(getContext(), "Signed in succssfully", Toast.LENGTH_SHORT).show();
+
+                                }
+                            }
+                        }
+                    });
+        }
+    }
+
+    private void getEditTextData() {
+        userNameString = nameEditText.getText().toString().trim();
+        userEmailString = emailEditText.getText().toString().trim();
+        userPasswordString = passwordEditText.getText().toString().trim();
+        userPhoneNoString = contactEditText.getText().toString().trim();
+
+        if (catagoryString == "Job Seeker") {
+            ageString = ageEditText.getText().toString().trim();
+            experienceString = expEditText.getText().toString().trim();
+        }
+    }
+
+    public boolean validateInputs(){
+//        Checking if inputs are empty
+//         1. Checking if textboxes are empty
+        if(userNameString.isEmpty()){
+            nameEditText.setError("Username Required");
+            nameEditText.requestFocus();
+            return false;
+        }
+        if (userEmailString.isEmpty()){
+            emailEditText.setError("Email Required");
+            emailEditText.requestFocus();
+            return false;
+        }
+        if (userPasswordString.isEmpty()){
+            passwordEditText.setError("Password Required");
+            passwordEditText.requestFocus();
+            return false;
+        }
+        if (userPhoneNoString.isEmpty()){
+            contactEditText.setError("Contact Required");
+            contactEditText.requestFocus();
+            return false;
+        }
+        if (userPhoneNoString.length() != 10){
+            contactEditText.setError("Enter valid number");
+            contactEditText.requestFocus();
+            return false;
+        }
+        if (catagoryString.equals("Job Seeker")){
+            if (ageString.isEmpty()){
+                ageEditText.setError("Age Required");
+                ageEditText.requestFocus();
+                return false;
+            }
+            if (experienceString.isEmpty()){
+                expEditText.setError("Experience Required");
+                expEditText.requestFocus();
+                return false;
+            }
+            if (Integer.parseInt(ageString) < 18){
+                ageEditText.setError("Age should be atleast 18");
+                ageEditText.requestFocus();
+                return false;
+            }
+//            2. Checking if inner drop down is selected
+            if (professionString.equals("")){
+                autoCompleteTextView_profession.setError("Profession needed");
+                autoCompleteTextView_profession.requestFocus();
+                return false;
+            }
+            if (experienceTimeString.equals("")){
+                autoCompleteTextView_experience.setError("Experience Required");
+                autoCompleteTextView_experience.requestFocus();
+                return false;
+            }
+        }
+//        3. Checking if outer dropdown list is selected
+        if (catagoryString.equals("")){
+            autoCompleteTextView_category.setError("Catagory Required");
+            autoCompleteTextView_category.requestFocus();
+            return false;
+        }
+
+//        Checking general things
+        if (userNameString.length() < 3){
+            nameEditText.setError("Username too small");
+            nameEditText.requestFocus();
+            return false;
+        }
+        if (userNameString.length() > 20){
+            nameEditText.setError("Username too large");
+            nameEditText.requestFocus();
+            return false;
+        }
+        if (userPasswordString.length() < 6){
+            passwordEditText.setError("Password should be atleast 6 characters");
+            passwordEditText.requestFocus();
+            return false;
+        }
+        if (userPasswordString.length() > 15){
+            passwordEditText.setError("Password is too large");
+            passwordEditText.requestFocus();
+            return false;
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(userEmailString).matches()){
+            emailEditText.setError("Provide valid email");
+            emailEditText.requestFocus();
+            return false;
+        }
+
+        return true;
+    }
+
     public void catatoryAdapter(View root) {
-        autoCompleteTextView = root.findViewById(R.id.autoComplete_catagory);
-        autoCompleteTextView.setInputType(0);
+        autoCompleteTextView_category = root.findViewById(R.id.autoComplete_catagory);
+        autoCompleteTextView_category.setInputType(0);
 
         ArrayAdapter<String> adapter_employee;
-        adapter_employee = new ArrayAdapter<>(root.getContext(), R.layout.dropdown_textview, R.id.items_design, catagory);
-        autoCompleteTextView.setSelected(true);
-        autoCompleteTextView.setAdapter(adapter_employee);
+        adapter_employee = new ArrayAdapter<>(root.getContext(), R.layout.dropdown_textview, R.id.items_design, catagoryArray);
+        autoCompleteTextView_category.setSelected(true);
+        autoCompleteTextView_category.setAdapter(adapter_employee);
 
-        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        autoCompleteTextView_category.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                catagory_string = adapter_employee.getItem(i);
+                catagoryString = adapter_employee.getItem(i);
                 invisible(root);
             }
         });
     }
 
     public void professionAdapter(View root) {
-        recycler = root.findViewById(R.id.recycler);
-        adapterList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, professions);
-        professionArray = new ArrayList<>();
-        professionArray.add(new ProfessionRecyclerI(adapterList));
-        recyclerAdapter = new ProfessionAdapter(professionArray);
-        recycler.setLayoutManager(new LinearLayoutManager(root.getContext()));
-        recycler.setAdapter(recyclerAdapter);
-    }
+        autoCompleteTextView_profession = root.findViewById(R.id.autoComplete_profession);
 
-    public void addProfession(View root) {
-        professionArray.add(0, new ProfessionRecyclerI(adapterList));
-        recyclerAdapter.notifyItemInserted(0);
-    }
+        ArrayAdapter<String> adapterList;
+        adapterList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, professionsArray);
 
-    public void removeProfession() {
-        if (professionArray.size() > 1) {
-            professionArray.remove(0);
-            recyclerAdapter.notifyItemRemoved(0);
-        }
+        autoCompleteTextView_profession.setAdapter(adapterList);
+
+        autoCompleteTextView_profession.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                professionString = adapterList.getItem(i);
+            }
+        });
     }
 
     public void experienceAdapter(View root) {
-        AutoCompleteTextView autoCompleteTextView_experience;
         autoCompleteTextView_experience = root.findViewById(R.id.autoComplete_experience);
         autoCompleteTextView_experience.setInputType(0);
-        ArrayAdapter exprienceList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, experience);
+        ArrayAdapter<String> exprienceList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, experienceArray);
         autoCompleteTextView_experience.setAdapter(exprienceList);
+
+        autoCompleteTextView_experience.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                experienceTimeString = exprienceList.getItem(i);
+            }
+        });
     }
 
     public void invisible(View root) {
@@ -180,20 +286,16 @@ public class SignupFragment extends Fragment {
         EditText experience_edittext = root.findViewById(R.id.experience_edittext);
         TextInputLayout experience_textInputLayout = root.findViewById(R.id.experience_dropdown);
 
-        if (catagory_string == "Employee") {
-            recycler.setVisibility(View.VISIBLE);
+        if (catagoryString == "Job Seeker") {
+            textInputLayout_profession.setVisibility(View.VISIBLE);
             age.setVisibility(View.VISIBLE);
             experience_edittext.setVisibility(View.VISIBLE);
             experience_textInputLayout.setVisibility(View.VISIBLE);
-            addText.setVisibility(View.VISIBLE);
-            removeText.setVisibility(View.VISIBLE);
         } else {
-            recycler.setVisibility(View.GONE);
+            textInputLayout_profession.setVisibility(View.GONE);
             age.setVisibility(View.GONE);
             experience_edittext.setVisibility(View.GONE);
             experience_textInputLayout.setVisibility(View.GONE);
-            addText.setVisibility(View.GONE);
-            removeText.setVisibility(View.GONE);
         }
     }
 
@@ -202,11 +304,9 @@ public class SignupFragment extends Fragment {
         EditText experience_edittext = root.findViewById(R.id.experience_edittext);
         TextInputLayout experience_textInputLayout = root.findViewById(R.id.experience_dropdown);
 
-        recycler.setVisibility(View.GONE);
+        textInputLayout_profession.setVisibility(View.GONE);
         age.setVisibility(View.GONE);
         experience_edittext.setVisibility(View.GONE);
         experience_textInputLayout.setVisibility(View.GONE);
-        addText.setVisibility(View.GONE);
-        removeText.setVisibility(View.GONE);
     }
 }
