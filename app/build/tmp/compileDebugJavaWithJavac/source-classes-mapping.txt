@@ -28,24 +28,6 @@ com/example/smallsolutions/CallHistory.java
 com/example/smallsolutions/profileActivity.java
  com.example.smallsolutions.profileActivity
  com.example.smallsolutions.profileActivity$1
-com/example/smallsolutions/FragmentAdapter.java
- com.example.smallsolutions.FragmentAdapter
-com/example/smallsolutions/AllRandom.java
- com.example.smallsolutions.AllRandom
- com.example.smallsolutions.AllRandom$1
-com/example/smallsolutions/UserDetails.java
- com.example.smallsolutions.UserDetails
-com/example/smallsolutions/CategoryFragment.java
- com.example.smallsolutions.CategoryFragment
-com/example/smallsolutions/LoginFragmentAdapter.java
- com.example.smallsolutions.LoginFragmentAdapter
-com/example/smallsolutions/HomeActivity.java
- com.example.smallsolutions.HomeActivity
- com.example.smallsolutions.HomeActivity$1
- com.example.smallsolutions.HomeActivity$2
-com/example/smallsolutions/SignUpActivity.java
- com.example.smallsolutions.SignUpActivity
- com.example.smallsolutions.SignUpActivity$1
 com/example/smallsolutions/LoginFragment.java
  com.example.smallsolutions.LoginFragment
  com.example.smallsolutions.LoginFragment$1
@@ -56,6 +38,24 @@ com/example/smallsolutions/LoginFragment.java
  com.example.smallsolutions.LoginFragment$4
  com.example.smallsolutions.LoginFragment$5
  com.example.smallsolutions.LoginFragment$6
+com/example/smallsolutions/AllRandom.java
+ com.example.smallsolutions.AllRandom
+ com.example.smallsolutions.AllRandom$1
+com/example/smallsolutions/UserDetails.java
+ com.example.smallsolutions.UserDetails
+com/example/smallsolutions/CategoryFragment.java
+ com.example.smallsolutions.CategoryFragment
+com/example/smallsolutions/LoginFragmentAdapter.java
+ com.example.smallsolutions.LoginFragmentAdapter
 com/example/smallsolutions/RecyclerAdapter.java
  com.example.smallsolutions.RecyclerAdapter
  com.example.smallsolutions.RecyclerAdapter$viewHolder
+com/example/smallsolutions/SignUpActivity.java
+ com.example.smallsolutions.SignUpActivity
+ com.example.smallsolutions.SignUpActivity$1
+com/example/smallsolutions/HomeActivity.java
+ com.example.smallsolutions.HomeActivity
+ com.example.smallsolutions.HomeActivity$1
+ com.example.smallsolutions.HomeActivity$2
+com/example/smallsolutions/FragmentAdapter.java
+ com.example.smallsolutions.FragmentAdapter
