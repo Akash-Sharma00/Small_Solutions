@@ -18,9 +18,9 @@ com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment$5
 com/example/smallsolutions/HomeFragment.java
  com.example.smallsolutions.HomeFragment
-com/example/smallsolutions/MainActivity.java
- com.example.smallsolutions.MainActivity
- com.example.smallsolutions.MainActivity$1
+com/example/smallsolutions/RecyclerAdapter.java
+ com.example.smallsolutions.RecyclerAdapter
+ com.example.smallsolutions.RecyclerAdapter$viewHolder
 com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity
  com.example.smallsolutions.LoginActivity$1
@@ -53,6 +53,6 @@ com/example/smallsolutions/LoginFragment.java
  com.example.smallsolutions.LoginFragment$4
  com.example.smallsolutions.LoginFragment$5
  com.example.smallsolutions.LoginFragment$6
-com/example/smallsolutions/RecyclerAdapter.java
- com.example.smallsolutions.RecyclerAdapter
- com.example.smallsolutions.RecyclerAdapter$viewHolder
+com/example/smallsolutions/MainActivity.java
+ com.example.smallsolutions.MainActivity
+ com.example.smallsolutions.MainActivity$1

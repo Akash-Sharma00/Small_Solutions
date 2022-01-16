@@ -87,14 +87,15 @@
                             android:layout_height="45dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
+                            android:padding="4dp"
                             android:background="@drawable/blue"
                             app:srcCompat="@drawable/carpenter_icon" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
                             android:layout_below="@+id/image1"
+                            android:layout_centerHorizontal="true"
                             android:text="@string/carpenter" />
 
                     </RelativeLayout>
@@ -118,14 +119,15 @@
                             android:layout_height="45dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
+                            android:padding="4dp"
                             android:background="@drawable/blue"
                             app:srcCompat="@drawable/carpenter_icon" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
                             android:layout_below="@+id/image2"
+                            android:layout_centerHorizontal="true"
                             android:text="@string/carpenter" />
 
                     </RelativeLayout>
@@ -150,6 +152,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:background="@drawable/blue"
+                            android:padding="4dp"
                             app:srcCompat="@drawable/carpenter_icon" />
 
                         <TextView
@@ -188,6 +191,7 @@
                             android:layout_height="45dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
+                            android:padding="4dp"
                             android:background="@drawable/blue"
                             app:srcCompat="@drawable/carpenter_icon" />
 
@@ -220,6 +224,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:background="@drawable/blue"
+                            android:padding="4dp"
                             app:srcCompat="@drawable/carpenter_icon" />
 
                         <TextView
@@ -250,6 +255,7 @@
                             android:layout_height="45dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
+                            android:padding="4dp"
                             android:background="@drawable/blue"
                             app:srcCompat="@drawable/carpenter_icon" />
 
@@ -319,7 +325,7 @@
             android:layout_marginTop="15dp"
             android:background="#E3EAF8"
             android:padding="5dp"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/options_textview">
