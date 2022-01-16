@@ -1,6 +1,9 @@
 package com.example.smallsolutions;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,6 +18,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -48,10 +53,71 @@ public class LoginFragment extends Fragment {
             }
         });
 
+//        When Forget Password clicked
+        forgetPassword = root.findViewById(R.id.forget_password);
+
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                forgetPassword.setTextColor(Color.RED);
+                resetPassword(root);
+                forgetPassword.setTextColor(Color.BLUE);
+            }
+        });
+
         return root;
     }
 
-//    Function to Authenticate user's id and password.
+//    Function To Reset Password
+    private void resetPassword(View root) {
+
+//        Creating EditText to getting Email
+        final EditText mail = new EditText(root.getContext());
+        mail.setTextColor(Color.BLACK);
+
+//        Creating Dialog Window
+        final AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(root.getContext());
+        passwordResetDialog.setTitle("Reset Password");
+        passwordResetDialog.setMessage("Enter your Email Id To Send rReset Password Link");
+        passwordResetDialog.setView(mail);
+
+        passwordResetDialog.setCancelable(false).setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+//                Extracting Main id and sending reset link
+                String id = mail.getText().toString();
+                if (id.isEmpty()){
+                    Toast.makeText(getContext(), "Email is required to sent reset link", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                Auth.sendPasswordResetEmail(id).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(getContext(), "Reset Link sent to your email id check Your Account", Toast.LENGTH_LONG).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getContext(), "Failed! to send reset link "+e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
+
+            }
+        });
+
+        passwordResetDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+//                       Closing Dialog
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog dialogBox = passwordResetDialog.create();
+        dialogBox.show();
+    }
+
+    //    Function to Authenticate user's id and password.
     private void authenticateUser(View root) {
 
 
@@ -98,7 +164,7 @@ public class LoginFragment extends Fragment {
            public void onDataChange(@NonNull DataSnapshot snapshot) {
 //               Passing path to the profile activity
                 String path =  snapshot.getValue(String.class);
-                Intent intent = new Intent(getContext(), profileActivity.class);
+                Intent intent = new Intent(getContext(), HomeActivity.class);
                 intent.putExtra("PATH",path);
                 startActivity(intent);
            }

@@ -18,14 +18,16 @@ public class FragmentAdapter extends FragmentStateAdapter {
         {
             case 1:
                 return new CategoryFragment();
-//            case 2:
+            case 2:
 //                return new frag1();
+            case 3:
+                return new LocalUserProfileFragment();
         }
         return new HomeFragment();
     }
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 3;
     }
 }

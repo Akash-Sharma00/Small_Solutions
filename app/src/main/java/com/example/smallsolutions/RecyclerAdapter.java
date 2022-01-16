@@ -16,9 +16,10 @@ import java.util.ArrayList;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHolder>
 {
-    ArrayList<RecyclerGetterNSetter> dataHolder;
-
-    public RecyclerAdapter(AllRandom allRandom, ArrayList<RecyclerGetterNSetter> dataHolder) {
+    ArrayList<UserDetails> dataHolder;
+    AllRandom allrandom;
+    public RecyclerAdapter(AllRandom allRandom, ArrayList<UserDetails> dataHolder) {
+        this.allrandom = allRandom;
         this.dataHolder = dataHolder;
     }
 
@@ -31,10 +32,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        holder.dpImg.setImageResource(dataHolder.get(position).getDisplayImg());
-        holder.NameText.setText(dataHolder.get(position).getNameText());
-        holder.ProfessionText.setText(dataHolder.get(position).getProfessionText());
-        holder.StarRating.setRating((float) dataHolder.get(position).getStarRating());
+//        holder.dpImg.setImageResource(dataHolder.get(position).getDisplayImg());
+        holder.NameText.setText(dataHolder.get(position).getUserName());
+        holder.ProfessionText.setText(dataHolder.get(position).getProfession());
+//        holder.StarRating.setRating((float) dataHolder.get(position).getStarRating());
     }
 
     @Override
@@ -60,19 +61,24 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
         @Override
         public void onClick(View v) {
             int pos = getAdapterPosition();
-            RecyclerGetterNSetter recyclerGetterNSetter = dataHolder.get(pos);
+            UserDetails userDetails = dataHolder.get(pos);
 
-            String name = recyclerGetterNSetter.getNameText();
-            String profession = recyclerGetterNSetter.getProfessionText();
-            Double starRatting = recyclerGetterNSetter.getStarRating();
+            String name = userDetails.getUserName();
+            String profession = userDetails.getProfession();
+            String exp = userDetails.getExperience();
+            String contact = userDetails.getUserPhoneNo();
+            String mail = userDetails.getUserEmail();
+            String age = userDetails.getAge();
 
-            Toast.makeText(itemView.getContext(), "I am active" + pos + recyclerGetterNSetter, Toast.LENGTH_SHORT).show();
-//            v.getContext().startActivity(new Intent(v.getContext(), profileActivity.class));
-//            Intent intent = new Intent(itemView.getContext(), profileActivity.class);
-//            intent.putExtra("Name",name);
-//            intent.putExtra("Profession", profession);
-//            intent.putExtra("StarRatting",starRatting);
-//            v.getContext().startActivity(intent);
+            Toast.makeText(itemView.getContext(), "I am active" + pos + "  "+name, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(itemView.getContext(), profileActivity.class);
+            intent.putExtra("Name",name);
+            intent.putExtra("Profession", profession);
+            intent.putExtra("Exp", exp);
+            intent.putExtra("Contact", contact);
+            intent.putExtra("Mail", mail);
+            intent.putExtra("Age", age);
+            v.getContext().startActivity(intent);
         }
     }
 

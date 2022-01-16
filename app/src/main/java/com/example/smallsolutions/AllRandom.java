@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class AllRandom extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    ArrayList<RecyclerGetterNSetter> dataHolder;
+    ArrayList<UserDetails> dataHolder;
     FirebaseDatabase database;
     DatabaseReference reference;
     RecyclerAdapter adapter;
@@ -31,10 +31,6 @@ public class AllRandom extends AppCompatActivity {
         setContentView(R.layout.activity_all_random);
 
         dataHolder = new ArrayList<>();
-//        dataHolder.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 4.4, "Akash", "Plumber"));
-//        dataHolder.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 1.4, "Nitin", "Cleaner"));
-//        dataHolder.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 4.9, "XYZ", "Developer"));
-//        dataHolder.add(new RecyclerGetterNSetter(R.drawable.mrplumber, 5.0, "Aadersh", "Nalla"));
 
         recyclerView = findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -54,9 +50,10 @@ public class AllRandom extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    RecyclerGetterNSetter userDetails = dataSnapshot.getValue(RecyclerGetterNSetter.class);
-//                    dataHolder.add(userDetails);
-                    Toast.makeText(getApplicationContext(), "Hello world", Toast.LENGTH_SHORT).show();
+                    for (DataSnapshot data: dataSnapshot.getChildren()){
+                        UserDetails userDetails = data.getValue(UserDetails.class);
+                        dataHolder.add(userDetails);
+                    }
                 }
                 adapter.notifyDataSetChanged();
             }

@@ -68,7 +68,6 @@
                                 app:srcCompat="@drawable/videoeditor" />
 
                             <TextView
-                                android:id="@+id/profile_profession"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/imageView9"
@@ -104,7 +103,6 @@
                                 app:srcCompat="@drawable/cook" />
 
                             <TextView
-                                android:id="@+id/profile_age"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/imageView10"
@@ -441,7 +439,6 @@
                                 app:srcCompat="@drawable/videoeditor" />
 
                             <TextView
-                                android:id="@+id/profile_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/imageView8"

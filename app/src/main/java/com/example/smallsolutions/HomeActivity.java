@@ -39,7 +39,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-//        Hooks for tablayout and viewpager
+        Intent intent = getIntent();
+        String r = intent.getStringExtra("PATH");
+//        Toast.makeText(this, r, Toast.LENGTH_SHORT).show();
+
+//        Hooks for tabLayout and viewpager
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewpager2);
 
@@ -47,9 +51,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         FragmentManager fm = getSupportFragmentManager();
         fragmentAdapter = new FragmentAdapter(fm, getLifecycle());
         viewPager2.setAdapter(fragmentAdapter);
-        tabLayout.getTabAt(0).getIcon().setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_IN);
 
-//        Hooking tablayout with viewpager
+//        Hooking tabLayout with viewpager
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -119,4 +122,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
+    public String getPath(){
+        Intent intent = getIntent();
+        String path = intent.getStringExtra("PATH");
+        return path;
+    }
+
 }

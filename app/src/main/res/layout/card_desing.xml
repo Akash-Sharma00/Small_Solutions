@@ -39,7 +39,7 @@
                 android:layout_marginStart="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/mrplumber" />
+                app:srcCompat="@drawable/icon_profile" />
 
             <TextView
                 android:id="@+id/nameText"
