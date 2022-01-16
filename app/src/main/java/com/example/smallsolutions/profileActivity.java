@@ -57,6 +57,9 @@ public class profileActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                Handle call
                 makePhoneCall();
+
+//                Tracking call logs
+
             }
         });
     }

@@ -19,7 +19,7 @@ public class FragmentAdapter extends FragmentStateAdapter {
             case 1:
                 return new CategoryFragment();
             case 2:
-//                return new frag1();
+                return new CallHistory();
             case 3:
                 return new LocalUserProfileFragment();
         }

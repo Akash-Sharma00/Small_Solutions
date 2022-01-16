@@ -23,6 +23,8 @@ com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity$2
  com.example.smallsolutions.LoginActivity$3
  com.example.smallsolutions.LoginActivity$4
+com/example/smallsolutions/CallHistory.java
+ com.example.smallsolutions.CallHistory
 com/example/smallsolutions/profileActivity.java
  com.example.smallsolutions.profileActivity
  com.example.smallsolutions.profileActivity$1

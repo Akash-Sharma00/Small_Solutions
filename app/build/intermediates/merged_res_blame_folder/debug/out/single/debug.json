@@ -248,6 +248,10 @@
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\hired.png"
     },
     {
+        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_call_history.xml.flat",
+        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\layout\\fragment_call_history.xml"
+    },
+    {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home.xml.flat",
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\layout\\activity_home.xml"
     },
