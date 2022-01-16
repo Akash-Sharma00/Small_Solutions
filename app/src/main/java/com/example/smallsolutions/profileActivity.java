@@ -2,11 +2,18 @@ package com.example.smallsolutions;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -15,6 +22,7 @@ public class profileActivity extends AppCompatActivity {
 
     TextView name, age, profession, exp, contact, mail, description;
     FloatingActionButton call_Button;
+    private int REQUEST_CODE = 1;
 
 
 
@@ -48,7 +56,33 @@ public class profileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                Handle call
+                makePhoneCall();
             }
         });
+    }
+
+
+
+    private void makePhoneCall() {
+        String Number = contact.getText().toString();
+        if (ContextCompat.checkSelfPermission(profileActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(profileActivity.this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CODE);
+        }else {
+            String dial = "tel:" + Number;
+            startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == REQUEST_CODE){
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                makePhoneCall();
+        }else {
+            Toast.makeText(profileActivity.this, "Permission Denied", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

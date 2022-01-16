@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-43:12
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-45:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\abc\.gradle\caches\transforms-3\c2e76fb5e086b5c906002f45c03cd24a\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\abc\.gradle\caches\transforms-3\c0f7869d4dd728111a89d7a770b58255\transformed\constraintlayout-2.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\abc\.gradle\caches\transforms-3\ccd6c517801f56e7200472775579e27c\transformed\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
@@ -58,20 +58,20 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\abc\.gradle\cach
 MERGED from [androidx.print:print:1.0.0] C:\Users\abc\.gradle\caches\transforms-3\84046498be48793439a4476136a93af1\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\abc\.gradle\caches\transforms-3\d3f87aa4861bbafadab8253cbbec58bc\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\abc\.gradle\caches\transforms-3\9ccd4574ebca9c86103f7bd859ba1dfd\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-45:12
 	package
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:3:5-41
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-45:12
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-45:12
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:11-69
@@ -171,6 +171,10 @@ ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\Andro
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:40:13-54
 	android:name
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:39:13-43
+uses-permission#android.permission.CALL_PHONE
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:43:5-68
+	android:name
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:43:22-66
 uses-sdk
 INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml

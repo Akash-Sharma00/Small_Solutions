@@ -13,6 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
 
     private static int SPLASH_SCREEN = 3000;
@@ -21,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Animation topAnim, bottomAnim, bottomImageAnim;
     ImageView image, bottomImage;
     TextView appName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,4 +56,6 @@ public class MainActivity extends AppCompatActivity {
             }
         },SPLASH_SCREEN);
 
-}}
+    }
+
+}
