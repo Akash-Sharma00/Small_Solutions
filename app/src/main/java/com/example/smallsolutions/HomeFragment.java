@@ -28,7 +28,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         // getting fields
         RelativeLayout carpenter, plumber, electrician, appDev, cook, allPro;
-        
+
         LinearLayout searchBar;
 
         ImageView searchIcon;

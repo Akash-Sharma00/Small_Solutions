@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class LocalUserProfileFragment extends Fragment {
 
     FirebaseDatabase database;
+    FirebaseAuth Auth;
     DatabaseReference reference;
 
     TextView name, age, profession, exp, contact, mail, description;
@@ -31,13 +33,6 @@ public class LocalUserProfileFragment extends Fragment {
 
         View myRoot = inflater.inflate(R.layout.fragment_local_user_profile, container, false);
 
-        HomeActivity homeActivity = (HomeActivity) getActivity();
-        String PATH = homeActivity.getPath();
-        Toast.makeText(getContext(), PATH, Toast.LENGTH_SHORT).show();
-
-
-        Toast.makeText(getContext(), PATH, Toast.LENGTH_SHORT).show();
-
 //      Creating Hooks
         name = myRoot.findViewById(R.id.local_name);
         age = myRoot.findViewById(R.id.local_age);
@@ -47,33 +42,54 @@ public class LocalUserProfileFragment extends Fragment {
         mail = myRoot.findViewById(R.id.local_mail);
         description = myRoot.findViewById(R.id.local_description);
 
+
 //        description.setText(Path); // Need to remove Later
 
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference(PATH);
+        Auth = FirebaseAuth.getInstance();
 
+        reference = database.getReference("users/allUsers/" + Auth.getCurrentUser().getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                Getting path
+                String PATH = snapshot.getValue(String.class);
 
-                UserDetails userDetails = snapshot.getValue(UserDetails.class);
+                reference = database.getReference(PATH);
+
+                reference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                        UserDetails userDetails = snapshot.getValue(UserDetails.class);
 
 //                Setting data in profile
-                name.setText(userDetails.getUserName());
-                age.setText(userDetails.getAge());
-                profession.setText(userDetails.getProfession());
-                exp.setText(userDetails.getExperience());
-                contact.setText(userDetails.getUserPhoneNo());
-                mail.setText(userDetails.getUserEmail());
+                        name.setText(userDetails.getUserName());
+                        age.setText(userDetails.getAge());
+                        profession.setText(userDetails.getProfession());
+                        exp.setText(userDetails.getExperience());
+                        contact.setText(userDetails.getUserPhoneNo());
+                        mail.setText(userDetails.getUserEmail());
+
+                    }
+
+
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
             }
-
-
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
+
+
 
         return myRoot;
     }

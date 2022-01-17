@@ -13,17 +13,16 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-//    Variables for viewpager and tablayout
+//    Variables for viewpager and tabLayout
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     FragmentAdapter fragmentAdapter;
@@ -38,10 +37,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        Intent intent = getIntent();
-        String r = intent.getStringExtra("PATH");
-//        Toast.makeText(this, r, Toast.LENGTH_SHORT).show();
 
 //        Hooks for tabLayout and viewpager
         tabLayout = findViewById(R.id.tabLayout);
@@ -122,11 +117,4 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
-
-    public String getPath(){
-        Intent intent = getIntent();
-        String path = intent.getStringExtra("PATH");
-        return path;
-    }
-
 }
