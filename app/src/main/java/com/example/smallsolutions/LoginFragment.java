@@ -61,9 +61,7 @@ public class LoginFragment extends Fragment {
         forgetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                forgetPassword.setTextColor(Color.RED);
                 resetPassword(root);
-                forgetPassword.setTextColor(Color.BLUE);
             }
         });
 

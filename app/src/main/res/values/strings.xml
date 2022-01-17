@@ -50,6 +50,7 @@
     <string name="search_a_employee">Search For Skilled Person</string>
     <string name="Recommended">Recommended Employees</string>
     <string name="you_may_also_like_this">You May Also Like This</string>
+    <string name="appDev">App Developer</string>
 
     <!--    Navigation Drawer Strings-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -62,7 +63,7 @@
 <!--    Forget Password Box String-->
     <string name="confirm">Confirm</string>
     <string name="reset_password_here">Reset Password Here</string>
-    <string name="message_in_forget_box">Enter your E-mail Id To get reset link</string>
+    <string name="message_in_forget_box">Enter your E-mail Id to get reset link</string>
 
 
 </resources>

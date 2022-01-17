@@ -30,6 +30,9 @@ public class AllRandom extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_random);
 
+        Intent intent = getIntent();
+        String profession = intent.getStringExtra("pro");
+
         dataHolder = new ArrayList<>();
 
         recyclerView = findViewById(R.id.recycler);
@@ -44,25 +47,51 @@ public class AllRandom extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference("users/profession");
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    for (DataSnapshot data: dataSnapshot.getChildren()){
-                        UserDetails userDetails = data.getValue(UserDetails.class);
-                        dataHolder.add(userDetails);
+
+        if (profession.equals("more")){
+            reference = database.getReference("users/profession");
+
+            reference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    for (DataSnapshot dataSnapshot: snapshot.getChildren()){
+                        for (DataSnapshot data: dataSnapshot.getChildren()){
+                            UserDetails userDetails = data.getValue(UserDetails.class);
+                            dataHolder.add(userDetails);
+                        }
                     }
+                    adapter.notifyDataSetChanged();
                 }
-                adapter.notifyDataSetChanged();
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
+                }
+            });
+        }
+        else {
+            reference = database.getReference("users/profession/" + profession);
+
+            reference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    for (DataSnapshot dataSnapshot: snapshot.getChildren()){
+                            UserDetails userDetails = dataSnapshot.getValue(UserDetails.class);
+                            dataHolder.add(userDetails);
+                    }
+                    adapter.notifyDataSetChanged();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+        }
 
     }
 
