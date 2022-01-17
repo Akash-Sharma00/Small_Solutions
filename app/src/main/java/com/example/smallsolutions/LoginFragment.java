@@ -1,6 +1,7 @@
 package com.example.smallsolutions;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -71,25 +73,28 @@ public class LoginFragment extends Fragment {
 //    Function To Reset Password
     private void resetPassword(View root) {
 
-//        Creating EditText to getting Email
-        final EditText mail = new EditText(root.getContext());
-        mail.setTextColor(Color.BLACK);
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(false);
+        dialog.setContentView(R.layout.forgetpasswordbox);
 
-//        Creating Dialog Window
-        final AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(root.getContext());
-        passwordResetDialog.setTitle("Reset Password");
-        passwordResetDialog.setMessage("Enter your Email Id To Send rReset Password Link");
-        passwordResetDialog.setView(mail);
+//        Creating Hooks
+        EditText mail = dialog.findViewById(R.id.getMail);
+        Button cancel = dialog.findViewById(R.id.cancel);
+        Button confirm = dialog.findViewById(R.id.confirm);
 
-        passwordResetDialog.setCancelable(false).setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+        confirm.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-//                Extracting Main id and sending reset link
+            public void onClick(View v) {
+//                Extracting email id
                 String id = mail.getText().toString();
+
+//                Condition For empty string
                 if (id.isEmpty()){
                     Toast.makeText(getContext(), "Email is required to sent reset link", Toast.LENGTH_SHORT).show();
                     return;
                 }
+//                Sending reset link
                 Auth.sendPasswordResetEmail(id).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
@@ -101,20 +106,16 @@ public class LoginFragment extends Fragment {
                         Toast.makeText(getContext(), "Failed! to send reset link "+e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
-
             }
         });
 
-        passwordResetDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        cancel.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-//                       Closing Dialog
+            public void onClick(View v) {
                 dialog.dismiss();
             }
         });
-
-        AlertDialog dialogBox = passwordResetDialog.create();
-        dialogBox.show();
+        dialog.show();
     }
 
     //    Function to Authenticate user's id and password.

@@ -57,7 +57,12 @@
 
     <!--    Profile Activity Strings-->
     <string name="only_Profession">Profession</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+<!--    Forget Password Box String-->
+    <string name="confirm">Confirm</string>
+    <string name="reset_password_here">Reset Password Here</string>
+    <string name="message_in_forget_box">Enter your E-mail Id To get reset link</string>
+
 
 </resources>
