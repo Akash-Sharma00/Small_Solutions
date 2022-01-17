@@ -30,6 +30,7 @@ public class AllRandom extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_random);
 
+//        Getting Specific Profession
         Intent intent = getIntent();
         String profession = intent.getStringExtra("pro");
 
@@ -50,6 +51,7 @@ public class AllRandom extends AppCompatActivity {
 
 
         if (profession.equals("more")){
+//            Loading all professions
             reference = database.getReference("users/profession");
 
             reference.addValueEventListener(new ValueEventListener() {
@@ -72,6 +74,7 @@ public class AllRandom extends AppCompatActivity {
             });
         }
         else {
+//            Loading only professions passed by used
             reference = database.getReference("users/profession/" + profession);
 
             reference.addValueEventListener(new ValueEventListener() {
