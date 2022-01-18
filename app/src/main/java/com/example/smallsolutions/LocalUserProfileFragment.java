@@ -52,12 +52,26 @@ public class LocalUserProfileFragment extends Fragment {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
 //                Getting path
                 String PATH = snapshot.getValue(String.class);
 
                 reference = database.getReference(PATH);
 
-                reference.addValueEventListener(new ValueEventListener() {
+//                When a recruiter logged in
+                if (PATH.contains("Recruiter")){
+                    Toast.makeText(getActivity(), "Found", Toast.LENGTH_SHORT).show();
+
+                    myRoot.findViewById(R.id.age_hint).setVisibility(View.GONE);
+                    myRoot.findViewById(R.id.exp_hint).setVisibility(View.GONE);
+                    myRoot.findViewById(R.id.profession_hint).setVisibility(View.GONE);
+
+                    age.setVisibility(View.GONE);
+                    profession.setVisibility(View.GONE);
+                    exp.setVisibility(View.GONE);
+                }
+
+                 reference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -72,25 +86,14 @@ public class LocalUserProfileFragment extends Fragment {
                         mail.setText(userDetails.getUserEmail());
 
                     }
-
-
-
                     @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
+                    public void onCancelled(@NonNull DatabaseError error) {}
                 });
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
-
-
-
         return myRoot;
     }
 }

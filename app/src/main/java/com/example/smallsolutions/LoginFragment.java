@@ -144,7 +144,7 @@ public class LoginFragment extends Fragment {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     Toast.makeText(getContext(), "Successfully Logged in", Toast.LENGTH_SHORT).show();
-                    gettingUserPath(Auth.getCurrentUser().getUid());
+                    startActivity(new Intent(getContext(), HomeActivity.class));
                 }
                 else {
                     Toast.makeText(getContext(), "Error: "+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -152,27 +152,6 @@ public class LoginFragment extends Fragment {
             }
         });
 
-    }
-
-//    Function to getting path of user's profile
-    private void gettingUserPath(String UID) {
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference reference = database.getReference("users").child("allUsers").child(UID);
-       reference.addValueEventListener(new ValueEventListener() {
-           @Override
-           public void onDataChange(@NonNull DataSnapshot snapshot) {
-//               Passing path to the profile activity
-                String path =  snapshot.getValue(String.class);
-                Intent intent = new Intent(getContext(), HomeActivity.class);
-                intent.putExtra("PATH",path);
-                startActivity(intent);
-           }
-
-           @Override
-           public void onCancelled(@NonNull DatabaseError error) {
-
-           }
-       });
     }
 
     //    Function to create animation for login page
