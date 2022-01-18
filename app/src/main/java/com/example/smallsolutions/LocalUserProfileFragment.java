@@ -1,5 +1,10 @@
 package com.example.smallsolutions;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +30,7 @@ public class LocalUserProfileFragment extends Fragment {
     FirebaseAuth Auth;
     DatabaseReference reference;
 
-    TextView name, age, profession, exp, contact, mail, description;
+    TextView name, age, profession, exp, contact, mail, description, signOut;
 
 
     @Override
@@ -62,9 +68,10 @@ public class LocalUserProfileFragment extends Fragment {
                 if (PATH.contains("Recruiter")){
                     Toast.makeText(getActivity(), "Found", Toast.LENGTH_SHORT).show();
 
-                    myRoot.findViewById(R.id.age_hint).setVisibility(View.GONE);
-                    myRoot.findViewById(R.id.exp_hint).setVisibility(View.GONE);
-                    myRoot.findViewById(R.id.profession_hint).setVisibility(View.GONE);
+                    myRoot.findViewById(R.id.AGE).setVisibility(View.GONE);
+                    myRoot.findViewById(R.id.PROFESSION).setVisibility(View.GONE);
+                    myRoot.findViewById(R.id.EXP).setVisibility(View.GONE);
+                    myRoot.findViewById(R.id.ABOUT).setVisibility(View.GONE);
 
                     age.setVisibility(View.GONE);
                     profession.setVisibility(View.GONE);
@@ -92,6 +99,33 @@ public class LocalUserProfileFragment extends Fragment {
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+
+//        Signing Out the user
+        signOut = myRoot.findViewById(R.id.signOut);
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+//                Alert Box to confirmation
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setCancelable(false);
+                builder.setMessage("Are sure, You want to Exit");
+                builder.create();
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Auth.signOut();
+                        startActivity(new Intent(getActivity(), LoginActivity.class));
+                    }
+                }).setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+//                             Close
+                    }
+                });
+                builder.create().show();
             }
         });
         return myRoot;
