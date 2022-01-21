@@ -1,5 +1,6 @@
 package com.example.smallsolutions;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,8 +15,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,6 +61,38 @@ public class MainActivity extends AppCompatActivity {
             }
         },SPLASH_SCREEN);
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseDatabase database;
+        DatabaseReference reference;
+        FirebaseAuth Auth;
+
+        Auth = FirebaseAuth.getInstance();
+        FirebaseUser user = Auth.getCurrentUser();
+        if (user != null){
+            database = FirebaseDatabase.getInstance();
+            String UID = Auth.getCurrentUser().getUid();
+            reference = database.getReference("users").child("allUsers").child(UID);
+            reference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    String path =  snapshot.getValue(String.class);
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    intent.putExtra("PATH",path);
+                    startActivity(intent);
+                    finish();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        }
     }
 
 }

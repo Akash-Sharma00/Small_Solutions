@@ -33,10 +33,6 @@ public class LocalUserProfileFragment extends Fragment {
 
         HomeActivity homeActivity = (HomeActivity) getActivity();
         String PATH = homeActivity.getPath();
-        Toast.makeText(getContext(), PATH, Toast.LENGTH_SHORT).show();
-
-
-        Toast.makeText(getContext(), PATH, Toast.LENGTH_SHORT).show();
 
 //      Creating Hooks
         name = myRoot.findViewById(R.id.local_name);

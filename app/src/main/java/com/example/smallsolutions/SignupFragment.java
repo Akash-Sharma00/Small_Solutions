@@ -1,5 +1,6 @@
 package com.example.smallsolutions;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -100,15 +101,14 @@ public class SignupFragment extends Fragment {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
                                 String userId = auth.getUid();
+                                String path;
                                 if (catagoryString.equals("Recruiter")){
                                     UserDetails recruiterDetails = new UserDetails(userNameString, userEmailString,
                                             userPasswordString, userPhoneNoString);
 
                                     recruiterReference.child(userId).setValue(recruiterDetails);
 
-                                    String path = "users/" + catagoryString + "/" + userId;
-                                    allUsersReference.child(userId).setValue(path);
-                                    Toast.makeText(getContext(), "Signed in successfully", Toast.LENGTH_SHORT).show();
+                                    path = "users/" + catagoryString + "/" + userId;
                                 }
                                 else {
                                     UserDetails seekerDetails = new UserDetails(userNameString,
@@ -117,11 +117,13 @@ public class SignupFragment extends Fragment {
 
                                     professionReference.child(professionString).child(userId).setValue(seekerDetails);
 
-                                    String path = "users/profession/" + professionString + "/" + userId;
-                                    allUsersReference.child(userId).setValue(path);
-                                    Toast.makeText(getContext(), "Signed in successfully", Toast.LENGTH_SHORT).show();
+                                    path = "users/profession/" + professionString + "/" + userId;
 
                                 }
+                                allUsersReference.child(userId).setValue(path);
+                                Toast.makeText(getContext(), "Signed in successfully", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getContext(), HomeActivity.class));
+                                getActivity().finish();
                             }
                         }
                     });

@@ -6,6 +6,11 @@
         android:checkableBehavior="single">
 
         <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            android:title="Home"/>
+
+        <item
             android:id="@+id/my_profile"
             android:icon="@drawable/icon_profile"
             android:title="My Profile" />
@@ -22,27 +27,22 @@
 
     </group>
 
+    <group>
+
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+
+    </group>
+
     <item android:title="Communication">
 
         <menu>
 
             <item
                 android:id="@+id/contact_us"
-                android:icon="@drawable/ic_contact"
-                android:title="Contact Us"/>
-
-        </menu>
-
-    </item>
-
-    <item android:title="Required">
-
-        <menu>
-
-            <item
-                android:id="@+id/login"
-                android:icon="@drawable/ic_login"
-                android:title="Login" />
+                android:title="About Us"/>
 
         </menu>
 

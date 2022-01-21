@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
@@ -32,7 +31,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 //                Toast.makeText(getActivity(), "More called", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(v.getContext(),AllRandom.class);
                 v.getContext().startActivity(intent);
-                getActivity().finish();
                 break;
         }
     }

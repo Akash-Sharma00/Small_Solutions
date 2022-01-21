@@ -7,11 +7,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -33,6 +35,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 //    Drawer Variable
     private DrawerLayout drawer;
+
+//    Variable to track viewpager's current position
+    int viewPagerscurrentPosition = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,16 +102,26 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
-
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.login:
+            case R.id.logout:
                 Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(intent);
-                finish();
+                break;
+            case R.id.home:
+                viewPager2.setCurrentItem(0);
+                break;
+            case R.id.my_profile:
+                viewPager2.setCurrentItem(3);
+                break;
+            case R.id.chat:
+                startActivity(new Intent(getApplicationContext(), ChatActivity.class));
+                break;
+            case R.id.more_catagory:
+                viewPager2.setCurrentItem(1);
                 break;
         }
         drawer.closeDrawer((GravityCompat.START));
@@ -115,8 +130,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onBackPressed() {
+
         if (drawer.isDrawerOpen(GravityCompat.START)){
             drawer.closeDrawer(GravityCompat.START);
+        }
+        if (viewPager2.getCurrentItem() > 0){
+            viewPager2.setCurrentItem(0);
         }
         else{
             super.onBackPressed();

@@ -18,7 +18,6 @@
     <string name="Contact">Contact</string>
     <string name="Exp">Experience</string>
     <string name="Age">Age</string>
-    <string name="AboutText">Write a description about your Self (OPTIONAL)</string>
     <string name="done">DONE</string>
     <string name="FillTheDetails">Fill the details</string>
 
@@ -47,7 +46,7 @@
     <string name="profile">Profile</string>
     <string name="category">Categories</string>
     <string name="hire_a_person">Choose Professionals To Hire</string>
-    <string name="search_a_employee">Search For Skilled Person</string>
+    <string name="search_a_employee">Search Catagory</string>
     <string name="Recommended">Recommended Employees</string>
     <string name="you_may_also_like_this">You May Also Like This</string>
 
