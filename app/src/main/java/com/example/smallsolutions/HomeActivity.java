@@ -35,7 +35,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 //    Drawer Variable
     private DrawerLayout drawer;
 
-//    Variable to track viewpager's current position
+//    Variable to track viewPager's current position
     int viewPagerscurrentPosition = 0;
 
     @Override
@@ -136,4 +136,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
+    public void callCategory(){
+        viewPager2.setCurrentItem(1);
+    }
+
 }

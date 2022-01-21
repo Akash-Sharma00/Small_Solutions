@@ -115,7 +115,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent more1 = new Intent(getActivity(), AllRandom.class);
                 more1.putExtra("pro","more");
                 startActivity(more1);
-                getActivity().finish();
                 break;
 
             case R.id.search_bar:
