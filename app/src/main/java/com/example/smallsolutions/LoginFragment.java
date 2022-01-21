@@ -25,6 +25,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -41,6 +42,8 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        checkIfUserIsLoggedIn();
+
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_login, container, false);
         animation(root);
@@ -80,7 +83,7 @@ public class LoginFragment extends Fragment {
         EditText mail = dialog.findViewById(R.id.getMail);
         Button cancel = dialog.findViewById(R.id.cancel);
         Button confirm = dialog.findViewById(R.id.confirm);
-
+        
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +92,7 @@ public class LoginFragment extends Fragment {
 
 //                Condition For empty string
                 if (id.isEmpty()){
-                    Toast.makeText(getContext(), "Email is required to sent reset link", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Email is required to send reset link", Toast.LENGTH_SHORT).show();
                     return;
                 }
 //                Sending reset link
@@ -180,5 +183,14 @@ public class LoginFragment extends Fragment {
         password.animate().translationX(0).alpha(1).setDuration(950);
         forgetPassword.animate().translationX(0).alpha(1).setDuration(1100);
         login.animate().translationX(0).alpha(1).setDuration(1250);
+    }
+
+    public void checkIfUserIsLoggedIn(){
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseUser user = auth.getCurrentUser();
+
+        if (user != null){
+            getActivity().finish();
+        }
     }
 }

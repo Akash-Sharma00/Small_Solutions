@@ -42,7 +42,7 @@
                 android:background="@drawable/search_bar_bg"
                 android:ems="10"
                 android:hint="@string/search_a_employee"
-                android:inputType="textPersonName"
+                android:inputType="textAutoComplete"
                 android:textColor="@color/black"
                 android:textColorHint="@color/grey"
                 android:textSize="14sp"

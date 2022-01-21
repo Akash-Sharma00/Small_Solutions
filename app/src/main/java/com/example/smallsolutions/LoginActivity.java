@@ -29,11 +29,6 @@ public class LoginActivity extends AppCompatActivity {
     TabLayout tabLayout;
     LoginFragmentAdapter adapter;
 
-
-    FirebaseDatabase database;
-    DatabaseReference reference;
-    FirebaseAuth Auth;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,35 +113,5 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout.setAlpha(0);
         tabLayout.setTranslationX(300);
         tabLayout.animate().translationX(0).alpha(1).setDuration(800);
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Auth = FirebaseAuth.getInstance();
-        FirebaseUser user = Auth.getCurrentUser();
-        if (user == null){
-            Toast.makeText(LoginActivity.this, "Login First", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            database = FirebaseDatabase.getInstance();
-            String UID = Auth.getCurrentUser().getUid();
-            reference = database.getReference("users").child("allUsers").child(UID);
-            reference.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    String path =  snapshot.getValue(String.class);
-                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                    intent.putExtra("PATH",path);
-                    startActivity(intent);
-                    finish();
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
-        }
     }
 }

@@ -67,6 +67,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent more = new Intent(getActivity(), AllRandom.class);
                 more.putExtra("pro","more");
                 startActivity(more);
+                getActivity().finish();
                 break;
 
             case R.id.carpenter:
@@ -74,6 +75,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent carp = new Intent(getActivity(), AllRandom.class);
                 carp.putExtra("pro","Carpenter");
                 startActivity(carp);
+                getActivity().finish();
                 break;
 
             case R.id.plumber:
@@ -81,6 +83,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent plum = new Intent(getActivity(), AllRandom.class);
                 plum.putExtra("pro","Plumber");
                 startActivity(plum);
+                getActivity().finish();
                 break;
 
             case R.id.electrician:
@@ -88,6 +91,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent elect = new Intent(getActivity(), AllRandom.class);
                 elect.putExtra("pro","Electrician");
                 startActivity(elect);
+                getActivity().finish();
                 break;
 
             case R.id.appdevloper:
@@ -95,6 +99,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent app = new Intent(getActivity(), AllRandom.class);
                 app.putExtra("pro","App Developer");
                 startActivity(app);
+                getActivity().finish();
                 break;
 
             case R.id.cook:
@@ -102,6 +107,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent cook = new Intent(getActivity(), AllRandom.class);
                 cook.putExtra("pro","Cook");
                 startActivity(cook);
+                getActivity().finish();
                 break;
 
             case R.id.allpro:
@@ -109,6 +115,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent more1 = new Intent(getActivity(), AllRandom.class);
                 more1.putExtra("pro","more");
                 startActivity(more1);
+                getActivity().finish();
                 break;
 
             case R.id.search_bar:
