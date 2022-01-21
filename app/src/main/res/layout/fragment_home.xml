@@ -26,7 +26,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/searchPro"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
@@ -35,7 +35,7 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/enteredPro"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -51,7 +51,7 @@
 
         <LinearLayout
             android:id="@+id/category"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_marginTop="15dp"
@@ -61,7 +61,6 @@
             app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/search_bar"
-            app:layout_constraintVertical_bias="0.04"
             app:layout_constraintWidth_percent=".85">
 
             <LinearLayout
@@ -72,12 +71,13 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="11dp"
+                    android:layout_weight="1"
                     android:padding="6dp"
                     app:cardElevation="0dp">
 
                     <RelativeLayout
+                        android:id="@+id/carpenter"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -87,11 +87,12 @@
                             android:layout_height="45dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:padding="4dp"
                             android:background="@drawable/blue"
+                            android:padding="4dp"
                             app:srcCompat="@drawable/carpenter_icon" />
 
                         <TextView
+                            android:id="@+id/text_carpenter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/image1"
@@ -105,11 +106,12 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="11dp"
+                    android:layout_weight="1"
                     app:cardElevation="0dp">
 
                     <RelativeLayout
+                        android:id="@+id/plumber"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -119,16 +121,17 @@
                             android:layout_height="45dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:padding="4dp"
                             android:background="@drawable/blue"
-                            app:srcCompat="@drawable/carpenter_icon" />
+                            android:padding="4dp"
+                            app:srcCompat="@drawable/ic_plumber" />
 
                         <TextView
+                            android:id="@+id/text_plumber"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/image2"
                             android:layout_centerHorizontal="true"
-                            android:text="@string/carpenter" />
+                            android:text="@string/plumber" />
 
                     </RelativeLayout>
 
@@ -137,11 +140,12 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="11dp"
+                    android:layout_weight="1"
                     app:cardElevation="0dp">
 
                     <RelativeLayout
+                        android:id="@+id/electrician"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -153,14 +157,15 @@
                             android:layout_marginTop="10dp"
                             android:background="@drawable/blue"
                             android:padding="4dp"
-                            app:srcCompat="@drawable/carpenter_icon" />
+                            app:srcCompat="@drawable/ic_electrician" />
 
                         <TextView
+                            android:id="@+id/text_electrician"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
                             android:layout_below="@+id/image3"
-                            android:text="@string/carpenter" />
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/electrician" />
 
                     </RelativeLayout>
 
@@ -176,12 +181,13 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="11dp"
+                    android:layout_weight="1"
                     android:padding="6dp"
                     app:cardElevation="0dp">
 
                     <RelativeLayout
+                        android:id="@+id/appdevloper"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -191,16 +197,17 @@
                             android:layout_height="45dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:padding="4dp"
                             android:background="@drawable/blue"
-                            app:srcCompat="@drawable/carpenter_icon" />
+                            android:padding="4dp"
+                            app:srcCompat="@drawable/ic_app_developer" />
 
                         <TextView
+                            android:id="@+id/text_appdevloper"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
                             android:layout_below="@+id/image4"
-                            android:text="@string/carpenter" />
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/appDev" />
 
                     </RelativeLayout>
 
@@ -209,11 +216,12 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="11dp"
+                    android:layout_weight="1"
                     app:cardElevation="0dp">
 
                     <RelativeLayout
+                        android:id="@+id/cook"
                         android:layout_width="match_parent"
                         android:layout_height="72dp">
 
@@ -225,14 +233,15 @@
                             android:layout_marginTop="10dp"
                             android:background="@drawable/blue"
                             android:padding="4dp"
-                            app:srcCompat="@drawable/carpenter_icon" />
+                            app:srcCompat="@drawable/ic_cook" />
 
                         <TextView
+                            android:id="@+id/text_cook"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/image5"
                             android:layout_centerHorizontal="true"
-                            android:text="@string/carpenter" />
+                            android:text="@string/cook" />
 
                     </RelativeLayout>
 
@@ -241,11 +250,12 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="11dp"
+                    android:layout_weight="1"
                     app:cardElevation="0dp">
 
                     <RelativeLayout
+                        android:id="@+id/allpro"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -255,16 +265,16 @@
                             android:layout_height="45dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:padding="4dp"
                             android:background="@drawable/blue"
-                            app:srcCompat="@drawable/carpenter_icon" />
+                            android:padding="4dp"
+                            app:srcCompat="@drawable/ic_more" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
                             android:layout_below="@+id/image6"
-                            android:text="@string/carpenter" />
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/more" />
 
                     </RelativeLayout>
 

@@ -160,6 +160,14 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\mrplumber.jpg"
     },
     {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_app_developer.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_app_developer.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_cook.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_cook.xml"
+    },
+    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_android.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_android.xml"
     },
@@ -196,6 +204,10 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\search_icon.xml"
     },
     {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_more.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_more.xml"
+    },
+    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_bungee.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\bungee.xml"
     },
@@ -228,6 +240,10 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\navbar_header.xml"
     },
     {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_plumber.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_plumber.xml"
+    },
+    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_rounded_corners.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\rounded_corners.xml"
     },
@@ -258,6 +274,10 @@
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_burger.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_burger.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_electrician.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_electrician.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -306,6 +326,10 @@
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_forgetpasswordbox.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\forgetpasswordbox.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_bad_script.xml.flat",
