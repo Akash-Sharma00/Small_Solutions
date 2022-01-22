@@ -42,7 +42,7 @@
 
     <!--   Strings of home fragments -->
     <string name="Home">Home</string>
-    <string name="hired">Hired</string>
+    <string name="calls">Calls</string>
     <string name="profile">Profile</string>
     <string name="category">Categories</string>
     <string name="hire_a_person">Choose Professionals To Hire</string>

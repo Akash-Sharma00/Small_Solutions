@@ -36,7 +36,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawer;
 
 //    Variable to track viewPager's current position
-    int viewPagerscurrentPosition = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +100,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
         switch (item.getItemId()){
             case R.id.logout:
                 Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
@@ -136,9 +136,4 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
-
-    public void callCategory(){
-        viewPager2.setCurrentItem(1);
-    }
-
 }

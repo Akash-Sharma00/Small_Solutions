@@ -20,18 +20,20 @@ import java.util.Locale;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
+    // getting fields
+    RelativeLayout carpenter, plumber, electrician, appDev, cook, allPro;
+
+    //        Getting search bar
+    ImageView searchIcon;
+    EditText profession;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View myView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        // getting fields
-        RelativeLayout carpenter, plumber, electrician, appDev, cook, allPro;
-
-        LinearLayout searchBar;
-
-        ImageView searchIcon;
 
 //        Creating all hooks
          carpenter = myView.findViewById(R.id.carpenter);
@@ -41,8 +43,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
          cook = myView.findViewById(R.id.cook);
          allPro = myView.findViewById(R.id.allpro);
          searchIcon = myView.findViewById(R.id.searchPro);
-         searchBar = myView.findViewById(R.id.search_bar);
         TextView more = myView.findViewById(R.id.more);
+        profession = myView.findViewById(R.id.enteredPro);
 
 //         Setting Clicks on every clickable object
          carpenter.setOnClickListener(this);
@@ -51,9 +53,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
          appDev.setOnClickListener(this);
          cook.setOnClickListener(this);
          allPro.setOnClickListener(this);
-         searchIcon.setOnClickListener(this);
-         searchBar.setOnClickListener(this);
         more.setOnClickListener(this);
+        searchIcon.setOnClickListener(this);
 
         return myView;
     }
@@ -116,10 +117,39 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 more1.putExtra("pro","more");
                 startActivity(more1);
                 break;
-
-            case R.id.search_bar:
-                Toast.makeText(getContext(), "search bar", Toast.LENGTH_SHORT).show();
-                break;
+            case R.id.searchPro:
+                searchProfession();
         }
+    }
+
+
+
+
+    private void searchProfession() {
+        String Profession = profession.getText().toString();
+
+//                 If users search for two word profession like app developer
+        if (Profession.contains(" ")){
+            int index = Profession.indexOf(" ") + 1;
+            String first = Profession.substring(0,1).toUpperCase() + Profession.substring(1,index);
+            String second = Profession.substring(index, index+1).toUpperCase() + Profession.substring(index+1);
+            String result = first + second;
+            Intent search = new Intent(getActivity(), AllRandom.class);
+            search.putExtra("pro", result);
+            startActivity(search);
+            Toast.makeText(getActivity(),result, Toast.LENGTH_SHORT).show();
+        }
+
+        //Single word profession
+        else {
+
+            String result = Profession.substring(0,1).toUpperCase()+Profession.substring(1);
+            Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
+            Intent search = new Intent(getActivity(), AllRandom.class);
+            search.putExtra("pro", result);
+            startActivity(search);
+        }
+        getActivity().finish();
+
     }
 }

@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -86,6 +88,14 @@ public class AllRandom extends AppCompatActivity {
                             dataHolder.add(userDetails);
                     }
                     adapter.notifyDataSetChanged();
+
+                    //        Condition for no result found
+                    if (dataHolder.isEmpty()){
+                        Toast.makeText(getApplication(), "No result found", Toast.LENGTH_SHORT).show();
+            TextView Null = findViewById(R.id.noResult);
+            Null.setVisibility(View.VISIBLE);
+            Null.setText("No Result Found");
+                    }
                 }
 
                 @Override
@@ -95,6 +105,8 @@ public class AllRandom extends AppCompatActivity {
             });
 
         }
+
+
 
     }
 
