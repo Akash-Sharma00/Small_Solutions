@@ -92,9 +92,9 @@ public class AllRandom extends AppCompatActivity {
                     //        Condition for no result found
                     if (dataHolder.isEmpty()){
                         Toast.makeText(getApplication(), "No result found", Toast.LENGTH_SHORT).show();
-            TextView Null = findViewById(R.id.noResult);
-            Null.setVisibility(View.VISIBLE);
-            Null.setText("No Result Found");
+                        TextView Null = findViewById(R.id.noResult);
+                         Null.setVisibility(View.VISIBLE);
+                          Null.setText("No Result Found");
                     }
                 }
 

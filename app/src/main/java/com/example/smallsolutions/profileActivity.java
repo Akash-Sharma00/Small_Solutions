@@ -16,15 +16,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class profileActivity extends AppCompatActivity {
 
 
     TextView name, age, profession, exp, contact, mail, description;
     FloatingActionButton call_Button;
-    private int REQUEST_CODE = 1;
-
-
+    private final int REQUEST_CODE = 1;
+    FirebaseDatabase database;
+    DatabaseReference reference;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,15 +63,29 @@ public class profileActivity extends AppCompatActivity {
         call_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Handle call
-                makePhoneCall();
 
 //                Tracking call logs
+                uploadCalls();
 
+//                Handle call
+                makePhoneCall();
             }
         });
     }
 
+    private void uploadCalls() {
+        String receiverName = name.getText().toString();
+        String receiverContact = contact.getText().toString();
+        String receiverPro = profession.getText().toString();
+        String callTime = new SimpleDateFormat("hh:mm  dd-MM-yyyy").format(new Date());
+
+        database = FirebaseDatabase.getInstance();
+        reference = database.getReference("users").child("callLog");
+        auth = FirebaseAuth.getInstance();
+
+        UserDetails userDetails = new UserDetails(receiverName, receiverContact, receiverPro, callTime, "Hello");
+        reference.child(auth.getUid()).push().setValue(userDetails);
+    }
 
 
     private void makePhoneCall() {

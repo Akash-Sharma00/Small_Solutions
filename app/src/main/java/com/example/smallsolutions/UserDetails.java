@@ -1,13 +1,22 @@
 package com.example.smallsolutions;
 
+
 import java.io.Serializable;
 
 class UserDetails implements Serializable {
 
-    private String userName, userEmail, userPassword, userPhoneNo, age, experience, profession;
+    private String userName, userEmail, userPassword, userPhoneNo, age, experience, profession, time;
+    private String imageUri;
 
     public UserDetails() {
+    }
 
+    public UserDetails(String userName, String userPhoneNo, String profession, String time, String imageUri) {
+        this.userName = userName;
+        this.userPhoneNo = userPhoneNo;
+        this.profession = profession;
+        this.time = time;
+        this.imageUri = imageUri;
     }
 
     public UserDetails(String userName, String userEmail, String userPassword, String userPhoneNo) {
@@ -26,6 +35,8 @@ class UserDetails implements Serializable {
         this.experience = experience;
         this.profession = profession;
     }
+
+
 
     public String getUserName() {
         return userName;
@@ -53,5 +64,13 @@ class UserDetails implements Serializable {
 
     public String getProfession() {
         return profession;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getImageUri() {
+        return imageUri;
     }
 }

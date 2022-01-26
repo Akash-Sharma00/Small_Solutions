@@ -14,10 +14,10 @@ com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment$3
  com.example.smallsolutions.SignupFragment$4
  com.example.smallsolutions.SignupFragment$5
+com/example/smallsolutions/callLogRecycler.java
+ com.example.smallsolutions.callLogRecycler
 com/example/smallsolutions/ChatActivity.java
  com.example.smallsolutions.ChatActivity
-com/example/smallsolutions/RecyclerGetterNSetter.java
- com.example.smallsolutions.RecyclerGetterNSetter
 com/example/smallsolutions/HomeFragment.java
  com.example.smallsolutions.HomeFragment
 com/example/smallsolutions/MainActivity.java
@@ -31,6 +31,7 @@ com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity$3
 com/example/smallsolutions/CallHistory.java
  com.example.smallsolutions.CallHistory
+ com.example.smallsolutions.CallHistory$1
 com/example/smallsolutions/profileActivity.java
  com.example.smallsolutions.profileActivity
  com.example.smallsolutions.profileActivity$1
@@ -46,6 +47,10 @@ com/example/smallsolutions/CategoryFragment.java
  com.example.smallsolutions.CategoryFragment
 com/example/smallsolutions/LoginFragmentAdapter.java
  com.example.smallsolutions.LoginFragmentAdapter
+com/example/smallsolutions/CallLogAdapter.java
+ com.example.smallsolutions.CallLogAdapter
+ com.example.smallsolutions.CallLogAdapter$viewHolder
+ com.example.smallsolutions.CallLogAdapter$viewHolder$1
 com/example/smallsolutions/HomeActivity.java
  com.example.smallsolutions.HomeActivity
  com.example.smallsolutions.HomeActivity$1
