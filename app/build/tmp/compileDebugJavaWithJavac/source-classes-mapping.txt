@@ -1,39 +1,8 @@
 com/example/smallsolutions/BuildConfig.java
  com.example.smallsolutions.BuildConfig
-com/example/smallsolutions/LocalUserProfileFragment.java
- com.example.smallsolutions.LocalUserProfileFragment
- com.example.smallsolutions.LocalUserProfileFragment$1
- com.example.smallsolutions.LocalUserProfileFragment$1$1
- com.example.smallsolutions.LocalUserProfileFragment$2
- com.example.smallsolutions.LocalUserProfileFragment$2$1
- com.example.smallsolutions.LocalUserProfileFragment$2$2
-com/example/smallsolutions/CategoryFragment.java
- com.example.smallsolutions.CategoryFragment
-com/example/smallsolutions/ChatActivity.java
- com.example.smallsolutions.ChatActivity
-com/example/smallsolutions/RecyclerGetterNSetter.java
- com.example.smallsolutions.RecyclerGetterNSetter
-com/example/smallsolutions/UserDetails.java
- com.example.smallsolutions.UserDetails
-com/example/smallsolutions/LoginFragmentAdapter.java
- com.example.smallsolutions.LoginFragmentAdapter
-com/example/smallsolutions/LoginActivity.java
- com.example.smallsolutions.LoginActivity
- com.example.smallsolutions.LoginActivity$1
- com.example.smallsolutions.LoginActivity$2
- com.example.smallsolutions.LoginActivity$3
-com/example/smallsolutions/CallHistory.java
- com.example.smallsolutions.CallHistory
-com/example/smallsolutions/profileActivity.java
- com.example.smallsolutions.profileActivity
- com.example.smallsolutions.profileActivity$1
 com/example/smallsolutions/RecyclerAdapter.java
  com.example.smallsolutions.RecyclerAdapter
  com.example.smallsolutions.RecyclerAdapter$viewHolder
-com/example/smallsolutions/AllRandom.java
- com.example.smallsolutions.AllRandom
- com.example.smallsolutions.AllRandom$1
- com.example.smallsolutions.AllRandom$2
 com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment
  com.example.smallsolutions.SignupFragment$1
@@ -41,16 +10,12 @@ com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment$3
  com.example.smallsolutions.SignupFragment$4
  com.example.smallsolutions.SignupFragment$5
+com/example/smallsolutions/ChatActivity.java
+ com.example.smallsolutions.ChatActivity
+com/example/smallsolutions/RecyclerGetterNSetter.java
+ com.example.smallsolutions.RecyclerGetterNSetter
 com/example/smallsolutions/HomeFragment.java
  com.example.smallsolutions.HomeFragment
-com/example/smallsolutions/HomeActivity.java
- com.example.smallsolutions.HomeActivity
- com.example.smallsolutions.HomeActivity$1
- com.example.smallsolutions.HomeActivity$2
-com/example/smallsolutions/MainActivity.java
- com.example.smallsolutions.MainActivity
- com.example.smallsolutions.MainActivity$1
- com.example.smallsolutions.MainActivity$2
 com/example/smallsolutions/LoginFragment.java
  com.example.smallsolutions.LoginFragment
  com.example.smallsolutions.LoginFragment$1
@@ -60,5 +25,40 @@ com/example/smallsolutions/LoginFragment.java
  com.example.smallsolutions.LoginFragment$3$2
  com.example.smallsolutions.LoginFragment$4
  com.example.smallsolutions.LoginFragment$5
+com/example/smallsolutions/LoginFragmentAdapter.java
+ com.example.smallsolutions.LoginFragmentAdapter
+com/example/smallsolutions/CallHistory.java
+ com.example.smallsolutions.CallHistory
+com/example/smallsolutions/profileActivity.java
+ com.example.smallsolutions.profileActivity
+ com.example.smallsolutions.profileActivity$1
 com/example/smallsolutions/FragmentAdapter.java
  com.example.smallsolutions.FragmentAdapter
+com/example/smallsolutions/AllRandom.java
+ com.example.smallsolutions.AllRandom
+ com.example.smallsolutions.AllRandom$1
+ com.example.smallsolutions.AllRandom$2
+com/example/smallsolutions/UserDetails.java
+ com.example.smallsolutions.UserDetails
+com/example/smallsolutions/CategoryFragment.java
+ com.example.smallsolutions.CategoryFragment
+com/example/smallsolutions/LocalUserProfileFragment.java
+ com.example.smallsolutions.LocalUserProfileFragment
+ com.example.smallsolutions.LocalUserProfileFragment$1
+ com.example.smallsolutions.LocalUserProfileFragment$1$1
+ com.example.smallsolutions.LocalUserProfileFragment$2
+ com.example.smallsolutions.LocalUserProfileFragment$2$1
+ com.example.smallsolutions.LocalUserProfileFragment$2$2
+com/example/smallsolutions/HomeActivity.java
+ com.example.smallsolutions.HomeActivity
+ com.example.smallsolutions.HomeActivity$1
+ com.example.smallsolutions.HomeActivity$2
+com/example/smallsolutions/MainActivity.java
+ com.example.smallsolutions.MainActivity
+ com.example.smallsolutions.MainActivity$1
+ com.example.smallsolutions.MainActivity$2
+com/example/smallsolutions/LoginActivity.java
+ com.example.smallsolutions.LoginActivity
+ com.example.smallsolutions.LoginActivity$1
+ com.example.smallsolutions.LoginActivity$2
+ com.example.smallsolutions.LoginActivity$3
