@@ -103,6 +103,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(intent);
                 break;
