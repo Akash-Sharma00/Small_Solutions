@@ -66,7 +66,6 @@ public class LocalUserProfileFragment extends Fragment {
 
 //                When a recruiter logged in
                 if (PATH.contains("Recruiter")){
-                    Toast.makeText(getActivity(), "Found", Toast.LENGTH_SHORT).show();
 
                     myRoot.findViewById(R.id.AGE).setVisibility(View.GONE);
                     myRoot.findViewById(R.id.PROFESSION).setVisibility(View.GONE);

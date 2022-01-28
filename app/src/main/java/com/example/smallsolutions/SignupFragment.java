@@ -125,6 +125,9 @@ public class SignupFragment extends Fragment {
                                 startActivity(new Intent(getContext(), HomeActivity.class));
                                 getActivity().finish();
                             }
+                            else{
+                                Toast.makeText(getContext(), "User with same id already exist", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     });
         }
@@ -272,13 +275,13 @@ public class SignupFragment extends Fragment {
     public void experienceAdapter(View root) {
         autoCompleteTextView_experience = root.findViewById(R.id.autoComplete_experience);
         autoCompleteTextView_experience.setInputType(0);
-        ArrayAdapter<String> exprienceList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, experienceArray);
-        autoCompleteTextView_experience.setAdapter(exprienceList);
+        ArrayAdapter<String> experienceList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, experienceArray);
+        autoCompleteTextView_experience.setAdapter(experienceList);
 
         autoCompleteTextView_experience.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                experienceTimeString = exprienceList.getItem(i);
+                experienceTimeString = experienceList.getItem(i);
             }
         });
     }

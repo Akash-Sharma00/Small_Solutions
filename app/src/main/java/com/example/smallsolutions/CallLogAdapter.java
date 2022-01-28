@@ -1,5 +1,6 @@
 package com.example.smallsolutions;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -15,9 +16,12 @@ import java.util.ArrayList;
 
 public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.viewHolder>{
 
+    Activity activity;
     ArrayList<UserDetails> Holder;
-    public CallLogAdapter(ArrayList<UserDetails> holder) {
-        this.Holder = holder;
+
+    public CallLogAdapter(Activity activity, ArrayList<UserDetails> Holder) {
+        this.Holder = Holder;
+        this.activity = activity;
     }
 
     @NonNull
@@ -33,7 +37,6 @@ public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.viewHold
         holder.receiver_Contact.setText(Holder.get(position).getUserPhoneNo());
         holder.receiverProfessionText.setText(Holder.get(position).getProfession());
         holder.call_time.setText(Holder.get(position).getTime());
-//        holder.receiver_ImgUri.setText(Holder.get(position).getImageUri());
     }
 
     @Override
@@ -41,14 +44,13 @@ public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.viewHold
         return Holder.size();
     }
 
-    public class viewHolder extends RecyclerView.ViewHolder {
+    public class viewHolder extends RecyclerView.ViewHolder{
         ImageView call;
         TextView  receiverNameText, receiverProfessionText, receiver_Contact, call_time;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
 
-//            receiver_ImgUri = itemView.findViewById(R.id.receiver_pro3);
             receiverNameText = itemView.findViewById(R.id.receiver_name);
             receiver_Contact = itemView.findViewById(R.id.receiver_contact);
             receiverProfessionText = itemView.findViewById(R.id.receiver_pro);

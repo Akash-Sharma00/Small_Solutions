@@ -116,4 +116,5 @@ public class AllRandom extends AppCompatActivity {
         startActivity(home);
         super.onBackPressed();
     }
+
 }

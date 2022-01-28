@@ -20,18 +20,6 @@
             android:layout_height="match_parent">
 
 
-            <TextView
-                android:id="@+id/receiver_pro3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:text="TextView"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/call_again"
-                app:layout_constraintStart_toEndOf="@+id/receiver_name" />
-
             <ImageView
                 android:id="@+id/receiver_img"
                 android:layout_width="80dp"
@@ -50,6 +38,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="20dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/receiver_img"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,6 +60,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/receiver_img"
                 app:layout_constraintTop_toBottomOf="@+id/receiver_contact" />
@@ -82,9 +74,11 @@
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
                 android:text="TextView"
+                android:textColor="#020202"
+                android:textStyle="bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/call_again"
-                app:layout_constraintStart_toEndOf="@+id/receiver_name"
+                app:layout_constraintStart_toEndOf="@+id/receiver_contact"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView

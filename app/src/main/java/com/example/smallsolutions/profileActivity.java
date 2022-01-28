@@ -20,12 +20,18 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class profileActivity extends AppCompatActivity {
 
+    private static final String FILE_NAME = "AllCalls.txt";
 
     TextView name, age, profession, exp, contact, mail, description;
     FloatingActionButton call_Button;
@@ -85,6 +91,7 @@ public class profileActivity extends AppCompatActivity {
 
         UserDetails userDetails = new UserDetails(receiverName, receiverContact, receiverPro, callTime, "Hello");
         reference.child(auth.getUid()).push().setValue(userDetails);
+
     }
 
 

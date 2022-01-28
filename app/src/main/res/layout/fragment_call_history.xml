@@ -9,4 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"/>
+
+
+    <TextView
+        android:id="@+id/noCalls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Call History Available"
+        android:visibility="gone"
+        android:textColor="#474545"
+        android:textSize="20sp" />
+
 </RelativeLayout>
