@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#EDEDED"
         android:padding="7dp"
         app:cardCornerRadius="4dp">
 
@@ -72,8 +74,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
-                android:text="TextView"
-                android:textColor="#020202"
+                android:textColor="@color/blue"
                 android:textStyle="bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/call_again"
@@ -85,7 +86,6 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/buttons_layout"
                 android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

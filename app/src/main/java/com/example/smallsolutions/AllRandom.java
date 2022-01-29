@@ -64,9 +64,9 @@ public class AllRandom extends AppCompatActivity {
                         for (DataSnapshot data: dataSnapshot.getChildren()){
                             UserDetails userDetails = data.getValue(UserDetails.class);
                             dataHolder.add(userDetails);
+                            adapter.notifyDataSetChanged();
                         }
                     }
-                    adapter.notifyDataSetChanged();
                 }
 
                 @Override
