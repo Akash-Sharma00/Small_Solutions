@@ -11,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ import java.util.Date;
 public class profileActivity extends AppCompatActivity {
 
     TextView name, age, profession, exp, contact, mail, description;
+    ProgressBar progressBar;
     FloatingActionButton call_Button;
     private final int REQUEST_CODE = 1;
     FirebaseDatabase database;
@@ -47,8 +49,10 @@ public class profileActivity extends AppCompatActivity {
         mail = findViewById(R.id.profile_mail);
         call_Button = findViewById(R.id.profile_call);
         description = findViewById(R.id.profile_description);
+        progressBar = findViewById(R.id.profile_progress);
 
 //        Setting all data
+        progressBar.setVisibility(View.GONE);
         name.setText(intent.getStringExtra("Name"));
         age.setText(intent.getStringExtra("Age"));
         profession.setText(intent.getStringExtra("Profession"));

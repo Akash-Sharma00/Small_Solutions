@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ import java.util.ArrayList;
 public class AllRandom extends AppCompatActivity {
 
     RecyclerView recyclerView;
+    ProgressBar progress;
     ArrayList<UserDetails> dataHolder;
     FirebaseDatabase database;
     DatabaseReference reference;
@@ -38,6 +40,7 @@ public class AllRandom extends AppCompatActivity {
 
         dataHolder = new ArrayList<>();
 
+        progress = findViewById(R.id.All_progress);
         recyclerView = findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new RecyclerAdapter(this, dataHolder));
@@ -64,8 +67,9 @@ public class AllRandom extends AppCompatActivity {
                         for (DataSnapshot data: dataSnapshot.getChildren()){
                             UserDetails userDetails = data.getValue(UserDetails.class);
                             dataHolder.add(userDetails);
-                            adapter.notifyDataSetChanged();
                         }
+                        progress.setVisibility(View.GONE);
+                        adapter.notifyDataSetChanged();
                     }
                 }
 

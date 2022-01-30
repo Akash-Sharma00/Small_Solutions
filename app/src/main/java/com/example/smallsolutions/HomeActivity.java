@@ -10,6 +10,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -29,6 +31,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     FragmentAdapter fragmentAdapter;
+
+    FirebaseAuth Auth;
 
 //    Variable for toolbar
     Toolbar toolbar;
@@ -104,8 +108,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()){
             case R.id.logout:
-                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-                startActivity(intent);
+                SigningOut();
                 break;
             case R.id.home:
                 viewPager2.setCurrentItem(0);
@@ -122,6 +125,29 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
         drawer.closeDrawer((GravityCompat.START));
         return true;
+    }
+
+    private void SigningOut() {
+        //                Alert Box to confirmation
+        Auth = FirebaseAuth.getInstance();
+        AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
+        builder.setCancelable(false);
+        builder.setMessage("Are sure, You want to Sigh Out");
+        builder.create();
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Auth.signOut();
+                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+                finish();
+            }
+        }).setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+//                             Close
+            }
+        });
+        builder.create().show();
     }
 
     @Override

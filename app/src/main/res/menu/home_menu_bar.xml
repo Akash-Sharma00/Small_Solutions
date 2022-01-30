@@ -7,8 +7,9 @@
 
         <item
             android:id="@+id/home"
+            android:checked="true"
             android:icon="@drawable/ic_home"
-            android:title="Home"/>
+            android:title="Home" />
 
         <item
             android:id="@+id/my_profile"
@@ -27,14 +28,6 @@
 
     </group>
 
-    <group>
-
-            <item
-                android:id="@+id/logout"
-                android:icon="@drawable/ic_logout"
-                android:title="Logout" />
-
-    </group>
 
     <item android:title="Communication">
 
@@ -43,6 +36,19 @@
             <item
                 android:id="@+id/contact_us"
                 android:title="About Us"/>
+
+        </menu>
+
+    </item>
+    <item android:title="Authentication">
+
+        <menu>
+
+
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
 
         </menu>
 

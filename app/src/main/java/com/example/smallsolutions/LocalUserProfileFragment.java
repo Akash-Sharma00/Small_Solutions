@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ public class LocalUserProfileFragment extends Fragment {
     DatabaseReference reference;
 
     TextView name, age, profession, exp, contact, mail, description, signOut;
+    ProgressBar progressBar;
 
 
     @Override
@@ -83,6 +85,7 @@ public class LocalUserProfileFragment extends Fragment {
 
                         UserDetails userDetails = snapshot.getValue(UserDetails.class);
 
+
 //                Setting data in profile
                         name.setText(userDetails.getUserName());
                         age.setText(userDetails.getAge());
@@ -110,7 +113,7 @@ public class LocalUserProfileFragment extends Fragment {
 //                Alert Box to confirmation
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setCancelable(false);
-                builder.setMessage("Are sure, You want to Exit");
+                builder.setMessage("Are sure, You want to Sigh Out");
                 builder.create();
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
