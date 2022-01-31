@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,15 +25,23 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class LocalUserProfileFragment extends Fragment {
 
+//    Database variables
     FirebaseDatabase database;
     FirebaseAuth Auth;
     DatabaseReference reference;
 
+//    Textview variables
     TextView name, age, profession, exp, contact, mail, description, signOut;
+    ProgressBar progressBar;
 
+//    Imageview variables
+    CircleImageView profilePhoto;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,14 +57,14 @@ public class LocalUserProfileFragment extends Fragment {
         contact = myRoot.findViewById(R.id.local_contact);
         mail = myRoot.findViewById(R.id.local_mail);
         description = myRoot.findViewById(R.id.local_description);
-
+        profilePhoto = myRoot.findViewById(R.id.userProfilePhoto);
 
 //        description.setText(Path); // Need to remove Later
 
         database = FirebaseDatabase.getInstance();
         Auth = FirebaseAuth.getInstance();
 
-        reference = database.getReference("users/allUsers/" + Auth.getCurrentUser().getUid());
+        reference = database.getReference("users/allUsers/" + Auth.getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -66,7 +76,6 @@ public class LocalUserProfileFragment extends Fragment {
 
 //                When a recruiter logged in
                 if (PATH.contains("Recruiter")){
-                    Toast.makeText(getActivity(), "Found", Toast.LENGTH_SHORT).show();
 
                     myRoot.findViewById(R.id.AGE).setVisibility(View.GONE);
                     myRoot.findViewById(R.id.PROFESSION).setVisibility(View.GONE);
@@ -84,6 +93,7 @@ public class LocalUserProfileFragment extends Fragment {
 
                         UserDetails userDetails = snapshot.getValue(UserDetails.class);
 
+
 //                Setting data in profile
                         name.setText(userDetails.getUserName());
                         age.setText(userDetails.getAge());
@@ -91,7 +101,7 @@ public class LocalUserProfileFragment extends Fragment {
                         exp.setText(userDetails.getExperience());
                         contact.setText(userDetails.getUserPhoneNo());
                         mail.setText(userDetails.getUserEmail());
-
+                        Picasso.get().load(userDetails.getImageURL()).into(profilePhoto);
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {}
@@ -111,7 +121,7 @@ public class LocalUserProfileFragment extends Fragment {
 //                Alert Box to confirmation
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setCancelable(false);
-                builder.setMessage("Are sure, You want to Exit");
+                builder.setMessage("Are sure, You want to Sigh Out");
                 builder.create();
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override

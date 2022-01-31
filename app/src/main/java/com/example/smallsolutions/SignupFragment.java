@@ -3,7 +3,6 @@ package com.example.smallsolutions;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.util.Patterns;
@@ -15,21 +14,14 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
 
 public class SignupFragment extends Fragment {
 
 //    String arrays for drop down box
     String[] categoryArray = {"Job Seeker", "Recruiter"};
-    String[] professionsArray = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
+    String[] professionsArray = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook"};
     String[] experienceArray = {"yrs", "months"};
 
 //    Variables to take user data from edittext
@@ -42,10 +34,12 @@ public class SignupFragment extends Fragment {
     AutoCompleteTextView autoCompleteTextView_category, autoCompleteTextView_profession, autoCompleteTextView_experience;
 
 //    Sign up button
-    Button signup;
+    Button next;
 
 //  All data in edittext
     EditText nameEditText, emailEditText, passwordEditText, contactEditText, ageEditText, expEditText;
+
+    Intent intent;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,11 +59,11 @@ public class SignupFragment extends Fragment {
         ageEditText = root.findViewById(R.id.age);
         expEditText = root.findViewById(R.id.experience_edittext);
 
-        signup = root.findViewById(R.id.signup);
-        signup.setOnClickListener(new View.OnClickListener() {
+        next = root.findViewById(R.id.next);
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                authenticateUser();
+                sendDataToSignupActivity();
             }
         });
 
@@ -84,49 +78,26 @@ public class SignupFragment extends Fragment {
         return root;
     }
 
-    private void authenticateUser() {
+    private void sendDataToSignupActivity() {
         getEditTextData();
         if (validateInputs()){
-            FirebaseDatabase databaseInstance = FirebaseDatabase.getInstance();
-            FirebaseAuth auth = FirebaseAuth.getInstance();
-            DatabaseReference userReference , professionReference, recruiterReference, allUsersReference;
-            userReference = databaseInstance.getReference("users");
-            allUsersReference = databaseInstance.getReference("users/allUsers");
-            professionReference = databaseInstance.getReference("users/profession");
-            recruiterReference = databaseInstance.getReference("users/Recruiter");
 
-            auth.createUserWithEmailAndPassword(userEmailString, userPasswordString)
-                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()){
-                                String userId = auth.getUid();
-                                String path;
-                                if (catagoryString.equals("Recruiter")){
-                                    UserDetails recruiterDetails = new UserDetails(userNameString, userEmailString,
-                                            userPasswordString, userPhoneNoString);
-
-                                    recruiterReference.child(userId).setValue(recruiterDetails);
-
-                                    path = "users/" + catagoryString + "/" + userId;
-                                }
-                                else {
-                                    UserDetails seekerDetails = new UserDetails(userNameString,
-                                            userEmailString, userPasswordString, userPhoneNoString, ageString,
-                                            experienceString + " " + experienceTimeString, professionString);
-
-                                    professionReference.child(professionString).child(userId).setValue(seekerDetails);
-
-                                    path = "users/profession/" + professionString + "/" + userId;
-
-                                }
-                                allUsersReference.child(userId).setValue(path);
-                                Toast.makeText(getContext(), "Signed in successfully", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getContext(), HomeActivity.class));
-                                getActivity().finish();
-                            }
-                        }
-                    });
+            intent = new Intent(getContext(), SignupActivity.class);
+            if (catagoryString.equals("Recruiter")) {
+                UserDetails recruiterDetails = new UserDetails(userNameString, userEmailString, userPhoneNoString);
+                intent.putExtra("userDetails", recruiterDetails);
+                intent.putExtra("userPassword", userPasswordString);
+                intent.putExtra("recruiter", "true");
+            }
+            else {
+                UserDetails seekerDetails = new UserDetails(userNameString,
+                        userEmailString, userPhoneNoString, ageString,experienceString + " " + experienceTimeString,
+                        professionString);
+                intent.putExtra("userDetails", seekerDetails);
+                intent.putExtra("userPassword", userPasswordString);
+                intent.putExtra("recruiter", "false");
+            }
+            startActivity(intent);
         }
     }
 
@@ -272,13 +243,13 @@ public class SignupFragment extends Fragment {
     public void experienceAdapter(View root) {
         autoCompleteTextView_experience = root.findViewById(R.id.autoComplete_experience);
         autoCompleteTextView_experience.setInputType(0);
-        ArrayAdapter<String> exprienceList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, experienceArray);
-        autoCompleteTextView_experience.setAdapter(exprienceList);
+        ArrayAdapter<String> experienceList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, experienceArray);
+        autoCompleteTextView_experience.setAdapter(experienceList);
 
         autoCompleteTextView_experience.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                experienceTimeString = exprienceList.getItem(i);
+                experienceTimeString = experienceList.getItem(i);
             }
         });
     }

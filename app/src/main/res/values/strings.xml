@@ -20,6 +20,10 @@
     <string name="Age">Age</string>
     <string name="done">DONE</string>
     <string name="FillTheDetails">Fill the details</string>
+    <string name="nextText">Next</string>
+
+<!--    Signup Activity -->
+    <string name="selectImage">Select Image</string>
 
     <!--    Catagory activity text-->
     <string name="carpenter">Carpenter</string>
@@ -42,7 +46,7 @@
 
     <!--   Strings of home fragments -->
     <string name="Home">Home</string>
-    <string name="hired">Hired</string>
+    <string name="calls">Calls</string>
     <string name="profile">Profile</string>
     <string name="category">Categories</string>
     <string name="hire_a_person">Choose Professionals To Hire</string>
@@ -59,7 +63,7 @@
     <string name="only_Profession">Profession</string>
 
 
-<!--    Forget Password Box String-->
+    <!--    Forget Password Box String-->
     <string name="confirm">Confirm</string>
     <string name="reset_password_here">Reset Password Here</string>
     <string name="message_in_forget_box">Enter your E-mail Id to get reset link</string>

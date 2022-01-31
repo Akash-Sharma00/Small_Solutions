@@ -1,10 +1,7 @@
 package com.example.smallsolutions;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,6 +13,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,17 +24,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
 
 public class LoginFragment extends Fragment {
 
     EditText username, password;
     TextView forgetPassword;
     Button login;
+    ProgressBar progressBar;
     FirebaseAuth Auth = FirebaseAuth.getInstance(); //getting Database reference
 
     @Override
@@ -47,6 +42,8 @@ public class LoginFragment extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_login, container, false);
         animation(root);
+
+        progressBar = root.findViewById(R.id.login_progress);
 
 //        When log in button clicked
         login = root.findViewById(R.id.login_button);
@@ -122,6 +119,7 @@ public class LoginFragment extends Fragment {
     //    Function to Authenticate user's id and password.
     private void authenticateUser(View root) {
 
+        progressBar.setVisibility(View.VISIBLE);
 
 //      Hooks for id pass word
         username = root.findViewById(R.id.UserName_login);
@@ -135,10 +133,12 @@ public class LoginFragment extends Fragment {
         if (mail.isEmpty()){
             username.setError("Email is Required");
             username.requestFocus();
+            progressBar.setVisibility(View.GONE);
             return;
         }else if(code.isEmpty()){
             password.setError("Password is Required");
             password.requestFocus();
+            progressBar.setVisibility(View.GONE);
             return;
         }
 
@@ -146,10 +146,13 @@ public class LoginFragment extends Fragment {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+                    progressBar.setVisibility(View.GONE);
                     Toast.makeText(getContext(), "Successfully Logged in", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getContext(), HomeActivity.class));
+                    getActivity().finish();
                 }
                 else {
+                    progressBar.setVisibility(View.GONE);
                     Toast.makeText(getContext(), "Error: "+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
