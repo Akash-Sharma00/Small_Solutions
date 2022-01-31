@@ -77,8 +77,8 @@
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:icon="@drawable/hired"
-                    android:text="@string/hired" />
+                    android:icon="@drawable/ic_baseline_call_24"
+                    android:text="@string/calls" />
 
                 <com.google.android.material.tabs.TabItem
                     android:id="@+id/tabItem"

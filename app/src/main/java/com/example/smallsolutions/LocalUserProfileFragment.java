@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +38,7 @@ public class LocalUserProfileFragment extends Fragment {
 
 //    Textview variables
     TextView name, age, profession, exp, contact, mail, description, signOut;
+    ProgressBar progressBar;
 
 //    Imageview variables
     CircleImageView profilePhoto;
@@ -74,7 +76,6 @@ public class LocalUserProfileFragment extends Fragment {
 
 //                When a recruiter logged in
                 if (PATH.contains("Recruiter")){
-                    Toast.makeText(getActivity(), "Found", Toast.LENGTH_SHORT).show();
 
                     myRoot.findViewById(R.id.AGE).setVisibility(View.GONE);
                     myRoot.findViewById(R.id.PROFESSION).setVisibility(View.GONE);
@@ -91,6 +92,7 @@ public class LocalUserProfileFragment extends Fragment {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                         UserDetails userDetails = snapshot.getValue(UserDetails.class);
+
 
 //                Setting data in profile
                         name.setText(userDetails.getUserName());
@@ -119,7 +121,7 @@ public class LocalUserProfileFragment extends Fragment {
 //                Alert Box to confirmation
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setCancelable(false);
-                builder.setMessage("Are sure, You want to Exit");
+                builder.setMessage("Are sure, You want to Sigh Out");
                 builder.create();
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override

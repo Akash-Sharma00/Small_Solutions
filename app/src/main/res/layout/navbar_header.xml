@@ -14,10 +14,11 @@
         android:src="@drawable/ic_android"/>
 
     <TextView
+        android:id="@+id/NavId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
         android:text="useremail@gmail.com"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="17sp" />
 
 </LinearLayout>

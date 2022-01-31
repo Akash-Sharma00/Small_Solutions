@@ -39,6 +39,7 @@
         <activity
             android:name="com.example.smallsolutions.HomeActivity"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name="com.example.smallsolutions.LoginActivity"

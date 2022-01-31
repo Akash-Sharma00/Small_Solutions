@@ -104,6 +104,10 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_signup.xml"
     },
     {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_call_card.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\call_card.xml"
+    },
+    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_carpenter_icon.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\carpenter_icon.xml"
     },

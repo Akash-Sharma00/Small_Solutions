@@ -1,15 +1,20 @@
 package com.example.smallsolutions;
-
-import android.net.Uri;
-
 import java.io.Serializable;
 
 class UserDetails implements Serializable {
 
-    private String userName, userEmail,  userPhoneNo, age, experience, profession, imageURL;
+    private String userName, userEmail,  userPhoneNo, age, experience, profession, imageURL, time;
 
     public UserDetails() {
 //        Empty constructor needed
+    }
+
+    public UserDetails(String userName, String userPhoneNo, String profession, String time, String imageURL){
+        this.userName = userName;
+        this.userPhoneNo = userPhoneNo;
+        this.profession = profession;
+        this.time = time;
+        this.imageURL = imageURL;
     }
 
     public UserDetails(String userName, String userEmail, String userPhoneNo) {
@@ -57,5 +62,9 @@ class UserDetails implements Serializable {
 
     public String getImageURL(){
         return imageURL;
+    }
+    
+    public String getTime() {
+        return time;
     }
 }

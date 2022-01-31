@@ -10,12 +10,15 @@ import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -29,14 +32,15 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     ViewPager2 viewPager2;
     FragmentAdapter fragmentAdapter;
 
+    FirebaseAuth Auth;
+
 //    Variable for toolbar
     Toolbar toolbar;
 
 //    Drawer Variable
     private DrawerLayout drawer;
 
-//    Variable to track viewpager's current position
-    int viewPagerscurrentPosition = 0;
+//    Variable to track viewPager's current position
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,11 +105,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
         switch (item.getItemId()){
             case R.id.logout:
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-                startActivity(intent);
+                SigningOut();
                 break;
             case R.id.home:
                 viewPager2.setCurrentItem(0);
@@ -122,6 +125,29 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
         drawer.closeDrawer((GravityCompat.START));
         return true;
+    }
+
+    private void SigningOut() {
+//         Alert Box to confirmation
+        Auth = FirebaseAuth.getInstance();
+        AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
+        builder.setCancelable(false);
+        builder.setMessage("Are sure, You want to Sigh Out");
+        builder.create();
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Auth.signOut();
+                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+                finish();
+            }
+        }).setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+//                             Close
+            }
+        });
+        builder.create().show();
     }
 
     @Override

@@ -21,7 +21,7 @@ public class SignupFragment extends Fragment {
 
 //    String arrays for drop down box
     String[] categoryArray = {"Job Seeker", "Recruiter"};
-    String[] professionsArray = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook", "Other"};
+    String[] professionsArray = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook"};
     String[] experienceArray = {"yrs", "months"};
 
 //    Variables to take user data from edittext
@@ -243,13 +243,13 @@ public class SignupFragment extends Fragment {
     public void experienceAdapter(View root) {
         autoCompleteTextView_experience = root.findViewById(R.id.autoComplete_experience);
         autoCompleteTextView_experience.setInputType(0);
-        ArrayAdapter<String> exprienceList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, experienceArray);
-        autoCompleteTextView_experience.setAdapter(exprienceList);
+        ArrayAdapter<String> experienceList = new ArrayAdapter(root.getContext(), R.layout.dropdown_textview, R.id.items_design, experienceArray);
+        autoCompleteTextView_experience.setAdapter(experienceList);
 
         autoCompleteTextView_experience.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                experienceTimeString = exprienceList.getItem(i);
+                experienceTimeString = experienceList.getItem(i);
             }
         });
     }

@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,6 +23,7 @@ import java.util.ArrayList;
 public class AllRandom extends AppCompatActivity {
 
     RecyclerView recyclerView;
+    ProgressBar progress;
     ArrayList<UserDetails> dataHolder;
     FirebaseDatabase database;
     DatabaseReference reference;
@@ -36,6 +40,7 @@ public class AllRandom extends AppCompatActivity {
 
         dataHolder = new ArrayList<>();
 
+        progress = findViewById(R.id.All_progress);
         recyclerView = findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new RecyclerAdapter(this, dataHolder));
@@ -63,8 +68,9 @@ public class AllRandom extends AppCompatActivity {
                             UserDetails userDetails = data.getValue(UserDetails.class);
                             dataHolder.add(userDetails);
                         }
+                        progress.setVisibility(View.GONE);
+                        adapter.notifyDataSetChanged();
                     }
-                    adapter.notifyDataSetChanged();
                 }
 
                 @Override
@@ -74,7 +80,7 @@ public class AllRandom extends AppCompatActivity {
             });
         }
         else {
-//            Loading only professions passed by used
+//            Loading only professions passed by user
             reference = database.getReference("users/profession/" + profession);
 
             reference.addValueEventListener(new ValueEventListener() {
@@ -86,6 +92,14 @@ public class AllRandom extends AppCompatActivity {
                             dataHolder.add(userDetails);
                     }
                     adapter.notifyDataSetChanged();
+
+                    //        Condition for no result found
+                    if (dataHolder.isEmpty()){
+                        Toast.makeText(getApplication(), "No result found", Toast.LENGTH_SHORT).show();
+                        TextView Null = findViewById(R.id.noResult);
+                         Null.setVisibility(View.VISIBLE);
+                          Null.setText("No Result Found");
+                    }
                 }
 
                 @Override
@@ -96,6 +110,8 @@ public class AllRandom extends AppCompatActivity {
 
         }
 
+
+
     }
 
     @Override
@@ -104,4 +120,5 @@ public class AllRandom extends AppCompatActivity {
         startActivity(home);
         super.onBackPressed();
     }
+
 }
