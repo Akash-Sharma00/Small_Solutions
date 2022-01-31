@@ -3,19 +3,15 @@ package com.example.smallsolutions;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.Locale;
 
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
@@ -40,7 +36,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
          plumber = myView.findViewById(R.id.plumber);
          electrician = myView.findViewById(R.id.electrician);
          appDev = myView.findViewById(R.id.appdevloper);
-         cook = myView.findViewById(R.id.cook);
+         cook = myView.findViewById(R.id.cook2);
          allPro = myView.findViewById(R.id.allpro);
          searchIcon = myView.findViewById(R.id.searchPro);
         TextView more = myView.findViewById(R.id.more);
@@ -103,7 +99,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 getActivity().finish();
                 break;
 
-            case R.id.cook:
+            case R.id.cook2:
                 Toast.makeText(getContext(), "Co", Toast.LENGTH_SHORT).show();
                 Intent cook = new Intent(getActivity(), AllRandom.class);
                 cook.putExtra("pro","Cook");

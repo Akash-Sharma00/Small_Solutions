@@ -32,6 +32,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/DigitalMarketer2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -67,6 +68,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cook2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -116,6 +118,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/carpenter2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -153,6 +156,7 @@
 
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/electrician2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -203,6 +207,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/mechanic2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -239,6 +244,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/plumber2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -289,6 +295,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/webdeveloper2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -325,6 +332,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/appdeveloper2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -375,6 +383,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/photoeditor2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -411,6 +420,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/videoeditor2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"

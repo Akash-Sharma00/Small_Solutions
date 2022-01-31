@@ -58,6 +58,7 @@ public class LocalUserProfileFragment extends Fragment {
         mail = myRoot.findViewById(R.id.local_mail);
         description = myRoot.findViewById(R.id.local_description);
         profilePhoto = myRoot.findViewById(R.id.userProfilePhoto);
+        progressBar = myRoot.findViewById(R.id.profileImgProgess);
 
 //        description.setText(Path); // Need to remove Later
 
@@ -102,6 +103,7 @@ public class LocalUserProfileFragment extends Fragment {
                         contact.setText(userDetails.getUserPhoneNo());
                         mail.setText(userDetails.getUserEmail());
                         Picasso.get().load(userDetails.getImageURL()).into(profilePhoto);
+                        progressBar.setVisibility(View.GONE);
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {}

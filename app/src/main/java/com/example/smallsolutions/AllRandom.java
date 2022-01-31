@@ -91,10 +91,12 @@ public class AllRandom extends AppCompatActivity {
                             UserDetails userDetails = dataSnapshot.getValue(UserDetails.class);
                             dataHolder.add(userDetails);
                     }
+                    progress.setVisibility(View.GONE);
                     adapter.notifyDataSetChanged();
 
                     //        Condition for no result found
                     if (dataHolder.isEmpty()){
+                        progress.setVisibility(View.GONE);
                         Toast.makeText(getApplication(), "No result found", Toast.LENGTH_SHORT).show();
                         TextView Null = findViewById(R.id.noResult);
                          Null.setVisibility(View.VISIBLE);

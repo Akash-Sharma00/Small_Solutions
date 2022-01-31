@@ -12,6 +12,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -46,6 +47,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 //    Declaring all view holders
     ImageView profileImage;
     Button signupButton, editButton;
+    ProgressBar progressBar;
 
 //    Image URI
     Uri imageUri;
@@ -74,6 +76,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         profileImage = findViewById(R.id.profilePhoto);
         editButton = findViewById(R.id.edit_button);
         signupButton = findViewById(R.id.signUp_button);
+        progressBar = findViewById(R.id.signUpProgress);
 
 //        Setting a default image to profile photo
         defaultImageURL = "https://firebasestorage.googleapis.com/v0/b/small-solutions-8d943.appspot.com/o/default%2Fdefault.png?alt=media&token=c334a4e3-2d71-4795-a5e4-a27e54862520";
@@ -109,6 +112,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 selectImage();
                 break;
             case R.id.signUp_button:
+                signupButton.setClickable(false);
                 signupUser(userDetails.getUserEmail(), userPassword);
                 break;
         }
@@ -120,6 +124,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Profile image"), PICK_IMAGE);
+        editButton.setText("Change Image");
     }
 
     @Override
@@ -139,6 +144,9 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
 //    Function to signup user
     private void signupUser(String userEmailString, String userPasswordString){
+
+        progressBar.setVisibility(View.VISIBLE);
+
         auth.createUserWithEmailAndPassword(userEmailString, userPasswordString)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -148,6 +156,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                         }
                         else{
                             Toast.makeText(SignupActivity.this, "Email already exists", Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.GONE);
                             startActivity(new Intent(SignupActivity.this, SignupFragment.class));
                         }
                     }
@@ -205,6 +214,8 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             path = "users/profession/" + userDetails.getProfession() + "/" + userID;
         }
         databaseReference.child("allUsers").child(userID).setValue(path);
+
+        progressBar.setVisibility(View.GONE);
 
         Toast.makeText(SignupActivity.this, "Signed in successfully", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(SignupActivity.this, HomeActivity.class));
