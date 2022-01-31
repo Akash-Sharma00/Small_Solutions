@@ -7,7 +7,7 @@
     tools:context=".profileActivity">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/userProfilePhoto"
         android:layout_width="166dp"
         android:layout_height="152dp"
         android:layout_marginTop="10dp"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/userProfilePhoto" />
 
     <TextView
         android:id="@+id/profile_profession"
