@@ -1,15 +1,25 @@
 [
     {
+<<<<<<< HEAD
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_hired.png.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\hired.png"
+=======
+        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_search_icon.xml.flat",
+        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable\\search_icon.xml"
+>>>>>>> 2082f7695e89367a2f970197d26ff473e201bcee
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
+<<<<<<< HEAD
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_bangers.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\bangers.xml"
+=======
+        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_contact.xml.flat",
+        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable\\ic_contact.xml"
+>>>>>>> 2082f7695e89367a2f970197d26ff473e201bcee
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_contact.xml.flat",
