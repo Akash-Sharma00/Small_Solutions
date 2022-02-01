@@ -24,14 +24,12 @@
         <entry key="..\:/Nitin/Black Book Project/app/src/main/res/layout/activity_more.xml" value="0.1234113712374582" />
         <entry key="..\:/Nitin/Black Book Project/app/src/main/res/layout/activity_profile.xml" value="0.12466216216216217" />
         <entry key="..\:/Nitin/Black Book Project/app/src/main/res/layout/activity_sign_up.xml" value="0.1234113712374582" />
-        <entry key="..\:/Nitin/Black Book Project/app/src/main/res/layout/activity_signup.xml" value="0.12013888888888889" />
         <entry key="..\:/Nitin/Black Book Project/app/src/main/res/layout/dropdown_textview.xml" value="0.12466216216216217" />
         <entry key="..\:/Nitin/Black Book Project/app/src/main/res/layout/fragment_home.xml" value="0.12466216216216217" />
         <entry key="..\:/Nitin/Black Book Project/app/src/main/res/layout/fragment_login.xml" value="0.12152777777777778" />
         <entry key="..\:/Nitin/Black Book Project/app/src/main/res/layout/fragment_signup.xml" value="0.12013888888888889" />
         <entry key="..\:/Nitin/Black Book Project/app/src/main/res/layout/profession_design.xml" value="0.12152777777777778" />
         <entry key="..\:/Nitin/Black Book Project/app/src/main/res/layout/profession_layout.xml" value="0.22" />
-        <entry key="..\:/Nitin/Black Book Project/app/src/main/res/menu/home_menu_bar.xml" value="0.12013888888888889" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Android-Project-Black-book/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Android-Project-Black-book/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.165234375" />
@@ -81,7 +79,7 @@
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_frag2.xml" value="0.1489071038251366" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_local_user_profile.xml" value="0.25" />
-        <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_option_for_sign_up.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_second.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_signup.xml" value="0.20416666666666666" />
