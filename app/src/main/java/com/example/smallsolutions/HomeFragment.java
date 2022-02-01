@@ -141,6 +141,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.searchPro:
                 searchProfession();
+                break;
         }
     }
 
@@ -148,6 +149,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private void searchProfession() {
 
         String Profession = profession.getText().toString();
+
+        if(Profession.isEmpty()){
+            Toast.makeText(getContext(), "Search Can't be empty", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
 //                 If users search for two word profession like app developer
         if (Profession.contains(" ")){
