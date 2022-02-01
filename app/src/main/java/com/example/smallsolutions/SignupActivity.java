@@ -113,6 +113,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.signUp_button:
                 signupButton.setClickable(false);
+                signupButton.setText("Signing up ...");
                 signupUser(userDetails.getUserEmail(), userPassword);
                 break;
         }
@@ -124,7 +125,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Profile image"), PICK_IMAGE);
-        editButton.setText("Change Image");
     }
 
     @Override
@@ -136,6 +136,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             try {
                 bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
                 profileImage.setImageBitmap(bitmap);
+                editButton.setText("Change Image");
             } catch (IOException e) {
                 e.printStackTrace();
             }
