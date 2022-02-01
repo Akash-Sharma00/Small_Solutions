@@ -18,12 +18,20 @@ import android.graphics.PorterDuff;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -31,8 +39,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     FragmentAdapter fragmentAdapter;
+    TextView navUser;
+    ImageView navImage;
 
     FirebaseAuth Auth;
+    FirebaseDatabase database;
+    DatabaseReference reference;
 
 //    Variable for toolbar
     Toolbar toolbar;
@@ -100,8 +112,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 //        Variable for navigation view
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.bringToFront();
+
+        View headerView = navigationView.getHeaderView(0);
+        navUser = headerView.findViewById(R.id.NavId);
+        navImage = headerView.findViewById(R.id.navImg);
+
+//        Function call for header
+        setNavHeader();
+
         navigationView.setNavigationItemSelectedListener(this);
     }
+
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -162,5 +184,44 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         else{
             super.onBackPressed();
         }
+    }
+
+
+ //       Function for Setting email & image in header
+
+    private void setNavHeader() {
+
+//        Getting Path of user profile
+
+        database = FirebaseDatabase.getInstance();
+        Auth = FirebaseAuth.getInstance();
+
+        reference = database.getReference("users/allUsers/" + Auth.getUid());
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String path = snapshot.getValue(String.class);
+
+                reference = database.getReference(path);
+
+//                Getting Email and image url
+                reference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            String mail = snapshot.child("userEmail").getValue(String.class);
+                            String imageUrl = snapshot.child("imageURL").getValue(String.class);
+
+//                            Setting email & image in header
+                            navUser.setText(mail);
+                        Picasso.get().load(imageUrl).into(navImage);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {}
+                });
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {}
+        });
     }
 }
