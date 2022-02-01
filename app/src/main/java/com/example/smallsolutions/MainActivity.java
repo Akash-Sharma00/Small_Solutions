@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -61,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
             }
         },SPLASH_SCREEN);
 
+//      Condition for no internet
+        if (!internetIsActive()){
+            startActivity(new Intent(MainActivity.this, No_Internet_Activity.class));
+            finish();
+        }
     }
 
     @Override
@@ -93,6 +100,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+//    Function to check device has internet or not
+    private boolean internetIsActive() {
+        boolean connected = false;
+        ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(MainActivity.CONNECTIVITY_SERVICE);
+        if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+            //we are connected to a network
+             connected = true;
+        }
+        else
+            connected = false;
+        return connected;
     }
 
 }
