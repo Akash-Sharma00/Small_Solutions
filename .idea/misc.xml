@@ -69,6 +69,7 @@
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/call_card.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/card_desing.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/content_form.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/dropdown_textview.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/forgetpasswordbox.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_call_history.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_category.xml" value="0.20416666666666666" />
@@ -76,7 +77,7 @@
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_first.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_frag1.xml" value="0.153125" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_frag2.xml" value="0.1489071038251366" />
-        <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_local_user_profile.xml" value="0.25" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/fragment_option_for_sign_up.xml" value="0.19947916666666668" />
@@ -85,7 +86,7 @@
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/header.xml" value="0.18796296296296297" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/menu_header.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/nav_header.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/navbar_header.xml" value="0.33" />
+        <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/navbar_header.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/toolbar.xml" value="0.20102564102564102" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/tooolbar.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/menu/home_menu_bar.xml" value="0.20416666666666666" />

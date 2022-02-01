@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -21,14 +24,17 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     //        Getting search bar
     ImageView searchIcon;
-    EditText profession;
+    AutoCompleteTextView profession;
+    String[] searchBarArray = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook"};
 
+    String professionString = "";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View myView = inflater.inflate(R.layout.fragment_home, container, false);
+
 
 
 //        Creating all hooks
@@ -52,7 +58,27 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         more.setOnClickListener(this);
         searchIcon.setOnClickListener(this);
 
+//        Function call for searchbar
+        searchAdapter(myView);
+
+
         return myView;
+    }
+
+    private void searchAdapter(View myView) {
+
+        ArrayAdapter<String> adapterList;
+        adapterList = new ArrayAdapter(myView.getContext(), R.layout.dropdown_textview, R.id.items_design, searchBarArray);
+
+        profession.setAdapter(adapterList);
+
+        profession.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                 professionString = adapterList.getItem(i);
+            }
+        });
+
     }
 
     @Override
@@ -118,10 +144,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-
-
-
+//  Function to show suggestion in searchbar
     private void searchProfession() {
+
         String Profession = profession.getText().toString();
 
 //                 If users search for two word profession like app developer

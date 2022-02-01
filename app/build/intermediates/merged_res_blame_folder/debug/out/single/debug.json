@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_search_icon.xml.flat",
-        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable\\search_icon.xml"
+        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_contact.xml.flat",
+        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable\\ic_contact.xml"
     },
     {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_login.xml.flat",
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable\\ic_login.xml"
     },
     {
-        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_contact.xml.flat",
-        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable\\ic_contact.xml"
+        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_search_icon.xml.flat",
+        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable\\search_icon.xml"
     },
     {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_mrplumber.jpg.flat",

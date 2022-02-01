@@ -100,7 +100,7 @@ public class AllRandom extends AppCompatActivity {
                         Toast.makeText(getApplication(), "No result found", Toast.LENGTH_SHORT).show();
                         TextView Null = findViewById(R.id.noResult);
                          Null.setVisibility(View.VISIBLE);
-                          Null.setText("No Result Found");
+                          Null.setText("No Result Found for "+profession);
                     }
                 }
 
