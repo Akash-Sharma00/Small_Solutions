@@ -8,10 +8,10 @@
     android:gravity="bottom"
     android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/navImg"
         android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_android"/>
+        android:layout_height="100dp"/>
 
     <TextView
         android:id="@+id/NavId"
