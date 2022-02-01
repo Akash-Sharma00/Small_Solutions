@@ -19,19 +19,25 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class profileActivity extends AppCompatActivity {
 
     TextView name, age, profession, exp, contact, mail, description;
+    CircleImageView profilePhoto;
     ProgressBar progressBar;
     FloatingActionButton call_Button;
     private final int REQUEST_CODE = 1;
     FirebaseDatabase database;
     DatabaseReference reference;
     FirebaseAuth auth;
+
+    String imageURL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +56,11 @@ public class profileActivity extends AppCompatActivity {
         call_Button = findViewById(R.id.profile_call);
         description = findViewById(R.id.profile_description);
         progressBar = findViewById(R.id.profile_progress);
+        profilePhoto = findViewById(R.id.userProfilePhoto);
 
 //        Setting all data
+        imageURL = intent.getStringExtra("ProfilePhoto");
+
         progressBar.setVisibility(View.GONE);
         name.setText(intent.getStringExtra("Name"));
         age.setText(intent.getStringExtra("Age"));
@@ -60,6 +69,7 @@ public class profileActivity extends AppCompatActivity {
         contact.setText(intent.getStringExtra("Contact"));
         mail.setText(intent.getStringExtra("Mail"));
         description.setText("To be given");
+        Picasso.get().load(imageURL).into(profilePhoto);
 
         call_Button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,23 +85,22 @@ public class profileActivity extends AppCompatActivity {
     }
 
     private void uploadCalls() {
-        String receiverName = name.getText().toString();
-        String receiverContact = contact.getText().toString();
-        String receiverPro = profession.getText().toString();
+        String receiverName = name.getText().toString().trim();
+        String receiverContact = contact.getText().toString().trim();
+        String receiverPro = profession.getText().toString().trim();
         String callTime = new SimpleDateFormat("hh:mm  dd-MM-yyyy").format(new Date());
 
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("users").child("callLog");
         auth = FirebaseAuth.getInstance();
 
-        UserDetails userDetails = new UserDetails(receiverName, receiverContact, receiverPro, callTime, "Hello");
+        UserDetails userDetails = new UserDetails(receiverName, receiverContact, receiverPro, callTime, imageURL);
         reference.child(auth.getUid()).push().setValue(userDetails);
 
     }
 
-
     private void makePhoneCall() {
-        String Number = contact.getText().toString();
+        String Number = contact.getText().toString().trim();
         if (ContextCompat.checkSelfPermission(profileActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(profileActivity.this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CODE);
         }else {

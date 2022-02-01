@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".profileActivity">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="166dp"
-        android:layout_height="152dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfilePhoto"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/mrplumber"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,75 +31,73 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/userProfilePhoto" />
 
     <TextView
         android:id="@+id/profile_profession"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/profile_age"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_age" />
 
     <TextView
         android:id="@+id/profile_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.383"
-        app:layout_constraintStart_toEndOf="@+id/age_hint"
-        app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+        app:layout_constraintTop_toTopOf="@+id/age_hint" />
 
     <TextView
         android:id="@+id/profile_exp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/profile_profession"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_profession" />
 
     <TextView
         android:id="@+id/profile_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_mail" />
 
     <TextView
         android:id="@+id/profile_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/profile_exp" />
+        app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/profile_exp"/>
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="@string/Email"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_contact" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/profile_call"
@@ -120,12 +118,11 @@
         android:id="@+id/profile_mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
         android:layout_marginTop="24dp"
-        android:textColor="@color/blue"
+        android:layout_marginEnd="20dp"
+        android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView17"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_contact"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -133,7 +130,7 @@
         android:id="@+id/age_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="28dp"
         android:text="@string/Age"
         android:textColor="@color/black"
@@ -145,7 +142,7 @@
         android:id="@+id/profession_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="@string/only_Profession"
         android:textColor="@color/black"
@@ -157,7 +154,7 @@
         android:id="@+id/exp_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="@string/experience"
         android:textColor="@color/black"
@@ -169,7 +166,7 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="@string/Contact"
         android:textColor="@color/black"

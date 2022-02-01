@@ -12,7 +12,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHolder>
 {
@@ -35,6 +39,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
 //        holder.dpImg.setImageResource(dataHolder.get(position).getDisplayImg());
         holder.NameText.setText(dataHolder.get(position).getUserName());
         holder.ProfessionText.setText(dataHolder.get(position).getProfession());
+        Picasso.get().load(dataHolder.get(position).getImageURL()).into(holder.profilePhoto);
 //        holder.StarRating.setRating((float) dataHolder.get(position).getStarRating());
     }
 
@@ -48,6 +53,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
         ImageView dpImg;
         TextView NameText, ProfessionText;
         RatingBar StarRating;
+        CircleImageView profilePhoto;
+
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
@@ -56,6 +63,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
             NameText = itemView.findViewById(R.id.nameText);
             ProfessionText = itemView.findViewById(R.id.professionText);
             StarRating = itemView.findViewById(R.id.starRating);
+            profilePhoto = itemView.findViewById(R.id.displayImg);
         }
 
         @Override
@@ -69,8 +77,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
             String contact = userDetails.getUserPhoneNo();
             String mail = userDetails.getUserEmail();
             String age = userDetails.getAge();
+            String profilePhotoURL = userDetails.getImageURL();
 
-            Toast.makeText(itemView.getContext(), "I am active" + pos + "  "+name, Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(itemView.getContext(), profileActivity.class);
             intent.putExtra("Name",name);
             intent.putExtra("Profession", profession);
@@ -78,6 +86,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
             intent.putExtra("Contact", contact);
             intent.putExtra("Mail", mail);
             intent.putExtra("Age", age);
+            intent.putExtra("ProfilePhoto", profilePhotoURL);
             v.getContext().startActivity(intent);
         }
     }

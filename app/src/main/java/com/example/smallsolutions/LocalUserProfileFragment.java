@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,16 +25,23 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class LocalUserProfileFragment extends Fragment {
 
+//    Database variables
     FirebaseDatabase database;
     FirebaseAuth Auth;
     DatabaseReference reference;
 
+//    Textview variables
     TextView name, age, profession, exp, contact, mail, description, signOut;
     ProgressBar progressBar;
 
+//    Imageview variables
+    CircleImageView profilePhoto;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,14 +57,14 @@ public class LocalUserProfileFragment extends Fragment {
         contact = myRoot.findViewById(R.id.local_contact);
         mail = myRoot.findViewById(R.id.local_mail);
         description = myRoot.findViewById(R.id.local_description);
-
+        profilePhoto = myRoot.findViewById(R.id.userProfilePhoto);
 
 //        description.setText(Path); // Need to remove Later
 
         database = FirebaseDatabase.getInstance();
         Auth = FirebaseAuth.getInstance();
 
-        reference = database.getReference("users/allUsers/" + Auth.getCurrentUser().getUid());
+        reference = database.getReference("users/allUsers/" + Auth.getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -93,7 +101,7 @@ public class LocalUserProfileFragment extends Fragment {
                         exp.setText(userDetails.getExperience());
                         contact.setText(userDetails.getUserPhoneNo());
                         mail.setText(userDetails.getUserEmail());
-
+                        Picasso.get().load(userDetails.getImageURL()).into(profilePhoto);
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {}

@@ -1,42 +1,40 @@
 package com.example.smallsolutions;
-
-
 import java.io.Serializable;
 
 class UserDetails implements Serializable {
 
-    private String userName, userEmail, userPassword, userPhoneNo, age, experience, profession, time;
-    private String imageUri;
+    private String userName, userEmail,  userPhoneNo, age, experience, profession, imageURL, time;
 
     public UserDetails() {
+//        Empty constructor needed
     }
 
-    public UserDetails(String userName, String userPhoneNo, String profession, String time, String imageUri) {
+    public UserDetails(String userName, String userPhoneNo, String profession, String time, String imageURL){
         this.userName = userName;
         this.userPhoneNo = userPhoneNo;
         this.profession = profession;
         this.time = time;
-        this.imageUri = imageUri;
+        this.imageURL = imageURL;
     }
 
-    public UserDetails(String userName, String userEmail, String userPassword, String userPhoneNo) {
+    public UserDetails(String userName, String userEmail, String userPhoneNo) {
         this.userName = userName;
         this.userEmail = userEmail;
-        this.userPassword = userPassword;
         this.userPhoneNo = userPhoneNo;
     }
 
-    public UserDetails(String userName, String userEmail, String userPassword, String userPhoneNo, String age, String experience, String profession) {
+    public UserDetails(String userName, String userEmail, String userPhoneNo, String age, String experience, String profession) {
         this.userName = userName;
         this.userEmail = userEmail;
-        this.userPassword = userPassword;
         this.userPhoneNo = userPhoneNo;
         this.age = age;
         this.experience = experience;
         this.profession = profession;
     }
 
-
+    public void setImageURL(String imageURL){
+        this.imageURL = imageURL;
+    }
 
     public String getUserName() {
         return userName;
@@ -44,10 +42,6 @@ class UserDetails implements Serializable {
 
     public String getUserEmail() {
         return userEmail;
-    }
-
-    public String getUserPassword() {
-        return userPassword;
     }
 
     public String getUserPhoneNo() {
@@ -66,11 +60,11 @@ class UserDetails implements Serializable {
         return profession;
     }
 
+    public String getImageURL(){
+        return imageURL;
+    }
+    
     public String getTime() {
         return time;
-    }
-
-    public String getImageUri() {
-        return imageUri;
     }
 }

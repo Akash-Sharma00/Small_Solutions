@@ -13,11 +13,16 @@ com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment$2
  com.example.smallsolutions.SignupFragment$3
  com.example.smallsolutions.SignupFragment$4
- com.example.smallsolutions.SignupFragment$5
 com/example/smallsolutions/callLogRecycler.java
  com.example.smallsolutions.callLogRecycler
 com/example/smallsolutions/ChatActivity.java
  com.example.smallsolutions.ChatActivity
+com/example/smallsolutions/SignupActivity.java
+ com.example.smallsolutions.SignupActivity
+ com.example.smallsolutions.SignupActivity$1
+ com.example.smallsolutions.SignupActivity$2
+ com.example.smallsolutions.SignupActivity$2$1
+ com.example.smallsolutions.SignupActivity$3
 com/example/smallsolutions/HomeFragment.java
  com.example.smallsolutions.HomeFragment
 com/example/smallsolutions/MainActivity.java

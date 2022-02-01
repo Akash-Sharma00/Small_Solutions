@@ -12,7 +12,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.transition.Hold;
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.viewHolder>{
 
@@ -37,6 +42,7 @@ public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.viewHold
         holder.receiver_Contact.setText(Holder.get(position).getUserPhoneNo());
         holder.receiverProfessionText.setText(Holder.get(position).getProfession());
         holder.call_time.setText(Holder.get(position).getTime());
+        Picasso.get().load(Holder.get(position).getImageURL()).into(holder.profilePhoto);
     }
 
     @Override
@@ -47,6 +53,7 @@ public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.viewHold
     public class viewHolder extends RecyclerView.ViewHolder{
         ImageView call;
         TextView  receiverNameText, receiverProfessionText, receiver_Contact, call_time;
+        CircleImageView profilePhoto;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
@@ -56,6 +63,7 @@ public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.viewHold
             receiverProfessionText = itemView.findViewById(R.id.receiver_pro);
             call_time = itemView.findViewById(R.id.call_time);
             call = itemView.findViewById(R.id.call_again);
+            profilePhoto = itemView.findViewById(R.id.receiver_img);
 
             call.setOnClickListener(new View.OnClickListener() {
                 @Override

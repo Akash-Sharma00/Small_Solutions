@@ -80,7 +80,7 @@ public class AllRandom extends AppCompatActivity {
             });
         }
         else {
-//            Loading only professions passed by used
+//            Loading only professions passed by user
             reference = database.getReference("users/profession/" + profession);
 
             reference.addValueEventListener(new ValueEventListener() {

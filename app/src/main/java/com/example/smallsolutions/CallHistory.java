@@ -22,7 +22,6 @@ import java.util.ArrayList;
 
 public class CallHistory extends Fragment {
 
-
     RecyclerView recyclerView;
     ArrayList<UserDetails> Holder;
     FirebaseDatabase database;

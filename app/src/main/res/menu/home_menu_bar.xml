@@ -28,7 +28,6 @@
 
     </group>
 
-
     <item android:title="Communication">
 
         <menu>
@@ -40,18 +39,13 @@
         </menu>
 
     </item>
-    <item android:title="Authentication">
 
-        <menu>
+    <group>
 
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
 
-            <item
-                android:id="@+id/logout"
-                android:icon="@drawable/ic_logout"
-                android:title="Logout" />
-
-        </menu>
-
-    </item>
-
+    </group>
 </menu>

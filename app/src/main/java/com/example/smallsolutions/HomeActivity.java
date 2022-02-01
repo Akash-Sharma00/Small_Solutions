@@ -128,7 +128,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void SigningOut() {
-        //                Alert Box to confirmation
+//         Alert Box to confirmation
         Auth = FirebaseAuth.getInstance();
         AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
         builder.setCancelable(false);
