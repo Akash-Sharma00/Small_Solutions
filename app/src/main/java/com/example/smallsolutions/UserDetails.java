@@ -9,6 +9,7 @@ class UserDetails implements Serializable {
 //        Empty constructor needed
     }
 
+
     public UserDetails(String userName, String userPhoneNo, String profession, String time, String imageURL){
         this.userName = userName;
         this.userPhoneNo = userPhoneNo;

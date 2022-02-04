@@ -61,6 +61,7 @@
 
     <!--    Profile Activity Strings-->
     <string name="only_Profession">Profession</string>
+    <string name="chatButton">Connect with Chat</string>
 
 
     <!--    Forget Password Box String-->
