@@ -7,9 +7,11 @@ com/example/smallsolutions/LocalUserProfileFragment.java
  com.example.smallsolutions.LocalUserProfileFragment$2
  com.example.smallsolutions.LocalUserProfileFragment$2$1
  com.example.smallsolutions.LocalUserProfileFragment$2$2
-com/example/smallsolutions/No_Internet_Activity.java
- com.example.smallsolutions.No_Internet_Activity
- com.example.smallsolutions.No_Internet_Activity$1
+com/example/smallsolutions/Message_Window_Activity.java
+ com.example.smallsolutions.Message_Window_Activity
+com/example/smallsolutions/ChatRecyclerAdapter.java
+ com.example.smallsolutions.ChatRecyclerAdapter
+ com.example.smallsolutions.ChatRecyclerAdapter$viewHolder
 com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment
  com.example.smallsolutions.SignupFragment$1
@@ -18,9 +20,8 @@ com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment$4
 com/example/smallsolutions/callLogRecycler.java
  com.example.smallsolutions.callLogRecycler
-com/example/smallsolutions/RecyclerAdapter.java
- com.example.smallsolutions.RecyclerAdapter
- com.example.smallsolutions.RecyclerAdapter$viewHolder
+com/example/smallsolutions/ChatActivity.java
+ com.example.smallsolutions.ChatActivity
 com/example/smallsolutions/SignupActivity.java
  com.example.smallsolutions.SignupActivity
  com.example.smallsolutions.SignupActivity$1
@@ -78,8 +79,9 @@ com/example/smallsolutions/LoginFragment.java
  com.example.smallsolutions.LoginFragment$3$2
  com.example.smallsolutions.LoginFragment$4
  com.example.smallsolutions.LoginFragment$5
-com/example/smallsolutions/ChatRecyclerAdapter.java
- com.example.smallsolutions.ChatRecyclerAdapter
- com.example.smallsolutions.ChatRecyclerAdapter$viewHolder
-com/example/smallsolutions/ChatActivity.java
- com.example.smallsolutions.ChatActivity
+com/example/smallsolutions/RecyclerAdapter.java
+ com.example.smallsolutions.RecyclerAdapter
+ com.example.smallsolutions.RecyclerAdapter$viewHolder
+com/example/smallsolutions/No_Internet_Activity.java
+ com.example.smallsolutions.No_Internet_Activity
+ com.example.smallsolutions.No_Internet_Activity$1

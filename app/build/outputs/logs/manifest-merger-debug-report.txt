@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-52:12
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-55:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\abc\.gradle\caches\transforms-3\c2e76fb5e086b5c906002f45c03cd24a\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\abc\.gradle\caches\transforms-3\c0f7869d4dd728111a89d7a770b58255\transformed\constraintlayout-2.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\abc\.gradle\caches\transforms-3\ccd6c517801f56e7200472775579e27c\transformed\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
@@ -62,20 +62,20 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\abc\.gradle\cach
 MERGED from [androidx.print:print:1.0.0] C:\Users\abc\.gradle\caches\transforms-3\84046498be48793439a4476136a93af1\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\abc\.gradle\caches\transforms-3\d3f87aa4861bbafadab8253cbbec58bc\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\abc\.gradle\caches\transforms-3\9ccd4574ebca9c86103f7bd859ba1dfd\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-55:12
 	package
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:3:5-41
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-52:12
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-55:12
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-52:12
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:1-55:12
 		INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:2:11-69
@@ -84,7 +84,7 @@ ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\Andro
 	android:name
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:5:22-66
 application
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:7:5-50:19
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:7:5-53:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\abc\.gradle\caches\transforms-3\c2e76fb5e086b5c906002f45c03cd24a\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\abc\.gradle\caches\transforms-3\c2e76fb5e086b5c906002f45c03cd24a\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\abc\.gradle\caches\transforms-3\c0f7869d4dd728111a89d7a770b58255\transformed\constraintlayout-2.1.0\AndroidManifest.xml:9:5-20
@@ -131,74 +131,80 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ab
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:13:9-52
-activity#com.example.smallsolutions.No_Internet_Activity
+activity#com.example.smallsolutions.Message_Window_Activity
 ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:14:9-16:39
 	android:exported
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:16:13-36
 	android:name
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:15:13-49
-activity#com.example.smallsolutions.SignupActivity
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:17:9-19:40
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:15:13-52
+activity#com.example.smallsolutions.No_Internet_Activity
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:17:9-19:39
 	android:exported
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:19:13-37
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:19:13-36
 	android:name
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:18:13-43
-activity#com.example.smallsolutions.ChatActivity
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:18:13-49
+activity#com.example.smallsolutions.SignupActivity
 ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:20:9-22:40
 	android:exported
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:22:13-37
 	android:name
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:21:13-41
-activity#com.example.smallsolutions.AllRandom
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:23:9-25:39
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:21:13-43
+activity#com.example.smallsolutions.ChatActivity
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:23:9-25:40
 	android:exported
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:25:13-36
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:24:13-38
-activity#com.example.smallsolutions.profileActivity
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:24:13-41
+activity#com.example.smallsolutions.AllRandom
 ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:26:9-28:39
 	android:exported
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:28:13-36
 	android:name
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:27:13-44
-activity#com.example.smallsolutions.HomeActivity
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:29:9-33:59
-	android:screenOrientation
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:32:13-49
-	android:windowSoftInputMode
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:33:13-56
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:27:13-38
+activity#com.example.smallsolutions.profileActivity
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:29:9-31:39
 	android:exported
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:31:13-36
 	android:name
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:30:13-41
-activity#com.example.smallsolutions.LoginActivity
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:34:9-36:39
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:30:13-44
+activity#com.example.smallsolutions.HomeActivity
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:32:9-36:59
+	android:screenOrientation
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:35:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:36:13-56
 	android:exported
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:36:13-36
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:34:13-36
 	android:name
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:35:13-42
-activity#com.example.smallsolutions.MainActivity
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:37:9-45:20
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:33:13-41
+activity#com.example.smallsolutions.LoginActivity
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:37:9-39:39
 	android:exported
 		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:39:13-36
 	android:name
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:38:13-41
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:38:13-42
+activity#com.example.smallsolutions.MainActivity
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:40:9-48:20
+	android:exported
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:42:13-36
+	android:name
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:41:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:40:13-44:29
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:43:13-47:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:41:17-69
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:44:17-69
 	android:name
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:41:25-66
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:44:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:43:17-77
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:46:17-77
 	android:name
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:43:27-74
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:46:27-74
 meta-data#preloaded_fonts
-ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:47:9-49:57
+ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:50:9-52:57
 	android:resource
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:49:13-54
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:52:13-54
 	android:name
-		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:48:13-43
+		ADDED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml:51:13-43
 uses-sdk
 INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\AndroidManifest.xml

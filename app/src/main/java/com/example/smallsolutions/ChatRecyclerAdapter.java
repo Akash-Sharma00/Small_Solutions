@@ -1,5 +1,6 @@
 package com.example.smallsolutions;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,6 +68,7 @@ public class ChatRecyclerAdapter extends RecyclerView.Adapter<ChatRecyclerAdapte
         @Override
         public void onClick(View view) {
             Toast.makeText(itemView.getContext(), "It is working", Toast.LENGTH_SHORT).show();
+            itemView.getContext().startActivity(new Intent(itemView.getContext(), Message_Window_Activity.class));
         }
     }
 }

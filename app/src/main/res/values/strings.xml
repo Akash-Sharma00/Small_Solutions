@@ -69,7 +69,7 @@
     <string name="reset_password_here">Reset Password Here</string>
     <string name="message_in_forget_box">Enter your E-mail Id to get reset link</string>
 
-<!--    No Internet Activity String-->
+    <!--    No Internet Activity String-->
     <string name="No_Data_message">It seems like your device has no internet connection</string>
     <string name="turnOnData">Please Turn On The Internet Connectivity</string>
     <string name="refresh">Refresh</string>
