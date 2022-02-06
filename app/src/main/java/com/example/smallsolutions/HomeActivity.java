@@ -144,6 +144,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.more_catagory:
                 viewPager2.setCurrentItem(1);
                 break;
+            case R.id.aboutUs:
+                startActivity(new Intent(getApplicationContext(), About_Us_Activity.class));
+                break;
         }
         drawer.closeDrawer((GravityCompat.START));
         return true;

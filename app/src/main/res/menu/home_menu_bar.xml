@@ -34,7 +34,7 @@
         <menu>
 
             <item
-                android:id="@+id/contact_us"
+                android:id="@+id/aboutUs"
                 android:title="About Us"/>
 
         </menu>

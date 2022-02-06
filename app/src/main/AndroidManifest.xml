@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmallSolutions">
         <activity
+            android:name=".About_Us_Activity"
+            android:exported="true" />
+        <activity
             android:name=".Message_Window_Activity"
             android:exported="true" />
         <activity

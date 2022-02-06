@@ -37,6 +37,8 @@
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/bluecolor.xml" value="0.165234375" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/buttons_layout.xml" value="0.2203125" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/carpenter_icon.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/dev_ic.xml" value="0.2203125" />
+        <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/devlop_ic.xml" value="0.2203125" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/hired.xml" value="0.165234375" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/home_icon.xml" value="0.165234375" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.165234375" />
@@ -44,6 +46,7 @@
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.165234375" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.2203125" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/ic_contact.xml" value="0.2203125" />
+        <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/ic_developer.xml" value="0.2203125" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/ic_hamburger.xml" value="0.2203125" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/ic_more.xml" value="0.2203125" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/icon_favorite.xml" value="0.21666666666666667" />
@@ -55,6 +58,7 @@
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/search_icon.xml" value="0.165234375" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/drawable/white.xml" value="0.165234375" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout-land/activity_login.xml" value="0.21197916666666666" />
+        <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/activity_about_us.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/activity_all_random.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/activity_category.xml" value="0.153125" />
         <entry key="..\:/Users/abc/AndroidStudioProjects/Small Solutions/app/src/main/res/layout/activity_chat.xml" value="0.20416666666666666" />

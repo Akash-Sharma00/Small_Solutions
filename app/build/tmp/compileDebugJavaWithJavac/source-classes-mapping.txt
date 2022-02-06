@@ -12,6 +12,8 @@ com/example/smallsolutions/Message_Window_Activity.java
 com/example/smallsolutions/ChatRecyclerAdapter.java
  com.example.smallsolutions.ChatRecyclerAdapter
  com.example.smallsolutions.ChatRecyclerAdapter$viewHolder
+com/example/smallsolutions/About_Us_Activity.java
+ com.example.smallsolutions.About_Us_Activity
 com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment
  com.example.smallsolutions.SignupFragment$1
