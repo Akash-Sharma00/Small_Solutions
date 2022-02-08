@@ -144,6 +144,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.more_catagory:
                 viewPager2.setCurrentItem(1);
                 break;
+            case R.id.aboutUs:
+                startActivity(new Intent(getApplicationContext(), About_Us_Activity.class));
+                break;
         }
         drawer.closeDrawer((GravityCompat.START));
         return true;
@@ -178,7 +181,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (drawer.isDrawerOpen(GravityCompat.START)){
             drawer.closeDrawer(GravityCompat.START);
         }
-        if (viewPager2.getCurrentItem() > 0){
+        else if (viewPager2.getCurrentItem() > 0){
             viewPager2.setCurrentItem(0);
         }
         else{

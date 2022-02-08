@@ -61,6 +61,7 @@
 
     <!--    Profile Activity Strings-->
     <string name="only_Profession">Profession</string>
+    <string name="chatButton">Connect with Chat</string>
 
 
     <!--    Forget Password Box String-->
@@ -74,4 +75,14 @@
     <string name="refresh">Refresh</string>
 
 
+<!--    About Us Activity String-->
+    <string name="akash">Akash Sharma</string>
+    <string name="nitin">Nitin Poojary</string>
+
+    <string name="Intro">We are the developers of SMALL SOLUTIONS. This is a college group project done by AKASH and NITIN.</string>
+
+
+    <string name="synopsis">
+        	Small Solutions is an android application that helps to connect Recruiter and Job Seekers. Our application acts as a mediator between Recruiter and Job Seeker by helping them contact with each other. Here Recruiter can hire Job Seeker for their work according to their skill sets by looking at their profile, and for that Job Seeker have to be registered themselves mentioning their skills. All they have to do is sign up for an account select their category i.e. Recruiter /Job Seeker and our interface will show them relevant interface accordingly.
+    </string>
 </resources>

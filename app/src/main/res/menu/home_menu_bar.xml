@@ -17,14 +17,15 @@
             android:title="My Profile" />
 
         <item
+            android:id="@+id/more_catagory"
+            android:icon="@drawable/ic_burger"
+            android:title="More Catagories" />
+
+        <item
             android:id="@+id/chat"
             android:icon="@drawable/ic_chat_bubble"
             android:title="Chat" />
 
-        <item
-            android:id="@+id/more_catagory"
-            android:icon="@drawable/ic_burger"
-            android:title="More Catagories" />
 
     </group>
 
@@ -33,7 +34,7 @@
         <menu>
 
             <item
-                android:id="@+id/contact_us"
+                android:id="@+id/aboutUs"
                 android:title="About Us"/>
 
         </menu>
