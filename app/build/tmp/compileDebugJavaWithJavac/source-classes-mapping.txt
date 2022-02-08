@@ -1,17 +1,28 @@
 com/example/smallsolutions/BuildConfig.java
  com.example.smallsolutions.BuildConfig
-com/example/smallsolutions/No_Internet_Activity.java
- com.example.smallsolutions.No_Internet_Activity
- com.example.smallsolutions.No_Internet_Activity$1
+com/example/smallsolutions/LocalUserProfileFragment.java
+ com.example.smallsolutions.LocalUserProfileFragment
+ com.example.smallsolutions.LocalUserProfileFragment$1
+ com.example.smallsolutions.LocalUserProfileFragment$1$1
+ com.example.smallsolutions.LocalUserProfileFragment$2
+ com.example.smallsolutions.LocalUserProfileFragment$2$1
+ com.example.smallsolutions.LocalUserProfileFragment$2$2
+ com.example.smallsolutions.LocalUserProfileFragment$3
 com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment
  com.example.smallsolutions.SignupFragment$1
  com.example.smallsolutions.SignupFragment$2
  com.example.smallsolutions.SignupFragment$3
  com.example.smallsolutions.SignupFragment$4
-com/example/smallsolutions/RecyclerAdapter.java
- com.example.smallsolutions.RecyclerAdapter
- com.example.smallsolutions.RecyclerAdapter$viewHolder
+com/example/smallsolutions/EditProfileActivity.java
+ com.example.smallsolutions.EditProfileActivity
+ com.example.smallsolutions.EditProfileActivity$1
+ com.example.smallsolutions.EditProfileActivity$2
+ com.example.smallsolutions.EditProfileActivity$3
+ com.example.smallsolutions.EditProfileActivity$3$1
+ com.example.smallsolutions.EditProfileActivity$4
+ com.example.smallsolutions.EditProfileActivity$4$1
+ com.example.smallsolutions.EditProfileActivity$5
 com/example/smallsolutions/callLogRecycler.java
  com.example.smallsolutions.callLogRecycler
 com/example/smallsolutions/ChatActivity.java
@@ -22,9 +33,9 @@ com/example/smallsolutions/SignupActivity.java
  com.example.smallsolutions.SignupActivity$2
  com.example.smallsolutions.SignupActivity$2$1
  com.example.smallsolutions.SignupActivity$3
-com/example/smallsolutions/No_Internet_Activity.java
- com.example.smallsolutions.No_Internet_Activity
- com.example.smallsolutions.No_Internet_Activity$1
+com/example/smallsolutions/HomeFragment.java
+ com.example.smallsolutions.HomeFragment
+ com.example.smallsolutions.HomeFragment$1
 com/example/smallsolutions/MainActivity.java
  com.example.smallsolutions.MainActivity
  com.example.smallsolutions.MainActivity$1
@@ -40,6 +51,22 @@ com/example/smallsolutions/CallHistory.java
 com/example/smallsolutions/profileActivity.java
  com.example.smallsolutions.profileActivity
  com.example.smallsolutions.profileActivity$1
+com/example/smallsolutions/FragmentAdapter.java
+ com.example.smallsolutions.FragmentAdapter
+com/example/smallsolutions/AllRandom.java
+ com.example.smallsolutions.AllRandom
+ com.example.smallsolutions.AllRandom$1
+ com.example.smallsolutions.AllRandom$2
+com/example/smallsolutions/UserDetails.java
+ com.example.smallsolutions.UserDetails
+com/example/smallsolutions/CategoryFragment.java
+ com.example.smallsolutions.CategoryFragment
+com/example/smallsolutions/LoginFragmentAdapter.java
+ com.example.smallsolutions.LoginFragmentAdapter
+com/example/smallsolutions/CallLogAdapter.java
+ com.example.smallsolutions.CallLogAdapter
+ com.example.smallsolutions.CallLogAdapter$viewHolder
+ com.example.smallsolutions.CallLogAdapter$viewHolder$1
 com/example/smallsolutions/HomeActivity.java
  com.example.smallsolutions.HomeActivity
  com.example.smallsolutions.HomeActivity$1
@@ -48,12 +75,6 @@ com/example/smallsolutions/HomeActivity.java
  com.example.smallsolutions.HomeActivity$4
  com.example.smallsolutions.HomeActivity$5
  com.example.smallsolutions.HomeActivity$5$1
-com/example/smallsolutions/CallLogAdapter.java
- com.example.smallsolutions.CallLogAdapter
- com.example.smallsolutions.CallLogAdapter$viewHolder
- com.example.smallsolutions.CallLogAdapter$viewHolder$1
-com/example/smallsolutions/UserDetails.java
- com.example.smallsolutions.UserDetails
 com/example/smallsolutions/LoginFragment.java
  com.example.smallsolutions.LoginFragment
  com.example.smallsolutions.LoginFragment$1
@@ -63,39 +84,9 @@ com/example/smallsolutions/LoginFragment.java
  com.example.smallsolutions.LoginFragment$3$2
  com.example.smallsolutions.LoginFragment$4
  com.example.smallsolutions.LoginFragment$5
-<<<<<<< HEAD
-com/example/smallsolutions/LoginFragmentAdapter.java
- com.example.smallsolutions.LoginFragmentAdapter
-com/example/smallsolutions/AllRandom.java
- com.example.smallsolutions.AllRandom
- com.example.smallsolutions.AllRandom$1
- com.example.smallsolutions.AllRandom$2
-com/example/smallsolutions/CategoryFragment.java
- com.example.smallsolutions.CategoryFragment
 com/example/smallsolutions/RecyclerAdapter.java
  com.example.smallsolutions.RecyclerAdapter
  com.example.smallsolutions.RecyclerAdapter$viewHolder
-com/example/smallsolutions/HomeFragment.java
- com.example.smallsolutions.HomeFragment
- com.example.smallsolutions.HomeFragment$1
-com/example/smallsolutions/FragmentAdapter.java
- com.example.smallsolutions.FragmentAdapter
-=======
-com/example/smallsolutions/LocalUserProfileFragment.java
- com.example.smallsolutions.LocalUserProfileFragment
- com.example.smallsolutions.LocalUserProfileFragment$1
- com.example.smallsolutions.LocalUserProfileFragment$1$1
- com.example.smallsolutions.LocalUserProfileFragment$2
- com.example.smallsolutions.LocalUserProfileFragment$2$1
- com.example.smallsolutions.LocalUserProfileFragment$2$2
- com.example.smallsolutions.LocalUserProfileFragment$3
-com/example/smallsolutions/EditProfileActivity.java
- com.example.smallsolutions.EditProfileActivity
- com.example.smallsolutions.EditProfileActivity$1
- com.example.smallsolutions.EditProfileActivity$2
- com.example.smallsolutions.EditProfileActivity$3
- com.example.smallsolutions.EditProfileActivity$3$1
- com.example.smallsolutions.EditProfileActivity$4
- com.example.smallsolutions.EditProfileActivity$4$1
- com.example.smallsolutions.EditProfileActivity$5
->>>>>>> 3eef746d89a0b8f6144ab3aefe221d93949253b0
+com/example/smallsolutions/No_Internet_Activity.java
+ com.example.smallsolutions.No_Internet_Activity
+ com.example.smallsolutions.No_Internet_Activity$1
