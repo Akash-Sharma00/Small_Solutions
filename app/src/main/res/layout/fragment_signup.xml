@@ -225,9 +225,7 @@
                 android:hint="@string/experience"
                 android:textColor="@color/black"
                 app:hintTextAppearance="@font/bree_serif"
-                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="0dp" />
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

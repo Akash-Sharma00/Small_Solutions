@@ -19,6 +19,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -43,6 +44,15 @@ public class LocalUserProfileFragment extends Fragment {
 //    Imageview variables
     CircleImageView profilePhoto;
 
+//    Floating Action button for editing profile
+    FloatingActionButton editProfile;
+
+//    Variable to store if user is recruiter or not
+    String isRecruiter = "false";
+
+//    Declaring userDetails object to store user details
+    UserDetails userDetails;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -59,6 +69,7 @@ public class LocalUserProfileFragment extends Fragment {
         description = myRoot.findViewById(R.id.local_description);
         profilePhoto = myRoot.findViewById(R.id.userProfilePhoto);
         progressBar = myRoot.findViewById(R.id.profileImgProgess);
+        editProfile = myRoot.findViewById(R.id.editFloatingButton);
 
 //        description.setText(Path); // Need to remove Later
 
@@ -86,13 +97,16 @@ public class LocalUserProfileFragment extends Fragment {
                     age.setVisibility(View.GONE);
                     profession.setVisibility(View.GONE);
                     exp.setVisibility(View.GONE);
+
+//                    Setting recruiter variable to value true
+                    isRecruiter = "true";
                 }
 
                  reference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                        UserDetails userDetails = snapshot.getValue(UserDetails.class);
+                        userDetails = snapshot.getValue(UserDetails.class);
 
 
 //                Setting data in profile
@@ -138,6 +152,17 @@ public class LocalUserProfileFragment extends Fragment {
                     }
                 });
                 builder.create().show();
+            }
+        });
+
+//        Calling Edit Profile
+        editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), EditProfileActivity.class);
+                intent.putExtra("recruiter", isRecruiter);
+                intent.putExtra("userDetails", userDetails);
+                startActivity(intent);
             }
         });
         return myRoot;
