@@ -181,7 +181,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (drawer.isDrawerOpen(GravityCompat.START)){
             drawer.closeDrawer(GravityCompat.START);
         }
-        if (viewPager2.getCurrentItem() > 0){
+        else if (viewPager2.getCurrentItem() > 0){
             viewPager2.setCurrentItem(0);
         }
         else{

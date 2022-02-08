@@ -3,12 +3,16 @@ import java.io.Serializable;
 
 class UserDetails implements Serializable {
 
-    private String userName, userEmail,  userPhoneNo, age, experience, profession, imageURL, time;
+    private String userName, userEmail,  userPhoneNo, age, experience, profession, imageURL, time, message;
 
     public UserDetails() {
 //        Empty constructor needed
     }
 
+    public UserDetails(String time, String message) {
+        this.time = time;
+        this.message = message;
+    }
 
     public UserDetails(String userName, String userPhoneNo, String profession, String time, String imageURL){
         this.userName = userName;
@@ -31,6 +35,10 @@ class UserDetails implements Serializable {
         this.age = age;
         this.experience = experience;
         this.profession = profession;
+    }
+
+    public String getMessage() {
+        return message;
     }
 
     public void setImageURL(String imageURL){

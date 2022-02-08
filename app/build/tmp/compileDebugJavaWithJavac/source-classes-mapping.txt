@@ -7,6 +7,9 @@ com/example/smallsolutions/LocalUserProfileFragment.java
  com.example.smallsolutions.LocalUserProfileFragment$2
  com.example.smallsolutions.LocalUserProfileFragment$2$1
  com.example.smallsolutions.LocalUserProfileFragment$2$2
+com/example/smallsolutions/ChatWindowAdapter.java
+ com.example.smallsolutions.ChatWindowAdapter
+ com.example.smallsolutions.ChatWindowAdapter$viewHolder
 com/example/smallsolutions/Message_Window_Activity.java
  com.example.smallsolutions.Message_Window_Activity
 com/example/smallsolutions/ChatRecyclerAdapter.java

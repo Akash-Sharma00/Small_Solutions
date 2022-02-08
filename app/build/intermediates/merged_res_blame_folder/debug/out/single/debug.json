@@ -172,6 +172,10 @@
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\layout\\activity_about_us.xml"
     },
     {
+        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\layout_receiver_massage_card.xml.flat",
+        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\layout\\receiver_massage_card.xml"
+    },
+    {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
@@ -238,6 +242,10 @@
     {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_profile.xml.flat",
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\layout_sender_massage_card.xml.flat",
+        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\layout\\sender_massage_card.xml"
     },
     {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_electrician.jpeg.flat",
