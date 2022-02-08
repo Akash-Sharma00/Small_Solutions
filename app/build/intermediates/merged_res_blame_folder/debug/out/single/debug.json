@@ -1,25 +1,11 @@
 [
     {
-<<<<<<< HEAD
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_hired.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\hired.png"
-=======
-        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_search_icon.xml.flat",
-        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable\\search_icon.xml"
->>>>>>> 2082f7695e89367a2f970197d26ff473e201bcee
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-<<<<<<< HEAD
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_bangers.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\bangers.xml"
-=======
-        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_contact.xml.flat",
-        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\drawable\\ic_contact.xml"
->>>>>>> 2082f7695e89367a2f970197d26ff473e201bcee
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_contact.xml.flat",
@@ -30,44 +16,20 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\hired.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_bree_serif.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\bree_serif.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_home.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_home.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_profession_design.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\profession_design.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_home.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_home.xml"
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_no_internet.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_no_internet.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_hired.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\hired.png"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_category.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_category.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_login.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_login.xml"
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_buttons_layout.xml.flat",
@@ -78,28 +40,8 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\toolbar.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\menu_home_menu_bar.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\menu\\home_menu_bar.xml"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_card_desing.xml.flat",
@@ -110,56 +52,44 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\toolbar_background.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_profile.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\icon_profile.xml"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_signup.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_signup.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_profile.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\icon_profile.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_call_card.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\call_card.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_carpenter_icon.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\carpenter_icon.xml"
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_electrician.jpeg.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\electrician.jpeg"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_no_internet.png.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\no_internet.png"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_electrician.jpeg.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\electrician.jpeg"
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_carpenter_icon.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\carpenter_icon.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_call_history.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_call_history.xml"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_carpenter.jpeg.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\carpenter.jpeg"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_chat_bubble.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_chat_bubble.xml"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_back.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_back.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_signup.xml.flat",
@@ -174,10 +104,6 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_white.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\white.xml"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_plumber.jpeg.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\plumber.jpeg"
     },
@@ -186,20 +112,8 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\mrplumber.jpg"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_app_developer.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_app_developer.xml"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_cook.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_cook.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_android.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_android.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_login.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_login.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_blue.xml.flat",
@@ -208,10 +122,6 @@
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\anim_bottom_animation.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\anim\\bottom_animation.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_bottom_img.jpg.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\bottom_img.jpg"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_textbox_layout.xml.flat",
@@ -226,20 +136,8 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\search_bar_bg.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_search_icon.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\search_icon.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_more.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_more.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_bungee.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\bungee.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_photoeditor.jpeg.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\photoeditor.jpeg"
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_done.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_done.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -258,16 +156,164 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_chat.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_profile.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_profile.xml"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_navbar_header.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\navbar_header.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_plumber.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_plumber.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_local_user_profile.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_local_user_profile.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_cook.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\cook.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_webdev.jpeg.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\webdev.jpeg"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_baloo_bhai.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\baloo_bhai.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_videoeditor.jpeg.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\videoeditor.jpeg"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\anim_bottom_image_animation.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\anim\\bottom_image_animation.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\anim_top_animation.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\anim\\top_animation.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_bad_script.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\bad_script.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_digitalmarketer.jpeg.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\digitalmarketer.jpeg"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_search_24.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_edit_profile.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_edit_profile.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_hired.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\hired.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_bree_serif.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\bree_serif.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_no_internet.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_no_internet.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_hired.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\hired.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_category.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_category.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_login.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\menu_home_menu_bar.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\menu\\home_menu_bar.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_call_history.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_call_history.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_chat_bubble.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_chat_bubble.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_white.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\white.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_app_developer.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_app_developer.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_android.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_android.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_login.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_login.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_bottom_img.jpg.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\bottom_img.jpg"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_search_icon.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\search_icon.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_more.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_more.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_bungee.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\bungee.xml"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_photoeditor.jpeg.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\photoeditor.jpeg"
+    },
+    {
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_profile.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_profile.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_rounded_corners.xml.flat",
@@ -282,20 +328,12 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_logout.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_all_random.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_all_random.xml"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_form_background.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\form_background.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_local_user_profile.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\fragment_local_user_profile.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_cook.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\cook.png"
+        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_all_random.xml.flat",
+        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_all_random.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_burger.xml.flat",
@@ -318,36 +356,12 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_webdev.jpeg.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\webdev.jpeg"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_baloo_bhai.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\baloo_bhai.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_videoeditor.jpeg.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\videoeditor.jpeg"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\anim_bottom_image_animation.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\anim\\bottom_image_animation.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\anim_top_animation.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\anim\\top_animation.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
@@ -358,20 +372,8 @@
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\forgetpasswordbox.xml"
     },
     {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\font_bad_script.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\font\\bad_script.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_digitalmarketer.jpeg.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable-v24\\digitalmarketer.jpeg"
-    },
-    {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home.xml.flat",
         "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\layout\\activity_home.xml"
-    },
-    {
-        "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_search_24.xml.flat",
-        "source": "D:\\Nitin\\Black Book Project\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
     },
     {
         "merged": "D:\\Nitin\\Black Book Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_edit.xml.flat",

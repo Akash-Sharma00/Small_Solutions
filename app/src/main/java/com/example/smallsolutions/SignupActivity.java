@@ -158,7 +158,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                         else{
                             Toast.makeText(SignupActivity.this, "Email already exists", Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
-                            startActivity(new Intent(SignupActivity.this, SignupFragment.class));
+                            finish();
                         }
                     }
                 });
