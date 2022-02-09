@@ -161,7 +161,7 @@ public class LocalUserProfileFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), EditProfileActivity.class);
                 intent.putExtra("recruiter", isRecruiter);
-                intent.putExtra("userDetails", userDetails);
+                intent.putExtra("imageURL", userDetails.getImageURL());
                 startActivity(intent);
             }
         });
