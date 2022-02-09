@@ -19,6 +19,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -51,16 +52,15 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
     ImageView imageEditPencil;
     TextView removeProfilePicture;
     TextInputEditText userNameUpdate, userContactUpdate, userAgeUpdate, userExperienceUpdate;
-    TextInputLayout professionTIL, experienceTIL;
-    AutoCompleteTextView experienceDropDown, userProfessionUpdate;
+    TextInputLayout experienceTIL;
+    AutoCompleteTextView experienceDropDown;
     Button update;
 
 //    Toolbar elements
-    Toolbar toolbar;
     ImageView back, confirmChanges;
 
 //    Strings needed to be updated
-    String name, email, password, phoneNo, profession, age, experienceNo, experienceDropDownValue;
+    String name, phoneNo, age, experienceNo, experienceDropDownValue;
 
 //    URI and bitmaps
     Uri imageURI = null;
@@ -76,9 +76,6 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
 //    String variable to get value of isRecruiter variable passed through intent
     String recruiter;
 
-//    UserDetaiils object to store value of user passed through intent
-    UserDetails userDetails;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,10 +87,8 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         uploadProgressBar.setVisibility(View.GONE);
 
 //        Hooks for toolbar elements
-        toolbar = findViewById(R.id.toolbar);
         confirmChanges = findViewById(R.id.confirmChanges);
         back = findViewById(R.id.back);
-        setSupportActionBar(toolbar);
 
 //        Hooks for ui elements
         profileEdit = findViewById(R.id.profilePhotoEdit);
@@ -101,12 +96,10 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         removeProfilePicture = findViewById(R.id.removeProfilePicture);
         userNameUpdate = findViewById(R.id.userNameUpdate);
         userContactUpdate = findViewById(R.id.userPhoneNoUpdate);
-        userProfessionUpdate = findViewById(R.id.autocomplete_user_profession);
         userAgeUpdate = findViewById(R.id.userAgeNoUpdate);
         userExperienceUpdate = findViewById(R.id.userExperienceNoUpdate);
         experienceDropDown = findViewById(R.id.autoComplete_experience_update);
         update = findViewById(R.id.updateChanges);
-        professionTIL = findViewById(R.id.userProfessionNoTIL);
         experienceTIL = findViewById(R.id.userExperienceUpdateDropDown);
 
 //        Setting adapters for  drop down
@@ -114,13 +107,11 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         expList = new ArrayAdapter(this, R.layout.dropdown_textview, R.id.items_design, exp);
         experienceDropDown.setAdapter(expList);
 
-        ArrayAdapter<String> proList;
-        proList = new ArrayAdapter(this, R.layout.dropdown_textview, R.id.items_design, professionDropDown);
-        userProfessionUpdate.setAdapter(proList);
-
         Intent intent = getIntent();
         recruiter = intent.getStringExtra("recruiter");
-        userDetails = (UserDetails) intent.getSerializableExtra( "userDetails");
+
+//        Setting profile photo using url passed
+        Picasso.get().load(intent.getStringExtra("imageURL")).into(profileEdit);
 
         if (recruiter.equals("true")){
 //            Function call to make unnecessary elements invisible
@@ -128,8 +119,6 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         }
 
 //        Function call to set Edit text values to user details as default
-        setDefaultValues();
-
         back.setOnClickListener(this);
         confirmChanges.setOnClickListener(this);
         profileEdit.setOnClickListener(this);
@@ -141,7 +130,9 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.back:
-                createDatabaseInstance();
+                if (!compareChanges()){
+                    displayAlert();
+                }
                 break;
             case R.id.profilePhotoEdit:
             case R.id.editProfilePhoto:
@@ -149,31 +140,14 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.confirmChanges:
             case R.id.updateChanges:
+                confirmChanges.setVisibility(View.GONE);
                 uploadProgressBar.setVisibility(View.VISIBLE);
                 uploadDataToDatabase();
                 break;
         }
     }
 
-    private void setDefaultValues() {
-        Picasso.get().load(userDetails.getImageURL()).into(profileEdit);
-        userNameUpdate.setText(userDetails.getUserName());
-        userContactUpdate.setText(userDetails.getUserPhoneNo());
-
-        if (!recruiter.equals("true")){
-            userProfessionUpdate.setText(userDetails.getProfession());
-            userAgeUpdate.setText(userDetails.getAge());
-
-            String[] exp = userDetails.getExperience().split(" ",2);
-            userExperienceUpdate.setText(exp[0]);
-            experienceDropDown.setText(exp[1]);
-        }
-
-        progressBar.setVisibility(View.GONE);
-    }
-
     private void visibilityGone() {
-        professionTIL.setVisibility(View.GONE);
         userAgeUpdate.setVisibility(View.GONE);
         userExperienceUpdate.setVisibility(View.GONE);
         experienceTIL.setVisibility(View.GONE);
@@ -181,8 +155,12 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        createDatabaseInstance();
+        if (!compareChanges()){
+            displayAlert();
+        }else{
+            super.onBackPressed();
+        }
+
     }
 
     private void displayAlert(){
@@ -205,7 +183,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         builder.create().show();
     }
 
-    private boolean compareChanges(UserDetails userDetailsDatabase){
+    private boolean compareChanges(){
 //        Getting values in edit texts
         getEditTextValue();
 
@@ -215,18 +193,15 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         }
 
 //        Checking if any changes were done
-        if (!name.equals(userDetailsDatabase.getUserName())){
+        if (!name.equals("")){
             return false;
         }
-        if (!phoneNo.equals(userDetailsDatabase.getUserPhoneNo())){
+        if (!phoneNo.equals("")){
             return false;
         }
-        if (recruiter.equals("true")){
-            if (!profession.equals(userDetailsDatabase.getProfession())){
-                return false;
-            }
+        if (!recruiter.equals("true")){
             String experience = experienceNo + experienceDropDownValue;
-            if (!experience.equals(userDetailsDatabase.getExperience())){
+            if (!experience.equals("")){
                 return false;
             }
         }
@@ -237,51 +212,10 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         phoneNo = userContactUpdate.getText().toString().trim();
 
         if (!recruiter.equals("true")){
-            profession = userProfessionUpdate.getText().toString().trim();
             age = userAgeUpdate.getText().toString().trim();
             experienceNo = userExperienceUpdate.getText().toString().trim();
             experienceDropDownValue = experienceDropDown.getText().toString().trim();
         }
-    }
-
-    private void createDatabaseInstance(){
-        FirebaseDatabase database;
-        DatabaseReference databaseReference;
-        FirebaseAuth auth;
-
-        database = FirebaseDatabase.getInstance();
-        auth = FirebaseAuth.getInstance();
-        databaseReference = database.getReference("users/allUsers/" + auth.getUid());
-
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                To store the path of user object in database
-                String path = snapshot.getValue(String.class);
-                FirebaseDatabase database;
-                database = FirebaseDatabase.getInstance();
-                DatabaseReference userReference = database.getReference(path);
-                userReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        UserDetails userDetailsDatabase = snapshot.getValue(UserDetails.class);
-                        if (!compareChanges(userDetailsDatabase)){
-                            displayAlert();
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 
     private void selectImage(){
@@ -310,7 +244,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         FirebaseDatabase database;
         FirebaseAuth auth;
         DatabaseReference reference;
-
+        Log.e("Checking Upload", "Upload funtion called");
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("users");
@@ -345,8 +279,9 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         reference.child("Recruiter").child(auth.getUid()).child("userName").setValue(name);
         reference.child("Recruiter").child(auth.getUid()).child("userPhoneNo").setValue(phoneNo);
         if (!recruiter.equals("true")){
-            reference.child("profession").child(profession).child(auth.getUid()).child("userName").setValue(name);
+
         }
+        confirmChanges.setVisibility(View.VISIBLE);
         uploadProgressBar.setVisibility(View.GONE);
     }
 }
