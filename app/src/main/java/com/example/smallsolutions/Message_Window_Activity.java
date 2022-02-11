@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -75,42 +77,40 @@ public class Message_Window_Activity extends AppCompatActivity {
         recycler.setHasFixedSize(true);
 
 
+        auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        reference = database.getReference("users/message");
+//        ref = database.getReference("users/message/"+ID+"/"+auth.getUid());
+        send.setOnClickListener(view -> {
+            Toast.makeText(this, auth.getUid(), Toast.LENGTH_SHORT).show();
+            String Message = message.getText().toString().trim();
+            String time = new SimpleDateFormat("hh:mm  dd-MM-yyyy").format(new Date());
+            ChatMessageLoader sendMessage = new ChatMessageLoader(Message, time, Sender_id);
+            reference.child(auth.getUid()).child(ID).push().setValue(sendMessage);
 
+            reference.child(ID).child(auth.getUid()).push().setValue(sendMessage);
 
+            message.setText("");
+        });
+        
 
+        ref = database.getReference("users/message/"+auth.getUid());
+        ref.child(ID).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                messageHolder.clear();
+                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    ChatMessageLoader userChat = dataSnapshot.getValue(ChatMessageLoader.class);
+                    messageHolder.add(userChat);
+                }
+                recycler.setAdapter(new ChatWindowAdapter(messageHolder, Message_Window_Activity.this));
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-//        database = FirebaseDatabase.getInstance();
-//     // reference = database.getReference(chatPath).child("chats");
-//        reference = database.getReference("users").child("chats");
-//
-//        send.setOnClickListener(view -> {
-//            String Message = message.getText().toString().trim();
-//            String time = new SimpleDateFormat("hh:mm  dd-MM-yyyy").format(new Date());
-//            ChatMessageLoader sendMessage = new ChatMessageLoader(Message, time, Sender_id);
-//            reference.child(Sender_id).child("messages").push().setValue(sendMessage);
-//            reference.child(Receiver_id).push().setValue(sendMessage);
-//            message.setText("");
-//        });
-//
-////        ref = database.getReference(chatPath).child("chats").child(auth.getUid());
-//        ref = database.getReference("users/chats/"+Sender_id+"/messages");
-//        ref.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                messageHolder.clear();
-//                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
-//                    ChatMessageLoader userChat = dataSnapshot.getValue(ChatMessageLoader.class);
-//                    messageHolder.add(userChat);
-//                }
-//                recycler.setAdapter(new ChatWindowAdapter(messageHolder, Message_Window_Activity.this));
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
+            }
+        });
 
     }
 }

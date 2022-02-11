@@ -71,7 +71,6 @@ public class ChatRecyclerAdapter extends RecyclerView.Adapter<ChatRecyclerAdapte
 
         @Override
         public void onClick(View view) {
-            Toast.makeText(itemView.getContext(), "It is working", Toast.LENGTH_SHORT).show();
             int pos = getAdapterPosition();
             ChatMessageLoader details = ChatHolder.get(pos);
 
@@ -83,6 +82,7 @@ public class ChatRecyclerAdapter extends RecyclerView.Adapter<ChatRecyclerAdapte
             intent.putExtra("Name",name);
             intent.putExtra("ProfilePhoto", image);
             intent.putExtra("uid",uid);
+            Toast.makeText(itemView.getContext(), uid, Toast.LENGTH_SHORT).show();
             view.getContext().startActivity(intent);
         }
     }

@@ -8,9 +8,12 @@ com/example/smallsolutions/LocalUserProfileFragment.java
  com.example.smallsolutions.LocalUserProfileFragment$2$1
  com.example.smallsolutions.LocalUserProfileFragment$2$2
  com.example.smallsolutions.LocalUserProfileFragment$3
-com/example/smallsolutions/RecyclerAdapter.java
- com.example.smallsolutions.RecyclerAdapter
- com.example.smallsolutions.RecyclerAdapter$viewHolder
+com/example/smallsolutions/profileActivity.java
+ com.example.smallsolutions.profileActivity
+ com.example.smallsolutions.profileActivity$1
+ com.example.smallsolutions.profileActivity$2
+ com.example.smallsolutions.profileActivity$2$1
+ com.example.smallsolutions.profileActivity$2$1$1
 com/example/smallsolutions/CallLogAdapter.java
  com.example.smallsolutions.CallLogAdapter
  com.example.smallsolutions.CallLogAdapter$viewHolder
@@ -43,12 +46,9 @@ com/example/smallsolutions/MainActivity.java
 com/example/smallsolutions/CallHistory.java
  com.example.smallsolutions.CallHistory
  com.example.smallsolutions.CallHistory$1
-com/example/smallsolutions/profileActivity.java
- com.example.smallsolutions.profileActivity
- com.example.smallsolutions.profileActivity$1
- com.example.smallsolutions.profileActivity$2
- com.example.smallsolutions.profileActivity$2$1
- com.example.smallsolutions.profileActivity$2$1$1
+com/example/smallsolutions/ChatActivity.java
+ com.example.smallsolutions.ChatActivity
+ com.example.smallsolutions.ChatActivity$1
 com/example/smallsolutions/AllRandom.java
  com.example.smallsolutions.AllRandom
  com.example.smallsolutions.AllRandom$1
@@ -81,9 +81,9 @@ com/example/smallsolutions/About_Us_Activity.java
  com.example.smallsolutions.About_Us_Activity
 com/example/smallsolutions/callLogRecycler.java
  com.example.smallsolutions.callLogRecycler
-com/example/smallsolutions/ChatActivity.java
- com.example.smallsolutions.ChatActivity
- com.example.smallsolutions.ChatActivity$1
+com/example/smallsolutions/RecyclerAdapter.java
+ com.example.smallsolutions.RecyclerAdapter
+ com.example.smallsolutions.RecyclerAdapter$viewHolder
 com/example/smallsolutions/HomeFragment.java
  com.example.smallsolutions.HomeFragment
  com.example.smallsolutions.HomeFragment$1
@@ -101,6 +101,7 @@ com/example/smallsolutions/ChatWindowAdapter.java
  com.example.smallsolutions.ChatWindowAdapter$viewHolder
 com/example/smallsolutions/Message_Window_Activity.java
  com.example.smallsolutions.Message_Window_Activity
+ com.example.smallsolutions.Message_Window_Activity$1
 com/example/smallsolutions/ChatRecyclerAdapter.java
  com.example.smallsolutions.ChatRecyclerAdapter
  com.example.smallsolutions.ChatRecyclerAdapter$viewHolder
