@@ -20,12 +20,9 @@ com/example/smallsolutions/CallLogAdapter.java
  com.example.smallsolutions.CallLogAdapter$viewHolder$1
 com/example/smallsolutions/LoginFragmentAdapter.java
  com.example.smallsolutions.LoginFragmentAdapter
-com/example/smallsolutions/SignupFragment.java
- com.example.smallsolutions.SignupFragment
- com.example.smallsolutions.SignupFragment$1
- com.example.smallsolutions.SignupFragment$2
- com.example.smallsolutions.SignupFragment$3
- com.example.smallsolutions.SignupFragment$4
+com/example/smallsolutions/ChatRecyclerAdapter.java
+ com.example.smallsolutions.ChatRecyclerAdapter
+ com.example.smallsolutions.ChatRecyclerAdapter$viewHolder
 com/example/smallsolutions/EditProfileActivity.java
  com.example.smallsolutions.EditProfileActivity
  com.example.smallsolutions.EditProfileActivity$1
@@ -33,12 +30,8 @@ com/example/smallsolutions/EditProfileActivity.java
  com.example.smallsolutions.EditProfileActivity$3
  com.example.smallsolutions.EditProfileActivity$3$1
  com.example.smallsolutions.EditProfileActivity$4
-com/example/smallsolutions/SignupActivity.java
- com.example.smallsolutions.SignupActivity
- com.example.smallsolutions.SignupActivity$1
- com.example.smallsolutions.SignupActivity$2
- com.example.smallsolutions.SignupActivity$2$1
- com.example.smallsolutions.SignupActivity$3
+com/example/smallsolutions/UserDetails.java
+ com.example.smallsolutions.UserDetails
 com/example/smallsolutions/MainActivity.java
  com.example.smallsolutions.MainActivity
  com.example.smallsolutions.MainActivity$1
@@ -94,14 +87,22 @@ com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity$3
 com/example/smallsolutions/FragmentAdapter.java
  com.example.smallsolutions.FragmentAdapter
-com/example/smallsolutions/UserDetails.java
- com.example.smallsolutions.UserDetails
+com/example/smallsolutions/SignupActivity.java
+ com.example.smallsolutions.SignupActivity
+ com.example.smallsolutions.SignupActivity$1
+ com.example.smallsolutions.SignupActivity$2
+ com.example.smallsolutions.SignupActivity$2$1
+ com.example.smallsolutions.SignupActivity$3
+com/example/smallsolutions/SignupFragment.java
+ com.example.smallsolutions.SignupFragment
+ com.example.smallsolutions.SignupFragment$1
+ com.example.smallsolutions.SignupFragment$2
+ com.example.smallsolutions.SignupFragment$3
+ com.example.smallsolutions.SignupFragment$4
 com/example/smallsolutions/ChatWindowAdapter.java
  com.example.smallsolutions.ChatWindowAdapter
- com.example.smallsolutions.ChatWindowAdapter$viewHolder
+ com.example.smallsolutions.ChatWindowAdapter$ReceiverViewHolder
+ com.example.smallsolutions.ChatWindowAdapter$SenderViewHolder
 com/example/smallsolutions/Message_Window_Activity.java
  com.example.smallsolutions.Message_Window_Activity
  com.example.smallsolutions.Message_Window_Activity$1
-com/example/smallsolutions/ChatRecyclerAdapter.java
- com.example.smallsolutions.ChatRecyclerAdapter
- com.example.smallsolutions.ChatRecyclerAdapter$viewHolder
