@@ -20,9 +20,9 @@ public class ChatRecyclerAdapter extends RecyclerView.Adapter<ChatRecyclerAdapte
 
 
     ChatActivity chatActivity;
-    ArrayList<UserDetails> ChatHolder;
+    ArrayList<ChatMessageLoader> ChatHolder;
 
-    public ChatRecyclerAdapter(ChatActivity chatActivity, ArrayList<UserDetails> chatHolder) {
+    public ChatRecyclerAdapter(ChatActivity chatActivity, ArrayList<ChatMessageLoader> chatHolder) {
         this.chatActivity = chatActivity;
         this.ChatHolder = chatHolder;
     }
@@ -39,6 +39,8 @@ public class ChatRecyclerAdapter extends RecyclerView.Adapter<ChatRecyclerAdapte
     public void onBindViewHolder(@NonNull ChatRecyclerAdapter.viewHolder holder, int position) {
 
         holder.chatName.setText(ChatHolder.get(position).getUserName());
+        holder.lastTime.setText(ChatHolder.get(position).getLastTime());
+        holder.lastMessage.setText(ChatHolder.get(position).getLastMessage());
         holder.chatProfession.setText(ChatHolder.get(position).getProfession());
         Picasso.get().load(ChatHolder.get(position).getImageURL()).into(holder.chatImg);
 
@@ -52,7 +54,7 @@ public class ChatRecyclerAdapter extends RecyclerView.Adapter<ChatRecyclerAdapte
     public class viewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         CircleImageView chatImg;
-        TextView chatName, chatProfession;
+        TextView chatName, chatProfession,lastMessage,lastTime;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,13 +64,26 @@ public class ChatRecyclerAdapter extends RecyclerView.Adapter<ChatRecyclerAdapte
             chatImg = itemView.findViewById(R.id.chatCardImg);
             chatName = itemView.findViewById(R.id.chatCardName);
             chatProfession = itemView.findViewById(R.id.chatCardProfession);
+            lastMessage = itemView.findViewById(R.id.chatCardLastMessage);
+            lastTime = itemView.findViewById(R.id.chatCardTime);
 
         }
 
         @Override
         public void onClick(View view) {
             Toast.makeText(itemView.getContext(), "It is working", Toast.LENGTH_SHORT).show();
-            itemView.getContext().startActivity(new Intent(itemView.getContext(), Message_Window_Activity.class));
+            int pos = getAdapterPosition();
+            ChatMessageLoader details = ChatHolder.get(pos);
+
+            String name = details.getUserName();
+            String image = details.imageURL;
+            String uid = details.uid;
+
+            Intent intent = new Intent(itemView.getContext(), Message_Window_Activity.class);
+            intent.putExtra("Name",name);
+            intent.putExtra("ProfilePhoto", image);
+            intent.putExtra("uid",uid);
+            view.getContext().startActivity(intent);
         }
     }
 }

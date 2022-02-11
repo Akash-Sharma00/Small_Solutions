@@ -11,10 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class ChatWindowAdapter extends RecyclerView.Adapter<ChatWindowAdapter.viewHolder> {
-    ArrayList <UserDetails> messages;
+    ArrayList <ChatMessageLoader> messages;
     Message_Window_Activity message_window_activity;
 
-    public ChatWindowAdapter(ArrayList<UserDetails> messages, Message_Window_Activity message_window_activity) {
+    public ChatWindowAdapter(ArrayList<ChatMessageLoader> messages, Message_Window_Activity message_window_activity) {
         this.messages = messages;
         this.message_window_activity = message_window_activity;
     }
@@ -22,7 +22,7 @@ public class ChatWindowAdapter extends RecyclerView.Adapter<ChatWindowAdapter.vi
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.receiver_massage_card,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.sender_massage_card,parent,false);
         return new ChatWindowAdapter.viewHolder(view);
     }
 
@@ -43,8 +43,8 @@ public class ChatWindowAdapter extends RecyclerView.Adapter<ChatWindowAdapter.vi
         public viewHolder(@NonNull View itemView) {
             super(itemView);
 
-            SMessage = itemView.findViewById(R.id.chatMessage);
-            STime = itemView.findViewById(R.id.chatTime);
+            SMessage = itemView.findViewById(R.id.SenderMessage);
+            STime = itemView.findViewById(R.id.senderTime);
 
         }
     }
