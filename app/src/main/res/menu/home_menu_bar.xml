@@ -17,7 +17,7 @@
             android:title="My Profile" />
 
         <item
-            android:id="@+id/calllog"
+            android:id="@+id/call_log"
             android:icon="@drawable/ic_baseline_call_24"
             android:title="Calls" />
 

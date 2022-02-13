@@ -133,6 +133,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.home:
                 viewPager2.setCurrentItem(0);
                 break;
+            case R.id.call_log:
+                viewPager2.setCurrentItem(2);
+                break;
             case R.id.my_profile:
                 viewPager2.setCurrentItem(3);
                 break;
