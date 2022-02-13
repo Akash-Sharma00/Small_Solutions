@@ -59,14 +59,6 @@
             app:layout_constraintEnd_toEndOf="@id/profilePhotoEdit"
             app:layout_constraintBottom_toBottomOf="@id/profilePhotoEdit"/>
 
-        <ProgressBar
-            android:id="@+id/confirmChangesProgressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="6dp"/>
-
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profilePhotoEdit"
             android:layout_width="115dp"
@@ -78,13 +70,12 @@
 
         <ImageView
             android:id="@+id/editProfilePhoto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
             android:src="@drawable/ic_edit"
-            app:layout_constraintEnd_toEndOf="@id/profilePhotoEdit"
-            app:layout_constraintBottom_toBottomOf="@+id/profilePhotoEdit"
             app:tint="@color/blue"
-            tools:ignore="UseAppTint" />
+            app:layout_constraintEnd_toEndOf="@id/profilePhotoEdit"
+            app:layout_constraintBottom_toBottomOf="@+id/profilePhotoEdit" />
 
         <TextView
             android:id="@+id/removeProfilePicture"

@@ -123,8 +123,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -134,6 +132,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.home:
                 viewPager2.setCurrentItem(0);
+                break;
+            case R.id.call_log:
+                viewPager2.setCurrentItem(2);
                 break;
             case R.id.my_profile:
                 viewPager2.setCurrentItem(3);

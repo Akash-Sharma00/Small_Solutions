@@ -21,9 +21,11 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -45,7 +47,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class EditProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
 //    Progress bar
-    ProgressBar progressBar, uploadProgressBar;
+    ProgressBar progressBar;
 
 //    Variables to creates hooks for ui elements
     CircleImageView profileEdit;
@@ -60,7 +62,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
     ImageView back, confirmChanges;
 
 //    Strings needed to be updated
-    String name, phoneNo, age, experienceNo, experienceDropDownValue;
+    String name, phoneNo, profession, age, experienceNo, experienceDropDownValue;
 
 //    URI and bitmaps
     Uri imageURI = null;
@@ -82,9 +84,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_edit_profile);
 
         progressBar = findViewById(R.id.progressBar);
-        uploadProgressBar = findViewById(R.id.confirmChangesProgressBar);
         progressBar.setVisibility(View.VISIBLE);
-        uploadProgressBar.setVisibility(View.GONE);
 
 //        Hooks for toolbar elements
         confirmChanges = findViewById(R.id.confirmChanges);
@@ -109,6 +109,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
 
         Intent intent = getIntent();
         recruiter = intent.getStringExtra("recruiter");
+        profession = intent.getStringExtra("profession");
 
 //        Setting profile photo using url passed
         Picasso.get().load(intent.getStringExtra("imageURL")).into(profileEdit);
@@ -121,6 +122,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
 //        Function call to set Edit text values to user details as default
         back.setOnClickListener(this);
         confirmChanges.setOnClickListener(this);
+        removeProfilePicture.setOnClickListener(this);
         profileEdit.setOnClickListener(this);
         imageEditPencil.setOnClickListener(this);
         update.setOnClickListener(this);
@@ -132,7 +134,13 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
             case R.id.back:
                 if (!compareChanges()){
                     displayAlert();
+                    break;
                 }
+                finish();
+                break;
+            case R.id.removeProfilePicture:
+                imageURL = "https://firebasestorage.googleapis.com/v0/b/small-solutions-8d943.appspot.com/o/default%2Fdefault.png?alt=media&token=c334a4e3-2d71-4795-a5e4-a27e54862520";
+                Picasso.get().load(imageURL).into(profileEdit);
                 break;
             case R.id.profilePhotoEdit:
             case R.id.editProfilePhoto:
@@ -140,8 +148,6 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.confirmChanges:
             case R.id.updateChanges:
-                confirmChanges.setVisibility(View.GONE);
-                uploadProgressBar.setVisibility(View.VISIBLE);
                 uploadDataToDatabase();
                 break;
         }
@@ -160,7 +166,6 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         }else{
             super.onBackPressed();
         }
-
     }
 
     private void displayAlert(){
@@ -244,7 +249,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         FirebaseDatabase database;
         FirebaseAuth auth;
         DatabaseReference reference;
-        Log.e("Checking Upload", "Upload funtion called");
+
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("users");
@@ -269,19 +274,88 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
                         @Override
                         public void onSuccess(Uri uri) {
                             imageURL = uri.toString();
-                            reference.child("Recruiter").child(auth.getUid()).child("imageURL").setValue(imageURL);
+                            if (recruiter.equals("true")){
+                                reference.child("Recruiter").child(auth.getUid()).child("imageURL").setValue(imageURL);
+                            }else {
+                                reference.child("profession").child(profession).child(auth.getUid()).child("imageURL").setValue(imageURL);
+                            }
                         }
                     });
                 }
             });
         }
 
-        reference.child("Recruiter").child(auth.getUid()).child("userName").setValue(name);
-        reference.child("Recruiter").child(auth.getUid()).child("userPhoneNo").setValue(phoneNo);
-        if (!recruiter.equals("true")){
+        getEditTextValue();
 
+        if (validate()){
+            confirmChanges.setClickable(false);
+            update.setClickable(false);
+            update.setText("Updating ...");
+            if (!recruiter.equals("true")){
+                reference.child("profession").child(profession).child(auth.getUid()).child("userName").setValue(name);
+                reference.child("profession").child(profession).child(auth.getUid()).child("userPhoneNo").setValue(phoneNo);
+                reference.child("profession").child(profession).child(auth.getUid()).child("age").setValue(age);
+                reference.child("profession").child(profession).child(auth.getUid()).child("experience").setValue(experienceNo + " " + experienceDropDownValue);
+            }else {
+                reference.child("Recruiter").child(auth.getUid()).child("userName").setValue(name);
+                reference.child("Recruiter").child(auth.getUid()).child("userPhoneNo").setValue(phoneNo);
+            }
+            confirmChanges.setClickable(true);
+            update.setClickable(true);
+            update.setText("Done");
+            Toast.makeText(EditProfileActivity.this, "Changes may take a while to appear", Toast.LENGTH_SHORT).show();
+            finish();
         }
-        confirmChanges.setVisibility(View.VISIBLE);
-        uploadProgressBar.setVisibility(View.GONE);
+    }
+
+    private boolean validate() {
+        if (name.equals("")){
+            userNameUpdate.setError("Name cannot be empty");
+            userNameUpdate.requestFocus();
+            return false;
+        }
+        if (name.length() < 3){
+            userNameUpdate.setError("Username too small");
+            userNameUpdate.requestFocus();
+            return false;
+        }
+        if (name.length() > 20){
+            userNameUpdate.setError("Username too large");
+            userNameUpdate.requestFocus();
+            return false;
+        }
+        if (phoneNo.equals("")){
+            userContactUpdate.setError("Contact cannot be empty");
+            userContactUpdate.requestFocus();
+            return false;
+        }
+        if (phoneNo.length() != 10){
+            userContactUpdate.setError("Enter valid number");
+            userContactUpdate.requestFocus();
+            return false;
+        }
+        if (!recruiter.equals("true")){
+            if (age.equals("")){
+                userAgeUpdate.setError("Age cannot be empty");
+                userAgeUpdate.requestFocus();
+                return false;
+            }
+            if (Integer.parseInt(age) < 18){
+                userAgeUpdate.setError("Age should be atleast 18");
+                userAgeUpdate.requestFocus();
+                return false;
+            }
+            if (experienceNo.equals("")){
+                userExperienceUpdate.setError("Experience cannot be empty");
+                userExperienceUpdate.requestFocus();
+                return false;
+            }
+            if (experienceDropDownValue.equals("")){
+                experienceDropDown.setError("Experience cannot be empty");
+                experienceDropDown.requestFocus();
+                return false;
+            }
+        }
+        return true;
     }
 }

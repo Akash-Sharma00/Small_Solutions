@@ -162,6 +162,9 @@ public class LocalUserProfileFragment extends Fragment {
                 Intent intent = new Intent(getContext(), EditProfileActivity.class);
                 intent.putExtra("recruiter", isRecruiter);
                 intent.putExtra("imageURL", userDetails.getImageURL());
+                if (!isRecruiter.equals("true")){
+                    intent.putExtra("profession", userDetails.getProfession());
+                }
                 startActivity(intent);
             }
         });
