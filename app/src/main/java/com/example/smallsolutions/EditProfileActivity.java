@@ -47,7 +47,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class EditProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
 //    Progress bar
-    ProgressBar progressBar, uploadProgressBar;
+    ProgressBar progressBar;
 
 //    Variables to creates hooks for ui elements
     CircleImageView profileEdit;
@@ -148,6 +148,9 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.confirmChanges:
             case R.id.updateChanges:
+                confirmChanges.setClickable(false);
+                update.setClickable(false);
+                update.setText("Uploading ...");
                 uploadDataToDatabase();
                 break;
         }
@@ -249,6 +252,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         FirebaseDatabase database;
         FirebaseAuth auth;
         DatabaseReference reference;
+
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("users");
@@ -283,13 +287,6 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
                 }
             });
         }
-        if (imageURL != null){
-            if (recruiter.equals("true")){
-                reference.child("Recruiter").child(auth.getUid()).child("imageURL").setValue(imageURL);
-            }else {
-                reference.child("profession").child(profession).child(auth.getUid()).child("imageURL").setValue(imageURL);
-            }
-        }
 
         getEditTextValue();
 
@@ -298,11 +295,14 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
             reference.child("profession").child(profession).child(auth.getUid()).child("userPhoneNo").setValue(phoneNo);
             reference.child("profession").child(profession).child(auth.getUid()).child("age").setValue(age);
             reference.child("profession").child(profession).child(auth.getUid()).child("experience").setValue(experienceNo + " " + experienceDropDownValue);
-        }else{
+        }else {
             reference.child("Recruiter").child(auth.getUid()).child("userName").setValue(name);
             reference.child("Recruiter").child(auth.getUid()).child("userPhoneNo").setValue(phoneNo);
         }
-        uploadProgressBar.setVisibility(View.GONE);
+        confirmChanges.setClickable(true);
+        update.setClickable(true);
+        update.setText("Done");
+        Toast.makeText(EditProfileActivity.this, "Changes may take a while to appear", Toast.LENGTH_SHORT).show();
         finish();
     }
 }

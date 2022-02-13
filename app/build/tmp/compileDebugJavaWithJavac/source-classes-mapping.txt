@@ -1,13 +1,8 @@
 com/example/smallsolutions/BuildConfig.java
  com.example.smallsolutions.BuildConfig
-com/example/smallsolutions/LocalUserProfileFragment.java
- com.example.smallsolutions.LocalUserProfileFragment
- com.example.smallsolutions.LocalUserProfileFragment$1
- com.example.smallsolutions.LocalUserProfileFragment$1$1
- com.example.smallsolutions.LocalUserProfileFragment$2
- com.example.smallsolutions.LocalUserProfileFragment$2$1
- com.example.smallsolutions.LocalUserProfileFragment$2$2
- com.example.smallsolutions.LocalUserProfileFragment$3
+com/example/smallsolutions/RecyclerAdapter.java
+ com.example.smallsolutions.RecyclerAdapter
+ com.example.smallsolutions.RecyclerAdapter$viewHolder
 com/example/smallsolutions/ChatWindowAdapter.java
  com.example.smallsolutions.ChatWindowAdapter
  com.example.smallsolutions.ChatWindowAdapter$ReceiverViewHolder
@@ -24,13 +19,10 @@ com/example/smallsolutions/SignupFragment.java
  com.example.smallsolutions.SignupFragment$2
  com.example.smallsolutions.SignupFragment$3
  com.example.smallsolutions.SignupFragment$4
-com/example/smallsolutions/EditProfileActivity.java
- com.example.smallsolutions.EditProfileActivity
- com.example.smallsolutions.EditProfileActivity$1
- com.example.smallsolutions.EditProfileActivity$2
- com.example.smallsolutions.EditProfileActivity$3
- com.example.smallsolutions.EditProfileActivity$3$1
- com.example.smallsolutions.EditProfileActivity$4
+com/example/smallsolutions/CallLogAdapter.java
+ com.example.smallsolutions.CallLogAdapter
+ com.example.smallsolutions.CallLogAdapter$viewHolder
+ com.example.smallsolutions.CallLogAdapter$viewHolder$1
 com/example/smallsolutions/SignupActivity.java
  com.example.smallsolutions.SignupActivity
  com.example.smallsolutions.SignupActivity$1
@@ -99,10 +91,18 @@ com/example/smallsolutions/UserDetails.java
  com.example.smallsolutions.UserDetails
 com/example/smallsolutions/LoginFragmentAdapter.java
  com.example.smallsolutions.LoginFragmentAdapter
-com/example/smallsolutions/CallLogAdapter.java
- com.example.smallsolutions.CallLogAdapter
- com.example.smallsolutions.CallLogAdapter$viewHolder
- com.example.smallsolutions.CallLogAdapter$viewHolder$1
-com/example/smallsolutions/RecyclerAdapter.java
- com.example.smallsolutions.RecyclerAdapter
- com.example.smallsolutions.RecyclerAdapter$viewHolder
+com/example/smallsolutions/LocalUserProfileFragment.java
+ com.example.smallsolutions.LocalUserProfileFragment
+ com.example.smallsolutions.LocalUserProfileFragment$1
+ com.example.smallsolutions.LocalUserProfileFragment$1$1
+ com.example.smallsolutions.LocalUserProfileFragment$2
+ com.example.smallsolutions.LocalUserProfileFragment$2$1
+ com.example.smallsolutions.LocalUserProfileFragment$2$2
+ com.example.smallsolutions.LocalUserProfileFragment$3
+com/example/smallsolutions/EditProfileActivity.java
+ com.example.smallsolutions.EditProfileActivity
+ com.example.smallsolutions.EditProfileActivity$1
+ com.example.smallsolutions.EditProfileActivity$2
+ com.example.smallsolutions.EditProfileActivity$3
+ com.example.smallsolutions.EditProfileActivity$3$1
+ com.example.smallsolutions.EditProfileActivity$4
