@@ -78,6 +78,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
             String mail = userDetails.getUserEmail();
             String age = userDetails.getAge();
             String profilePhotoURL = userDetails.getImageURL();
+            String seekerUid = userDetails.getUid();
 
             Intent intent = new Intent(itemView.getContext(), profileActivity.class);
             intent.putExtra("Name",name);
@@ -87,6 +88,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
             intent.putExtra("Mail", mail);
             intent.putExtra("Age", age);
             intent.putExtra("ProfilePhoto", profilePhotoURL);
+            intent.putExtra("uid",seekerUid);
             v.getContext().startActivity(intent);
         }
     }

@@ -11,14 +11,20 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
@@ -32,10 +38,13 @@ public class profileActivity extends AppCompatActivity {
     CircleImageView profilePhoto;
     ProgressBar progressBar;
     FloatingActionButton call_Button;
+    Button connectChat;
     private final int REQUEST_CODE = 1;
     FirebaseDatabase database;
-    DatabaseReference reference;
+    DatabaseReference reference,ref;
     FirebaseAuth auth;
+
+    String seeker_id;
 
     String imageURL;
 
@@ -57,8 +66,12 @@ public class profileActivity extends AppCompatActivity {
         description = findViewById(R.id.profile_description);
         progressBar = findViewById(R.id.profile_progress);
         profilePhoto = findViewById(R.id.userProfilePhoto);
+        connectChat = findViewById(R.id.chat_button);
 
 //        Setting all data
+
+        seeker_id = intent.getStringExtra("uid");
+
         imageURL = intent.getStringExtra("ProfilePhoto");
 
         progressBar.setVisibility(View.GONE);
@@ -81,6 +94,71 @@ public class profileActivity extends AppCompatActivity {
 //                Handle call
                 makePhoneCall();
             }
+        });
+
+//        Listing all users in chat recycler
+
+        connectChat.setOnClickListener(view -> {
+            Toast.makeText(this, seeker_id, Toast.LENGTH_SHORT).show();
+            auth = FirebaseAuth.getInstance();
+            String pro = intent.getStringExtra("Profession");
+            database = FirebaseDatabase.getInstance();
+            reference = database.getReference("users/chats/");
+
+
+                ChatMessageLoader user = new ChatMessageLoader( imageURL,pro,"","", intent.getStringExtra("Name"),seeker_id);
+            reference.child(auth.getUid()).child(seeker_id).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+
+                    FirebaseAuth Auth = FirebaseAuth.getInstance();
+
+                    ref = database.getReference("users/allUsers/" + Auth.getUid());
+                    ref.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+//                Getting path
+                            String PATH = snapshot.getValue(String.class);
+
+                            ref = database.getReference(PATH);
+
+
+                            ref.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                                    UserDetails userDetails = snapshot.getValue(UserDetails.class);
+                                    ChatMessageLoader user2;
+                                    if (PATH.contains("Recruiter")){
+                                        user2 = new ChatMessageLoader( userDetails.getImageURL(),"Recruiter","","", userDetails.getUserName(), auth.getUid());
+                                    }
+                                    else {
+                                        user2 = new ChatMessageLoader( userDetails.getImageURL(),pro,"","", userDetails.getUserName(), auth.getUid());
+                                    }
+
+                                    reference.child(seeker_id).child(auth.getUid()).setValue(user2);
+
+                                }
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {}
+                            });
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                        }
+                    });
+
+
+
+
+                }
+            });
+
+
+
+            startActivity(new Intent(profileActivity.this, ChatActivity.class));
+
         });
     }
 
@@ -107,6 +185,7 @@ public class profileActivity extends AppCompatActivity {
             String dial = "tel:" + Number;
             startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
         }
+
     }
 
     @Override
