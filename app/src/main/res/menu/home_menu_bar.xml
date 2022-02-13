@@ -17,6 +17,11 @@
             android:title="My Profile" />
 
         <item
+            android:id="@+id/calllog"
+            android:icon="@drawable/ic_baseline_call_24"
+            android:title="Calls" />
+
+        <item
             android:id="@+id/more_catagory"
             android:icon="@drawable/ic_burger"
             android:title="More Catagories" />
