@@ -148,9 +148,6 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.confirmChanges:
             case R.id.updateChanges:
-                confirmChanges.setClickable(false);
-                update.setClickable(false);
-                update.setText("Uploading ...");
                 uploadDataToDatabase();
                 break;
         }
@@ -290,19 +287,75 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
 
         getEditTextValue();
 
-        if (!recruiter.equals("true")){
-            reference.child("profession").child(profession).child(auth.getUid()).child("userName").setValue(name);
-            reference.child("profession").child(profession).child(auth.getUid()).child("userPhoneNo").setValue(phoneNo);
-            reference.child("profession").child(profession).child(auth.getUid()).child("age").setValue(age);
-            reference.child("profession").child(profession).child(auth.getUid()).child("experience").setValue(experienceNo + " " + experienceDropDownValue);
-        }else {
-            reference.child("Recruiter").child(auth.getUid()).child("userName").setValue(name);
-            reference.child("Recruiter").child(auth.getUid()).child("userPhoneNo").setValue(phoneNo);
+        if (validate()){
+            confirmChanges.setClickable(false);
+            update.setClickable(false);
+            update.setText("Updating ...");
+            if (!recruiter.equals("true")){
+                reference.child("profession").child(profession).child(auth.getUid()).child("userName").setValue(name);
+                reference.child("profession").child(profession).child(auth.getUid()).child("userPhoneNo").setValue(phoneNo);
+                reference.child("profession").child(profession).child(auth.getUid()).child("age").setValue(age);
+                reference.child("profession").child(profession).child(auth.getUid()).child("experience").setValue(experienceNo + " " + experienceDropDownValue);
+            }else {
+                reference.child("Recruiter").child(auth.getUid()).child("userName").setValue(name);
+                reference.child("Recruiter").child(auth.getUid()).child("userPhoneNo").setValue(phoneNo);
+            }
+            confirmChanges.setClickable(true);
+            update.setClickable(true);
+            update.setText("Done");
+            Toast.makeText(EditProfileActivity.this, "Changes may take a while to appear", Toast.LENGTH_SHORT).show();
+            finish();
         }
-        confirmChanges.setClickable(true);
-        update.setClickable(true);
-        update.setText("Done");
-        Toast.makeText(EditProfileActivity.this, "Changes may take a while to appear", Toast.LENGTH_SHORT).show();
-        finish();
+    }
+
+    private boolean validate() {
+        if (name.equals("")){
+            userNameUpdate.setError("Name cannot be empty");
+            userNameUpdate.requestFocus();
+            return false;
+        }
+        if (name.length() < 3){
+            userNameUpdate.setError("Username too small");
+            userNameUpdate.requestFocus();
+            return false;
+        }
+        if (name.length() > 20){
+            userNameUpdate.setError("Username too large");
+            userNameUpdate.requestFocus();
+            return false;
+        }
+        if (phoneNo.equals("")){
+            userContactUpdate.setError("Contact cannot be empty");
+            userContactUpdate.requestFocus();
+            return false;
+        }
+        if (phoneNo.length() != 10){
+            userContactUpdate.setError("Enter valid number");
+            userContactUpdate.requestFocus();
+            return false;
+        }
+        if (!recruiter.equals("true")){
+            if (age.equals("")){
+                userAgeUpdate.setError("Age cannot be empty");
+                userAgeUpdate.requestFocus();
+                return false;
+            }
+            if (Integer.parseInt(age) < 18){
+                userAgeUpdate.setError("Age should be atleast 18");
+                userAgeUpdate.requestFocus();
+                return false;
+            }
+            if (experienceNo.equals("")){
+                userExperienceUpdate.setError("Experience cannot be empty");
+                userExperienceUpdate.requestFocus();
+                return false;
+            }
+            if (experienceDropDownValue.equals("")){
+                experienceDropDown.setError("Experience cannot be empty");
+                experienceDropDown.requestFocus();
+                return false;
+            }
+        }
+        return true;
     }
 }
