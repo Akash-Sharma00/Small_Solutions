@@ -1,11 +1,12 @@
 package com.example.smallsolutions;
 
+import android.app.ActionBar;
+import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -82,8 +83,8 @@ public class ChatRecyclerAdapter extends RecyclerView.Adapter<ChatRecyclerAdapte
             intent.putExtra("Name",name);
             intent.putExtra("ProfilePhoto", image);
             intent.putExtra("uid",uid);
-            Toast.makeText(itemView.getContext(), uid, Toast.LENGTH_SHORT).show();
             view.getContext().startActivity(intent);
+            ((Activity)view.getContext()).finish();
         }
     }
 }

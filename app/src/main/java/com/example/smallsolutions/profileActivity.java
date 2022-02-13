@@ -106,7 +106,7 @@ public class profileActivity extends AppCompatActivity {
             reference = database.getReference("users/chats/");
 
 
-                ChatMessageLoader user = new ChatMessageLoader( imageURL,pro,"","", intent.getStringExtra("Name"),seeker_id);
+                ChatMessageLoader user = new ChatMessageLoader( imageURL,pro, intent.getStringExtra("Name"),seeker_id);
             reference.child(auth.getUid()).child(seeker_id).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
@@ -131,10 +131,10 @@ public class profileActivity extends AppCompatActivity {
                                     UserDetails userDetails = snapshot.getValue(UserDetails.class);
                                     ChatMessageLoader user2;
                                     if (PATH.contains("Recruiter")){
-                                        user2 = new ChatMessageLoader( userDetails.getImageURL(),"Recruiter","","", userDetails.getUserName(), auth.getUid());
+                                        user2 = new ChatMessageLoader( userDetails.getImageURL(),"Recruiter", userDetails.getUserName(), auth.getUid());
                                     }
                                     else {
-                                        user2 = new ChatMessageLoader( userDetails.getImageURL(),pro,"","", userDetails.getUserName(), auth.getUid());
+                                        user2 = new ChatMessageLoader( userDetails.getImageURL(),pro, userDetails.getUserName(), auth.getUid());
                                     }
 
                                     reference.child(seeker_id).child(auth.getUid()).setValue(user2);

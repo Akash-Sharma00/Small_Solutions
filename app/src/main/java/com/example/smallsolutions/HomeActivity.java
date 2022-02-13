@@ -19,6 +19,7 @@ import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,7 +41,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     ViewPager2 viewPager2;
     FragmentAdapter fragmentAdapter;
     TextView navUser;
-    ImageView navImage;
+    ImageView navImage, chat;
 
     FirebaseAuth Auth;
     FirebaseDatabase database;
@@ -101,6 +102,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 //        Setting toolbar as actionbar
         setSupportActionBar(toolbar);
+        chat = findViewById(R.id.open_chat);
 
 //        Hook for drawer variable
         drawer = findViewById(R.id.drawerLayout);
@@ -121,6 +123,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setNavHeader();
 
         navigationView.setNavigationItemSelectedListener(this);
+
+        chat.setOnClickListener(view -> startActivity(new Intent(HomeActivity.this, ChatActivity.class)));
     }
 
     @Override

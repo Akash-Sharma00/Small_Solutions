@@ -49,7 +49,6 @@ public class ChatActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
                         ChatMessageLoader userDetails = dataSnapshot.getValue(ChatMessageLoader.class);
-                        Toast.makeText(ChatActivity.this, userDetails.getProfession(),Toast.LENGTH_SHORT).show();
                         ChatHolder.add(userDetails);
                 }
                 ChatRecyclerView.setAdapter(new ChatRecyclerAdapter(ChatActivity.this,ChatHolder));

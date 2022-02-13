@@ -36,7 +36,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-//        holder.dpImg.setImageResource(dataHolder.get(position).getDisplayImg());
         holder.NameText.setText(dataHolder.get(position).getUserName());
         holder.ProfessionText.setText(dataHolder.get(position).getProfession());
         Picasso.get().load(dataHolder.get(position).getImageURL()).into(holder.profilePhoto);

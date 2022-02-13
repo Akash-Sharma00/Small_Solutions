@@ -3,15 +3,14 @@ import java.io.Serializable;
 
 class UserDetails implements Serializable {
 
-    private String userName, userEmail,  userPhoneNo, age, experience, profession, imageURL, time, uid, chatPath, lastMessage, lastTime;
+    private String userName, userEmail, userPhoneNo, age, experience, profession, imageURL, time, uid;
 
     public UserDetails() {
 //        Empty constructor needed
     }
 
 
-
-    public UserDetails(String userName, String userPhoneNo, String profession, String time, String imageURL){
+    public UserDetails(String userName, String userPhoneNo, String profession, String time, String imageURL) {
         this.userName = userName;
         this.userPhoneNo = userPhoneNo;
         this.profession = profession;
@@ -34,15 +33,8 @@ class UserDetails implements Serializable {
         this.profession = profession;
     }
 
-    public UserDetails(String chatPath, String imageURL, String profession, String userName) {
-        this.chatPath = chatPath;
-        this.imageURL = imageURL;
-        this.userName = userName;
-        this.profession = profession;
-    }
 
-
-    public void setImageURL(String imageURL){
+    public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
 
@@ -70,19 +62,15 @@ class UserDetails implements Serializable {
         return profession;
     }
 
-    public String getImageURL(){
+    public String getImageURL() {
         return imageURL;
     }
-    
+
     public String getTime() {
         return time;
     }
 
     public String getUid() {
         return uid;
-    }
-
-    public String getChatPath() {
-        return chatPath;
     }
 }
