@@ -1,5 +1,6 @@
 package com.example.smallsolutions;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,6 +26,9 @@ import java.util.Date;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Message_Window_Activity extends AppCompatActivity {
+
+
+
     CircleImageView Image;
     RecyclerView recycler;
     EditText message;
@@ -41,6 +45,7 @@ public class Message_Window_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_window);
+
 
         Intent intent = getIntent();
         String NAME = intent.getStringExtra("Name");
@@ -104,6 +109,7 @@ public class Message_Window_Activity extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
                     ChatMessageLoader userChat = dataSnapshot.getValue(ChatMessageLoader.class);
                     messageHolder.add(userChat);
+
                 }
                 recycler.setAdapter(new ChatWindowAdapter(messageHolder, Message_Window_Activity.this));
             }
@@ -115,6 +121,7 @@ public class Message_Window_Activity extends AppCompatActivity {
         });
 
     }
+
 
     @Override
     public void onBackPressed() {
