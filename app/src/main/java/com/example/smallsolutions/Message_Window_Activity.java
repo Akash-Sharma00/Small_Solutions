@@ -82,15 +82,16 @@ public class Message_Window_Activity extends AppCompatActivity {
         reference = database.getReference("users/message");
 //        ref = database.getReference("users/message/"+ID+"/"+auth.getUid());
         send.setOnClickListener(view -> {
-            Toast.makeText(this, auth.getUid(), Toast.LENGTH_SHORT).show();
             String Message = message.getText().toString().trim();
             String time = new SimpleDateFormat("hh:mm  dd-MM-yyyy").format(new Date());
             ChatMessageLoader sendMessage = new ChatMessageLoader(Message, time, Sender_id);
-            reference.child(auth.getUid()).child(ID).push().setValue(sendMessage);
+            if (!Message.equals("")){
+                reference.child(auth.getUid()).child(ID).push().setValue(sendMessage);
 
-            reference.child(ID).child(auth.getUid()).push().setValue(sendMessage);
+                reference.child(ID).child(auth.getUid()).push().setValue(sendMessage);
 
-            message.setText("");
+                message.setText("");
+            }
         });
         
 

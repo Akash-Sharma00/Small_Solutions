@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="#00000000"
     android:padding="5dp">
 
     <androidx.cardview.widget.CardView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginStart="70dp"
-        android:backgroundTint="#5CECEC"
+        android:backgroundTint="#4689DC"
         app:cardCornerRadius="10dp"
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="5dp">
@@ -32,21 +33,21 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="15dp"
                 android:text="TextView"
-                android:textColor="#000000"
+                android:textColor="@color/senderColor"
                 android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/senderTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
                 android:maxLines="1"
                 android:text="TextView"
-                android:textColor="@color/black"
+                android:textColor="@color/senderColor"
                 android:textSize="10sp"
                 android:textStyle="italic" />
         </RelativeLayout>

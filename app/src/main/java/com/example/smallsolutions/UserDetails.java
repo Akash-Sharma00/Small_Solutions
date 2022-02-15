@@ -41,6 +41,9 @@ class UserDetails implements Serializable {
         this.profession = profession;
     }
 
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
 
     public void setImageURL(String imageURL){
         this.imageURL = imageURL;
