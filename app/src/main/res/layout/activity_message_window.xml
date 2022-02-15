@@ -4,76 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C4D6D6"
     tools:context=".Message_Window_Activity">
 
     <LinearLayout
         android:id="@+id/windowToolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blue"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="#223FD3"
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/windowImg"
             android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="15dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="10dp"
             android:src="@drawable/dev_ic" />
+
         <TextView
             android:id="@+id/windowName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_gravity="center_vertical"
+            android:fontFamily="?attr/actionBarTabTextStyle"
             android:text="Akash"
+            android:textFontWeight="@android:integer/config_longAnimTime"
             android:textColor="@color/white"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/message_window"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/windowToolbar"
+        android:layout_above="@+id/messageText"
+        android:layout_marginBottom="6dp"/>
 
-        android:layout_above="@+id/messageEditor"
-        android:layout_below="@+id/windowToolbar" />
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/messageEditor"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/messageText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toStartOf="@id/sendButton"
+        android:background="@drawable/textbox_layout"
+        android:hint="Enter Message"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/sendButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/messageText"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/textbox_layout"
-            android:hint="Enter Message"
-            android:minHeight="48dp"
-            android:paddingStart="10dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/black" />
-
-        <ImageView
-            android:id="@+id/sendButton"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/blue"
-            android:padding="10dp"
-            app:srcCompat="@drawable/ic_baseline_send_24" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        android:background="@drawable/blue"
+        android:padding="10dp"
+        app:srcCompat="@drawable/ic_baseline_send_24" />
 
 </RelativeLayout>

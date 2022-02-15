@@ -87,9 +87,10 @@ public class Message_Window_Activity extends AppCompatActivity {
             if (Message.isEmpty()){return;}
 
             ChatMessageLoader sendMessage = new ChatMessageLoader(Message, time, Sender_id);
-            reference.child(auth.getUid()).child(ID).push().setValue(sendMessage);
+            if (!Message.equals("")){
+                reference.child(auth.getUid()).child(ID).push().setValue(sendMessage);
 
-            reference.child(ID).child(auth.getUid()).push().setValue(sendMessage);
+                reference.child(ID).child(auth.getUid()).push().setValue(sendMessage);
 
             reference = database.getReference("users/chats");
             reference.child(auth.getUid()).child(ID).child("lastMessage").setValue(Message);
@@ -98,6 +99,7 @@ public class Message_Window_Activity extends AppCompatActivity {
             reference.child(ID).child(auth.getUid()).child("lastTime").setValue(time);
 
             message.setText("");
+        }
         });
         
 

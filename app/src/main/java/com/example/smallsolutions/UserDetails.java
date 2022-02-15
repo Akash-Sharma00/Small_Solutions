@@ -37,6 +37,9 @@ class UserDetails implements Serializable {
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
 
     public String getUserName() {
         return userName;

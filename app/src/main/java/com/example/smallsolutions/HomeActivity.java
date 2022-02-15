@@ -41,7 +41,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     ViewPager2 viewPager2;
     FragmentAdapter fragmentAdapter;
     TextView navUser;
-    ImageView navImage, chat;
+    ImageView navImage;
+    ImageView  chatShortcut;
 
     FirebaseAuth Auth;
     FirebaseDatabase database;
@@ -99,10 +100,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 //        Hook for toolbar
         toolbar = findViewById(R.id.toolbar);
+        chatShortcut = findViewById(R.id.chatShortcut);
+
+        chatShortcut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, ChatActivity.class));
+            }
+        });
 
 //        Setting toolbar as actionbar
         setSupportActionBar(toolbar);
-        chat = findViewById(R.id.open_chat);
 
 //        Hook for drawer variable
         drawer = findViewById(R.id.drawerLayout);
@@ -123,8 +131,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setNavHeader();
 
         navigationView.setNavigationItemSelectedListener(this);
-
-        chat.setOnClickListener(view -> startActivity(new Intent(HomeActivity.this, ChatActivity.class)));
     }
 
     @Override

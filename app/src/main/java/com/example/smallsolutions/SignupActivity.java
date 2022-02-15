@@ -114,7 +114,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.signUp_button:
                 signupButton.setClickable(false);
                 signupButton.setText("Signing up ...");
-                signupUser(userDetails.getUserEmail(), userPassword);
+                setImageURL();
                 break;
         }
     }
@@ -141,27 +141,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 e.printStackTrace();
             }
         }
-    }
-
-//    Function to signup user
-    private void signupUser(String userEmailString, String userPasswordString){
-
-        progressBar.setVisibility(View.VISIBLE);
-
-        auth.createUserWithEmailAndPassword(userEmailString, userPasswordString)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            setImageURL();
-                        }
-                        else{
-                            Toast.makeText(SignupActivity.this, "Email already exists", Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
-                            finish();
-                        }
-                    }
-                });
     }
 
 //    Setting imageURL to userObject to database
@@ -203,6 +182,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     private void uploadUserObject(){
 //        Setting userID
         userID = auth.getUid();
+        userDetails.setUid(userID);
 
 //        Uploading data to database
         if (recruiter.equals("true")){

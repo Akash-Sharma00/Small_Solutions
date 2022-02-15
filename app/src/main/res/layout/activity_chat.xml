@@ -10,16 +10,19 @@
         android:id="@+id/chatToolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:backgroundTint="@color/blue">
+        android:backgroundTint="#223FD3">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:layout_marginStart="20dp"
             android:layout_gravity="center_vertical"
-            android:textStyle="bold"/>
+            android:layout_marginStart="20dp"
+            android:fontFamily="?attr/actionBarTabTextStyle"
+            android:text="Chat"
+            android:textFontWeight="@android:integer/config_longAnimTime"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView

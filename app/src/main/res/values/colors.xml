@@ -14,4 +14,7 @@
 <!--    DropDownStroke Colour-->
     <color name="mtrl_textinput_default_box_stroke_color">#D3D3D3</color>
     <color name="BLUE">#1010F8</color>
+
+<!--    Chat sender TextView color-->
+    <color name="senderColor">#FFFFFF</color>
 </resources>

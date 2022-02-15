@@ -3,6 +3,7 @@ package com.example.smallsolutions;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.util.Patterns;
@@ -14,7 +15,13 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class SignupFragment extends Fragment {
@@ -63,7 +70,7 @@ public class SignupFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendDataToSignupActivity();
+                authenticateUser();
             }
         });
 
@@ -76,6 +83,27 @@ public class SignupFragment extends Fragment {
         gone(root);
 
         return root;
+    }
+
+    private void authenticateUser(){
+//        Function to signup user
+        FirebaseAuth auth;
+        auth = FirebaseAuth.getInstance();
+
+        getEditTextData();
+        auth.createUserWithEmailAndPassword(userEmailString, userPasswordString)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            sendDataToSignupActivity();
+                        }
+                        else{
+                            emailEditText.setError("Email already exists");
+                            emailEditText.requestFocus();
+                        }
+                    }
+                });
     }
 
     private void sendDataToSignupActivity() {
