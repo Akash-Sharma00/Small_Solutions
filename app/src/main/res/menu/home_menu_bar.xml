@@ -2,12 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <group
-        android:checkableBehavior="single">
+    <group>
 
         <item
             android:id="@+id/home"
-            android:checked="true"
             android:icon="@drawable/ic_home"
             android:title="Home" />
 
@@ -26,15 +24,18 @@
             android:icon="@drawable/ic_burger"
             android:title="More Catagories" />
 
-        <item
-            android:id="@+id/chat"
-            android:icon="@drawable/ic_chat_bubble"
-            android:title="Chat" />
-
-
     </group>
 
     <item android:title="Communication">
+        <menu>
+            <item
+                android:id="@+id/chat"
+                android:icon="@drawable/ic_chat_bubble"
+                android:title="Chat" />
+        </menu>
+    </item>
+
+    <item android:title="Descriptions">
 
         <menu>
 

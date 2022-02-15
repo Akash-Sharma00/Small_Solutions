@@ -38,7 +38,7 @@ public class LocalUserProfileFragment extends Fragment {
     DatabaseReference reference;
 
 //    Textview variables
-    TextView name, age, profession, exp, contact, mail, description, signOut;
+    TextView name, age, profession, exp, contact, mail, signOut;
     ProgressBar progressBar;
 
 //    Imageview variables
@@ -66,7 +66,6 @@ public class LocalUserProfileFragment extends Fragment {
         exp = myRoot.findViewById(R.id.local_exp);
         contact = myRoot.findViewById(R.id.local_contact);
         mail = myRoot.findViewById(R.id.local_mail);
-        description = myRoot.findViewById(R.id.local_description);
         profilePhoto = myRoot.findViewById(R.id.userProfilePhoto);
         progressBar = myRoot.findViewById(R.id.profileImgProgess);
         editProfile = myRoot.findViewById(R.id.editFloatingButton);
@@ -92,7 +91,6 @@ public class LocalUserProfileFragment extends Fragment {
                     myRoot.findViewById(R.id.AGE).setVisibility(View.GONE);
                     myRoot.findViewById(R.id.PROFESSION).setVisibility(View.GONE);
                     myRoot.findViewById(R.id.EXP).setVisibility(View.GONE);
-                    myRoot.findViewById(R.id.ABOUT).setVisibility(View.GONE);
 
                     age.setVisibility(View.GONE);
                     profession.setVisibility(View.GONE);

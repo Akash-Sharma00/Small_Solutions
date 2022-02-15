@@ -99,8 +99,11 @@ public class profileActivity extends AppCompatActivity {
 //        Listing all users in chat recycler
 
         connectChat.setOnClickListener(view -> {
-            Toast.makeText(this, seeker_id, Toast.LENGTH_SHORT).show();
             auth = FirebaseAuth.getInstance();
+            if(seeker_id.equals(auth.getUid())){
+                Toast.makeText(this, "You Can't Connect With Same Account", Toast.LENGTH_SHORT).show();
+                return;
+            }
             String pro = intent.getStringExtra("Profession");
             database = FirebaseDatabase.getInstance();
             reference = database.getReference("users/chats/");
@@ -148,9 +151,6 @@ public class profileActivity extends AppCompatActivity {
                         public void onCancelled(@NonNull DatabaseError error) {
                         }
                     });
-
-
-
 
                 }
             });
