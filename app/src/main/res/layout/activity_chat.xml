@@ -19,8 +19,8 @@
             android:layout_marginStart="20dp"
             android:fontFamily="?attr/actionBarTabTextStyle"
             android:text="Chat"
-            android:textFontWeight="@android:integer/config_longAnimTime"
             android:textColor="@color/white"
+            android:textFontWeight="@android:integer/config_longAnimTime"
             android:textSize="20sp" />
 
     </androidx.cardview.widget.CardView>
