@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -52,6 +53,9 @@ public class ChatActivity extends AppCompatActivity {
                         ChatHolder.add(userDetails);
                 }
                 ChatRecyclerView.setAdapter(new ChatRecyclerAdapter(ChatActivity.this,ChatHolder));
+                if(ChatHolder.isEmpty()){
+                    findViewById(R.id.chatHistory).setVisibility(View.VISIBLE);
+                }
             }
 
             @Override

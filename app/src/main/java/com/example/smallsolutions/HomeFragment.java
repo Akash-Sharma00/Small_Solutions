@@ -3,7 +3,11 @@ package com.example.smallsolutions;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +20,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
@@ -23,11 +35,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     RelativeLayout carpenter, plumber, electrician, appDev, cook, allPro;
 
     //        Getting search bar
+    TextView more;
     ImageView searchIcon;
     AutoCompleteTextView profession;
     String[] searchBarArray = {"Carpenter", "Electrician", "Mechanic", "Plumber", "Web Developer", "App Developer", "Photo Editor", "Video Editor", "Digital Marketer", "Cook"};
 
     String professionString = "";
+
+    RecyclerView HomeRecycler;
+    ArrayList<UserDetails> HomeHolder;
+    Home_Recycler_Adapter adapter;
+    FirebaseDatabase database;
+    DatabaseReference reference;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,6 +65,17 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
          allPro = myView.findViewById(R.id.allpro);
          searchIcon = myView.findViewById(R.id.searchPro);
         profession = myView.findViewById(R.id.enteredPro);
+        more = myView.findViewById(R.id.more);
+
+        HomeHolder = new ArrayList<>();
+        HomeRecycler = myView.findViewById(R.id.homeRecycler);
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
+
+        HomeRecycler.setLayoutManager(linearLayoutManager);
+        HomeRecycler.setHasFixedSize(true);
+
 
 //         Setting Clicks on every clickable object
          carpenter.setOnClickListener(this);
@@ -55,12 +85,41 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
          cook.setOnClickListener(this);
          allPro.setOnClickListener(this);
         searchIcon.setOnClickListener(this);
+        more.setOnClickListener(this);
 
 //        Function call for searchbar
         searchAdapter(myView);
 
+        addDataInRecycler(myView);
+
 
         return myView;
+    }
+
+    private void addDataInRecycler(View myView) {
+        database = FirebaseDatabase.getInstance();
+        reference = database.getReference("users/profession");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    for (DataSnapshot data: dataSnapshot.getChildren()){
+                        UserDetails userDetails = data.getValue(UserDetails.class);
+                        HomeHolder.add(userDetails);
+                    }
+//                    progress.setVisibility(View.GONE);
+                    HomeRecycler.setAdapter(new Home_Recycler_Adapter(getActivity(), HomeHolder));
+//                    adapter.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     private void searchAdapter(View myView) {
@@ -84,7 +143,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         EditText searchTxt;
         switch (v.getId()){
             case R.id.carpenter:
-                Toast.makeText(getContext(), "C", Toast.LENGTH_SHORT).show();
                 Intent carp = new Intent(getActivity(), AllRandom.class);
                 carp.putExtra("pro","Carpenter");
                 startActivity(carp);
@@ -92,7 +150,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.plumber:
-                Toast.makeText(getContext(), "P", Toast.LENGTH_SHORT).show();
                 Intent plum = new Intent(getActivity(), AllRandom.class);
                 plum.putExtra("pro","Plumber");
                 startActivity(plum);
@@ -100,7 +157,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.electrician:
-                Toast.makeText(getContext(), "E", Toast.LENGTH_SHORT).show();
                 Intent elect = new Intent(getActivity(), AllRandom.class);
                 elect.putExtra("pro","Electrician");
                 startActivity(elect);
@@ -108,7 +164,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.appdevloper:
-                Toast.makeText(getContext(), "A", Toast.LENGTH_SHORT).show();
                 Intent app = new Intent(getActivity(), AllRandom.class);
                 app.putExtra("pro","App Developer");
                 startActivity(app);
@@ -116,7 +171,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.cook2:
-                Toast.makeText(getContext(), "Co", Toast.LENGTH_SHORT).show();
                 Intent cook = new Intent(getActivity(), AllRandom.class);
                 cook.putExtra("pro","Cook");
                 startActivity(cook);
@@ -124,7 +178,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.allpro:
-                Toast.makeText(getContext(), "ALL", Toast.LENGTH_SHORT).show();
+            case R.id.more:
                 Intent more1 = new Intent(getActivity(), AllRandom.class);
                 more1.putExtra("pro","more");
                 startActivity(more1);
@@ -154,14 +208,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             Intent search = new Intent(getActivity(), AllRandom.class);
             search.putExtra("pro", result);
             startActivity(search);
-            Toast.makeText(getActivity(),result, Toast.LENGTH_SHORT).show();
         }
 
         //Single word profession
         else {
 
             String result = Profession.substring(0,1).toUpperCase()+Profession.substring(1);
-            Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
             Intent search = new Intent(getActivity(), AllRandom.class);
             search.putExtra("pro", result);
             startActivity(search);
