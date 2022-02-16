@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -97,6 +98,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     }
 
     private void addDataInRecycler(View myView) {
+        ProgressBar progress;
+        progress = myView.findViewById(R.id.homeProgress);
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("users/profession");
 
@@ -109,9 +112,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                         UserDetails userDetails = data.getValue(UserDetails.class);
                         HomeHolder.add(userDetails);
                     }
-//                    progress.setVisibility(View.GONE);
+                    progress.setVisibility(View.GONE);
                     HomeRecycler.setAdapter(new Home_Recycler_Adapter(getActivity(), HomeHolder));
-//                    adapter.notifyDataSetChanged();
                 }
             }
 

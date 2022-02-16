@@ -63,7 +63,6 @@ public class Home_Recycler_Adapter extends RecyclerView.Adapter<Home_Recycler_Ad
 
         @Override
         public void onClick(View view) {
-            Toast.makeText(itemView.getContext(), "Clicked", Toast.LENGTH_SHORT).show();
                 int pos = getAdapterPosition();
                 UserDetails userDetails = Holder.get(pos);
 
