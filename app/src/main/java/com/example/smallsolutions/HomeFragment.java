@@ -45,7 +45,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
          cook = myView.findViewById(R.id.cook2);
          allPro = myView.findViewById(R.id.allpro);
          searchIcon = myView.findViewById(R.id.searchPro);
-        TextView more = myView.findViewById(R.id.more);
         profession = myView.findViewById(R.id.enteredPro);
 
 //         Setting Clicks on every clickable object
@@ -55,7 +54,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
          appDev.setOnClickListener(this);
          cook.setOnClickListener(this);
          allPro.setOnClickListener(this);
-        more.setOnClickListener(this);
         searchIcon.setOnClickListener(this);
 
 //        Function call for searchbar
@@ -85,14 +83,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         EditText searchTxt;
         switch (v.getId()){
-            case R.id.more:
-//                calling all random activity
-                Intent more = new Intent(getActivity(), AllRandom.class);
-                more.putExtra("pro","more");
-                startActivity(more);
-                getActivity().finish();
-                break;
-
             case R.id.carpenter:
                 Toast.makeText(getContext(), "C", Toast.LENGTH_SHORT).show();
                 Intent carp = new Intent(getActivity(), AllRandom.class);

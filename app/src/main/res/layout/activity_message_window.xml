@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C4D6D6"
     tools:context=".Message_Window_Activity">
 
     <LinearLayout
@@ -42,10 +43,9 @@
         android:id="@+id/message_window"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/messageText"
         android:layout_below="@+id/windowToolbar"
-        android:layout_marginBottom="6dp"
-        android:background="#C4D6D6" />
+        android:layout_above="@+id/messageText"
+        android:layout_marginBottom="6dp"/>
 
     <EditText
         android:id="@+id/messageText"

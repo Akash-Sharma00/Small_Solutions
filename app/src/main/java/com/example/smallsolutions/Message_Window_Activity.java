@@ -1,5 +1,6 @@
 package com.example.smallsolutions;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,10 +11,6 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,6 +26,9 @@ import java.util.Date;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Message_Window_Activity extends AppCompatActivity {
+
+
+
     CircleImageView Image;
     RecyclerView recycler;
     EditText message;
@@ -46,12 +46,12 @@ public class Message_Window_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_window);
 
+
         Intent intent = getIntent();
         String NAME = intent.getStringExtra("Name");
         String IMAGE = intent.getStringExtra("ProfilePhoto");
         String ID = intent.getStringExtra("uid");
 
-        Toast.makeText(this,ID,Toast.LENGTH_SHORT).show();
 
         auth = FirebaseAuth.getInstance();
         Receiver_id = intent.getStringExtra("Sender_id");
@@ -80,18 +80,26 @@ public class Message_Window_Activity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("users/message");
-//        ref = database.getReference("users/message/"+ID+"/"+auth.getUid());
         send.setOnClickListener(view -> {
             String Message = message.getText().toString().trim();
             String time = new SimpleDateFormat("hh:mm  dd-MM-yyyy").format(new Date());
+
+            if (Message.isEmpty()){return;}
+
             ChatMessageLoader sendMessage = new ChatMessageLoader(Message, time, Sender_id);
             if (!Message.equals("")){
                 reference.child(auth.getUid()).child(ID).push().setValue(sendMessage);
 
                 reference.child(ID).child(auth.getUid()).push().setValue(sendMessage);
 
-                message.setText("");
-            }
+            reference = database.getReference("users/chats");
+            reference.child(auth.getUid()).child(ID).child("lastMessage").setValue(Message);
+            reference.child(auth.getUid()).child(ID).child("lastTime").setValue(time);
+            reference.child(ID).child(auth.getUid()).child("lastMessage").setValue(Message);
+            reference.child(ID).child(auth.getUid()).child("lastTime").setValue(time);
+
+            message.setText("");
+        }
         });
         
 
@@ -103,6 +111,7 @@ public class Message_Window_Activity extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
                     ChatMessageLoader userChat = dataSnapshot.getValue(ChatMessageLoader.class);
                     messageHolder.add(userChat);
+
                 }
                 recycler.setAdapter(new ChatWindowAdapter(messageHolder, Message_Window_Activity.this));
             }
@@ -113,5 +122,12 @@ public class Message_Window_Activity extends AppCompatActivity {
             }
         });
 
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(Message_Window_Activity.this, ChatActivity.class));
     }
 }

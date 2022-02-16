@@ -99,14 +99,17 @@ public class profileActivity extends AppCompatActivity {
 //        Listing all users in chat recycler
 
         connectChat.setOnClickListener(view -> {
-            Toast.makeText(this, seeker_id, Toast.LENGTH_SHORT).show();
             auth = FirebaseAuth.getInstance();
+            if(seeker_id.equals(auth.getUid())){
+                Toast.makeText(this, "You Can't Connect With Same Account", Toast.LENGTH_SHORT).show();
+                return;
+            }
             String pro = intent.getStringExtra("Profession");
             database = FirebaseDatabase.getInstance();
             reference = database.getReference("users/chats/");
 
 
-                ChatMessageLoader user = new ChatMessageLoader( imageURL,pro,"","", intent.getStringExtra("Name"),seeker_id);
+                ChatMessageLoader user = new ChatMessageLoader( imageURL,pro, intent.getStringExtra("Name"),seeker_id);
             reference.child(auth.getUid()).child(seeker_id).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
@@ -131,10 +134,10 @@ public class profileActivity extends AppCompatActivity {
                                     UserDetails userDetails = snapshot.getValue(UserDetails.class);
                                     ChatMessageLoader user2;
                                     if (PATH.contains("Recruiter")){
-                                        user2 = new ChatMessageLoader( userDetails.getImageURL(),"Recruiter","","", userDetails.getUserName(), auth.getUid());
+                                        user2 = new ChatMessageLoader( userDetails.getImageURL(),"Recruiter", userDetails.getUserName(), auth.getUid());
                                     }
                                     else {
-                                        user2 = new ChatMessageLoader( userDetails.getImageURL(),pro,"","", userDetails.getUserName(), auth.getUid());
+                                        user2 = new ChatMessageLoader( userDetails.getImageURL(),pro, userDetails.getUserName(), auth.getUid());
                                     }
 
                                     reference.child(seeker_id).child(auth.getUid()).setValue(user2);
@@ -148,9 +151,6 @@ public class profileActivity extends AppCompatActivity {
                         public void onCancelled(@NonNull DatabaseError error) {
                         }
                     });
-
-
-
 
                 }
             });

@@ -19,6 +19,7 @@ import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,7 +41,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     ViewPager2 viewPager2;
     FragmentAdapter fragmentAdapter;
     TextView navUser;
-    ImageView navImage, chatShortcut;
+    ImageView navImage;
+    ImageView  chatShortcut;
 
     FirebaseAuth Auth;
     FirebaseDatabase database;

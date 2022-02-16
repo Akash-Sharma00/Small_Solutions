@@ -36,11 +36,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-//        holder.dpImg.setImageResource(dataHolder.get(position).getDisplayImg());
         holder.NameText.setText(dataHolder.get(position).getUserName());
         holder.ProfessionText.setText(dataHolder.get(position).getProfession());
         Picasso.get().load(dataHolder.get(position).getImageURL()).into(holder.profilePhoto);
-//        holder.StarRating.setRating((float) dataHolder.get(position).getStarRating());
     }
 
     @Override
@@ -52,7 +50,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
     {
         ImageView dpImg;
         TextView NameText, ProfessionText;
-        RatingBar StarRating;
         CircleImageView profilePhoto;
 
         public viewHolder(@NonNull View itemView) {
@@ -62,7 +59,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
             dpImg = itemView.findViewById(R.id.displayImg);
             NameText = itemView.findViewById(R.id.nameText);
             ProfessionText = itemView.findViewById(R.id.professionText);
-            StarRating = itemView.findViewById(R.id.starRating);
             profilePhoto = itemView.findViewById(R.id.displayImg);
         }
 

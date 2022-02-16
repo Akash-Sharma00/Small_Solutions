@@ -7,23 +7,13 @@ public class ChatMessageLoader {
     public ChatMessageLoader() {
     }
 
-    public ChatMessageLoader(String imageURL, String profession, String lastMessage, String lastTime, String userName, String uid) {
+    public ChatMessageLoader(String imageURL, String profession, String userName, String uid) {
         this.imageURL = imageURL;
         this.profession = profession;
-        this.lastMessage = lastMessage;
-        this.lastTime = lastTime;
         this.userName = userName;
         this.uid = uid;
     }
 
-//    public ChatMessageLoader(String senderId, String imageURL, String profession, String lastMessage, String lastTime, String userName) {
-//        this.senderId = senderId;
-//        this.imageURL = imageURL;
-//        this.profession = profession;
-//        this.lastMessage = lastMessage;
-//        this.lastTime = lastTime;
-//        this.userName = userName;
-//    }
 
     public ChatMessageLoader(String message, String time, String senderId) {
         this.message = message;
