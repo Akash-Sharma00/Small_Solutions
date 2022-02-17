@@ -140,6 +140,10 @@
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\layout\\activity_home.xml"
     },
     {
+        "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\font_roboto_medium.xml.flat",
+        "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\font\\roboto_medium.xml"
+    },
+    {
         "merged": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\abc\\AndroidStudioProjects\\Small Solutions\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
