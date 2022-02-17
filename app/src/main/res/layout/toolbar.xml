@@ -21,8 +21,8 @@
             android:fontFamily="?attr/actionBarTabTextStyle"
             android:gravity="center"
             android:text="@string/app_name"
-            android:textFontWeight="@android:integer/config_longAnimTime"
             android:textColor="@color/black"
+            android:textFontWeight="@android:integer/config_longAnimTime"
             android:textSize="20sp" />
 
         <ImageView
@@ -35,6 +35,21 @@
             android:layout_marginBottom="14dp"
             android:src="@drawable/ic_baseline_send_24"
             app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/indicator"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignStart="@+id/chatShortcut"
+            android:layout_alignEnd="@+id/chatShortcut"
+            android:layout_alignBottom="@+id/chatShortcut"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/blue"
+            android:padding="4dp"
+            android:visibility="gone" />
 
     </RelativeLayout>
 

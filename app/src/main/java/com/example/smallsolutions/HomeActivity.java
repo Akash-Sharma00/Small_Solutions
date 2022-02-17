@@ -19,6 +19,7 @@ import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -41,7 +42,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     ViewPager2 viewPager2;
     FragmentAdapter fragmentAdapter;
     TextView navUser;
-    ImageView navImage;
+    ImageView navImage,indicator;
     ImageView  chatShortcut;
 
     FirebaseAuth Auth;
@@ -105,6 +106,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         chatShortcut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                indicator = findViewById(R.id.indicator);
+                indicator.setVisibility(View.GONE);
                 startActivity(new Intent(HomeActivity.this, ChatActivity.class));
             }
         });
@@ -129,8 +132,27 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 //        Function call for header
         setNavHeader();
+        indicate();
 
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    private void indicate() {
+        Auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        reference = database.getReference("users/message/"+Auth.getUid());
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                indicator = findViewById(R.id.indicator);
+                indicator.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     @Override
