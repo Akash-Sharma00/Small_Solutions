@@ -87,6 +87,7 @@ public class profileActivity extends AppCompatActivity {
         call_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(profileActivity.this, "Connecting Call!", Toast.LENGTH_SHORT).show();
 
 //                Tracking call logs
                 uploadCalls();

@@ -41,15 +41,13 @@ com/example/smallsolutions/MainActivity.java
  com.example.smallsolutions.MainActivity
  com.example.smallsolutions.MainActivity$1
  com.example.smallsolutions.MainActivity$2
-com/example/smallsolutions/Home_Recycler_Adapter.java
- com.example.smallsolutions.Home_Recycler_Adapter
- com.example.smallsolutions.Home_Recycler_Adapter$viewHolder
-com/example/smallsolutions/profileActivity.java
- com.example.smallsolutions.profileActivity
- com.example.smallsolutions.profileActivity$1
- com.example.smallsolutions.profileActivity$2
- com.example.smallsolutions.profileActivity$2$1
- com.example.smallsolutions.profileActivity$2$1$1
+com/example/smallsolutions/CallHistory.java
+ com.example.smallsolutions.CallHistory
+ com.example.smallsolutions.CallHistory$1
+com/example/smallsolutions/CallLogAdapter.java
+ com.example.smallsolutions.CallLogAdapter
+ com.example.smallsolutions.CallLogAdapter$viewHolder
+ com.example.smallsolutions.CallLogAdapter$viewHolder$1
 com/example/smallsolutions/AllRandom.java
  com.example.smallsolutions.AllRandom
  com.example.smallsolutions.AllRandom$1
@@ -101,13 +99,15 @@ com/example/smallsolutions/UserDetails.java
  com.example.smallsolutions.UserDetails
 com/example/smallsolutions/LoginFragmentAdapter.java
  com.example.smallsolutions.LoginFragmentAdapter
+com/example/smallsolutions/Home_Recycler_Adapter.java
+ com.example.smallsolutions.Home_Recycler_Adapter
+ com.example.smallsolutions.Home_Recycler_Adapter$viewHolder
 com/example/smallsolutions/RecyclerAdapter.java
  com.example.smallsolutions.RecyclerAdapter
  com.example.smallsolutions.RecyclerAdapter$viewHolder
-com/example/smallsolutions/CallLogAdapter.java
- com.example.smallsolutions.CallLogAdapter
- com.example.smallsolutions.CallLogAdapter$viewHolder
- com.example.smallsolutions.CallLogAdapter$viewHolder$1
-com/example/smallsolutions/CallHistory.java
- com.example.smallsolutions.CallHistory
- com.example.smallsolutions.CallHistory$1
+com/example/smallsolutions/profileActivity.java
+ com.example.smallsolutions.profileActivity
+ com.example.smallsolutions.profileActivity$1
+ com.example.smallsolutions.profileActivity$2
+ com.example.smallsolutions.profileActivity$2$1
+ com.example.smallsolutions.profileActivity$2$1$1
