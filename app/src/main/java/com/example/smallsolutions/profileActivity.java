@@ -38,7 +38,7 @@ public class profileActivity extends AppCompatActivity {
     CircleImageView profilePhoto;
     ProgressBar progressBar;
     FloatingActionButton call_Button;
-    Button connectChat;
+    FloatingActionButton connectChat;
     private final int REQUEST_CODE = 1;
     FirebaseDatabase database;
     DatabaseReference reference,ref;
