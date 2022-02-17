@@ -89,6 +89,7 @@ com/example/smallsolutions/ChatActivity.java
 com/example/smallsolutions/HomeFragment.java
  com.example.smallsolutions.HomeFragment
  com.example.smallsolutions.HomeFragment$1
+ com.example.smallsolutions.HomeFragment$2
 com/example/smallsolutions/LoginActivity.java
  com.example.smallsolutions.LoginActivity
  com.example.smallsolutions.LoginActivity$1
@@ -104,6 +105,9 @@ com/example/smallsolutions/CallLogAdapter.java
  com.example.smallsolutions.CallLogAdapter
  com.example.smallsolutions.CallLogAdapter$viewHolder
  com.example.smallsolutions.CallLogAdapter$viewHolder$1
+com/example/smallsolutions/Home_Recycler_Adapter.java
+ com.example.smallsolutions.Home_Recycler_Adapter
+ com.example.smallsolutions.Home_Recycler_Adapter$viewHolder
 com/example/smallsolutions/RecyclerAdapter.java
  com.example.smallsolutions.RecyclerAdapter
  com.example.smallsolutions.RecyclerAdapter$viewHolder
