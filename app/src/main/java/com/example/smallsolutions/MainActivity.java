@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     String path =  snapshot.getValue(String.class);
-                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                    intent.putExtra("PATH",path);
+                    Intent intent;
+                    intent = new Intent(MainActivity.this, HomeActivity.class);
                     startActivity(intent);
                     finish();
                 }

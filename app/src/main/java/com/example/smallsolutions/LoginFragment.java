@@ -153,7 +153,7 @@ public class LoginFragment extends Fragment {
                 }
                 else {
                     progressBar.setVisibility(View.GONE);
-                    Toast.makeText(getContext(), "Error: "+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Error: "+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });

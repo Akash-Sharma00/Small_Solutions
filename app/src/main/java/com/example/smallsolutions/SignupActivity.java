@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -200,5 +201,32 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
         Toast.makeText(SignupActivity.this, "Signed in successfully", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(SignupActivity.this, HomeActivity.class));
+    }
+
+    @Override
+    protected void onStop() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseAuth.getInstance().signOut();
+        user.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                finish();
+            }
+        });
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseAuth.getInstance().signOut();
+        if (user != null){
+            user.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void unused) {
+                }
+            });
+        }
+        super.onDestroy();
     }
 }

@@ -70,6 +70,7 @@ public class SignupFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                next.setText("Please wait ...");
                 authenticateUser();
             }
         });
@@ -309,5 +310,11 @@ public class SignupFragment extends Fragment {
         age.setVisibility(View.GONE);
         experience_edittext.setVisibility(View.GONE);
         experience_textInputLayout.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onResume() {
+        next.setText("Next");
+        super.onResume();
     }
 }
