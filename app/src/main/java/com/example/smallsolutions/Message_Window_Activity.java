@@ -11,6 +11,9 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -37,7 +40,7 @@ public class Message_Window_Activity extends AppCompatActivity {
     ArrayList<ChatMessageLoader>messageHolder;
     ChatWindowAdapter chatAdapter;
     FirebaseDatabase database;
-    DatabaseReference reference, ref;
+    DatabaseReference reference, ref, myref;
     FirebaseAuth auth;
     String Sender_id, Receiver_id;
 
@@ -87,19 +90,29 @@ public class Message_Window_Activity extends AppCompatActivity {
             if (Message.isEmpty()){return;}
 
             ChatMessageLoader sendMessage = new ChatMessageLoader(Message, time, Sender_id);
-            if (!Message.equals("")){
-                reference.child(auth.getUid()).child(ID).push().setValue(sendMessage);
+                reference.child(auth.getUid()).child(ID).push().setValue(sendMessage).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        reference.child(ID).child(auth.getUid()).push().setValue(sendMessage);
+                    }
+                });
 
-                reference.child(ID).child(auth.getUid()).push().setValue(sendMessage);
 
-            reference = database.getReference("users/chats");
-            reference.child(auth.getUid()).child(ID).child("lastMessage").setValue(Message);
-            reference.child(auth.getUid()).child(ID).child("lastTime").setValue(time);
-            reference.child(ID).child(auth.getUid()).child("lastMessage").setValue(Message);
-            reference.child(ID).child(auth.getUid()).child("lastTime").setValue(time);
+            myref = database.getReference("users/chats");
+            myref.child(auth.getUid()).child(ID).child("lastMessage").setValue(Message);
+            myref.child(auth.getUid()).child(ID).child("lastTime").setValue(time).addOnSuccessListener(
+                    new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+
+                            myref.child(ID).child(auth.getUid()).child("lastMessage").setValue(Message);
+                            myref.child(ID).child(auth.getUid()).child("lastTime").setValue(time);
+                            Toast.makeText(Message_Window_Activity.this, ID, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+            );
 
             message.setText("");
-        }
         });
         
 
@@ -122,12 +135,5 @@ public class Message_Window_Activity extends AppCompatActivity {
             }
         });
 
-    }
-
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startActivity(new Intent(Message_Window_Activity.this, ChatActivity.class));
     }
 }
