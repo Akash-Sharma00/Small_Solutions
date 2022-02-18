@@ -84,7 +84,6 @@ public class ChatRecyclerAdapter extends RecyclerView.Adapter<ChatRecyclerAdapte
             intent.putExtra("ProfilePhoto", image);
             intent.putExtra("uid",uid);
             view.getContext().startActivity(intent);
-            ((Activity)view.getContext()).finish();
         }
     }
 }
