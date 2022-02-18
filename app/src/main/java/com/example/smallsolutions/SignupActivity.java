@@ -39,7 +39,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 //    Constant String value to store default image location
     String defaultImageURL;
 
-//    Variable to store user id and path to userdetails in database
+//    Variable to store user id and path to user details in database
     String userID, path;
 
 //    UserDetails class instance
@@ -204,7 +204,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     @Override
-    protected void onStop() {
+    public void onBackPressed() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseAuth.getInstance().signOut();
         user.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -213,20 +213,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 finish();
             }
         });
-        super.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null){
-            FirebaseAuth.getInstance().signOut();
-            user.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-                @Override
-                public void onSuccess(Void unused) {
-                }
-            });
-        }
-        super.onDestroy();
+        super.onBackPressed();
     }
 }

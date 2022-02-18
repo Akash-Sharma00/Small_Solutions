@@ -34,7 +34,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class profileActivity extends AppCompatActivity {
 
-    TextView name, age, profession, exp, contact, mail, description;
+    TextView name, age, profession, exp, contact, mail;
     CircleImageView profilePhoto;
     ProgressBar progressBar;
     FloatingActionButton call_Button;
@@ -63,7 +63,6 @@ public class profileActivity extends AppCompatActivity {
         contact = findViewById(R.id.profile_contact);
         mail = findViewById(R.id.profile_mail);
         call_Button = findViewById(R.id.profile_call);
-        description = findViewById(R.id.profile_description);
         progressBar = findViewById(R.id.profile_progress);
         profilePhoto = findViewById(R.id.userProfilePhoto);
         connectChat = findViewById(R.id.chat_button);
@@ -81,7 +80,6 @@ public class profileActivity extends AppCompatActivity {
         exp.setText(intent.getStringExtra("Exp"));
         contact.setText(intent.getStringExtra("Contact"));
         mail.setText(intent.getStringExtra("Mail"));
-        description.setText("To be given");
         Picasso.get().load(imageURL).into(profilePhoto);
 
         call_Button.setOnClickListener(new View.OnClickListener() {

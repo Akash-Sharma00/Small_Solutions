@@ -22,6 +22,8 @@ import java.util.ArrayList;
 
 public class AllRandom extends AppCompatActivity {
 
+    TextView toolbarTitle;
+    String titleString;
     RecyclerView recyclerView;
     ProgressBar progress;
     ArrayList<UserDetails> dataHolder;
@@ -37,6 +39,7 @@ public class AllRandom extends AppCompatActivity {
 //        Getting Specific Profession
         Intent intent = getIntent();
         String profession = intent.getStringExtra("pro");
+        titleString = intent.getStringExtra("toolbarTitle");
 
         dataHolder = new ArrayList<>();
 
@@ -45,7 +48,8 @@ public class AllRandom extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new RecyclerAdapter(this, dataHolder));
         adapter = new RecyclerAdapter(this, dataHolder);
-
+        toolbarTitle = findViewById(R.id.toolbarTitle);
+        toolbarTitle.setText(titleString);
 
         recyclerView.setHasFixedSize(true);
         dataHolder = new ArrayList<>();
