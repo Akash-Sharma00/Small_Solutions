@@ -204,7 +204,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     @Override
-    protected void onStop() {
+    public void onBackPressed() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseAuth.getInstance().signOut();
         user.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -213,20 +213,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 finish();
             }
         });
-        super.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        FirebaseAuth.getInstance().signOut();
-        if (user != null){
-            user.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-                @Override
-                public void onSuccess(Void unused) {
-                }
-            });
-        }
-        super.onDestroy();
+        super.onBackPressed();
     }
 }

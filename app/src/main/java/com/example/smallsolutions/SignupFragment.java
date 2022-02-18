@@ -92,42 +92,43 @@ public class SignupFragment extends Fragment {
         auth = FirebaseAuth.getInstance();
 
         getEditTextData();
-        auth.createUserWithEmailAndPassword(userEmailString, userPasswordString)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            sendDataToSignupActivity();
+        if (validateInputs()){
+            auth.createUserWithEmailAndPassword(userEmailString, userPasswordString)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()){
+                                sendDataToSignupActivity();
+                            }
+                            else{
+                                emailEditText.setError("Email already exists");
+                                emailEditText.requestFocus();
+                                next.setText("Next");
+                            }
                         }
-                        else{
-                            emailEditText.setError("Email already exists");
-                            emailEditText.requestFocus();
-                        }
-                    }
-                });
+                    });
+        }else {
+            next.setText("Next");
+        }
     }
 
     private void sendDataToSignupActivity() {
-        getEditTextData();
-        if (validateInputs()){
-
-            intent = new Intent(getContext(), SignupActivity.class);
-            if (catagoryString.equals("Recruiter")) {
-                UserDetails recruiterDetails = new UserDetails(userNameString, userEmailString, userPhoneNoString);
-                intent.putExtra("userDetails", recruiterDetails);
-                intent.putExtra("userPassword", userPasswordString);
-                intent.putExtra("recruiter", "true");
-            }
-            else {
-                UserDetails seekerDetails = new UserDetails(userNameString,
-                        userEmailString, userPhoneNoString, ageString,experienceString + " " + experienceTimeString,
-                        professionString);
-                intent.putExtra("userDetails", seekerDetails);
-                intent.putExtra("userPassword", userPasswordString);
-                intent.putExtra("recruiter", "false");
-            }
-            startActivity(intent);
+        intent = new Intent(getContext(), SignupActivity.class);
+        if (catagoryString.equals("Recruiter")) {
+            UserDetails recruiterDetails = new UserDetails(userNameString, userEmailString, userPhoneNoString);
+            intent.putExtra("userDetails", recruiterDetails);
+            intent.putExtra("userPassword", userPasswordString);
+            intent.putExtra("recruiter", "true");
         }
+        else {
+            UserDetails seekerDetails = new UserDetails(userNameString,
+                    userEmailString, userPhoneNoString, ageString,experienceString + " " + experienceTimeString,
+                    professionString);
+            intent.putExtra("userDetails", seekerDetails);
+            intent.putExtra("userPassword", userPasswordString);
+            intent.putExtra("recruiter", "false");
+        }
+        startActivity(intent);
     }
 
     private void getEditTextData() {
