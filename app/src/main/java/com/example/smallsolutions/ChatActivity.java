@@ -48,6 +48,7 @@ public class ChatActivity extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                ChatHolder.clear();
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
                         ChatMessageLoader userDetails = dataSnapshot.getValue(ChatMessageLoader.class);
                         ChatHolder.add(userDetails);
