@@ -219,8 +219,8 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onDestroy() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        FirebaseAuth.getInstance().signOut();
         if (user != null){
+            FirebaseAuth.getInstance().signOut();
             user.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
