@@ -58,6 +58,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
                 carpenter.setCardBackgroundColor(R.drawable.blue);
                 Intent car = new Intent(getActivity(), AllRandom.class);
                 car.putExtra("pro","Carpenter");
+                car.putExtra("toolbarTitle","Carpenter");
                 startActivity(car);
                 getActivity().finish();
                 break;
@@ -66,6 +67,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
                 electrician.setCardBackgroundColor(R.drawable.blue);
                 Intent elect = new Intent(getActivity(), AllRandom.class);
                 elect.putExtra("pro","Electrician");
+                elect.putExtra("toolbarTitle","Electrician");
                 startActivity(elect);
                 getActivity().finish();
                 break;
@@ -74,6 +76,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
                 mechanic.setCardBackgroundColor(R.drawable.blue);
                 Intent mech = new Intent(getActivity(), AllRandom.class);
                 mech.putExtra("pro","Mechanic");
+                mech.putExtra("toolbarTitle","Mechanic");
                 startActivity(mech);
                 getActivity().finish();
                 break;
@@ -82,6 +85,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
                 plumber.setCardBackgroundColor(R.drawable.blue);
                 Intent plum = new Intent(getActivity(), AllRandom.class);
                 plum.putExtra("pro","Plumber");
+                plum.putExtra("toolbarTitle","Plumber");
                 startActivity(plum);
                 getActivity().finish();
                 break;
@@ -90,6 +94,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
                 webDeveloper.setCardBackgroundColor(R.drawable.blue);
                 Intent web = new Intent(getActivity(), AllRandom.class);
                 web.putExtra("pro","Web Developer");
+                web.putExtra("toolbarTitle","Web Developer");
                 startActivity(web);
                 getActivity().finish();
                 break;
@@ -98,6 +103,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
                 appDeveloper.setCardBackgroundColor(R.drawable.blue);
                 Intent app = new Intent(getActivity(), AllRandom.class);
                 app.putExtra("pro","App Developer");
+                app.putExtra("toolbarTitle","App Developer");
                 startActivity(app);
                 getActivity().finish();
                 break;
@@ -106,6 +112,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
                 photoEditor.setCardBackgroundColor(R.drawable.blue);
                 Intent photo = new Intent(getActivity(), AllRandom.class);
                 photo.putExtra("pro","Photo Editor");
+                photo.putExtra("toolbarTitle","Photo Editor");
                 startActivity(photo);
                 getActivity().finish();
                 break;
@@ -114,6 +121,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
                 videoEditor.setCardBackgroundColor(R.drawable.blue);
                 Intent video = new Intent(getActivity(), AllRandom.class);
                 video.putExtra("pro","Video Editor");
+                video.putExtra("toolbarTitle","Video Editor");
                 startActivity(video);
                 getActivity().finish();
                 break;
@@ -122,6 +130,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
                 digitalMarketer.setCardBackgroundColor(R.drawable.blue);
                 Intent digital = new Intent(getActivity(), AllRandom.class);
                 digital.putExtra("pro","Digital Marketer");
+                digital.putExtra("toolbarTitle","Digital Marketer");
                 startActivity(digital);
                 getActivity().finish();
                 break;
@@ -130,6 +139,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
                 cook.setCardBackgroundColor(R.drawable.blue);
                 Intent cook = new Intent(getActivity(), AllRandom.class);
                 cook.putExtra("pro","Cook");
+                cook.putExtra("toolbarTitle","Cook");
                 startActivity(cook);
                 getActivity().finish();
                 break;
