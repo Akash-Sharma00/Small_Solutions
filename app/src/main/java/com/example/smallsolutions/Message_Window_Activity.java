@@ -107,7 +107,6 @@ public class Message_Window_Activity extends AppCompatActivity {
 
                             myref.child(ID).child(auth.getUid()).child("lastMessage").setValue(Message);
                             myref.child(ID).child(auth.getUid()).child("lastTime").setValue(time);
-                            Toast.makeText(Message_Window_Activity.this, ID, Toast.LENGTH_SHORT).show();
                         }
                     }
             );
