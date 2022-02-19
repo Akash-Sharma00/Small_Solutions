@@ -78,6 +78,7 @@ public class Message_Window_Activity extends AppCompatActivity {
         recycler.setLayoutManager(linearLayoutManager);
         chatAdapter = new ChatWindowAdapter(messageHolder, this);
         recycler.setHasFixedSize(true);
+        recycler.setAdapter(chatAdapter);
 
 
         auth = FirebaseAuth.getInstance();

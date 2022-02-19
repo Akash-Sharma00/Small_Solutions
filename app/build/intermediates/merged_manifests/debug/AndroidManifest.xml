@@ -34,7 +34,8 @@
             android:exported="true" />
         <activity
             android:name="com.example.smallsolutions.Message_Window_Activity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.example.smallsolutions.No_Internet_Activity"
             android:exported="true" />
