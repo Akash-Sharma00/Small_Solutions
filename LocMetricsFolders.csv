@@ -1,0 +1,28 @@
+Folder,Files,LOC,SLOC-P,SLOC-L,MVG,BLOC,C&SLOC,CLOC,CWORD,HCLOC,HCWORD
+Total,31,3588,2764,2230,207,664,2,160,731,3,9
+C:\Users\abc\AndroidStudioProjects\Small Solutions,31,3588,2764,2230,207,664,2,160,731,3,9
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app,31,3588,2764,2230,207,664,2,160,731,3,9
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\build,1,13,8,7,0,2,0,3,9,3,9
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\build\generated,1,13,8,7,0,2,0,3,9,3,9
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\build\generated\source,1,13,8,7,0,2,0,3,9,3,9
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\build\generated\source\buildConfig,1,13,8,7,0,2,0,3,9,3,9
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\build\generated\source\buildConfig\debug,1,13,8,7,0,2,0,3,9,3,9
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\build\generated\source\buildConfig\debug\com,1,13,8,7,0,2,0,3,9,3,9
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\build\generated\source\buildConfig\debug\com\example,1,13,8,7,0,2,0,3,9,3,9
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\build\generated\source\buildConfig\debug\com\example\smallsolutions,1,13,8,7,0,2,0,3,9,3,9
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src,30,3575,2756,2223,207,662,2,157,722,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\androidTest,1,26,15,11,0,5,0,6,24,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\androidTest\java,1,26,15,11,0,5,0,6,24,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\androidTest\java\com,1,26,15,11,0,5,0,6,24,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\androidTest\java\com\example,1,26,15,11,0,5,0,6,24,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\androidTest\java\com\example\smallsolutions,1,26,15,11,0,5,0,6,24,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main,27,3527,2729,2204,207,652,2,146,677,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\java,27,3527,2729,2204,207,652,2,146,677,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\java\com,27,3527,2729,2204,207,652,2,146,677,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\java\com\example,27,3527,2729,2204,207,652,2,146,677,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\main\java\com\example\smallsolutions,27,3527,2729,2204,207,652,2,146,677,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\test,2,22,12,8,0,5,0,5,21,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\test\java,2,22,12,8,0,5,0,5,21,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\test\java\com,2,22,12,8,0,5,0,5,21,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\test\java\com\example,2,22,12,8,0,5,0,5,21,0,0
+C:\Users\abc\AndroidStudioProjects\Small Solutions\app\src\test\java\com\example\smallsolutions,2,22,12,8,0,5,0,5,21,0,0

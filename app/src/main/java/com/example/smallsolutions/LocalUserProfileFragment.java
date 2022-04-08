@@ -135,7 +135,7 @@ public class LocalUserProfileFragment extends Fragment {
 //                Alert Box to confirmation
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setCancelable(false);
-                builder.setMessage("Are sure, You want to Sigh Out");
+                builder.setMessage("Are you sure, You want to Sign Out");
                 builder.create();
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
