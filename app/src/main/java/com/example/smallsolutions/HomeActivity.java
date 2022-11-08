@@ -190,7 +190,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Auth = FirebaseAuth.getInstance();
         AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
         builder.setCancelable(false);
-        builder.setMessage("Are sure, You want to Sigh Out");
+        builder.setMessage("Are you sure, You want to Sign Out");
         builder.create();
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
             @Override
